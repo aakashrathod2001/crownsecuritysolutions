@@ -1,0 +1,344 @@
+/* ==============================
+   MAIN NAVBAR BASE STYLES
+============================== */
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100; /* ensures above dropdowns */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+  /* Remove iOS tap highlights globally within navbar */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: clamp(0.75rem, 0.577rem + 0.769vw, 1.5rem);
+  width: 100%;
+}
+
+/* Left Section */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hamburger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent; /* Remove blue highlight on iOS */
+  -webkit-touch-callout: none; /* Prevent callout on long press */
+  user-select: none; /* Prevent text selection */
+
+  /* Ensure icon color stays consistent */
+  svg {
+    color: #222;
+    stroke: #222;
+  }
+
+  @media (min-width: 1279px) {
+    display: none;
+  }
+}
+
+/* Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #111827;
+  text-decoration: none;
+}
+
+.brandLogo {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  width: clamp(10rem, 9.538rem + 2.051vw, 12rem);
+  height: auto;
+  aspect-ratio: 249/40;
+}
+
+/* ==============================
+   DESKTOP NAV LINKS
+============================== */
+.links {
+  display: none;
+
+  @media (min-width: 1279px) {
+    display: flex;
+    gap: clamp(1rem, 0.538rem + 2.051vw, 3rem);
+  }
+
+  a {
+    color: #222;
+    font-family: "Outfit";
+    font-size: clamp(0.875rem, 0.817rem + 0.256vw, 1.125rem);
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: none;
+    }
+  }
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Chevron icon for dropdown indication */
+.dropdownIcon {
+  margin-left: 4px;
+  stroke: currentColor;
+  color: #222;
+  -webkit-text-fill-color: currentColor; /* iOS Safari fix */
+  transition: transform 0.2s ease, stroke 0.2s ease;
+  vertical-align: middle;
+}
+
+.iconActive {
+  transform: rotate(180deg);
+  stroke: #f15151;
+}
+
+/* ==============================
+   RIGHT SECTION (Button)
+============================== */
+.right {
+  flex-shrink: 0;
+}
+
+.ctaPrimary {
+  background-color: #222;
+  color: #fff;
+}
+
+/* ==============================
+   MEGA MENU (Desktop)
+============================== */
+.megaMenuContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 2rem;
+  z-index: 90;
+  animation: fadeIn 0.2s ease forwards;
+  max-width: calc(100vw - 40px); /* Prevent overflow with padding */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.megaMenu {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 0rem 3rem;
+}
+
+.megaLink {
+  display: block;
+  color: #222;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.4rem 0;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #f15151;
+  }
+}
+
+/* ==============================
+   MOBILE MENU (Accordion Style)
+============================== */
+.mobile {
+  display: block;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  padding: clamp(2rem, 1.019rem + 4.359vw, 6.25rem);
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (min-width: 1279px) {
+    display: none;
+  }
+}
+
+.mobileItem {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #f3f3f3;
+  padding-bottom: 0.5rem;
+}
+
+.mobileMainRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: #222;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+.mobileToggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* Remove blue highlight on iOS */
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.mobileChevron {
+  stroke: currentColor;
+  color: #222;
+  -webkit-text-fill-color: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* ==============================
+   SCROLLABLE TWO-COLUMN DROPDOWN
+============================== */
+.mobileDropdown {
+  overflow-y: auto;
+  max-height: 60vh; /* keeps large lists scrollable */
+  padding-right: 0.5rem;
+  margin-left: 1rem;
+  display: grid;
+  grid-template-columns: 1fr; /* single column by default */
+  gap: 0.4rem 1rem;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
+}
+
+/* When expanded */
+.mobileDropdown.open {
+  max-height: 60vh;
+  opacity: 1;
+  margin-top: 0.4rem;
+  padding-top: 0.5rem;
+}
+
+/* Two-column layout for medium phones */
+@media (min-width: 699px) {
+  .mobileDropdown {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Styled scrollbar (for iOS + webkit) */
+.mobileDropdown::-webkit-scrollbar {
+  width: 6px;
+}
+.mobileDropdown::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+.mobileDropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mobileDropdown a {
+  font-size: 0.9rem;
+  color: #444;
+  text-decoration: none;
+  line-height: 1.4;
+  padding: 0.3rem 0;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #f15151;
+  }
+}
+
+/* ==============================
+   RESPONSIVE ADJUSTMENTS
+============================== */
+@media (max-width: 1024px) {
+  .megaMenu {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+  }
+
+  .megaMenuContainer {
+    padding: 1rem 1.2rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1365px) {
+  .megaMenu {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+
+  .megaMenuContainer {
+    padding: 1rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .megaMenuContainer {
+    display: none;
+  }
+}

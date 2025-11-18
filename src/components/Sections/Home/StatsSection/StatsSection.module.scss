@@ -1,0 +1,15 @@
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  --grid-gap: clamp(0.5rem, 0.154rem + 1.538vw, 2rem); /* spacing between items */
+  width: 100%; 
+  gap: var(--grid-gap);
+}
+
+

@@ -1,0 +1,119 @@
+// @use './tokens';
+// @use './mixins';
+// @use './utilities';
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.bodySectionLayout {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5rem, 2.692rem + 10.256vw, 15rem);
+  padding-top: clamp(5rem, 2.692rem + 10.256vw, 15rem);
+}
+
+body {
+  font-family: var(--font-outfit), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional utilities so you can swap fonts anywhere */
+.font-outfit {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+}
+.font-montserrat {
+  font-family: var(--font-montserrat), var(--font-outfit), system-ui, sans-serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), var(--font-outfit), system-ui, sans-serif;
+}
+
+/* images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  /* layout */
+  .container {
+    margin: 0 auto;
+    max-width: 1920px;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll; /* allow vertical scroll */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling */
+  }
+
+  body::-webkit-scrollbar {
+    width: 0 !important; /* Safari, Chrome, Edge */
+    display: none !important;
+  }
+
+  body {
+    scrollbar-width: none; /* Firefox */
+  }
+
+  @supports (-webkit-touch-callout: none) {
+    input,
+    textarea,
+    select {
+      font-size: 16px !important; /* prevent zoom */
+      transform: scale(0.875); /* looks like ~14px */
+      transform-origin: left center;
+    }
+  }
+
+  .full-width-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-inline: clamp(1.172rem, 0rem + 5.208vw, 6.25rem);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 1.019rem + 4.359vw, 6.25rem);
+    align-items: center;
+  }
+}
+
+.pageLayout {
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  width: 100%;
+  align-self: center;
+}
+
+.cfBody :global(.grecaptcha-badge) {
+  visibility: hidden !important;
+}

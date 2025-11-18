@@ -1,0 +1,248 @@
+import { getSEOUrlBySlug } from "@/lib/urlMappings";
+
+// --------------------------------------------
+// Slug generator (FINAL FIXED VERSION)
+// --------------------------------------------
+const slugify = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/\//g, "-")            // fix "UI/UX" → "ui-ux"
+    .replace(/&/g, "and")           // fix "Proofreading & Editing"
+    .replace(/[^a-z0-9]+/g, "-")    // replace all non-alphanumeric chars
+    .replace(/^-+|-+$/g, "");       // trim hyphens
+
+// Helper to wrap service items
+const serviceLink = (item: string, category: string) => ({
+  label: item,
+  href:
+    getSEOUrlBySlug(slugify(item), "service") ||
+    `/${category}/${slugify(item)}`,
+});
+
+export const stackedBlocks = [
+  // ============================================================
+  // BRANDING
+  // ============================================================
+  {
+    title: "Branding",
+    className: "redBlock",
+    heading: "Branding",
+    description:
+      "Your brand is the foundation of every connection you make. With Wunderkint, visuals evolve into brand identities that inspire trust, spark recognition, and leave a lasting impact. From strategy to design, every element of branding lives here, under one roof, shaped with vision and creativity.",
+
+    buttonText: "Build Your Brand Identity",
+    buttonHref: getSEOUrlBySlug("branding", "category") || "/category/branding",
+    moreHref: getSEOUrlBySlug("branding", "category") || "/category/branding",
+
+    bulletPoints: [
+      "Logo Design",
+      "Graphic Design",
+      "Brochure Design",
+      "Event management",
+      "Menu Design",
+      "Logo Animation",
+      "Social Media Design",
+      "Social Media Management",
+      "Rebranding",
+      "Brand Style Guides",
+      "Cover Letters",
+      "Poster Design",
+      "Flyer Design",
+      "Book Covers",
+      "Catalog Design",
+      "Pattern Design",
+      "Book Design",
+      "3D Design",
+      "Infographic Design",
+      "Landscape Design",
+      "Print Design",
+      "App Design",
+      "Visual Design",
+      "Icon Design",
+      "Campaign Planning",
+      "Brand Launch",
+      "Traditional Advertising",
+      "Store Launches",
+      "Out of Home advertising (OOH)",
+      "Offline Activations",
+      "Online Amplifications",
+    ].map((i) => serviceLink(i, "branding")),
+
+    image: "https://cdn.wunderkint.com/images/home/brand_identity.webp",
+  },
+
+  // ============================================================
+  // CONTENT
+  // ============================================================
+  {
+    title: "Content",
+    className: "yellowBlock",
+    heading: "Content",
+    description:
+      "Content is the heartbeat of connection. Wunderkint crafts narratives that resonate deeply, inspire action, and amplify your brand’s voice across every platform. From compelling storytelling to innovative formats, our content solutions are designed to leave a lasting imprint on your audience.",
+
+    buttonText: "Create Impactful Content",
+    buttonHref: getSEOUrlBySlug("content", "category") || "/category/content",
+    moreHref: getSEOUrlBySlug("content", "category") || "/category/content",
+
+    bulletPoints: [
+      "Video Editing",
+      "Content Writing",
+      "Motion Graphics",
+      "Video Production",
+      "Film Production",
+      "UGC Videos",
+      "CGI Animation",
+      "Product Photography",
+      "VFX Production",
+      "Animation Production",
+      "Transcription",
+      "Creative Writing",
+      "Storyboards",
+      "Ad Copy",
+      "Content Strategy",
+      "UX Writing",
+      "Scriptwriting",
+      "Podcast Writing",
+      "Social Media Copywriting",
+      "Sales Copy",
+      "Podcast Production",
+      "Proofreading & Editing",
+      "Product Videos",
+      "UGC Ads",
+      "Social Media Videos",
+      "3D Product Animation",
+      "Music Promotion",
+      "Art & Illustration",
+      "3D Video Production",
+      "4D Video Production",
+    ].map((i) => serviceLink(i, "content")),
+
+    image: "https://cdn.wunderkint.com/images/home/content_marketing.webp",
+  },
+
+  // ============================================================
+  // TECH
+  // ============================================================
+  {
+    title: "Tech",
+    className: "tealBlock",
+    heading: "Tech",
+    description:
+      "Technology is more than tools; it is the engine of transformation. Through Wunderkint, innovation becomes seamless digital solutions that are adaptive and future-ready. From web to product experiences, every tech-driven solution is built to empower brands and enhance human connection.",
+
+    buttonText: "Innovate With Tech",
+    buttonHref: getSEOUrlBySlug("tech", "category") || "/category/tech",
+    moreHref: getSEOUrlBySlug("tech", "category") || "/category/tech",
+
+    bulletPoints: [
+      "Website Design",
+      "Website Development",
+      "UI/UX Design",
+      "Mobile App Development",
+      "Web Applications",
+      "Software Development",
+      "Shopify Website",
+      "Game Development",
+      "Marketing Automation",
+      "Chatbot Development",
+      "WordPress Development",
+      "Webflow Development",
+      "Android App Development",
+      "Data Processing",
+      "Dropshipping Websites",
+      "Landing Page Design",
+      "Business Websites",
+      "Tech Consulting",
+      "iOS App Development",
+      "Custom Websites",
+      "Email Automations",
+      "E-Commerce Development",
+      "Cross-platform Development",
+    ].map((i) => serviceLink(i, "tech")),
+
+    image: "https://cdn.wunderkint.com/images/home/tech.webp",
+  },
+
+  // ============================================================
+  // MARKETING
+  // ============================================================
+  {
+    title: "Marketing",
+    className: "blueBlock",
+    heading: "Marketing",
+    description:
+      "Your brand’s story deserves to be seen, heard, and remembered. Wunderkint develops marketing strategies that go beyond campaigns. They spark conversations, drive engagement, and create movements. Every idea is fueled by creativity and executed with precision, ensuring your brand thrives in a competitive world.",
+
+    buttonText: "Elevate Your Marketing",
+    buttonHref: getSEOUrlBySlug("marketing", "category") || "/category/marketing",
+    moreHref: getSEOUrlBySlug("marketing", "category") || "/category/marketing",
+
+    bulletPoints: [
+      "Affiliate Marketing",
+      "Social Media Marketing",
+      "Email Marketing",
+      "Search Engine Optimization",
+      "Influencer Marketing",
+      "Lead Generation",
+      "Public Relations",
+      "Display Advertising",
+      "Programmatic Ad",
+      "Media Planning & Buying",
+      "Project Management",
+      "Marketing Strategy",
+      "Product Management",
+      "Press Releases",
+      "Facebook Ads Campaigns",
+      "Instagram Marketing",
+      "Video Marketing",
+      "Paid Social Media",
+      "Intellectual Property Management",
+      "Shopify Marketing",
+      "Search Engine Marketing",
+      "Event Marketing",
+      "E-Commerce Marketing",
+    ].map((i) => serviceLink(i, "marketing")),
+
+    image: "https://cdn.wunderkint.com/images/home/marketing.webp",
+  },
+
+  // ============================================================
+  // AI
+  // ============================================================
+  {
+    title: "AI",
+    className: "purpleBlock",
+    heading: "AI",
+    description:
+      "Artificial Intelligence is where imagination meets intelligence. With Wunderkint’s AI-driven solutions, brands can engage, create, and grow in transformative ways. From smarter insights to automated creativity, our AI services open new dimensions of possibility for visionary brands.",
+
+    buttonText: "Unlock AI Potential",
+    buttonHref: getSEOUrlBySlug("ai", "category") || "/category/ai",
+    moreHref: getSEOUrlBySlug("ai", "category") || "/category/ai",
+
+    bulletPoints: [
+      "AI Chatbot",
+      "AI Video Generation",
+      "AI for Businesses",
+      "AI Audio Generation",
+      "AI Content",
+      "AI Consulting",
+      "AI Product Photography",
+      "AI Integrations",
+      "AI Music Videos",
+      "AI Marketing",
+      "AI GIFs",
+      "AI Podcasts",
+      "AI Artists",
+      "AI Video Avatars",
+      "AI Video Art",
+      "AI-based CGI Ads",
+      "AI Product Lookbooks",
+      "AI-based Key Visuals",
+      "AI Clone Videos",
+    ].map((i) => serviceLink(i, "ai")),
+
+    image: "https://cdn.wunderkint.com/images/home/ai.webp",
+  },
+];

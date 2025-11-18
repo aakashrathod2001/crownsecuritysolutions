@@ -1,0 +1,11 @@
+.BrandsSlider {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.brandSlider {
+  --logo-h: clamp(2rem, 1.538rem + 2.051vw, 4rem);
+  --logo-gap: clamp(2rem, 1.654rem + 1.538vw, 3.5rem);
+  --logo-filter: grayscale(0%);
+}
