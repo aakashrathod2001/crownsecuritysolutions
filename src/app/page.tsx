@@ -76,18 +76,19 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <SEOStructuredData page="home" />
+      {/* <SEOStructuredData page="home" />
 
       <Hero />
-      <HomeTagline heading={headings.heroTagline} variant="home" />
+      <HomeTagline heading={headings.heroTagline} variant="home" /> */}
       <StackedScroll />
       <div className="bodySectionLayout">
-        <StatsSection />
+        <h1>Hello Lets Build these Amazing project</h1>
+        {/* <StatsSection />
         <BrandsSlider />
         <PortfolioSection />
         <TestimonialsSection />
         <PricingSection />
-        <FAQSection heading={headings.faqSection} items={faqs} />;
+        <FAQSection heading={headings.faqSection} items={faqs} />; */}
       </div>
     </>
   );
