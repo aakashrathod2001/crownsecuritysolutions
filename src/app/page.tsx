@@ -1,18 +1,18 @@
 // app/page.tsx - Enhanced Home Page with SEO
 import { Metadata } from 'next';
 // import Script from 'next/script';
-import Hero from "@/components/Sections/Home/Hero/Hero";
-import HomeTagline from "@/components/Sections/Home/HomeTagline/HomeTagline";
-import StatsSection from "@/components/Sections/Home/StatsSection/StatsSection";
-import StackedScroll from "@/components/UI/StackedScroll/StackedScroll";
-import BrandsSlider from "@/components/Sections/Home/BrandsSlider/BrandsSlider";
-import PortfolioSection from "@/components/Sections/Home/PortfolioSection/PortfolioSection";
-import TestimonialsSection from "@/components/Sections/Home/TestimonialsSection/TestimonialsSection";
-import PricingSection from "@/components/Sections/Home/PricingSection/PricingSection";
-import FAQSection from "@/components/Sections/FAQSection/FAQSection";
-import { headings } from "@/data/headings";
-import { faqs } from "@/data/faq";
-import SEOStructuredData from "@/components/SEO/SEOStructuredData";
+// import Hero from "@/components/Sections/Home/Hero/Hero";
+// import HomeTagline from "@/components/Sections/Home/HomeTagline/HomeTagline";
+// import StatsSection from "@/components/Sections/Home/StatsSection/StatsSection";
+// import StackedScroll from "@/components/UI/StackedScroll/StackedScroll";
+// import BrandsSlider from "@/components/Sections/Home/BrandsSlider/BrandsSlider";
+// import PortfolioSection from "@/components/Sections/Home/PortfolioSection/PortfolioSection";
+// import TestimonialsSection from "@/components/Sections/Home/TestimonialsSection/TestimonialsSection";
+// import PricingSection from "@/components/Sections/Home/PricingSection/PricingSection";
+// import FAQSection from "@/components/Sections/FAQSection/FAQSection";
+// import { headings } from "@/data/headings";
+// import { faqs } from "@/data/faq";
+// import SEOStructuredData from "@/components/SEO/SEOStructuredData";
 
 
 // Generate metadata for home page
@@ -80,7 +80,7 @@ export default function HomePage() {
 
       <Hero />
       <HomeTagline heading={headings.heroTagline} variant="home" /> */}
-      <StackedScroll />
+      {/* <StackedScroll /> */}
       <div className="bodySectionLayout">
         <h1>Hello Lets Build these Amazing project</h1>
         {/* <StatsSection />
