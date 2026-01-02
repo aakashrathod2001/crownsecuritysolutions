@@ -13,6 +13,9 @@ import { Metadata } from 'next';
 // import { headings } from "@/data/headings";
 // import { faqs } from "@/data/faq";
 // import SEOStructuredData from "@/components/SEO/SEOStructuredData";
+import HeroSection from '@/components/Sections/HeroSection/HeroSection';
+import { homepageHero, aboutHero, servicesHero } from '@/data/heroSections';
+
 
 
 // Generate metadata for home page
@@ -80,6 +83,8 @@ export default function HomePage() {
 
       <Hero />
       <HomeTagline heading={headings.heroTagline} variant="home" /> */}
+      <HeroSection {...homepageHero} />
+
       {/* <StackedScroll /> */}
       <div className="bodySectionLayout">
         {/* <StatsSection />
