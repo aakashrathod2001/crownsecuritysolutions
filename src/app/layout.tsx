@@ -176,7 +176,7 @@ export default function RootLayout({
         </noscript>
 
         {/* ✅ Global Header */}
-        {/* <Header /> */}
+        <Header />
 
         {/* ✅ Page Content */}
         <main>{children}</main>

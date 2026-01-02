@@ -1,145 +1,51 @@
-// import React, { ReactNode } from "react";
-// import Link from "next/link";
-// import { ArrowUpRight } from "lucide-react";
-// import styles from "./Button.module.scss";
+// components/ui/Button/Button.tsx
+import React from 'react';
+import styles from './Button.module.scss';
 
-// type ButtonProps = {
-//   text?: string;
-//   className?: string;
-//   children?: ReactNode;
-//   href?: string;                          // 👈 NEW: render as <Link> when provided
-//   target?: "_self" | "_blank";
-//   rel?: string;
-//   type?: "button" | "submit" | "reset";
-//   onClick?: () => void;
-//   disabled?: boolean;
-//   ariaLabel?: string;
-//   showIcon?: boolean;                     // 👈 NEW: toggle arrow icon
-// };
-
-// const Button: React.FC<ButtonProps> = ({
-//   text,
-//   className = "",
-//   children,
-//   href,
-//   target = "_self",
-//   rel,
-//   type = "button",
-//   onClick,
-//   disabled = false,
-//   ariaLabel,
-//   showIcon = true,
-// }) => {
-//   const content = (
-//     <>
-//       {children ? (
-//         children
-//       ) : (
-//         <>
-//           {text || "Contact us"}
-//           {showIcon && <ArrowUpRight className={styles.icon} />}
-//         </>
-//       )}
-//     </>
-//   );
-
-//   if (href) {
-//     return (
-//       <Link
-//         href={href}
-//         target={target}
-//         rel={rel}
-//         aria-label={ariaLabel ?? text}
-//         className={`${styles.button} ${className}`}
-//       >
-//         {content}
-//       </Link>
-//     );
-//   }
-
-//   return (
-//     <button
-//       type={type}
-//       onClick={onClick}
-//       disabled={disabled}
-//       aria-label={ariaLabel ?? text}
-//       className={`${styles.button} ${className}`}
-//     >
-//       {content}
-//     </button>
-//   );
-// };
-
-// export default Button;
-
-import React, { ReactNode } from "react";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import styles from "./Button.module.scss";
-
-type ButtonProps = {
-  text?: string;
-  className?: string;
-  children?: ReactNode;
-  href?: string; // if provided → renders as <Link>
-  target?: "_self" | "_blank";
-  rel?: string;
-  type?: "button" | "submit" | "reset";
+export interface ButtonProps {
+  text: string;
   onClick?: () => void;
-  disabled?: boolean;
-  ariaLabel?: string;
-  showIcon?: boolean;
-};
+  variant?: 'primary' | 'secondary' | 'outline';
+  icon?: React.ReactNode;
+  className?: string;
+  backgroundColor?: string;
+  textColor?: string;
+  iconBgColor?: string;
+}
 
 const Button: React.FC<ButtonProps> = ({
   text,
-  className = "",
-  children,
-  href,
-  target = "_self",
-  rel,
-  type = "button",
   onClick,
-  disabled = false,
-  ariaLabel,
-  showIcon = true,
+  variant = 'primary',
+  icon,
+  className = '',
+  backgroundColor,
+  textColor,
+  iconBgColor,
 }) => {
-  const content = (
-    <>
-      {children ? (
-        children
-      ) : (
-        <>
-          {text || "Contact us"}
-          {showIcon && <ArrowUpRight className={styles.icon} />}
-        </>
-      )}
-    </>
-  );
-
-  if (href) {
-    return (
-      <Link
-        href={href}
-        target={target}
-        rel={rel}
-        aria-label={ariaLabel ?? text}
-        className={`${styles.button} ${className}`}
-      >
-        {content}
-      </Link>
-    );
-  }
+  const buttonStyle = iconBgColor ? { '--clr': iconBgColor } as React.CSSProperties : undefined;
 
   return (
     <button
-      type={type}
+      className={`${styles.button} ${styles[variant]} ${className}`}
       onClick={onClick}
-      disabled={disabled}
-      aria-label={ariaLabel ?? text}
-      className={`${styles.button} ${className}`}
+      style={buttonStyle}
     >
-      {content}
+      <span className={styles.buttonDecor}></span>
+      <div className={styles.buttonContent}>
+        <div 
+          className={styles.buttonIcon}
+          style={iconBgColor ? { backgroundColor: iconBgColor } : undefined}
+        >
+          <span className={styles.icon}>{icon}</span>
+        </div>
+        <span 
+          className={styles.buttonText}
+          style={textColor ? { color: textColor } : undefined}
+        >
+          {text}
+        </span>
+      </div>
     </button>
   );
 };
