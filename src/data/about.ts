@@ -23,7 +23,7 @@ export type AboutData = {
 export const ABOUT_DATA: AboutData = {
   aboutContent: {
     label: "About Us",
-    title: "Welcome to\nCrown Security Agencies",
+    title: "Welcome to Crown Security Agencies",
     subtitle:
       "India's trusted partner in professional security and manpower management.",
     imageSrc: "/images/specialized-services.png",

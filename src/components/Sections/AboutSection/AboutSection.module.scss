@@ -16,7 +16,8 @@
 .leftColumn {
   display: flex;
   flex-direction: column;
-  flex: 1 1 calc(40% - var(--gap)/2);
+  // flex: 1 1 calc(40% - var(--gap)/2);
+  flex: 1;
   gap: 64px;
 }
 
@@ -34,7 +35,7 @@
 
 .label {
   color: #c7a034;
-  font-family: Helvetica;
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -43,7 +44,7 @@
 
 .title {
   color: #000;
-  font-family: Helvetica;
+  font-family: 'Inter', sans-serif;
   font-size: 56px;
   font-style: normal;
   font-weight: 300;
@@ -52,7 +53,7 @@
 
 .subtitle {
   color: #000;
-  font-family: Helvetica;
+  font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 300;
@@ -76,12 +77,13 @@
 .rightColumn {
   display: flex;
   flex-direction: column;
-  flex: 1 1 calc(60% - var(--gap)/2);
+  // flex: 1 1 calc(60% - var(--gap)/2);
+  flex: 1;
 }
 
 .paragraph {
   color: #000;
-  font-family: Helvetica;
+  font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
