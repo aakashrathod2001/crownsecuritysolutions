@@ -1,9 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './AboutSection.module.scss';
-import { aboutContent } from '@/data/aboutSection';
+import { ABOUT_DATA } from '@/data/about';
 
-const AboutSection: React.FC = () => {
+interface AboutSectionProps {
+  showImage?: boolean;
+  variant?: 'home' | 'about';
+}
+
+const AboutSection: React.FC<AboutSectionProps> = ({
+  showImage = true,
+  variant = 'about'
+}) => {
+  const content = variant === 'home' ? ABOUT_DATA.homeAboutContent : ABOUT_DATA.aboutContent;
   return (
     <section className={styles.aboutSection}>
       <div className="pageLayout">
@@ -12,34 +21,36 @@ const AboutSection: React.FC = () => {
             <div className={styles.leftColumn}>
               <div className={styles.header}>
                 <div className={styles.eyebrow}>
-                  <span className={styles.label}>{aboutContent.label}</span>
+                  <span className={styles.label}>{content.label}</span>
                   <h2 className={styles.title}>
-                    {aboutContent.title.split('\n').map((line, index) => (
+                    {content.title.split('\n').map((line, index) => (
                       <React.Fragment key={index}>
                         {line}
-                        {index < aboutContent.title.split('\n').length - 1 && <br />}
+                        {index < content.title.split('\n').length - 1 && <br />}
                       </React.Fragment>
                     ))}
                   </h2>
                 </div>
                 <p className={styles.subtitle}>
-                  {aboutContent.subtitle}
+                  {content.subtitle}
                 </p>
               </div>
 
-              <div className={styles.imageWrapper}>
-                <Image
-                  src={aboutContent.imageSrc}
-                  alt={aboutContent.imageAlt}
-                  width={575}
-                  height={510}
-                  className={styles.image}
-                />
-              </div>
+              {showImage && (
+                <div className={styles.imageWrapper}>
+                  <Image
+                    src={content.imageSrc}
+                    alt={content.imageAlt}
+                    width={575}
+                    height={510}
+                    className={styles.image}
+                  />
+                </div>
+              )}
             </div>
 
             <div className={styles.rightColumn}>
-              {aboutContent.paragraphs.map((paragraph, index) => (
+              {content.paragraphs.map((paragraph, index) => (
                 <p key={index} className={styles.paragraph}>
                   {paragraph}
                 </p>

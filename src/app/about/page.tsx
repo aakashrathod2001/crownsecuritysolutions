@@ -1,14 +1,14 @@
-// app/page.tsx - Minimal Home Page
+// app/about/page.tsx
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
 import AboutSection from '@/components/Sections/AboutSection/AboutSection';
-import { homepageHero } from '@/data/heroSections';
+import { aboutpageHero } from '@/data/heroSections';
 
-export default function HomePage() {
+export default function AboutPage() {
   return (
     <>
-      <HeroSection {...homepageHero} />
+      <HeroSection {...aboutpageHero} />
       <div className="bodySectionLayout">
-        <AboutSection showImage={false} variant="home" />;
+        <AboutSection showImage={true} variant="about" />;
       </div>
     </>
   );

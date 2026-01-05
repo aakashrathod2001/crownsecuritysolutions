@@ -6,6 +6,14 @@ export interface NavItem {
 
 export const navigationItems: NavItem[] = [
   {
+    label: 'Home',
+    href: '/',
+  },
+  {
+    label: 'About',
+    href: '/about',
+  },
+  {
     label: 'What we do',
     href: '/what-we-do',
   },
@@ -16,10 +24,6 @@ export const navigationItems: NavItem[] = [
   {
     label: 'Where we are',
     href: '/where-we-are',
-  },
-  {
-    label: 'Ambassador Era',
-    href: '/ambassador-era',
   },
   {
     label: 'Join us',
