@@ -4,12 +4,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { navigationItems } from '@/data/navigation';
 import Button, { ArrowIcon } from '@/components/UI/Button/Button';
 import styles from './Header.module.scss';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -32,7 +34,10 @@ const Header: React.FC = () => {
           <ul className={styles.navList}>
             {navigationItems.map((item) => (
               <li key={item.label} className={styles.navItem}>
-                <Link href={item.href} className={styles.navLink}>
+                <Link
+                  href={item.href}
+                  className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
+                >
                   {item.label}
                 </Link>
               </li>

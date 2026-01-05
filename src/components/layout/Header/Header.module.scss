@@ -109,6 +109,15 @@
     width: 100%;
   }
 
+  &.active {
+    color: #ffffff;
+    opacity: 0.8;
+  }
+
+  &.active::after {
+    width: 100%;
+  }
+
   @media (max-width: 1024px) {
     display: block;
     padding: 1rem 0;
