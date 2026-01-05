@@ -4,9 +4,16 @@ import { HeroSectionProps } from '@/types/hero';
 // Homepage Hero
 export const homepageHero: HeroSectionProps = {
   media: {
-    type: 'image',
-    src: '/images/home/home-hero-bg.png',
+    type: 'video',
+    src: '/videos/garda-security-usa-ambient.mp4',
+    poster: '/images/home/home-hero-bg.png',
     alt: 'Security guard at concert',
+    videoProps: {
+      autoPlay: true,
+      loop: true,
+      muted: true,
+      playsInline: true,
+    },
   },
   content: {
     title: 'Your Security. Our Priority.',
@@ -17,17 +24,17 @@ export const homepageHero: HeroSectionProps = {
         text: 'LEARN HOW',
         href: '/about',
         variant: 'primary',
-        iconBgColor: '#e74c3c',
+        iconBgColor: '#F6292F',
       },
     ],
   },
   overlay: {
     enabled: true,
-    color: '#000000',
-    opacity: 0.5,
+    color: '#252929',
+    opacity: 0.6,
   },
   contentPosition: 'left',
-  minHeight: '600px',
+  minHeight: '840px',
 };
 
 // About Page Hero

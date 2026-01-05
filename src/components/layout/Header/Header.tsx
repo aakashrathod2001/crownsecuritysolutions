@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { navigationItems } from '@/data/navigation';
-import Button from '@/components/UI/Button/Button';
+import Button, { ArrowIcon } from '@/components/UI/Button/Button';
 import styles from './Header.module.scss';
 
 const Header: React.FC = () => {
@@ -22,8 +22,8 @@ const Header: React.FC = () => {
           <Image
             src="/logo.png"
             alt="Crown Security Managers"
-            width={200}
-            height={45}
+            width={171}
+            height={40}
             priority
           />
         </Link>
@@ -42,23 +42,7 @@ const Header: React.FC = () => {
             <Button
               text="Contact us"
               variant="primary"
-              icon={
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5 12H19M19 12L12 5M19 12L12 19"
-                    stroke="currentColor"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              }
+              icon={<ArrowIcon color="#F6292F" />}
               onClick={() => console.log('Contact us clicked')}
             />
           </div>
