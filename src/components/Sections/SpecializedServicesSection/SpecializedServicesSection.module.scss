@@ -77,7 +77,7 @@
   gap: 10px;
   text-decoration: none;
   color: #000;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -86,10 +86,10 @@
   width: fit-content;
 
   &:hover {
-    color: #c7a034;
+    color: #C7A034;
 
     svg {
-      stroke: #c7a034;
+      stroke: #C7A034;
     }
   }
 }
@@ -101,16 +101,20 @@
 .arrowIcon {
   display: flex;
   transition: all 0.3s ease;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
+  width: 24px;
+  height: 24px;
+  color: #F6292F;
 
   path {
-    stroke: inherit;
+    stroke: currentColor; /* Use currentColor to inherit from parent */
     transition: stroke 0.3s ease;
   }
 }
 
 .link:hover .arrowIcon {
   transform: rotate(0deg);
+  color: #C7A034;
 }
 
 /* Responsive styles */
