@@ -1,0 +1,138 @@
+.trackRecordSection {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.statsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.statsGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  --gap: 80px;
+  gap: var(--gap);
+  width: 100%;
+
+  // Desktop: 3 cards per row
+  @media (min-width: 1024px) {
+    .statCard,
+    .ctaCard {
+      flex: 0 0 calc((100% - 2 * var(--gap)) / 3);
+      max-width: calc((100% - 2 * var(--gap)) / 3);
+    }
+  }
+
+  // Tablet: 2 cards per row
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .statCard,
+    .ctaCard {
+      flex: 0 0 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+    }
+  }
+
+  // Mobile: 1 card per row
+  @media (max-width: 767px) {
+    .statCard,
+    .ctaCard {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #999999;
+  min-height: 120px;
+
+  // Remove border-left on cards that are at the start of rows on smaller screens
+  @media (max-width: 1023px) {
+    &:nth-child(even) {
+      border-left: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    border-left: none;
+  }
+}
+
+.statContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 25px;
+}
+
+.statNumber {
+  color: #c7a034;
+  font-family: I;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100px;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.statLabel {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.ctaCard {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0 25px;
+  min-height: 120px;
+}
+
+.ctaTitle {
+  color: #000;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.ctaLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+
+  &:hover {
+    color: #c7a034;
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
+}

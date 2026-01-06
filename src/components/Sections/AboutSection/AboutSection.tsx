@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import SectionHeader from '@/components/UI/SectionHeader/SectionHeader';
 import styles from './AboutSection.module.scss';
 import { ABOUT_DATA } from '@/data/about';
 
@@ -19,22 +20,11 @@ const AboutSection: React.FC<AboutSectionProps> = ({
         <div className="full-width-container">
           <div className={styles.container}>
             <div className={styles.leftColumn}>
-              <div className={styles.header}>
-                <div className={styles.eyebrow}>
-                  <span className={styles.label}>{content.label}</span>
-                  <h2 className={styles.title}>
-                    {content.title.split('\n').map((line, index) => (
-                      <React.Fragment key={index}>
-                        {line}
-                        {index < content.title.split('\n').length - 1 && <br />}
-                      </React.Fragment>
-                    ))}
-                  </h2>
-                </div>
-                <p className={styles.subtitle}>
-                  {content.subtitle}
-                </p>
-              </div>
+              <SectionHeader
+                label={content.label}
+                title={content.title}
+                subtitle={content.subtitle}
+              />
 
               {showImage && (
                 <div className={styles.imageWrapper}>
