@@ -30,6 +30,7 @@
   font-weight: 300;
   line-height: 64px;
   margin: 0;
+  white-space: pre-line; /* Preserve line breaks but collapse other whitespace */
 
   .highlight {
     color: #c7a034;
