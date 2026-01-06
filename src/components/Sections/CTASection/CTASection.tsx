@@ -13,7 +13,7 @@ const CTASection: React.FC<CTASectionProps> = ({
   label,
   title,
   textColor = '#ffffff',
-  showStripes = true,
+  showStripes = false,
   overlayOpacity = 0.7
 }) => {
   return (
