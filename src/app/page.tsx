@@ -19,7 +19,7 @@ export default function HomePage() {
         <SpecializedServicesSection />
         <CTASection {...homevisionCTA} />
       </div>
-      <LegacySection />;
+      <LegacySection />
       <div className="bodySectionLayout">
 
       </div>
