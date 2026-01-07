@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Play, Star, X } from "lucide-react";
+import { Star } from "lucide-react";
 import { testimonials, videoTestimonials } from "@/data/testimonials";
 import styles from "./Testimonials.module.scss";
 import SectionHeader from "@/components/UI/SectionHeader/SectionHeader";
@@ -22,23 +22,64 @@ const StarRating = ({ rating }: { rating: number }) => {
 const VideoThumbnail = ({
   thumbnail,
   videoUrl,
-  onPlay
+  isPlaying,
+  onPlay,
+  onStop
 }: {
   thumbnail: string;
   videoUrl?: string;
+  isPlaying: boolean;
   onPlay: () => void;
+  onStop: () => void;
 }) => {
+  if (isPlaying && videoUrl) {
+    return (
+      <div
+        className={styles.videoThumbnail}
+        onClick={(e) => {
+          // Prevent event bubbling to section click handler
+          e.stopPropagation();
+          // Only stop if clicking on the container, not the video controls
+          if (e.target === e.currentTarget) {
+            onStop();
+          }
+        }}
+      >
+        <video
+          className={styles.videoPlayer}
+          src={videoUrl}
+          controls
+          autoPlay
+          onClick={(e) => e.stopPropagation()}
+          onLoadedData={(e) => {
+            const video = e.target as HTMLVideoElement;
+            video.play().catch(console.error);
+          }}
+        />
+      </div>
+    );
+  }
+
   return (
-    <div className={styles.videoThumbnail}>
+    <div
+      className={styles.videoThumbnail}
+      onClick={(e) => {
+        // Prevent event bubbling when clicking on thumbnail/play button
+        e.stopPropagation();
+      }}
+    >
       <img
         src={thumbnail}
         alt="Video testimonial"
         className={styles.videoImage}
       />
       <div className={styles.videoOverlay} />
-      <button className={styles.playButton} onClick={onPlay}>
-        <Play className={styles.playIcon} />
-      </button>
+        <img
+          src="/images/testimonials/play-icon.png"
+          alt="Play video"
+          className={styles.playIcon}
+          onClick={onPlay}
+        />
     </div>
   );
 };
@@ -46,24 +87,32 @@ const VideoThumbnail = ({
 const TestimonialCard = ({
   quote,
   companyLogo,
+  companyName,
   personName,
   title,
   rating,
 }: {
   quote: string;
   companyLogo: string;
+  companyName: string;
   personName: string;
   title: string;
   rating: number;
 }) => {
   return (
-    <div className={styles.card}>
+    <div
+      className={styles.card}
+      onClick={(e) => e.stopPropagation()}
+    >
       <p className={styles.quote}>"{quote}"</p>
       <div className={styles.cardFooter}>
         <div className={styles.authorInfo}>
           <div className={styles.companyLogo}>
-            <span className={styles.logoText}>{companyLogo}</span>
-            <span className={styles.logoSubtext}>GROUP</span>
+            <img
+              src={companyLogo}
+              alt={`${companyName} logo`}
+              className={styles.logoImage}
+            />
           </div>
           <div className={styles.divider} />
           <div className={styles.personInfo}>
@@ -77,105 +126,70 @@ const TestimonialCard = ({
   );
 };
 
-const VideoModal = ({
-  videoUrl,
-  isOpen,
-  onClose
-}: {
-  videoUrl?: string;
-  isOpen: boolean;
-  onClose: () => void;
-}) => {
-  if (!isOpen || !videoUrl) return null;
 
-  return (
-    <div className={styles.videoModal} onClick={onClose}>
-      <div className={styles.videoModalContent} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeButton} onClick={onClose}>
-          <X className={styles.closeIcon} />
-        </button>
-        <video
-          className={styles.videoPlayer}
-          src={videoUrl}
-          controls
-          autoPlay
-          onLoadedData={(e) => {
-            // Ensure video starts playing
-            const video = e.target as HTMLVideoElement;
-            video.play().catch(console.error);
-          }}
-        />
-      </div>
-    </div>
-  );
-};
 
 const Testimonials = () => {
-  const [playingVideo, setPlayingVideo] = useState<string | null>(null);
+  const [playingVideoId, setPlayingVideoId] = useState<number | null>(null);
 
-  const handlePlayVideo = (videoUrl?: string) => {
-    if (videoUrl) {
-      setPlayingVideo(videoUrl);
-    }
+  const handlePlayVideo = (videoId: number) => {
+    setPlayingVideoId(videoId);
   };
 
-  const handleCloseVideo = () => {
-    setPlayingVideo(null);
+  const handleStopVideo = () => {
+    setPlayingVideoId(null);
   };
 
   return (
-    <>
-      <section className={styles.section}>
-        <div className="pageLayout">
-          <div className="full-width-container">
-            {/* Section Header */}
-            <div className={styles.SectionHeader}>
-              {/* Header */}
-              <SectionHeader
-                label=""
-                title="A comprehensive service offering\nfrom Crown Securities"
-                highlightedWords={["A comprehensive service offering"]}
-              />
+    <section
+      className={styles.section}
+      onClick={() => {
+        // Stop video if clicking anywhere in the section (outside interactive elements)
+        if (playingVideoId) {
+          handleStopVideo();
+        }
+      }}
+    >
+      <div className="pageLayout">
+        <div className="full-width-container">
+          <div className={styles.SectionHeader}>
+            <SectionHeader
+              label=""
+              title="A comprehensive service offering\nfrom Crown Securities"
+              highlightedWords={["A comprehensive service offering"]}
+            />
+          </div>
+
+          <div className={styles.container}>
+            <div className={styles.videoGrid}>
+              {videoTestimonials.map((video) => (
+                <VideoThumbnail
+                  key={video.id}
+                  thumbnail={video.thumbnail}
+                  videoUrl={video.videoUrl}
+                  isPlaying={playingVideoId === video.id}
+                  onPlay={() => handlePlayVideo(video.id)}
+                  onStop={handleStopVideo}
+                />
+              ))}
             </div>
 
-            <div className={styles.container}>
-              {/* Video Testimonials */}
-              <div className={styles.videoGrid}>
-                {videoTestimonials.map((video) => (
-                  <VideoThumbnail
-                    key={video.id}
-                    thumbnail={video.thumbnail}
-                    videoUrl={video.videoUrl}
-                    onPlay={() => handlePlayVideo(video.videoUrl)}
-                  />
-                ))}
-              </div>
-
-              {/* Text Testimonials Grid */}
-              <div className={styles.testimonialsGrid}>
-                {testimonials.map((testimonial) => (
-                  <TestimonialCard
-                    key={testimonial.id}
-                    quote={testimonial.quote}
-                    companyLogo={testimonial.companyLogo}
-                    personName={testimonial.personName}
-                    title={testimonial.title}
-                    rating={testimonial.rating}
-                  />
-                ))}
-              </div>
+            <div className={styles.testimonialsGrid}>
+              {testimonials.map((testimonial) => (
+                <TestimonialCard
+                  key={testimonial.id}
+                  quote={testimonial.quote}
+                  companyLogo={testimonial.companyLogo}
+                  companyName={testimonial.companyName}
+                  personName={testimonial.personName}
+                  title={testimonial.title}
+                  rating={testimonial.rating}
+                />
+              ))}
             </div>
-            
           </div>
         </div>
-      </section>
-
-      <VideoModal
-        videoUrl={playingVideo || undefined}
-        isOpen={!!playingVideo}
-        onClose={handleCloseVideo}
-      />
-    </>
+      </div>
+    </section>
   );
 };
 
