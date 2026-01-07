@@ -7,6 +7,7 @@ import { homepageHero } from '@/data/heroSections';
 import CTASection from '@/components/Sections/CTASection/CTASection';
 import { homemissionCTA, homevisionCTA } from '@/data/ctaSection';
 import LegacySection from '@/components/Sections/LegacySection/LegacySection';
+import CoreValues from '@/components/Sections/CoreValuesSection/CoreValuesSection';
 
 export default function HomePage() {
   return (
@@ -21,7 +22,7 @@ export default function HomePage() {
       </div>
       <LegacySection />
       <div className="bodySectionLayout">
-
+        <CoreValues />;
       </div>
     </>
   );
