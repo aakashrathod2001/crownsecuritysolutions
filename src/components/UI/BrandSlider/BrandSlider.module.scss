@@ -1,0 +1,37 @@
+.sliderWrapper {
+  width: 100vw; /* fill the screen */
+  overflow: hidden;
+  position: relative;
+}
+
+.sliderTrack {
+  display: flex;
+  flex-direction: row;
+  gap: var(--logo-gap, 40px);
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.logo {
+  flex: 0 0 auto; /* never shrink */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border: 1px solid #c7a034;
+  padding: 40px 64px;
+}
+
+.logoImage {
+  height: var(--logo-h, 40px); /* control only height */
+  width: auto; /* auto-adjust width */
+  object-fit: contain;
+  filter: var(--logo-filter, grayscale(100%));
+  transition: all 0.3s ease;
+
+  // &:hover {
+  //   filter: grayscale(0%);
+  //   opacity: 1;
+  // }
+}
