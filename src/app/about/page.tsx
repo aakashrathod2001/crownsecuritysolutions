@@ -8,7 +8,8 @@ export default function AboutPage() {
     <>
       <HeroSection {...aboutpageHero} />
       <div className="bodySectionLayout">
-        <AboutSection showImage={true} variant="about" />;
+        <AboutSection showImage={true} variant="about" />
+        
       </div>
     </>
   );

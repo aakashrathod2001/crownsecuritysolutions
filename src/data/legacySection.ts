@@ -1,0 +1,23 @@
+// ============================================================================
+// TYPE DEFINITIONS FOR LEGACY SECTION
+// ============================================================================
+
+export type LegacySectionData = {
+  title: string;
+  subtitle: string;
+  content: string;
+  author: string;
+  backgroundImage: string;
+};
+
+// ============================================================================
+// LEGACY SECTION DATA
+// ============================================================================
+
+export const LEGACY_SECTION_DATA: LegacySectionData = {
+  title: "Our Legacy & Leadership",
+  subtitle: "Mr. Mohammad Nadir Tanveer Shaikh",
+  content: "The late Mr. Mohammad Tanveer Shamnameer Shaikh laid the foundation of CSA in 1997 with a vision rooted in discipline, integrity, and respect for human dignity.\n\nAfter his passing in 2010, his son, Mr. Mohammad Nadir Tanveer Shaikh, took charge as Managing Director – Operations, steering CSA into a new era of modernization and compliance.\n\nAn MBA graduate from Symbiosis Institute of Business Management, Pune, Mr. Nadir Shaikh represents the second generation of leadership, blending tradition with innovation. Under his direction, CSA has achieved the following Milestones:\n\nExpanded from Maharashtra to 7 states, PAN-India\nPartnered with industry leaders like DHL, Mahindra, BASF, Rustomjee, Apple, and Amazon\nIntroduced digital attendance, audit, and ERP systems\nMaintained a 90%+ client retention rate\nAchieved 200+ operational sites and 2000+ trained professionals.\n\nSecurity is not just about protection, it's about trust. At Crown Securities, we safeguard people, property, and peace of mind with integrity and discipline.",
+  author: "— Managing Director",
+  backgroundImage: "/images/home/legacy-bg.png" // Placeholder - will update with actual image
+};

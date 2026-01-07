@@ -5,7 +5,8 @@ import TrackRecordSection from '@/components/Sections/TrackRecordSection/TrackRe
 import SpecializedServicesSection from '@/components/Sections/SpecializedServicesSection/SpecializedServicesSection';
 import { homepageHero } from '@/data/heroSections';
 import CTASection from '@/components/Sections/CTASection/CTASection';
-import { missionCTA, visionCTA, lightCTA } from '@/data/ctaSection';
+import { homemissionCTA, homevisionCTA } from '@/data/ctaSection';
+import LegacySection from '@/components/Sections/LegacySection/LegacySection';
 
 export default function HomePage() {
   return (
@@ -14,8 +15,13 @@ export default function HomePage() {
       <div className="bodySectionLayout">
         <AboutSection showImage={false} variant="home" />
         <TrackRecordSection />
-        <CTASection {...missionCTA} />
-        <SpecializedServicesSection />;
+        <CTASection {...homemissionCTA} />
+        <SpecializedServicesSection />
+        <CTASection {...homevisionCTA} />
+      </div>
+      <LegacySection />;
+      <div className="bodySectionLayout">
+
       </div>
     </>
   );
