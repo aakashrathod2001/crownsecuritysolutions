@@ -9,14 +9,18 @@
 
 .stepNumber {
   position: absolute;
-  bottom: 0;
-  font-size: clamp(8rem, 4.615rem + 15.385vw, 24rem);
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.08);
-  line-height: 1;
+  bottom: 28%;
   z-index: 0;
   pointer-events: none;
-  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.15);
+  text-align: right;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.15);
+  font-family: 'Abel';
+  font-size: 250px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0;
 }
 
 .numberRight {
@@ -158,7 +162,7 @@
 
 /* Crown Security Block background styles */
 .goldBlock {
-  background-color: #C7A034; /* Crown Security gold */
+  background-color: #c7a034; /* Crown Security gold */
   color: #fff;
 
   &::before {
@@ -232,26 +236,26 @@
   .container {
     gap: clamp(2rem, 1rem + 4vw, 6rem); // Wider gap for 2-column
   }
-  
+
   .left {
     flex: 0.6; // Give more space to content in 2-column
   }
-  
+
   .right {
     flex: 0.4; // Image takes less space in 2-column
     justify-content: flex-end;
     align-items: center;
 
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       justify-content: flex-start;
     }
   }
-  
+
   .rightImage {
     width: clamp(12rem, 8rem + 18vw, 28rem);
     height: clamp(12rem, 8rem + 18vw, 28rem);
 
-    @media (max-width: 599px){
+    @media (max-width: 599px) {
       width: 100%;
       height: auto;
     }
@@ -280,7 +284,7 @@
     flex-direction: column;
     gap: 2rem;
   }
-  
+
   .twoColumn .container {
     gap: 3rem;
   }
@@ -296,7 +300,7 @@
     width: clamp(12.25rem, 9.481rem + 12.308vw, 24.25rem);
     height: clamp(12.25rem, 9.481rem + 12.308vw, 24.25rem);
   }
-  
+
   .twoColumn {
     .rightImage {
       width: clamp(16rem, 12rem + 15vw, 30rem);
