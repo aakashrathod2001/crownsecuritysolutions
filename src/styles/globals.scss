@@ -114,6 +114,6 @@ img {
   align-self: center;
 }
 
-.cfBody :global(.grecaptcha-badge) {
+.cfBody .grecaptcha-badge {
   visibility: hidden !important;
 }
