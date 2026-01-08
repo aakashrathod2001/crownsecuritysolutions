@@ -91,10 +91,10 @@ const StackedScroll: React.FC<Props> = ({
           style={{ zIndex: index + 1 }}
         >
           <BlockContent
-            {...block}
+            title={block.title}
+            heading={block.heading}
+            description={block.description}
             variant={block.className}
-            layout={layout}
-            buttonHref={buttonHref || block.buttonHref}
           />
         </div>
       ))}

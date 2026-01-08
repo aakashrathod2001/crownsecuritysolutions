@@ -1,209 +1,3 @@
-// .mainContainer {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100%;
-// }
-
-// .container {
-//   display: flex;
-//   justify-content: space-between;
-//   width: 100%;
-//   position: relative;
-//   z-index: 2;
-//   gap: clamp(1rem, -1.077rem + 9.231vw, 10rem);
-//   height: fit-content;
-//   padding-block: clamp(5rem, 4.423rem + 2.564vw, 7.5rem);
-// }
-
-// .middle,
-// .right {
-//   flex: 1;
-// }
-
-// .endContainer {
-//   flex: 1;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   // gap: clamp(0.1rem, -2.185rem + 10.154vw, 10rem);
-// }
-
-// .left {
-//   flex: 0.5;
-//   display: flex;
-//   flex-direction: column;
-//   gap: clamp(1rem, 0.769rem + 1.026vw, 2rem);
-// }
-
-// .middle {
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// .heading {
-//   color: inherit;
-//   font-size: clamp(1.5rem, 1.154rem + 1.538vw, 3rem);
-//   font-weight: 600;
-//   line-height: clamp(1.8rem, 1.385rem + 1.846vw, 3.6rem);
-// }
-
-// .description {
-//   color: inherit;
-//   font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
-//   font-weight: 400;
-//   line-height: clamp(1rem, 0.828rem + 0.763vw, 1.744rem);
-// }
-
-// .servicesBlockButton {
-//   color: #fff;
-//   background: #222;
-//   width: max-content;
-
-//   &:hover {
-//     background: #fff;
-//     color: #1b1b1b;
-//   }
-// }
-
-// .bulletList {
-//   display: flex;
-//   flex-direction: column;
-//   list-style: none;
-//   color: inherit;
-//   font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
-//   font-weight: 400;
-//   line-height: clamp(1rem, 0.828rem + 0.763vw, 1.744rem);
-//   gap: clamp(0.25rem, 0.192rem + 0.256vw, 0.5rem);
-
-//   li {
-//     display: flex;
-//     flex-direction: row;
-//     gap: clamp(0.25rem, 0.192rem + 0.256vw, 0.5rem);
-//     position: relative;
-
-//     &::before {
-//       content: "➜";
-//       font-size: inherit;
-//       font-weight: inherit;
-//       color: inherit;
-//     }
-
-//     .text {
-//       display: inline-block;
-//     }
-
-//     &:hover .text {
-//       font-weight: 600;
-//       text-decoration: underline;
-//       text-decoration-thickness: 1px;
-//       cursor: pointer;
-//     }
-//   }
-// }
-
-// .right {
-//   display: flex;
-//   justify-content: flex-end;
-// }
-
-// .rightImage {
-//   width: clamp(9.25rem, 5.788rem + 15.385vw, 24.25rem);
-//   // height: 100%;
-//   height: clamp(9.25rem, 5.788rem + 15.385vw, 24.25rem);
-//   aspect-ratio: 1 / 1;
-//   border-radius: 8px;
-// }
-
-// /* 🔥 Special button style only for redBlock variant */
-// .whiteOnRed {
-//   background-color: #fff;
-//   color: #1b1b1b;
-
-//   &:hover {
-//     background-color: #1b1b1b;
-//     color: #fff;
-//   }
-// }
-
-// /* 🔥 Block background + overlay image styles */
-
-// .redBlock {
-//   background-color: #f15151;
-//   color: #fff;
-
-//   &::before {
-//     background-image: url("/images/home/ServiceBlocksBg.png");
-//   }
-// }
-
-// .tealBlock {
-//   background-color: #95d8c3;
-
-//   &::before {
-//     background-image: url("/images/home/ServiceBlocksBg.png");
-//   }
-// }
-
-// .yellowBlock {
-//   background-color: #fcbda3;
-
-//   &::before {
-//     background-image: url("/images/home/ServiceBlocksBg.png");
-//   }
-// }
-
-// .blueBlock {
-//   background-color: #c3dff4;
-
-//   &::before {
-//     background-image: url("/images/home/ServiceBlocksBg.png");
-//   }
-// }
-
-// .purpleBlock {
-//   background-color: #bab8dc;
-
-//   &::before {
-//     background-image: url("/images/home/ServiceBlocksBg.png");
-//   }
-// }
-
-// /* The 11th link row WITHOUT any bullet/arrow */
-// .moreItem {
-//   padding-left: 0; /* reset if .item had left pad for the arrow */
-// }
-// .moreItem::before {
-//   content: none !important; /* kill any arrow/bullet pseudo on this row */
-// }
-
-// /* Style for the “Know More Services” link */
-// .moreLink {
-//   font-weight: 600;
-//   text-decoration: underline;
-//   cursor: pointer;
-//   color: inherit;
-//   border-bottom: 1px solid transparent;
-// }
-
-// @media (min-width: 360px) and (max-width: 599px) {
-//   .container {
-//     flex-direction: column;
-//   }
-// }
-
-// @media (min-width: 600px) and (max-width: 767px) {
-//   .container {
-//     flex-direction: column;
-//   }
-
-//   .rightImage {
-//     width: clamp(12.25rem, 9.481rem + 12.308vw, 24.25rem);
-//     height: clamp(12.25rem, 9.481rem + 12.308vw, 24.25rem);
-//   }
-// }
-
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -236,9 +30,11 @@
 }
 
 .left {
-  flex: 0.5;
+  flex: 1;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
   gap: clamp(1rem, 0.769rem + 1.026vw, 2rem);
 }
 
@@ -248,6 +44,8 @@
 }
 
 .heading {
+  display: flex;
+  flex: 0.5;
   color: inherit;
   font-size: clamp(1.5rem, 1.154rem + 1.538vw, 3rem);
   font-weight: 600;
@@ -255,6 +53,8 @@
 }
 
 .description {
+  display: flex;
+  flex: 1.5;
   color: inherit;
   font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
   font-weight: 400;
