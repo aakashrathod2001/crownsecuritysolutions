@@ -1,244 +1,248 @@
-// --------------------------------------------
-// Slug generator (FINAL FIXED VERSION)
-// --------------------------------------------
-const slugify = (text: string) =>
-  text
-    .toLowerCase()
-    .replace(/\//g, "-")            // fix "UI/UX" → "ui-ux"
-    .replace(/&/g, "and")           // fix "Proofreading & Editing"
-    .replace(/[^a-z0-9]+/g, "-")    // replace all non-alphanumeric chars
-    .replace(/^-+|-+$/g, "");       // trim hyphens
-
-// Helper to wrap service items
-const serviceLink = (item: string, category: string) => ({
-  label: item,
-  href: `/${category}/${slugify(item)}`,
-});
+// ============================================================================
+// CROWN SECURITY STACKED SERVICES DATA
+// ============================================================================
 
 export const stackedBlocks = [
   // ============================================================
-  // BRANDING
+  // 01 - CLIENT INQUIRY
   // ============================================================
   {
-    title: "Branding",
+    number: "01",
+    title: "Client Inquiry",
+    className: "goldBlock",
+    heading: "Client Inquiry",
+    description:
+      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
+
+    buttonText: "Start Your Inquiry",
+    buttonHref: "/contact",
+    moreHref: "/contact",
+
+    bulletPoints: [
+      "Initial Consultation",
+      "Requirements Analysis",
+      "Site Assessment",
+      "Risk Evaluation",
+      "Operational Review",
+      "Scope Definition"
+    ],
+
+    image: "/images/services/client-inquiry.jpg",
+  },
+
+  // ============================================================
+  // 02 - SITE SURVEY
+  // ============================================================
+  {
+    number: "02",
+    title: "Site Survey",
+    className: "darkBlock",
+    heading: "Site Survey",
+    description:
+      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
+
+    buttonText: "Schedule Site Survey",
+    buttonHref: "/services/site-survey",
+    moreHref: "/services/site-survey",
+
+    bulletPoints: [
+      "Physical Inspection",
+      "Layout Analysis",
+      "Entry Point Review",
+      "Vulnerability Mapping",
+      "Traffic Flow Assessment",
+      "Documentation"
+    ],
+
+    image: "/images/services/site-survey.jpg",
+  },
+
+  // ============================================================
+  // 03 - PROPOSAL & QUOTATION
+  // ============================================================
+  {
+    number: "03",
+    title: "Proposal & Quotation",
     className: "redBlock",
-    heading: "Branding",
+    heading: "Proposal & Quotation",
     description:
-      "Your brand is the foundation of every connection you make. With Wunderkint, visuals evolve into brand identities that inspire trust, spark recognition, and leave a lasting impact. From strategy to design, every element of branding lives here, under one roof, shaped with vision and creativity.",
+      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
 
-    buttonText: "Build Your Brand Identity",
-    buttonHref: "/category/branding",
-    moreHref: "/category/branding",
+    buttonText: "Request Proposal",
+    buttonHref: "/services/proposal",
+    moreHref: "/services/proposal",
 
     bulletPoints: [
-      "Logo Design",
-      "Graphic Design",
-      "Brochure Design",
-      "Event management",
-      "Menu Design",
-      "Logo Animation",
-      "Social Media Design",
-      "Social Media Management",
-      "Rebranding",
-      "Brand Style Guides",
-      "Cover Letters",
-      "Poster Design",
-      "Flyer Design",
-      "Book Covers",
-      "Catalog Design",
-      "Pattern Design",
-      "Book Design",
-      "3D Design",
-      "Infographic Design",
-      "Landscape Design",
-      "Print Design",
-      "App Design",
-      "Visual Design",
-      "Icon Design",
-      "Campaign Planning",
-      "Brand Launch",
-      "Traditional Advertising",
-      "Store Launches",
-      "Out of Home advertising (OOH)",
-      "Offline Activations",
-      "Online Amplifications",
-    ].map((i) => serviceLink(i, "branding")),
+      "Customized Plan",
+      "Cost Estimation",
+      "Service Timeline",
+      "Resource Allocation",
+      "Implementation Strategy",
+      "ROI Analysis"
+    ],
 
-    image: "https://cdn.wunderkint.com/images/home/brand_identity.webp",
+    image: "/images/services/proposal.jpg",
   },
 
   // ============================================================
-  // CONTENT
+  // 04 - AGREEMENT & DOCUMENTATION
   // ============================================================
   {
-    title: "Content",
-    className: "yellowBlock",
-    heading: "Content",
+    number: "04",
+    title: "Agreement & Documentation",
+    className: "darkBlock",
+    heading: "Agreement & Documentation",
     description:
-      "Content is the heartbeat of connection. Wunderkint crafts narratives that resonate deeply, inspire action, and amplify your brand’s voice across every platform. From compelling storytelling to innovative formats, our content solutions are designed to leave a lasting imprint on your audience.",
+      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
 
-    buttonText: "Create Impactful Content",
-    buttonHref: "/category/content",
-    moreHref: "/category/content",
+    buttonText: "Review Terms",
+    buttonHref: "/services/agreement",
+    moreHref: "/services/agreement",
 
     bulletPoints: [
-      "Video Editing",
-      "Content Writing",
-      "Motion Graphics",
-      "Video Production",
-      "Film Production",
-      "UGC Videos",
-      "CGI Animation",
-      "Product Photography",
-      "VFX Production",
-      "Animation Production",
-      "Transcription",
-      "Creative Writing",
-      "Storyboards",
-      "Ad Copy",
-      "Content Strategy",
-      "UX Writing",
-      "Scriptwriting",
-      "Podcast Writing",
-      "Social Media Copywriting",
-      "Sales Copy",
-      "Podcast Production",
-      "Proofreading & Editing",
-      "Product Videos",
-      "UGC Ads",
-      "Social Media Videos",
-      "3D Product Animation",
-      "Music Promotion",
-      "Art & Illustration",
-      "3D Video Production",
-      "4D Video Production",
-    ].map((i) => serviceLink(i, "content")),
+      "Contract Finalization",
+      "Terms & Conditions",
+      "SLA Definition",
+      "Insurance Coverage",
+      "Compliance Verification",
+      "Legal Review"
+    ],
 
-    image: "https://cdn.wunderkint.com/images/home/content_marketing.webp",
+    image: "/images/services/agreement.jpg",
   },
 
   // ============================================================
-  // TECH
+  // 05 - RECRUITMENT & TRAINING
   // ============================================================
   {
-    title: "Tech",
-    className: "tealBlock",
-    heading: "Tech",
+    number: "05",
+    title: "Recruitment & Training",
+    className: "goldBlock",
+    heading: "Recruitment & Training",
     description:
-      "Technology is more than tools; it is the engine of transformation. Through Wunderkint, innovation becomes seamless digital solutions that are adaptive and future-ready. From web to product experiences, every tech-driven solution is built to empower brands and enhance human connection.",
+      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
 
-    buttonText: "Innovate With Tech",
-    buttonHref: "/category/tech",
-    moreHref: "/category/tech",
+    buttonText: "Learn More",
+    buttonHref: "/services/recruitment",
+    moreHref: "/services/recruitment",
 
     bulletPoints: [
-      "Website Design",
-      "Website Development",
-      "UI/UX Design",
-      "Mobile App Development",
-      "Web Applications",
-      "Software Development",
-      "Shopify Website",
-      "Game Development",
-      "Marketing Automation",
-      "Chatbot Development",
-      "WordPress Development",
-      "Webflow Development",
-      "Android App Development",
-      "Data Processing",
-      "Dropshipping Websites",
-      "Landing Page Design",
-      "Business Websites",
-      "Tech Consulting",
-      "iOS App Development",
-      "Custom Websites",
-      "Email Automations",
-      "E-Commerce Development",
-      "Cross-platform Development",
-    ].map((i) => serviceLink(i, "tech")),
+      "Personnel Selection",
+      "Background Verification",
+      "Security Training",
+      "Skill Development",
+      "Certification Programs",
+      "Quality Assurance"
+    ],
 
-    image: "https://cdn.wunderkint.com/images/home/tech.webp",
+    image: "/images/services/recruitment.jpg",
   },
 
   // ============================================================
-  // MARKETING
+  // 06 - DEPLOYMENT & INDUCTION
   // ============================================================
   {
-    title: "Marketing",
-    className: "blueBlock",
-    heading: "Marketing",
+    number: "06",
+    title: "Deployment & Induction",
+    className: "darkBlock",
+    heading: "Deployment & Induction",
     description:
-      "Your brand’s story deserves to be seen, heard, and remembered. Wunderkint develops marketing strategies that go beyond campaigns. They spark conversations, drive engagement, and create movements. Every idea is fueled by creativity and executed with precision, ensuring your brand thrives in a competitive world.",
+      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
 
-    buttonText: "Elevate Your Marketing",
-    buttonHref: "/category/marketing",
-    moreHref: "/category/marketing",
+    buttonText: "Begin Deployment",
+    buttonHref: "/services/deployment",
+    moreHref: "/services/deployment",
 
     bulletPoints: [
-      "Affiliate Marketing",
-      "Social Media Marketing",
-      "Email Marketing",
-      "Search Engine Optimization",
-      "Influencer Marketing",
-      "Lead Generation",
-      "Public Relations",
-      "Display Advertising",
-      "Programmatic Ad",
-      "Media Planning & Buying",
-      "Project Management",
-      "Marketing Strategy",
-      "Product Management",
-      "Press Releases",
-      "Facebook Ads Campaigns",
-      "Instagram Marketing",
-      "Video Marketing",
-      "Paid Social Media",
-      "Intellectual Property Management",
-      "Shopify Marketing",
-      "Search Engine Marketing",
-      "Event Marketing",
-      "E-Commerce Marketing",
-    ].map((i) => serviceLink(i, "marketing")),
+      "On-Site Deployment",
+      "Site Induction",
+      "Protocol Training",
+      "System Familiarization",
+      "Emergency Procedures",
+      "Supervision Setup"
+    ],
 
-    image: "https://cdn.wunderkint.com/images/home/marketing.webp",
+    image: "/images/services/deployment.jpg",
   },
 
   // ============================================================
-  // AI
+  // 07 - MONITORING & REPORTING
   // ============================================================
   {
-    title: "AI",
-    className: "purpleBlock",
-    heading: "AI",
+    number: "07",
+    title: "Monitoring & Reporting",
+    className: "redBlock",
+    heading: "Monitoring & Reporting",
     description:
-      "Artificial Intelligence is where imagination meets intelligence. With Wunderkint’s AI-driven solutions, brands can engage, create, and grow in transformative ways. From smarter insights to automated creativity, our AI services open new dimensions of possibility for visionary brands.",
+      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
 
-    buttonText: "Unlock AI Potential",
-    buttonHref: "/category/ai",
-    moreHref: "/category/ai",
+    buttonText: "View Reports",
+    buttonHref: "/services/monitoring",
+    moreHref: "/services/monitoring",
 
     bulletPoints: [
-      "AI Chatbot",
-      "AI Video Generation",
-      "AI for Businesses",
-      "AI Audio Generation",
-      "AI Content",
-      "AI Consulting",
-      "AI Product Photography",
-      "AI Integrations",
-      "AI Music Videos",
-      "AI Marketing",
-      "AI GIFs",
-      "AI Podcasts",
-      "AI Artists",
-      "AI Video Avatars",
-      "AI Video Art",
-      "AI-based CGI Ads",
-      "AI Product Lookbooks",
-      "AI-based Key Visuals",
-      "AI Clone Videos",
-    ].map((i) => serviceLink(i, "ai")),
+      "24/7 Monitoring",
+      "Daily Reports",
+      "Incident Logging",
+      "Performance Metrics",
+      "Real-time Alerts",
+      "Analytics Dashboard"
+    ],
 
-    image: "https://cdn.wunderkint.com/images/home/ai.webp",
+    image: "/images/services/monitoring.jpg",
+  },
+
+  // ============================================================
+  // 08 - AUDITS & CONTINUOUS IMPROVEMENT
+  // ============================================================
+  {
+    number: "08",
+    title: "Audits & Continuous Improvement",
+    className: "darkBlock",
+    heading: "Audits & Continuous Improvement",
+    description:
+      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
+
+    buttonText: "Schedule Audit",
+    buttonHref: "/services/audits",
+    moreHref: "/services/audits",
+
+    bulletPoints: [
+      "Regular Audits",
+      "Performance Review",
+      "Quality Control",
+      "Compliance Checks",
+      "Process Optimization",
+      "Feedback Integration"
+    ],
+
+    image: "/images/services/audits.jpg",
+  },
+
+  // ============================================================
+  // 09 - TECHNOLOGY & SUPERVISION
+  // ============================================================
+  {
+    number: "09",
+    title: "Technology & Supervision",
+    className: "goldBlock",
+    heading: "Technology & Supervision",
+    description:
+      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
+
+    buttonText: "Explore Tech Solutions",
+    buttonHref: "/services/technology",
+    moreHref: "/services/technology",
+
+    bulletPoints: [
+      "Advanced Surveillance",
+      "Access Control Systems",
+      "Mobile Integration",
+      "AI Analytics",
+      "Real-time Supervision",
+      "Technical Support"
+    ],
+
+    image: "/images/services/technology.jpg",
   },
 ];
