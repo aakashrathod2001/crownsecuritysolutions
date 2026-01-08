@@ -25,10 +25,10 @@ const BlockContent: React.FC<BlockContentProps> = ({
     <div
       className={`${styles.mainContainer} ${variant ? styles[variant] : ""}`}
     >
-      {number && <div className={`${styles.stepNumber} ${numberPositionClass}`}>{number}</div>}
       <div className="pageLayout">
         <div className="full-width-container">
           <div className={styles.container}>
+            {number && <div className={`${styles.stepNumber} ${numberPositionClass}`}>{number}</div>}
             <div className={styles.left}>
               <h3 className={styles.heading}>{heading}</h3>
               <p className={styles.description}>{description}</p>

@@ -5,18 +5,19 @@
   align-items: center;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .stepNumber {
   position: absolute;
   bottom: 28%;
-  z-index: 0;
+  transform: translateY(-50%);
+  z-index: 1;
   pointer-events: none;
   color: rgba(255, 255, 255, 0.15);
-  text-align: right;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.15);
-  font-family: 'Abel';
+  font-family: "Abel";
   font-size: 250px;
   font-style: normal;
   font-weight: 400;
@@ -24,11 +25,11 @@
 }
 
 .numberRight {
-  right: clamp(2rem, -2.769rem + 18.462vw, 20rem);
+  right: 0;
 }
 
 .numberLeft {
-  left: clamp(2rem, -2.769rem + 18.462vw, 20rem);
+  left: 0;
 }
 
 .container {
@@ -40,6 +41,7 @@
   gap: clamp(1rem, -1.077rem + 9.231vw, 10rem);
   height: fit-content;
   padding-block: clamp(5rem, 4.423rem + 2.564vw, 7.5rem);
+  overflow: hidden;
 }
 
 .middle,
@@ -70,22 +72,24 @@
 
 .heading {
   display: flex;
-  flex: 0.5;
-  color: inherit;
-  font-size: clamp(1.5rem, 1.154rem + 1.538vw, 3rem);
-  font-weight: 600;
-  line-height: clamp(1.8rem, 1.385rem + 1.846vw, 3.6rem);
-  font-family: "Inter", sans-serif;
+  flex: 1;
+  color: #fff;
+  font-family: "Helvetica";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 56px;
 }
 
 .description {
   display: flex;
-  flex: 1.5;
-  color: inherit;
-  font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
+  flex: 1;
+  color: #fff;
+  font-family: "Helvetica";
+  font-size: 24px;
+  font-style: normal;
   font-weight: 400;
-  line-height: clamp(1rem, 0.828rem + 0.763vw, 1.744rem);
-  font-family: "Inter", sans-serif;
+  line-height: normal;
 }
 
 .servicesBlockButton {
@@ -162,7 +166,7 @@
 
 /* Crown Security Block background styles */
 .goldBlock {
-  background-color: #c7a034; /* Crown Security gold */
+  background-color: #C7A034; /* Crown Security gold */
   color: #fff;
 
   &::before {
@@ -212,7 +216,7 @@
 }
 
 .darkBlock {
-  background-color: #2b2b2b; /* Dark charcoal */
+  background-color: #252929; /* Dark charcoal */
   color: #fff;
 
   &::before {
@@ -222,7 +226,7 @@
 }
 
 .redBlock {
-  background-color: #ff3333; /* Bright red */
+  background-color: #F6292F; /* Bright red */
   color: #fff;
 
   &::before {
