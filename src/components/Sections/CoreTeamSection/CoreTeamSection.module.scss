@@ -1,0 +1,105 @@
+.coreTeamSection {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+}
+
+.sectionHeader {
+  text-align: center;
+  width: 100%;
+}
+
+.teamContent {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.teamSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+// Team Card
+.teamCard {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.coreCard {
+  width: 557px;
+}
+
+.otherCard {
+  width: 412px;
+}
+
+.cardImage {
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.coreCard .cardImage {
+  height: 557px;
+}
+
+.otherCard .cardImage {
+  height: 412px;
+}
+
+.cardContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardName {
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.coreCard .cardName {
+  font-size: 28px;
+}
+
+.otherCard .cardName {
+  font-size: 24px;
+}
+
+.cardPosition {
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+  color: #4a4a4a;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.coreCard .cardPosition {
+  font-size: 22px;
+}
+
+.otherCard .cardPosition {
+  font-size: 18px;
+}
