@@ -4,6 +4,12 @@
   width: 100%;
 }
 
+.sectionContent {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #999;
+}
+
 .statsContainer {
   display: flex;
   flex-direction: column;

@@ -15,6 +15,14 @@ export const homemissionCTA: CTAContent = {
 
 };
 
+export const aboutmissionCTA: CTAContent = {
+  label: "Our Mission",
+  title: "To serve you with ease and convenience by providing protection and security through elite, trained guards, at any hour of the day or night.",
+  textColor: "#ffffff",
+  showStripes: false,
+
+};
+
 // Example: Vision CTA - Can be used on other pages
 export const homevisionCTA: CTAContent = {
   label: "Our Vision",

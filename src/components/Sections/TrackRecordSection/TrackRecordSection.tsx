@@ -77,54 +77,55 @@ const TrackRecordSection: React.FC = () => {
     <section ref={sectionRef} className={styles.trackRecordSection}>
       <div className="pageLayout">
         <div className="full-width-container">
-            {/* Header */}
-            <SectionHeader
-              label="Our track record"
-              title="High-performing people across the continent"
-              highlightedWords={["people"]}
-            />
+            <hr className={styles.sectionContent}></hr>
+          {/* Header */}
+          <SectionHeader
+            label="Our track record"
+            title="High-performing people across the continent"
+            highlightedWords={["people"]}
+          />
 
-            {/* Statistics Grid */}
-            <div className={styles.statsContainer}>
-              <div className={styles.statsGrid}>
-                {statistics.map((stat, index) => (
-                  <div key={index} className={styles.statCard}>
-                    <div className={styles.statContent}>
-                      <span className={styles.statNumber}>
-                        {hasAnimated ? formatNumber(counters[index], stat.number) : '0'}
-                      </span>
-                      <span className={styles.statLabel}>{stat.label}</span>
-                    </div>
+          {/* Statistics Grid */}
+          <div className={styles.statsContainer}>
+            <div className={styles.statsGrid}>
+              {statistics.map((stat, index) => (
+                <div key={index} className={styles.statCard}>
+                  <div className={styles.statContent}>
+                    <span className={styles.statNumber}>
+                      {hasAnimated ? formatNumber(counters[index], stat.number) : '0'}
+                    </span>
+                    <span className={styles.statLabel}>{stat.label}</span>
                   </div>
-                ))}
-
-                {/* CTA Section */}
-                <div className={styles.ctaCard}>
-                  <h3 className={styles.ctaTitle}>
-                    Discover why we are the<br />
-                    best at what we do
-                  </h3>
-                  <a href="#" className={styles.ctaLink}>
-                    <span>Learn more</span>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 3L13 8L8 13M13 8H3"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </a>
                 </div>
+              ))}
+
+              {/* CTA Section */}
+              <div className={styles.ctaCard}>
+                <h3 className={styles.ctaTitle}>
+                  Discover why we are the<br />
+                  best at what we do
+                </h3>
+                <a href="#" className={styles.ctaLink}>
+                  <span>Learn more</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 3L13 8L8 13M13 8H3"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
