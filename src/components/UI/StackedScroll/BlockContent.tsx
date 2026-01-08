@@ -5,7 +5,6 @@ import styles from "./BlockContent.module.scss";
 
 type BlockContentProps = {
   number?: string;
-  title: string;
   heading: string;
   description: string;
   variant?: string;
@@ -14,7 +13,6 @@ type BlockContentProps = {
 
 const BlockContent: React.FC<BlockContentProps> = ({
   number,
-  title,
   heading,
   description,
   variant,

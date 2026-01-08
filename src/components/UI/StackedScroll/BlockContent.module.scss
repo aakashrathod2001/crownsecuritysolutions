@@ -44,17 +44,7 @@
   overflow: hidden;
 }
 
-.middle,
-.right {
-  flex: 1;
-}
 
-.endContainer {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
 .left {
   flex: 1;
@@ -65,10 +55,7 @@
   gap: clamp(1rem, 0.769rem + 1.026vw, 2rem);
 }
 
-.middle {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .heading {
   display: flex;
@@ -92,77 +79,7 @@
   line-height: normal;
 }
 
-.servicesBlockButton {
-  color: #fff;
-  background: #222;
-  width: max-content;
 
-  &:hover {
-    background: #fff;
-    color: #1b1b1b;
-  }
-}
-
-.bulletList {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  color: inherit;
-  font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
-  font-weight: 400;
-  line-height: clamp(1rem, 0.828rem + 0.763vw, 1.744rem);
-  gap: clamp(0.25rem, 0.192rem + 0.256vw, 0.5rem);
-
-  li {
-    display: flex;
-    flex-direction: row;
-    gap: clamp(0.25rem, 0.192rem + 0.256vw, 0.5rem);
-    position: relative;
-
-    &::before {
-      content: "➜";
-      font-size: inherit;
-      font-weight: inherit;
-      color: inherit;
-    }
-
-    .text {
-      display: inline-block;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    &:hover .text {
-      font-weight: 600;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      cursor: pointer;
-    }
-  }
-}
-
-.right {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.rightImage {
-  width: clamp(9.25rem, 5.788rem + 15.385vw, 24.25rem);
-  height: clamp(9.25rem, 5.788rem + 15.385vw, 24.25rem);
-  aspect-ratio: 1 / 1;
-  border-radius: 8px;
-}
-
-/* Special button style only for redBlock variant */
-.whiteOnRed {
-  background-color: #fff;
-  color: #1b1b1b;
-
-  &:hover {
-    background-color: #1b1b1b;
-    color: #fff;
-  }
-}
 
 /* Crown Security Block background styles */
 .goldBlock {
@@ -175,45 +92,7 @@
   }
 }
 
-.blueBlock {
-  background-color: #1e40af; /* Professional blue */
-  color: #fff;
 
-  &::before {
-    background-image: url("/images/services/blue-bg.jpg");
-    opacity: 0.1;
-  }
-}
-
-.tealBlock {
-  background-color: #0f766e; /* Professional teal */
-  color: #fff;
-
-  &::before {
-    background-image: url("/images/services/teal-bg.jpg");
-    opacity: 0.1;
-  }
-}
-
-.greenBlock {
-  background-color: #166534; /* Professional green */
-  color: #fff;
-
-  &::before {
-    background-image: url("/images/services/green-bg.jpg");
-    opacity: 0.1;
-  }
-}
-
-.purpleBlock {
-  background-color: #6b21a8; /* Professional purple */
-  color: #fff;
-
-  &::before {
-    background-image: url("/images/services/purple-bg.jpg");
-    opacity: 0.1;
-  }
-}
 
 .darkBlock {
   background-color: #252929; /* Dark charcoal */
@@ -235,62 +114,10 @@
   }
 }
 
-/* 2-column layout adjustments */
-.twoColumn {
-  .container {
-    gap: clamp(2rem, 1rem + 4vw, 6rem); // Wider gap for 2-column
-  }
-
-  .left {
-    flex: 0.6; // Give more space to content in 2-column
-  }
-
-  .right {
-    flex: 0.4; // Image takes less space in 2-column
-    justify-content: flex-end;
-    align-items: center;
-
-    @media (max-width: 767px) {
-      justify-content: flex-start;
-    }
-  }
-
-  .rightImage {
-    width: clamp(12rem, 8rem + 18vw, 28rem);
-    height: clamp(12rem, 8rem + 18vw, 28rem);
-
-    @media (max-width: 599px) {
-      width: 100%;
-      height: auto;
-    }
-  }
-}
-
-/* The 11th link row WITHOUT any bullet/arrow */
-.moreItem {
-  padding-left: 0;
-}
-.moreItem::before {
-  content: none !important;
-}
-
-/* Style for the "Know More Services" link */
-.moreLink {
-  font-weight: 600;
-  text-decoration: underline;
-  cursor: pointer;
-  color: inherit;
-  border-bottom: 1px solid transparent;
-}
-
 @media (min-width: 360px) and (max-width: 599px) {
   .container {
     flex-direction: column;
     gap: 2rem;
-  }
-
-  .twoColumn .container {
-    gap: 3rem;
   }
 }
 
@@ -299,16 +126,5 @@
     flex-direction: column;
     gap: 2.5rem;
   }
-
-  .rightImage {
-    width: clamp(12.25rem, 9.481rem + 12.308vw, 24.25rem);
-    height: clamp(12.25rem, 9.481rem + 12.308vw, 24.25rem);
-  }
-
-  .twoColumn {
-    .rightImage {
-      width: clamp(16rem, 12rem + 15vw, 30rem);
-      height: clamp(16rem, 12rem + 15vw, 30rem);
-    }
-  }
 }
+
