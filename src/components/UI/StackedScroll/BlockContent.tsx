@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { ReactNode } from "react";
 import styles from "./BlockContent.module.scss";
 
 type BlockContentProps = {

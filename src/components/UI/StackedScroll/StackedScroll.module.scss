@@ -26,3 +26,25 @@
   }
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: clamp(2rem, 1.019rem + 4.359vw, 6.25rem);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.SectionHeader {
+  max-width: 1280px;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+  position: relative;
+}
+
