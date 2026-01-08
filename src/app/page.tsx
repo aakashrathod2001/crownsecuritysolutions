@@ -1,7 +1,7 @@
 // app/page.tsx - Minimal Home Page
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
 import AboutSection from '@/components/Sections/AboutSection/AboutSection';
-import TrackRecordSection from '@/components/Sections/TrackRecordSection/TrackRecordSection';
+import StatsValueSection from '@/components/Sections/StatsValueSection/StatsValueSection';
 import SpecializedServicesSection from '@/components/Sections/SpecializedServicesSection/SpecializedServicesSection';
 import { homepageHero } from '@/data/heroSections';
 import CTASection from '@/components/Sections/CTASection/CTASection';
@@ -18,7 +18,7 @@ export default function HomePage() {
       <HeroSection {...homepageHero} />
       <div className="bodySectionLayout">
         <AboutSection showImage={false} variant="home" />
-        <TrackRecordSection />
+        <StatsValueSection />
         <CTASection {...homemissionCTA} />
         <SpecializedServicesSection />
         <CTASection {...homevisionCTA} />

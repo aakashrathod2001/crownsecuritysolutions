@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import SectionHeader from '@/components/UI/SectionHeader/SectionHeader';
-import styles from './TrackRecordSection.module.scss';
+import styles from './StatsValueSection.module.scss';
 
-const TrackRecordSection: React.FC = () => {
+const StatsValueSection: React.FC = () => {
   const [counters, setCounters] = useState<number[]>([0, 0, 0, 0, 0]);
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -74,7 +74,7 @@ const TrackRecordSection: React.FC = () => {
   };
 
   return (
-    <section ref={sectionRef} className={styles.trackRecordSection}>
+    <section ref={sectionRef} className={styles.StatsValueSection}>
       <div className="pageLayout">
         <div className="full-width-container">
             <hr className={styles.sectionContent}></hr>
@@ -132,4 +132,4 @@ const TrackRecordSection: React.FC = () => {
   );
 };
 
-export default TrackRecordSection;
+export default StatsValueSection;
