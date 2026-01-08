@@ -10,7 +10,7 @@ import LegacySection from '@/components/Sections/LegacySection/LegacySection';
 import CoreValues from '@/components/Sections/CoreValuesSection/CoreValuesSection';
 import BrandsSlider from '@/components/Sections/BrandsSlider/BrandsSlider';
 import Testimonials from '@/components/Sections/Testimonials/Testimonials';
-import StackedScroll from '@/components/UI/StackedScroll/StackedScroll';
+import ProcessSection from '@/components/Sections/ProcessSection/ProcessSection';
 
 export default function HomePage() {
   return (
@@ -26,10 +26,12 @@ export default function HomePage() {
       <LegacySection />
       <div className="bodySectionLayout">
         <CoreValues />
-        <BrandsSlider />
+        <BrandsSlider />;
+      </div>
+      <ProcessSection />
+      <div className="bodySectionLayout">
         <Testimonials />;
       </div>
-      <StackedScroll />
     </>
   );
 }
