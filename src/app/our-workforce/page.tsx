@@ -27,7 +27,7 @@ export default function WorkforcePage() {
           imageAlt={QUALIFICATION_STANDARDS_DATA.imageAlt}
         />
         <WorkforceStructureSection columns={WORKFORCE_STRUCTURE_DATA.columns} />
-        <StatsValueSection />
+        <StatsValueSection />;
       </div>
     </>
   );
