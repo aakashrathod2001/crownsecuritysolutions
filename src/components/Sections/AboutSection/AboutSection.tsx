@@ -2,18 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import SectionHeader from '@/components/UI/SectionHeader/SectionHeader';
 import styles from './AboutSection.module.scss';
-import { ABOUT_DATA } from '@/data/about';
+import { SectionWithImageProps } from '@/types/section';
 
-interface AboutSectionProps {
-  showImage?: boolean;
-  variant?: 'home' | 'about';
-}
-
-const AboutSection: React.FC<AboutSectionProps> = ({
+const InfoSplitSection: React.FC<SectionWithImageProps> = ({
   showImage = true,
-  variant = 'about'
+  content
 }) => {
-  const content = variant === 'home' ? ABOUT_DATA.homeAboutContent : ABOUT_DATA.aboutContent;
   return (
     <section className={styles.aboutSection}>
       <div className="pageLayout">
@@ -53,4 +47,4 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   );
 };
 
-export default AboutSection;
+export default InfoSplitSection;

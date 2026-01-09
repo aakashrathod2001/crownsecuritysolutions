@@ -1,6 +1,6 @@
 // app/about/page.tsx
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
-import AboutSection from '@/components/Sections/AboutSection/AboutSection';
+import InfoSplitSection from '@/components/Sections/AboutSection/AboutSection';
 import { aboutpageHero } from '@/data/heroSections';
 import StatsValueSection from '@/components/Sections/StatsValueSection/StatsValueSection';
 import TrackRecordSection from '@/components/Sections/TrackRecordSection/TrackRecordSection';
@@ -12,13 +12,14 @@ import CoreValues from '@/components/Sections/CoreValuesSection/CoreValuesSectio
 import CoreTeamSection from '@/components/Sections/CoreTeamSection/CoreTeamSection';
 import StackedScroll from '@/components/UI/StackedScroll/StackedScroll';
 import Testimonials from '@/components/Sections/Testimonials/Testimonials';
+import { ABOUT_DATA } from '@/data/about';
 
 export default function AboutPage() {
   return (
     <>
       <HeroSection {...aboutpageHero} />
       <div className="bodySectionLayout">
-        <AboutSection showImage={true} variant="about" />
+        <InfoSplitSection showImage={true} content={ABOUT_DATA.aboutContent} />
         <StatsValueSection />;
       </div>
       <TrackRecordSection />

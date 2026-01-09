@@ -1,6 +1,6 @@
 // app/page.tsx - Minimal Home Page
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
-import AboutSection from '@/components/Sections/AboutSection/AboutSection';
+import InfoSplitSection from '@/components/Sections/AboutSection/AboutSection';
 import StatsValueSection from '@/components/Sections/StatsValueSection/StatsValueSection';
 import SpecializedServicesSection from '@/components/Sections/SpecializedServicesSection/SpecializedServicesSection';
 import { homepageHero } from '@/data/heroSections';
@@ -11,13 +11,14 @@ import CoreValues from '@/components/Sections/CoreValuesSection/CoreValuesSectio
 import BrandsSlider from '@/components/Sections/BrandsSlider/BrandsSlider';
 import Testimonials from '@/components/Sections/Testimonials/Testimonials';
 import StackedScroll from '@/components/UI/StackedScroll/StackedScroll';
+import { ABOUT_DATA } from '@/data/about';
 
 export default function HomePage() {
   return (
     <>
       <HeroSection {...homepageHero} />
       <div className="bodySectionLayout">
-        <AboutSection showImage={false} variant="home" />
+        <InfoSplitSection showImage={false} content={ABOUT_DATA.homeAboutContent} />
         <StatsValueSection />
         <CTASection {...homemissionCTA} />
         <SpecializedServicesSection />

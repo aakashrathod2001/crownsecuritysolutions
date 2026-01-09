@@ -18,8 +18,8 @@ export const navigationItems: NavItem[] = [
     href: '/our-process',
   },
   {
-    label: 'Who we serve',
-    href: '/who-we-serve',
+    label: 'Our Workforce',
+    href: '/our-workforce',
   },
   {
     label: 'Where we are',
