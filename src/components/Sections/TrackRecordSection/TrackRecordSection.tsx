@@ -43,6 +43,8 @@ const TrackRecordSection: React.FC = () => {
 
   // Responsive height per item for the stacking animation
   const ITEM_HEIGHT = 70;
+  const GAP = 32;
+  const SPACED_HEIGHT = ITEM_HEIGHT + GAP;
 
   return (
     <section
@@ -80,15 +82,15 @@ const TrackRecordSection: React.FC = () => {
                     let zIndex = index;
 
                     if (isPast) {
-                      translateY = 0;
-                      opacity = 0.3;
+                      translateY = - (activeIndex - index) * SPACED_HEIGHT;
+                      opacity = 0;
                     } else if (isCurrent) {
                       translateY = 0;
                       opacity = 1;
                       zIndex = 100 + index;
                     } else {
-                      translateY = (index - activeIndex) * ITEM_HEIGHT;
-                      opacity = 0.15;
+                      translateY = (index - activeIndex) * SPACED_HEIGHT;
+                      opacity = 0.2;
                     }
 
                     return (
