@@ -3,6 +3,7 @@ import HeroSection from '@/components/Sections/HeroSection/HeroSection';
 import AboutSection from '@/components/Sections/AboutSection/AboutSection';
 import { aboutpageHero } from '@/data/heroSections';
 import StatsValueSection from '@/components/Sections/StatsValueSection/StatsValueSection';
+import TrackRecordSection from '@/components/Sections/TrackRecordSection/TrackRecordSection';
 import { aboutmissionCTA, homevisionCTA } from '@/data/ctaSection';
 import CTASection from '@/components/Sections/CTASection/CTASection';
 import LegacySection from '@/components/Sections/LegacySection/LegacySection';
@@ -20,6 +21,7 @@ export default function AboutPage() {
         <AboutSection showImage={true} variant="about" />
         <StatsValueSection />;
       </div>
+      <TrackRecordSection />
       <CTASection {...aboutmissionCTA} />
       <LegacySection />
       <CTASection {...homevisionCTA} />
