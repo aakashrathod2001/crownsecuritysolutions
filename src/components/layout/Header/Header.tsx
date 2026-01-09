@@ -36,7 +36,7 @@ const Header: React.FC = () => {
               <li key={item.label} className={styles.navItem}>
                 <Link
                   href={item.href}
-                  className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
+                  className={`${styles.navLink} ${pathname === item.href || pathname.startsWith(item.href + '/') || (item.href !== '/' && pathname === item.href + '/') ? styles.active : ''}`}
                 >
                   {item.label}
                 </Link>

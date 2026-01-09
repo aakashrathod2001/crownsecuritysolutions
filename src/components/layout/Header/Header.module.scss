@@ -109,12 +109,14 @@
     width: 100%;
   }
 
-  &.active {
+  &.active,
+  &.active:hover {
     color: #ffffff;
     opacity: 0.8;
   }
 
-  &.active::after {
+  &.active::after,
+  &.active:hover::after {
     width: 100%;
   }
 
