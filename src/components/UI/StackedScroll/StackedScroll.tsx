@@ -16,21 +16,25 @@ type StackedBlock = {
 
 type Props = {
   blocks?: StackedBlock[];
+  showHeader?: boolean;
 };
 
 const StackedScroll: React.FC<Props> = ({
   blocks = stackedBlocks,
+  showHeader = true,
 }) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.SectionHeader}>
-        <SectionHeader
-          label=""
-          title="The Process of Crown Securities"
-          subtitle="At Crown Security Agency, we follow a transparent, step-by-step system to ensure every deployment is planned, compliant, and performance-driven, supported by digital tools, expert supervision, and real-time reporting."
-          highlightedWords={["The Process"]}
-        />
-      </div>
+      {showHeader && (
+        <div className={styles.SectionHeader}>
+          <SectionHeader
+            label=""
+            title="The Process of Crown Securities"
+            subtitle="At Crown Security Agency, we follow a transparent, step-by-step system to ensure every deployment is planned, compliant, and performance-driven, supported by digital tools, expert supervision, and real-time reporting."
+            highlightedWords={["The Process"]}
+          />
+        </div>
+      )}
       <div className={styles.container}>
         {blocks.map((block, index) => (
           <div

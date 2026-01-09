@@ -1,7 +1,6 @@
 // data/heroSections.ts
 import { HeroSectionProps } from '@/types/hero';
 
-// Homepage Hero - Only hero section currently used
 export const homepageHero: HeroSectionProps = {
   media: {
     type: 'video',
@@ -22,7 +21,7 @@ export const homepageHero: HeroSectionProps = {
     buttons: [
       {
         text: 'LEARN HOW',
-        href: '/about',
+        href: '#',
         variant: 'primary',
         iconBgColor: '#F6292F',
       },
@@ -57,7 +56,42 @@ export const aboutpageHero: HeroSectionProps = {
     buttons: [
       {
         text: 'LEARN HOW',
-        href: '/about',
+        href: '#',
+        variant: 'primary',
+        iconBgColor: '#F6292F',
+      },
+    ],
+  },
+  overlay: {
+    enabled: true,
+    color: '#252929',
+    opacity: 0.6,
+  },
+  contentPosition: 'left',
+  minHeight: '840px',
+};
+
+export const ourprocesspageHero: HeroSectionProps = {
+  media: {
+    type: 'video',
+    src: '/videos/garda-security-usa-ambient.mp4',
+    poster: '/images/our-process-hero-bg.png',
+    alt: 'Security guard at concert',
+    videoProps: {
+      autoPlay: true,
+      loop: true,
+      muted: true,
+      playsInline: true,
+    },
+  },
+  content: {
+    title: 'Our Process',
+    description:
+      "At Crown Security Agency, we follow a transparent, step-by-step system that ensures every deployment is planned, compliant, and performance-driven. Each stage is powered by digital tools, trained supervision, and measurable benchmarks to guarantee accountability and peace of mind.",
+    buttons: [
+      {
+        text: 'LEARN HOW',
+        href: '#',
         variant: 'primary',
         iconBgColor: '#F6292F',
       },
