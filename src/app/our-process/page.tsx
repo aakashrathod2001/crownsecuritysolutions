@@ -2,6 +2,7 @@
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
 import { ourprocesspageHero } from '@/data/heroSections';
 import StackedScroll from '@/components/UI/StackedScroll/StackedScroll';
+import InfiniteCarousel from '@/components/Sections/InfiniteCarousel/InfiniteCarousel';
 
 export default function AboutPage() {
   return (
@@ -10,7 +11,12 @@ export default function AboutPage() {
       {/* <div className="bodySectionLayout">
         
       </div> */}
-      <StackedScroll showHeader={false} />
+      <StackedScroll showHeader={false} />;
+      <InfiniteCarousel
+        speed={35}
+        direction="left"
+        gap={32}
+      />;
 
     </>
   );
