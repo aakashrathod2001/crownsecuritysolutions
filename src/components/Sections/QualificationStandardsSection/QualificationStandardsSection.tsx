@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Button, { ArrowIcon } from '../../UI/Button/Button';
 import styles from './QualificationStandardsSection.module.scss';
 
 interface QualificationStandardsSectionProps {
@@ -51,18 +52,14 @@ const QualificationStandardsSection: React.FC<QualificationStandardsSectionProps
 
                                 <p className={styles.description}>{description}</p>
 
-                                <button
-                                    className={styles.applyButton}
+                                <Button
+                                    text={buttonText}
                                     onClick={onButtonClick}
-                                    type="button"
-                                >
-                                    <span className={styles.buttonIcon} aria-hidden="true">
-                                        <svg width="14" height="14" viewBox="0 0 12 12" fill="none">
-                                            <path d="M1 6H11M6 1L11 6L6 11" stroke="currentColor" strokeWidth="1.5" />
-                                        </svg>
-                                    </span>
-                                    <span className={styles.buttonText}>{buttonText}</span>
-                                </button>
+                                    variant="primary"
+                                    iconBgColor="#F6292F"
+                                    textColor="#F6292F"
+                                    icon={<ArrowIcon color="#FFFFFF" />}
+                                />
                             </div>
                         </div>
                     </div>
