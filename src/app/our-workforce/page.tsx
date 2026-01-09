@@ -2,9 +2,14 @@
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
 import InfoSplitSection from '@/components/Sections/AboutSection/AboutSection';
 import QualificationStandardsSection from '@/components/Sections/QualificationStandardsSection/QualificationStandardsSection';
+import WorkforceStructureSection from '@/components/Sections/WorkforceStructureSection/WorkforceStructureSection';
 import { ourworkforcepageHero } from '@/data/heroSections';
 import StatsValueSection from '@/components/Sections/StatsValueSection/StatsValueSection';
-import { WORKFORCE_DATA, QUALIFICATION_STANDARDS_DATA } from '@/data/workforce';
+import {
+  WORKFORCE_DATA,
+  QUALIFICATION_STANDARDS_DATA,
+  WORKFORCE_STRUCTURE_DATA
+} from '@/data/workforce';
 import styles from './page.module.scss';
 
 export default function WorkforcePage() {
@@ -21,8 +26,8 @@ export default function WorkforcePage() {
           imageSrc={QUALIFICATION_STANDARDS_DATA.imageSrc}
           imageAlt={QUALIFICATION_STANDARDS_DATA.imageAlt}
         />
-        <StatsValueSection />;
-
+        <WorkforceStructureSection columns={WORKFORCE_STRUCTURE_DATA.columns} />
+        <StatsValueSection />
       </div>
     </>
   );

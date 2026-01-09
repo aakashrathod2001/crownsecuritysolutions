@@ -1,0 +1,50 @@
+.structureSection {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+}
+
+.sectionContent {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #999;
+}
+
+.container {
+  width: 100%;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: clamp(2rem, 1.019rem + 4.359vw, 6.25rem);
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.title {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 64px;
+}
+
+.description {
+  color: #000;
+  white-space: pre-line;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px;
+}
