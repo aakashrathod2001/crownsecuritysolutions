@@ -16,8 +16,12 @@ import SectionHeader from '@/components/UI/SectionHeader/SectionHeader';
 const TrackRecordSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Set mobile state on client after hydration
+    setIsMobile(window.innerWidth < 768);
+
     const handleScroll = () => {
       if (!containerRef.current) return;
 
@@ -42,9 +46,8 @@ const TrackRecordSection: React.FC = () => {
   }, []);
 
   // Responsive height per item for the stacking animation
-  const ITEM_HEIGHT = 70;
-  const GAP = 32;
-  const SPACED_HEIGHT = ITEM_HEIGHT + GAP;
+  const ITEM_HEIGHT = isMobile ? 60 : 100;
+  const SPACED_HEIGHT = ITEM_HEIGHT;
 
   return (
     <section
