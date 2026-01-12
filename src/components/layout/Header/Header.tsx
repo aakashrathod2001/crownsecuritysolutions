@@ -56,7 +56,7 @@ const Header: React.FC = () => {
 
 
         <button
-          className={styles.hamburger}
+          className={`${styles.hamburger} ${isMenuOpen ? styles.hamburgerOpen : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
