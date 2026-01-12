@@ -10,12 +10,12 @@
 .container {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 16px 100px;
+  padding-inline: clamp(1.172rem, 0rem + 5.208vw, 6.25rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  min-height: 75px;
+  gap: 0.625rem;
+  min-height: clamp(3.25rem, 2.962rem + 1.282vw, 4.5rem);
 }
 
 .logo {
@@ -25,7 +25,7 @@
   z-index: 1001;
 
   img {
-    height: 45px;
+    height: clamp(2rem, 1.769rem + 1.026vw, 3rem);
     width: auto;
   }
 }
@@ -35,7 +35,7 @@
   display: flex;
   justify-content: flex-end;
   margin-left: auto;
-  gap: 3rem;
+  gap: clamp(1rem, 0.538rem + 2.051vw, 3rem);
 
   @media (max-width: 1024px) {
     position: fixed;
@@ -43,7 +43,7 @@
     left: -100%;
     width: 300px;
     height: 100vh;
-    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    background: linear-gradient(135deg, #000 0%, #1a252f 100%);
     transition: left 0.3s ease;
     padding-top: 5rem;
     margin: 0;
@@ -57,7 +57,7 @@
 .navList {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: clamp(1rem, 0.538rem + 2.051vw, 3rem);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -82,7 +82,7 @@
   color: #ffffff;
   text-decoration: none;
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 0.692rem + 0.256vw, 1rem);
   font-weight: 400;
   transition: all 0.3s ease;
   position: relative;
@@ -159,5 +159,19 @@
 
   @media (max-width: 1024px) {
     display: flex;
+  }
+
+  &.hamburgerOpen {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
   }
 }
