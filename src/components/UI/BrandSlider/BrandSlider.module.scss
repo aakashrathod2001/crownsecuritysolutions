@@ -18,9 +18,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
+  border-radius: clamp(0.75rem, 0.692rem + 0.256vw, 1rem);
   border: 1px solid #c7a034;
-  padding: 40px 64px;
+  padding: clamp(1rem, 0.654rem + 1.538vw, 2.5rem) clamp(1.5rem, 0.923rem + 2.564vw, 4rem);
 }
 
 .logoImage {

@@ -11,26 +11,37 @@
 }
 
 .servicesGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // grid-template-columns: repeat(3, 1fr);
+  --gap: clamp(1.5rem, 1.154rem + 1.538vw, 3rem);
+  gap: var(--gap);
   width: 100%;
   text-align: center;
+  justify-content: flex-start;
   overflow: hidden;
 }
 
 .serviceCard {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(0.5rem, 0.327rem + 0.769vw, 1.25rem);
+  justify-content: space-between;
   width: 100%;
-  max-width: 541px;
+  // max-width: 541px;
+  flex: 1 1 calc(100% / 3 - var(--gap));
   margin: 0 auto;
+
+  @media (max-width: 1023px) {
+    flex: 1 1 calc(100% / 2 - var(--gap));
+  }
 }
 
 .imageWrapper {
-  width: 100%;
-  height: 314px;
+  width: auto;
+  min-height: 160px;
+  aspect-ratio: 16/9;
   overflow: hidden;
   position: relative;
 
@@ -38,7 +49,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
   }
 }
 
@@ -47,49 +57,57 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  gap: 19px;
+  gap: clamp(0.5rem, 0.327rem + 0.769vw, 1.25rem);
   width: 100%;
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 0.327rem + 0.769vw, 1.25rem);
+  width: 100%;
+  justify-content: space-between;
 }
 
 .title {
   color: #000;
   font-family: "Inter", sans-serif;
-  font-size: 32px;
+  font-size: clamp(0.875rem, 0.615rem + 1.154vw, 2rem);
   font-style: normal;
   font-weight: 300;
-  line-height: 40px;
+  line-height: clamp(1.5rem, 1.269rem + 1.026vw, 2.5rem);
   margin: 0;
 }
 
 .description {
   color: #000;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: clamp(0.75rem, 0.692rem + 0.256vw, 1rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
   margin: 0;
 }
 
 .link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: clamp(0.5rem, 0.471rem + 0.128vw, 0.625rem);
   text-decoration: none;
   color: #000;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: clamp(0.75rem, 0.692rem + 0.256vw, 1rem);
   font-style: normal;
   font-weight: 600;
-  line-height: 24px;
+  line-height: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
   transition: color 0.3s ease;
   width: fit-content;
 
   &:hover {
-    color: #C7A034;
+    color: #c7a034;
 
     svg {
-      stroke: #C7A034;
+      stroke: #c7a034;
     }
   }
 }
@@ -102,9 +120,9 @@
   display: flex;
   transition: all 0.3s ease;
   transform: rotate(-45deg);
-  width: 24px;
-  height: 24px;
-  color: #F6292F;
+  width: clamp(0.875rem, 0.731rem + 0.641vw, 1.5rem);
+  height: clamp(0.875rem, 0.731rem + 0.641vw, 1.5rem);
+  color: #f6292f;
 
   path {
     stroke: currentColor; /* Use currentColor to inherit from parent */
@@ -114,7 +132,7 @@
 
 .link:hover .arrowIcon {
   transform: rotate(0deg);
-  color: #C7A034;
+  color: #c7a034;
 }
 
 /* Responsive styles */

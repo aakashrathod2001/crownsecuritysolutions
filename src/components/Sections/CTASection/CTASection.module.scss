@@ -43,7 +43,7 @@
   font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
   font-style: normal;
   font-weight: 600;
-  line-height: 24px;
+  line-height: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
   text-transform: uppercase;
 }
 

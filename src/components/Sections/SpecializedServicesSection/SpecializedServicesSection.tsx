@@ -18,11 +18,12 @@ const SpecializedServicesSection: React.FC = () => {
               title="A comprehensive service offering\nfrom Crown Securities"
               highlightedWords={["A comprehensive service offering"]}
             />
-            </div>
+          </div>
 
-            <div className={styles.servicesGrid}>
-              {SPECIALIZED_SERVICES_DATA.services.map((service, index) => (
-                <div key={index} className={styles.serviceCard}>
+          <div className={styles.servicesGrid}>
+            {SPECIALIZED_SERVICES_DATA.services.map((service, index) => (
+              <div key={index} className={styles.serviceCard}>
+                <div className={styles.contentSection}>
                   <div className={styles.imageWrapper}>
                     <Image
                       src={service.imageSrc}
@@ -32,34 +33,33 @@ const SpecializedServicesSection: React.FC = () => {
                       className={styles.image}
                     />
                   </div>
-
                   <div className={styles.content}>
                     <h3 className={styles.title}>{service.title}</h3>
                     <p className={styles.description}>{service.description}</p>
-
-                    <Link href={service.linkUrl} className={styles.link}>
-                      <span className={styles.linkText}>{service.linkText}</span>
-                      <svg
-                        width={24}
-                        height={24}
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className={styles.arrowIcon}
-                      >
-                        <path
-                          d="M5 12H19M19 12L12 5M19 12L12 19"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </Link>
                   </div>
                 </div>
-              ))}
-            </div>
+                <Link href={service.linkUrl} className={styles.link}>
+                  <span className={styles.linkText}>{service.linkText}</span>
+                  <svg
+                    width={24}
+                    height={24}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={styles.arrowIcon}
+                  >
+                    <path
+                      d="M5 12H19M19 12L12 5M19 12L12 19"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

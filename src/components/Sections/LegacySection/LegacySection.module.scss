@@ -34,7 +34,7 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 48px;
+  padding: clamp(1rem, 0.538rem + 2.051vw, 3rem);
   background: rgba(37, 41, 41, 0.6);
   -webkit-backdrop-filter: blur(8.5px);
   backdrop-filter: blur(8.5px);
@@ -44,7 +44,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   text-align: left;
   color: white;
@@ -53,19 +53,19 @@
 .title {
   color: #fff;
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
   font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
+  font-weight: 500;
+  line-height: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
 }
 
 .subtitle {
   color: #fff;
   font-family: "Inter", sans-serif;
-  font-size: 42px;
+  font-size: clamp(1.35rem, 1.056rem + 1.308vw, 2.625rem);
   font-style: normal;
-  font-weight: 600;
-  line-height: 56px;
+  font-weight: 500;
+  line-height: clamp(1.75rem, 1.346rem + 1.795vw, 3.5rem);
 }
 
 .content {
@@ -75,23 +75,23 @@
 .paragraph {
   color: #fff;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: clamp(0.75rem, 0.692rem + 0.256vw, 1rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
   white-space: pre-line;
 }
 
 .author {
   color: #fff;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: clamp(0.75rem, 0.692rem + 0.256vw, 1rem);
   font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
+  font-weight: 500;
+  line-height: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
 }
 
 .highlight {
-  font-weight: 600; /* Bold */
+  font-weight: 600;
   font-style: normal;
 }

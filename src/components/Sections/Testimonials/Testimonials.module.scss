@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 48px;
+  gap: clamp(1.25rem, 0.846rem + 1.795vw, 3rem);
 }
 
 // Video Testimonials Grid
@@ -25,17 +25,21 @@
   justify-content: center;
   width: 100%;
   align-items: center;
-  --gap: 48px;
+  --gap: clamp(1rem, 0.538rem + 2.051vw, 3rem);
   gap: var(--gap);
 }
 
 .videoThumbnail {
   position: relative;
   overflow: hidden;
-  border-radius: 2rem;
+  border-radius: clamp(1rem, 0.769rem + 1.026vw, 2rem);
   cursor: pointer;
   aspect-ratio: 9/16;
   flex: 1 1 calc(100% / 3 - var(--gap));
+
+  @media (max-width: 599px) {
+    flex: 0 0 calc(100% / 2 - var(--gap));
+  }
 
   &:hover {
     .playButton {
@@ -83,7 +87,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   background: transparent;
-  width: 88px;
+  width: clamp(1.5rem, 0.577rem + 4.103vw, 5.5rem);
   background: rgba(27, 27, 27, 0.5);
   backdrop-filter: blur(7);
   border-radius: 50%;
@@ -98,8 +102,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  --gap: 48px;
+  align-items: stretch;
+  --gap: clamp(0.5rem, -0.077rem + 2.564vw, 3rem);
   gap: var(--gap);
   width: 100%;
 }
@@ -107,42 +111,47 @@
 .card {
   display: flex;
   flex: 1 1 calc(50% - var(--gap) / 2);
-  padding: 32px 40px;
+  padding: clamp(0.875rem, 0.615rem + 1.154vw, 2rem) clamp(1rem, 0.654rem + 1.538vw, 2.5rem);
   flex-direction: column;
-  gap: 36px;
-  border-radius: 12px;
+  gap: clamp(0.5rem, 0.096rem + 1.795vw, 2.25rem);
+  border-radius: 0.75rem;
   border: 1px solid #000;
   background: #fff;
   overflow: hidden;
+
+  @media (max-width: 767px) {
+    flex: 1 1 100%;
+  }
 }
 
 .quote {
   color: #000;
   font-family: "Montserrat";
-  font-size: 20.3px;
+  font-size: clamp(0.875rem, 0.788rem + 0.385vw, 1.25rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 32px;
+  line-height: clamp(1.25rem, 1.077rem + 0.769vw, 2rem);
 }
 
 .cardFooter {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: clamp(0.75rem, 0.577rem + 0.769vw, 1.5rem);
 }
 
 .authorInfo {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: clamp(0.75rem, 0.577rem + 0.769vw, 1.5rem);
 }
 
 .companyLogo {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: clamp(1.75rem, 1.288rem + 2.051vw, 3.75rem);
+  height: clamp(1.75rem, 1.288rem + 2.051vw, 3.75rem);
   flex-shrink: 0;
 }
 
@@ -166,33 +175,35 @@
 .personName {
   color: #000;
   font-family: "Montserrat";
-  font-size: 18px;
+  font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 27px;
+  line-height: clamp(1rem, 0.841rem + 0.706vw, 1.688rem);
 }
 
 .personTitle {
-  font-weight: 600;
+  font-weight: 500;
   font-family: "Montserrat";
+  font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
 }
 
 // Star Rating
 .starRating {
   display: flex;
   gap: 0.125rem;
+  
 }
 
 .starFilled {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: clamp(0.75rem, 0.577rem + 0.769vw, 1.5rem);
+  height: clamp(0.75rem, 0.577rem + 0.769vw, 1.5rem);
   color: #ffa43c;
   fill: #ffa43c;
 }
 
 .starEmpty {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: clamp(0.75rem, 0.577rem + 0.769vw, 1.5rem);
+  height: clamp(0.75rem, 0.577rem + 0.769vw, 1.5rem);
   color: #ffa43c;
   fill: transparent;
 }

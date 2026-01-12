@@ -15,22 +15,26 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  --gap: 48px;
+  --gap: clamp(1rem, 0.538rem + 2.051vw, 3rem);
   gap: var(--gap);
 }
 
 // Value Card
 .valueCard {
   background: #f5f5f5;
-  padding: 48px;
+  padding: clamp(1rem, 0.538rem + 2.051vw, 3rem);
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: clamp(0.75rem, 0.577rem + 0.769vw, 1.5rem);
   align-items: flex-start;
-  height: 440px;
+  height: clamp(17.5rem, 15.192rem + 10.256vw, 27.5rem);
   position: relative;
   flex: 0 0 calc(100%/3 - var(--gap));
   transition: all 0.3s ease;
+
+  @media (max-width: 599px) {
+    flex: 0 0 calc(100%/2 - var(--gap));
+  }
 
   // White triangle corner on top-right
   &::before {
@@ -41,7 +45,7 @@
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 100px 100px 0;
+    border-width: 0 clamp(2.25rem, 1.327rem + 4.103vw, 6.25rem) clamp(2.25rem, 1.327rem + 4.103vw, 6.25rem) 0;
     border-color: transparent #ffffff transparent transparent;
   }
 
@@ -51,26 +55,26 @@
 }
 
 .valueCardIcon {
-  width: 80px;
-  height: 80px;
+  width: clamp(1.5rem, 0.692rem + 3.59vw, 5rem);
+  height: clamp(1.5rem, 0.692rem + 3.59vw, 5rem);
   color: #f6292f;
 }
 
 .valueCardTitle {
   color: #000;
   font-family: "Inter", sans-serif;
-  font-size: 28.297px;
+  font-size: clamp(0.875rem, 0.673rem + 0.897vw, 1.75rem);
   font-style: normal;
-  font-weight: 700;
-  line-height: 36.787px;
+  font-weight: 600;
+  line-height: clamp(1.25rem, 1.106rem + 0.641vw, 1.875rem);
 }
 
 .valueCardDescription {
   color: #333;
   font-family: "Inter", sans-serif;
-  font-size: 24px;
+  font-size: clamp(0.75rem, 0.577rem + 0.769vw, 1.5rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 30px;
+  line-height: clamp(1.25rem, 1.106rem + 0.641vw, 1.875rem);
   letter-spacing: 0.283px;
 }

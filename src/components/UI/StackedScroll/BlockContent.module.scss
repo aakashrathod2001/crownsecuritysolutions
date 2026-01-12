@@ -18,7 +18,7 @@
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.15);
   font-family: "Abel";
-  font-size: 250px;
+  font-size: clamp(7.5rem, 5.625rem + 8.333vw, 15.625rem);
   font-style: normal;
   font-weight: 400;
   line-height: 0;
@@ -40,7 +40,7 @@
   z-index: 2;
   gap: clamp(1rem, -1.077rem + 9.231vw, 10rem);
   height: fit-content;
-  padding-block: clamp(5rem, 4.423rem + 2.564vw, 7.5rem);
+  padding-block: clamp(1.5rem, 0.115rem + 6.154vw, 7.5rem);
   overflow: hidden;
 }
 
@@ -55,17 +55,16 @@
   gap: clamp(1rem, 0.769rem + 1.026vw, 2rem);
 }
 
-
-
 .heading {
   display: flex;
   flex: 1;
   color: #fff;
   font-family: "Helvetica";
-  font-size: 48px;
+  font-size: clamp(1rem, 0.538rem + 2.051vw, 3rem);
   font-style: normal;
-  font-weight: 600;
-  line-height: 56px;
+  font-weight: 500;
+  line-height: clamp(1.5rem, 1.038rem + 2.051vw, 3.5rem);
+  width: fit-content;
 }
 
 .description {
@@ -73,7 +72,7 @@
   flex: 1;
   color: #fff;
   font-family: "Helvetica";
-  font-size: 24px;
+  font-size: clamp(0.75rem, 0.577rem + 0.769vw, 1.5rem);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -117,7 +116,7 @@
   }
 }
 
-@media (min-width: 600px) and (max-width: 767px) {
+@media (min-width: 500px) and (max-width: 767px) {
   .container {
     flex-direction: column;
     gap: 2.5rem;
