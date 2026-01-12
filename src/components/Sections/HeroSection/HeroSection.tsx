@@ -13,7 +13,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   content,
   overlay = { enabled: true, color: '#000000', opacity: 0.5 },
   contentPosition = 'left',
-  minHeight = '600px',
   className = '',
 }) => {
   const overlayStyle = overlay.enabled
@@ -24,10 +23,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     : undefined;
 
   return (
-    <section
-      className={`${styles.hero} ${className}`}
-      style={{ minHeight }}
-    >
+    <section className={`${styles.hero} ${className}`}>
+
       {/* Background Media */}
       <div className={styles.mediaWrapper}>
         {media.type === 'image' ? (
@@ -58,49 +55,54 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
 
       {/* Content */}
-      <div className={styles.container}>
-        <div
-          className={`${styles.content} ${styles[`content--${contentPosition}`]
-            }`}
-        >
-          <h1
-            className={`${styles.title} ${content.titleClassName || ''}`}
-          >
-            {content.title}
-          </h1>
-          <p
-            className={`${styles.description} ${content.descriptionClassName || ''
-              }`}
-          >
-            {content.description}
-          </p>
-        </div>
-        {content.buttons && content.buttons.length > 0 && (
-          <div className={styles.buttonGroup}>
-            {content.buttons.map((button, index) => {
-              const ButtonContent = (
-                <Button
-                  key={index}
-                  text={button.text}
-                  variant={button.variant || 'primary'}
-                  iconBgColor={button.iconBgColor}
-                  onClick={button.onClick}
-                  icon={<ArrowIcon color="#FFFFFF" />}
-                />
-              );
+      <div className="pageLayout">
+        <div className="full-width-container">
+          <div className={styles.container}>
+            <div
+              className={`${styles.content} ${styles[`content--${contentPosition}`]
+                }`}
+            >
+              <h1
+                className={`${styles.title} ${content.titleClassName || ''}`}
+              >
+                {content.title}
+              </h1>
+              <p
+                className={`${styles.description} ${content.descriptionClassName || ''
+                  }`}
+              >
+                {content.description}
+              </p>
+            </div>
+            {content.buttons && content.buttons.length > 0 && (
+              <div className={styles.buttonGroup}>
+                {content.buttons.map((button, index) => {
+                  const ButtonContent = (
+                    <Button
+                      key={index}
+                      text={button.text}
+                      variant={button.variant || 'primary'}
+                      iconBgColor={button.iconBgColor}
+                      onClick={button.onClick}
+                      icon={<ArrowIcon color="#FFFFFF" />}
+                    />
+                  );
 
-              return button.href ? (
-                <Link key={index} href={button.href}>
-                  {ButtonContent}
-                </Link>
-              ) : (
-                ButtonContent
-              );
-            })}
+                  return button.href ? (
+                    <Link key={index} href={button.href}>
+                      {ButtonContent}
+                    </Link>
+                  ) : (
+                    ButtonContent
+                  );
+                })}
+              </div>
+            )}
+
           </div>
-        )}
-
+        </div>
       </div>
+      
     </section>
   );
 };

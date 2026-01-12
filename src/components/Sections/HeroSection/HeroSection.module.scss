@@ -6,7 +6,8 @@
   align-items: flex-end;
   overflow: hidden;
   height: 100vh;
-  max-height: 1008px;
+  justify-content: center;
+  height: clamp(32rem, 24.615rem + 32.821vw, 64rem);
 }
 
 .mediaWrapper {
@@ -34,27 +35,25 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 143px 100px;
-
   display: flex;
   flex-direction: column;
   gap: 48px;
 }
 
 .content {
-  max-width: 960px;
+  max-width: 60rem;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 17px;
+  gap: 1rem;
   align-self: stretch;
 }
 
 .title {
   color: #fff;
   font-family: 'Inter', sans-serif;
-  font-size: 64px;
+  font-size: clamp(2rem, 1.538rem + 2.051vw, 4rem);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -63,10 +62,10 @@
 .description {
   color: #fff;
   font-family: 'Inter', sans-serif;
-  font-size: 24px;
+  font-size: clamp(0.875rem, 0.731rem + 0.641vw, 1.5rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 33.6px;
+  line-height: clamp(1.5rem, 1.385rem + 0.513vw, 2rem);
 }
 
 .buttonGroup {
