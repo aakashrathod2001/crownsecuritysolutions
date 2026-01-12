@@ -29,19 +29,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: clamp(0.5rem, 0.385rem + 0.513vw, 1rem);
   position: relative;
   z-index: 2;
-  padding-block: 100px;
+  padding-block: clamp(2rem, 1.019rem + 4.359vw, 6.25rem);
+  color: #fff;
 }
 
 .label {
   color: #fff;
   text-align: center;
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 24px;
   text-transform: uppercase;
 }
@@ -50,16 +51,16 @@
   color: #fff;
   text-align: center;
   font-family: "Inter", sans-serif;
-  font-size: 32px;
+  font-size: clamp(1rem, 0.769rem + 1.026vw, 2rem);
   font-style: normal;
   font-weight: 300;
-  line-height: 48px;
+  line-height: clamp(1.5rem, 1.154rem + 1.538vw, 3rem);
   margin: 0;
 }
 
 .stripesWrapper {
   width: 100%;
-  height: 60px;
+  height: clamp(1.75rem, 1.288rem + 2.051vw, 3.75rem);
   overflow: hidden;
   position: relative;
   z-index: 2;
@@ -71,9 +72,9 @@
   background: repeating-linear-gradient(
     -45deg,
     #c7a034,
-    #c7a034 15px,
-    #25292900 15px,
-    #25292900 30px
+    #c7a034 clamp(0.75rem, 0.692rem + 0.256vw, 1rem),
+    #25292900 clamp(0.75rem, 0.692rem + 0.256vw, 1rem),
+    #25292900 clamp(1.25rem, 1.077rem + 0.769vw, 2rem)
   );
   //   animation: moveStripes 20s linear infinite;
 }

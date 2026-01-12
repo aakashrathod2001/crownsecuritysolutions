@@ -11,16 +11,20 @@
   --gap: clamp(2rem, 1.019rem + 4.359vw, 6.25rem);
   gap: var(--gap);
   align-self: stretch;
+  flex-wrap: wrap;
+
+  @media (max-width: 799px) {
+    flex-direction: column;
+
+  }
 }
 
 .leftColumn {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 64px;
+  gap: clamp(2rem, 1.538rem + 2.051vw, 4rem);
 }
-
-
 
 .imageWrapper {
   width: 100%;
@@ -45,9 +49,9 @@
 .paragraph {
   color: #000;
   font-family: 'Inter', sans-serif;
-  font-size: 24px;
+  font-size: clamp(0.875rem, 0.731rem + 0.641vw, 1.5rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 38px;
+  line-height: clamp(1.25rem, 1.077rem + 0.769vw, 2rem);
   white-space: pre-line;
 }

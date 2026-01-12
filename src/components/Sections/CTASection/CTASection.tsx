@@ -22,16 +22,20 @@ const CTASection: React.FC<CTASectionProps> = ({
         className={styles.overlay}
         style={{ opacity: overlayOpacity }}
       ></div>
-      
-      <div className={styles.container}>
-        <span className={styles.label} style={{ color: textColor }}>
-          {label}
-        </span>
-        <h2 className={styles.title} style={{ color: textColor }}>
-          {title}
-        </h2>
+
+      <div className="pageLayout">
+        <div className="full-width-container">
+          <div className={styles.container}>
+            <span className={styles.label} style={{ color: textColor }}>
+              {label}
+            </span>
+            <p className={styles.title} style={{ color: textColor }}>
+              {title}
+            </p>
+          </div>
+        </div>
       </div>
-      
+
       {showStripes && (
         <div className={styles.stripesWrapper}>
           <div className={styles.stripes}></div>
