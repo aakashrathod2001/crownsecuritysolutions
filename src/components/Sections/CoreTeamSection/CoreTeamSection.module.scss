@@ -56,10 +56,11 @@
 .otherCard {
   max-width: 25.75rem;
   flex: 1 1 calc(100% / 4 - var(--gap));
-  max-height: clamp(14rem, 9.154rem + 21.538vw, 35rem);
+  max-height: clamp(25rem, 22.692rem + 10.256vw, 35rem);
 
   @media (max-width: 799px) {
-    flex: 1 1 calc(100% / 2 - var(--gap));
+    // flex: 1 1 calc(100% / 2 - var(--gap));
+    flex: 1 1 100%;
   }
 
   @media (min-width: 800px) and (max-width: 1023px) {

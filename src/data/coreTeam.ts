@@ -59,7 +59,7 @@ export const coreTeamData: TeamMember[] = [
     id: "sadanand-palande",
     name: "Mr. Sadanand Palande",
     position: "Sr. Operations Manager",
-    image: "https://placehold.co/400x400.png",
+    image: "https://placehold.co/400x600.png",
     isCore: false,
   },
   {
