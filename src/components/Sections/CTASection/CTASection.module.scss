@@ -3,6 +3,9 @@
   position: relative;
   overflow: hidden;
   background-color: #252929;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .backgroundImage {

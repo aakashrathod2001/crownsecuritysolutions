@@ -13,7 +13,7 @@
 .teamContent {
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: clamp(2rem, 1.538rem + 2.051vw, 4rem);
 }
 
 .teamSection {
@@ -21,13 +21,15 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  --gap: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
+  gap: var(--gap);
 }
 
 // Team Card
 .teamCard {
   display: flex;
   flex-direction: column;
+  gap: clamp(0.75rem, 0.577rem + 0.769vw, 1.5rem);
   background: #fff;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -38,38 +40,53 @@
 }
 
 .coreCard {
-  width: 557px;
+  max-width: 34.8125rem;
+  flex: 1 1 calc(100% / 3 - var(--gap));
+  height: clamp(25rem, 19.231rem + 25.641vw, 50rem);
+
+  @media (max-width: 599px) {
+    flex: 1 1 100%;
+  }
+
+  @media (min-width: 600px) and (max-width: 1023px) {
+    flex: 0 0 calc(100% / 2 - var(--gap));
+  }
 }
 
 .otherCard {
-  width: 412px;
+  max-width: 25.75rem;
+  flex: 1 1 calc(100% / 4 - var(--gap));
+  max-height: clamp(14rem, 9.154rem + 21.538vw, 35rem);
+
+  @media (max-width: 799px) {
+    flex: 1 1 calc(100% / 2 - var(--gap));
+  }
+
+  @media (min-width: 800px) and (max-width: 1023px) {
+    flex: 0 0 calc(100% / 3 - var(--gap));
+  }
 }
 
 .cardImage {
   width: 100%;
   overflow: hidden;
+  min-height: 176px;
+  flex: 1.75;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    // object-position: center top;
   }
 }
 
-.coreCard .cardImage {
-  height: 557px;
-}
-
-.otherCard .cardImage {
-  height: 412px;
-}
-
 .cardContent {
-  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
+  height: 5.5rem;
 }
 
 .cardName {
@@ -81,11 +98,11 @@
 }
 
 .coreCard .cardName {
-  font-size: 28px;
+  font-size: clamp(1rem, 0.827rem + 0.769vw, 1.75rem);
 }
 
 .otherCard .cardName {
-  font-size: 24px;
+  font-size: clamp(0.875rem, 0.731rem + 0.641vw, 1.5rem);
 }
 
 .cardPosition {
@@ -97,9 +114,9 @@
 }
 
 .coreCard .cardPosition {
-  font-size: 22px;
+  font-size: clamp(0.875rem, 0.76rem + 0.513vw, 1.375rem);
 }
 
 .otherCard .cardPosition {
-  font-size: 18px;
+  font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
 }
