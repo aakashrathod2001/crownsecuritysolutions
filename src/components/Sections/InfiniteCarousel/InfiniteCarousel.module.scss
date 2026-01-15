@@ -26,7 +26,7 @@
 .carouselInner {
   display: flex;
   width: max-content;
-  gap: 32px;
+  gap: clamp(0.75rem, 0.462rem + 1.282vw, 2rem);
 }
 
 .carouselItem {
@@ -35,8 +35,8 @@
 
 .imageContainer {
   position: relative;
-  width: 400px;
-  height: 220px;
+  width: clamp(12.5rem, 9.615rem + 12.821vw, 25rem);
+  height: auto;
   overflow: hidden;
   transition: all 0.7s ease;
 }

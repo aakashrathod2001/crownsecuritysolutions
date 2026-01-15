@@ -8,7 +8,7 @@
 .sectionContent {
   display: block;
   width: 100%;
-  border-top: 1px solid #999;
+  border-top: 0.0625rem solid #999;
 }
 
 .container {
@@ -17,9 +17,14 @@
 
 .split {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   gap: clamp(2rem, 1.019rem + 4.359vw, 6.25rem);
+
+  @media (max-width: 699px) {
+    flex-direction: column;
+  }
 }
 
 .imageWrapper {
@@ -41,30 +46,30 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: clamp(1rem, 0.769rem + 1.026vw, 2rem);
 }
 
 .title {
   color: #000000;
-  font-family: 'Inter', sans-serif;
-  font-size: 56px;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.25rem, 0.731rem + 2.308vw, 3.5rem);
   font-style: normal;
   font-weight: 300;
-  line-height: 64px;
+  line-height: clamp(1.75rem, 1.231rem + 2.308vw, 4rem);
 }
 
 .qualifications {
-  padding-left: 22px;
+  padding-left: 1.375rem;
   list-style: disc;
 }
 
 .qualification,
 .description {
   color: #333;
-  font-family: 'Inter', sans-serif;
-  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.875rem, 0.731rem + 0.641vw, 1.5rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 38px;
-  letter-spacing: 0.24px;
+  line-height: clamp(1.25rem, 1.077rem + 0.769vw, 2rem);
+  letter-spacing: 0.015rem;
 }

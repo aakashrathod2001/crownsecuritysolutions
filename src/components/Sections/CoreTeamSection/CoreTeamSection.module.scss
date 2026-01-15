@@ -88,6 +88,10 @@
   flex-direction: column;
   gap: 0.5rem;
   height: 5.5rem;
+
+  @media (max-width: 599px) {
+    height: auto;
+  }
 }
 
 .cardName {

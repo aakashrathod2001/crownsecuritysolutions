@@ -16,7 +16,6 @@ interface InfiniteCarouselProps {
 export function InfiniteCarousel({
   speed = 40,
   direction = 'left',
-  gap = 32,
   className = '',
   containerClassName = '',
 }: InfiniteCarouselProps) {
@@ -30,9 +29,6 @@ export function InfiniteCarousel({
 
       <motion.div
         className={`${styles.carouselInner} ${className}`}
-        style={{
-          gap: `${gap}px`
-        }}
         animate={{
           x: direction === 'left' ? [0, "-50%"] : ["-50%", 0],
         }}
