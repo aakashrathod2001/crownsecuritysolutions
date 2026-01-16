@@ -140,3 +140,38 @@ export const ourworkforcepageHero: HeroSectionProps = {
   contentPosition: 'left',
   minHeight: '840px',
 };
+
+export const servicespageHero: HeroSectionProps = {
+  media: {
+    type: 'video',
+    src: '/videos/garda-security-usa-ambient.mp4',
+    poster: '/images/our-workforce-hero-bg.png',
+    alt: 'Security guard at concert',
+    videoProps: {
+      autoPlay: true,
+      loop: true,
+      muted: true,
+      playsInline: true,
+    },
+  },
+  content: {
+    title: 'Our Services',
+    description:
+      "Security isn’t standard; it’s situational. That’s why Crown Securities offers tailored protection services designed around your environment, risk profile, and operational needs.",
+    buttons: [
+      {
+        text: 'LEARN HOW',
+        href: '#',
+        variant: 'primary',
+        iconBgColor: '#F6292F',
+      },
+    ],
+  },
+  overlay: {
+    enabled: true,
+    color: '#252929',
+    opacity: 0.6,
+  },
+  contentPosition: 'left',
+  minHeight: '840px',
+};

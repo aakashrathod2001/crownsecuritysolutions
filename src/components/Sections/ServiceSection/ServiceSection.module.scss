@@ -1,0 +1,117 @@
+.serviceSection,
+.leftLayout,
+.rightLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.rightLayout {
+  .container {
+    flex-direction: row-reverse;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  flex: 1;
+  min-height: 504px;
+  width: auto;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.label {
+  color: #252929;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 150% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.title {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.descContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #333;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: 0.24px;
+}
+
+.description {
+  font-weight: 400;
+}
+
+.targetSegment strong {
+    font-weight: 600;
+}
+
+.scopeOfWork {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scopeTitle {
+  font-weight: 600;
+}
+
+.scopeList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  li {
+    padding-left: 1.5rem;
+    position: relative;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #000;
+      font-weight: 600;
+    }
+  }
+}

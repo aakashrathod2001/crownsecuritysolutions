@@ -22,8 +22,8 @@ export const navigationItems: NavItem[] = [
     href: '/our-workforce',
   },
   {
-    label: 'Where we are',
-    href: '/where-we-are',
+    label: 'Services',
+    href: '/services',
   },
   {
     label: 'Join us',
