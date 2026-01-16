@@ -4,7 +4,7 @@ import ServiceSection from '@/components/Sections/ServiceSection/ServiceSection'
 import { servicespageHero } from '@/data/heroSections';
 import { serviceData } from '@/data/serviceSectionData';
 import styles from './page.module.scss';
-
+import InfiniteCarousel from '@/components/Sections/InfiniteCarousel/InfiniteCarousel';
 
 export default function ServicesPage() {
     return (
@@ -17,8 +17,12 @@ export default function ServicesPage() {
                 <ServiceSection variant='right' service={serviceData[1]} />
                 <ServiceSection service={serviceData[0]} />
                 <ServiceSection variant='right' service={serviceData[1]} />
+                <InfiniteCarousel
+                    speed={35}
+                    direction="left"
+                    gap={32}
+                />;
             </div>
-
         </>
     );
 }
