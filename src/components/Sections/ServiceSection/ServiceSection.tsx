@@ -33,7 +33,8 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ variant = 'left', servi
               <Image
                 src={currentService.image}
                 alt={currentService.title}
-                fill
+                width={600}
+                height={600}
                 className={styles.image}
                 priority
               />
