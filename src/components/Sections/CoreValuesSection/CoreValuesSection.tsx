@@ -1,12 +1,25 @@
 'use client';
 
 import React from 'react';
-import { ValueCardProps, coreValuesData, companyInfo } from '@/data/coreValues';
+import { ValueCardProps, CoreValue, coreValuesData } from '@/data/coreValues';
 import styles from './CoreValuesSection.module.scss';
 import SectionHeader from '@/components/UI/SectionHeader/SectionHeader';
 
 // CoreValues.tsx
-const CoreValues: React.FC = () => {
+interface CoreValuesSectionProps {
+    values?: CoreValue[];
+    title?: string;
+    subtitle?: string;
+}
+
+const CoreValuesSection: React.FC<CoreValuesSectionProps> = ({
+    values,
+    title = "Core Values",
+    subtitle
+}) => {
+    // Use provided values or fallback to default core values data
+    const displayValues = values || coreValuesData;
+
     return (
         <section className={styles.coreValuesSection}>
             <div className="pageLayout">
@@ -15,13 +28,14 @@ const CoreValues: React.FC = () => {
                         {/* Header */}
                         <SectionHeader
                             label=""
-                            title="Core Values of Crown Securities"
+                            title={title}
+                            subtitle={subtitle}
                             highlightedWords={["Core Values"]}
                         />
                     </div>
 
                     <div className={styles.coreValuesGrid}>
-                        {coreValuesData.map((value) => (
+                        {displayValues.map((value) => (
                             <ValueCard key={value.id} value={value} />
                         ))}
                     </div>
@@ -46,4 +60,4 @@ const ValueCard: React.FC<ValueCardProps> = ({ value }) => {
     );
 };
 
-export default CoreValues;
+export default CoreValuesSection;

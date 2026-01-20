@@ -1,6 +1,6 @@
 // app/page.tsx - Minimal Home Page
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
-import InfoSplitSection from '@/components/Sections/AboutSection/AboutSection';
+import InfoSplitSection from '@/components/Sections/InfoSplitSection/InfoSplitSection';
 import StatsValueSection from '@/components/Sections/StatsValueSection/StatsValueSection';
 import SpecializedServicesSection from '@/components/Sections/SpecializedServicesSection/SpecializedServicesSection';
 import { homepageHero } from '@/data/heroSections';

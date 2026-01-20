@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import SectionHeader from '@/components/UI/SectionHeader/SectionHeader';
-import styles from './AboutSection.module.scss';
+import styles from './InfoSplitSection.module.scss';
 import { SectionWithImageProps } from '@/types/section';
 
 const InfoSplitSection: React.FC<SectionWithImageProps> = ({

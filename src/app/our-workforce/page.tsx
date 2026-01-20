@@ -1,6 +1,6 @@
 // app/our-workforce/page.tsx
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
-import InfoSplitSection from '@/components/Sections/AboutSection/AboutSection';
+import InfoSplitSection from '@/components/Sections/InfoSplitSection/InfoSplitSection';
 import QualificationStandardsSection from '@/components/Sections/QualificationStandardsSection/QualificationStandardsSection';
 import WorkforceStructureSection from '@/components/Sections/WorkforceStructureSection/WorkforceStructureSection';
 import { ourworkforcepageHero } from '@/data/heroSections';

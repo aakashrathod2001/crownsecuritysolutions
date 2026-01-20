@@ -1,6 +1,6 @@
 // app/about/page.tsx
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
-import InfoSplitSection from '@/components/Sections/AboutSection/AboutSection';
+import InfoSplitSection from '@/components/Sections/InfoSplitSection/InfoSplitSection';
 import { aboutpageHero } from '@/data/heroSections';
 import StatsValueSection from '@/components/Sections/StatsValueSection/StatsValueSection';
 import TrackRecordSection from '@/components/Sections/TrackRecordSection/TrackRecordSection';
