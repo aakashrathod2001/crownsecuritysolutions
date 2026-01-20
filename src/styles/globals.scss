@@ -98,7 +98,7 @@ img {
     max-width: none;
     margin: 0;
     padding-inline: clamp(1.172rem, 0rem + 5.208vw, 6.25rem);
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: clamp(2rem, 1.019rem + 4.359vw, 6.25rem);
