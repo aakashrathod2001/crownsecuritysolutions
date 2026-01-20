@@ -1,7 +1,10 @@
 // data/navigation.ts
+import { services } from './services';
+
 export interface NavItem {
   label: string;
   href: string;
+  children?: NavItem[];
 }
 
 export const navigationItems: NavItem[] = [
@@ -24,9 +27,9 @@ export const navigationItems: NavItem[] = [
   {
     label: 'Services',
     href: '/services',
-  },
-  {
-    label: 'Join us',
-    href: '/join-us',
+    children: services.map(service => ({
+      label: service.title,
+      href: `/services/${service.slug}`,
+    })),
   },
 ];

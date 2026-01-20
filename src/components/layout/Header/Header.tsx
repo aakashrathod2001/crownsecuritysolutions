@@ -11,6 +11,7 @@ import styles from './Header.module.scss';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const pathname = usePathname();
 
   const toggleMenu = () => {
@@ -34,12 +35,36 @@ const Header: React.FC = () => {
           <ul className={styles.navList}>
             {navigationItems.map((item) => (
               <li key={item.label} className={styles.navItem}>
-                <Link
-                  href={item.href}
-                  className={`${styles.navLink} ${pathname === item.href || pathname.startsWith(item.href + '/') || (item.href !== '/' && pathname === item.href + '/') ? styles.active : ''}`}
+                <div
+                  className={`${styles.navItemWrapper} ${item.children ? styles.hasDropdown : ''}`}
+                  onMouseEnter={() => item.children && setDropdownOpen(item.label)}
+                  onMouseLeave={() => setDropdownOpen(null)}
+                  onClick={() => item.children && setDropdownOpen(dropdownOpen === item.label ? null : item.label)}
                 >
-                  {item.label}
-                </Link>
+                  <Link
+                    href={item.href}
+                    className={`${styles.navLink} ${pathname === item.href || pathname.startsWith(item.href + '/') || (item.href !== '/' && pathname === item.href + '/') ? styles.active : ''} ${item.children ? styles.hasDropdown : ''}`}
+                  >
+                    {item.label}
+                    {item.children && (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.dropdownIcon} aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                    )}
+                  </Link>
+                  {item.children && (
+                    <ul className={`${styles.dropdownMenu} ${dropdownOpen === item.label ? styles.dropdownOpen : ''}`}>
+                      {item.children.map((child) => (
+                        <li key={child.label} className={styles.dropdownItem}>
+                          <Link
+                            href={child.href}
+                            className={`${styles.dropdownLink} ${pathname === child.href ? styles.active : ''}`}
+                          >
+                            {child.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </li>
             ))}
           </ul>
