@@ -1,0 +1,147 @@
+.formSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 40px;
+  gap: 40px;
+}
+
+.formHeader {
+  display: flex;
+  align-items: flex-start;
+}
+
+.formTitle {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.25rem, 0.981rem + 1.154vw, 2.375rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(1.5rem, 1.231rem + 1.154vw, 2.5rem);
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 0.5rem + 1.026vw, 1.5rem);
+}
+
+.fieldsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.75rem, 0.5rem + 1.026vw, 1.5rem);
+
+  @media (max-width: 799px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  border: 1px solid #9a9a9a;
+  background-color: #ededed;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: clamp(0.6rem, 0.5rem + 0.385vw, 0.9rem)
+    clamp(0.75rem, 0.62rem + 0.513vw, 1.1rem);
+  outline: none;
+  box-shadow: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #5f5f5f;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #f6292f;
+  background-color: #f3f3f3;
+}
+
+.select {
+  appearance: none;
+  padding-right: clamp(2rem, 1.625rem + 1.538vw, 2.75rem);
+}
+
+.selectWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.selectIcon {
+  position: absolute;
+  right: clamp(0.75rem, 0.62rem + 0.513vw, 1.1rem);
+  color: #5f5f5f;
+  pointer-events: none;
+  display: inline-flex;
+  transition: transform 0.2s ease;
+}
+
+.selectIcon svg {
+  width: 1rem;
+  height: 0.625rem;
+}
+
+.selectWrapper:focus-within .selectIcon {
+  transform: rotate(180deg);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: clamp(6rem, 5.077rem + 3.077vw, 8rem);
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: #5f5f5f;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.7rem, 0.62rem + 0.385vw, 0.95rem);
+  line-height: 1.5;
+}
+
+.checkbox {
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-top: 0.2rem;
+  accent-color: #f6292f;
+}
+
+.link {
+  color: #f6292f;
+  text-decoration: underline;
+}
+
+.submitRow {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: clamp(0.5rem, 0.308rem + 0.769vw, 1rem);
+}
+
+.submitButton {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}

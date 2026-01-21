@@ -1,0 +1,237 @@
+.contactSection {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+  padding: clamp(2.5rem, 1.731rem + 3.077vw, 5.5rem) 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  --gap: 60px;
+  gap: var(--gap);
+  // align-self: stretch;
+  flex-wrap: wrap;
+
+  @media (max-width: 799px) {
+    flex-direction: column;
+  }
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: clamp(1.5rem, 1.282rem + 0.923vw, 2.5rem);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.eyebrow {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 0.385rem + 0.513vw, 1rem);
+  width: 100%;
+}
+
+.label {
+  color: #c7a034;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
+  font-style: normal;
+  font-weight: 600;
+  line-height: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
+  margin: 0;
+}
+
+.title {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.15rem, 0.723rem + 1.897vw, 3rem);
+  font-style: normal;
+  font-weight: 300;
+  line-height: clamp(1.5rem, 0.923rem + 2.564vw, 4rem);
+  margin: 0;
+  white-space: pre-line;
+
+  .highlight {
+    color: #f6292f;
+  }
+}
+
+.subtitle {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.75rem, 0.663rem + 0.385vw, 1.125rem);
+  font-style: normal;
+  font-weight: 300;
+  line-height: clamp(1.25rem, 1.077rem + 0.769vw, 2rem);
+  margin: 0;
+}
+
+.imageWrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  flex: 1.1;
+  gap: clamp(1.5rem, 1.282rem + 0.923vw, 2.5rem);
+  height: auto;
+}
+
+// Lower Container
+
+.lowerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  --gap: 60px;
+  gap: var(--gap);
+  align-self: stretch;
+  flex-wrap: wrap;
+
+  @media (max-width: 799px) {
+    flex-direction: column;
+  }
+}
+
+.lowerLeftContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 0.8;
+  gap: clamp(1.5rem, 1.282rem + 0.923vw, 2.5rem);
+  height: -webkit-fill-available;
+}
+
+.lowerRightContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1.2;
+  gap: clamp(1.5rem, 1.282rem + 0.923vw, 2.5rem);
+}
+
+.serviceCard {
+  background: rgba(37, 41, 41, 0.1);
+  padding: clamp(1.5rem, 1.038rem + 2.051vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.serviceBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.serviceTitle {
+  font-family: "Inter", sans-serif;
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.serviceText {
+  font-family: "Inter", sans-serif;
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.serviceDivider {
+  width: 100%;
+  height: 1px;
+  background-color: #C7A034;
+}
+
+// Left .container Content
+
+.infoCard {
+  background-color: #252929;
+  color: #ffffff;
+  padding: clamp(1.5rem, 1.038rem + 2.051vw, 3rem);
+  gap: 40px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.infoCardRow {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.infoTitle {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.infoText {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.infoLinkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.infoLink {
+  color: #c7a034;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.contactName {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
