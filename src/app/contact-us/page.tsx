@@ -4,7 +4,7 @@ export default function ContactUsPage() {
   return (
     <>
       <div className="bodySectionLayout">
-        <ContactUs />
+        <ContactUs />;
       </div>
     </>
   );
