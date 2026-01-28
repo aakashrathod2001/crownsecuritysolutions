@@ -29,9 +29,9 @@ const StackedScroll: React.FC<Props> = ({
         <div className={styles.SectionHeader}>
           <SectionHeader
             label=""
-            title="The Process of Crown Securities"
+            title="Our Processs"
             subtitle="At Crown Security Agency, we follow a transparent, step-by-step system to ensure every deployment is planned, compliant, and performance-driven, supported by digital tools, expert supervision, and real-time reporting."
-            highlightedWords={["The Process"]}
+            highlightedWords={["Our"]}
           />
         </div>
       )}

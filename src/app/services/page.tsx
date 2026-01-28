@@ -11,12 +11,13 @@ export default function ServicesPage() {
         <>
             <HeroSection {...servicespageHero} />
             <div className={styles.pageLayout}>
-                <ServiceSection service={serviceData[0]} />
-                <ServiceSection variant='right' service={serviceData[1]} />
-                <ServiceSection service={serviceData[0]} />
-                <ServiceSection variant='right' service={serviceData[1]} />
-                <ServiceSection service={serviceData[0]} />
-                <ServiceSection variant='right' service={serviceData[1]} />
+                {serviceData.map((service, index) => (
+                    <ServiceSection 
+                        key={index}
+                        variant={index % 2 === 1 ? 'right' : undefined} 
+                        service={service} 
+                    />
+                ))}
                 <InfiniteCarousel
                     speed={35}
                     direction="left"

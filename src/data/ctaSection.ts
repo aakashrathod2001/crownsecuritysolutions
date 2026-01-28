@@ -26,7 +26,7 @@ export const aboutmissionCTA: CTAContent = {
 // Example: Vision CTA - Can be used on other pages
 export const homevisionCTA: CTAContent = {
   label: "Our Vision",
-  title: "To become India’s most trusted and technology-driven security agency, known for reliability, compliance, and excellence in manpower management. Our goal is to establish a strong operational presence in every major metro and Tier-2 city while redefining service quality through innovation and ethical leadership.",
+  title: "To become India’s most trusted and technology-driven security agency, known for reliability, compliance, and excellence in manpower management.\nOur goal is to establish a strong operational presence in every major metro and Tier-2 city while redefining service quality through innovation and ethical leadership.",
   textColor: "#ffffff",
   showStripes: true,
 };

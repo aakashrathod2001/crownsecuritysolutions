@@ -154,8 +154,8 @@ const Testimonials = () => {
           <div className={styles.SectionHeader}>
             <SectionHeader
               label=""
-              title="Look what our Client says"
-              highlightedWords={["Look what"]}
+              title="What Our Client Says"
+              highlightedWords={["What Our"]}
             />
           </div>
 

@@ -39,7 +39,7 @@ export const stackedBlocks = [
     className: "darkBlock",
     heading: "Site Survey",
     description:
-      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
+      "Our Field Officers conduct a detailed on-site inspection to assess entry points, CCTV coverage, emergency access, and potential vulnerabilities.",
 
     buttonText: "Schedule Site Survey",
     buttonHref: "/services/site-survey",
@@ -66,7 +66,7 @@ export const stackedBlocks = [
     className: "redBlock",
     heading: "Proposal & Quotation",
     description:
-      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
+      "A customized proposal is prepared outlining manpower, supervision, and technology solutions, ensuring complete transparency and cost efficiency.",
 
     buttonText: "Request Proposal",
     buttonHref: "/services/proposal",
@@ -93,7 +93,7 @@ export const stackedBlocks = [
     className: "darkBlock",
     heading: "Agreement & Documentation",
     description:
-      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
+      "We formalize the engagement through PSARA-compliant contracts and statutory documentation, ensuring full legal and ethical compliance.",
 
     buttonText: "Review Terms",
     buttonHref: "/services/agreement",
@@ -120,7 +120,7 @@ export const stackedBlocks = [
     className: "goldBlock",
     heading: "Recruitment & Training",
     description:
-      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
+      "All guards undergo police verification, medical fitness checks, and PSARA-standard training in discipline, fire safety, and first aid.",
 
     buttonText: "Learn More",
     buttonHref: "/services/recruitment",
@@ -147,7 +147,7 @@ export const stackedBlocks = [
     className: "darkBlock",
     heading: "Deployment & Induction",
     description:
-      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
+      "Our team conducts a site induction and deploys trained guards under supervision, ensuring daily reporting and operational discipline.",
 
     buttonText: "Begin Deployment",
     buttonHref: "/services/deployment",
@@ -174,7 +174,7 @@ export const stackedBlocks = [
     className: "redBlock",
     heading: "Monitoring & Reporting",
     description:
-      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
+      "Through our 24×7 Central Control Room in Thane, we track attendance, patrols, and incidents using GPS and cloud-based systems for real-time updates.",
 
     buttonText: "View Reports",
     buttonHref: "/services/monitoring",
@@ -201,7 +201,7 @@ export const stackedBlocks = [
     className: "darkBlock",
     heading: "Audits & Continuous Improvement",
     description:
-      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
+      "Regular inspections, surprise night audits, and digital performance reviews ensure consistent service quality and ongoing improvement.",
 
     buttonText: "Schedule Audit",
     buttonHref: "/services/audits",
@@ -228,7 +228,7 @@ export const stackedBlocks = [
     className: "goldBlock",
     heading: "Technology & Supervision",
     description:
-      "We begin by understanding your security requirements, analyzing your site type, manpower needs, and operational risks to create a tailored protection plan.",
+      "Every phase is supported by digital attendance, ERP dashboards, and GPS-based patrol tracking, ensuring accuracy, accountability, and peace of mind.",
 
     buttonText: "Explore Tech Solutions",
     buttonHref: "/services/technology",

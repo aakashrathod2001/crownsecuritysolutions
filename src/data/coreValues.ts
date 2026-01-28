@@ -77,28 +77,28 @@ export const coreValuesData: CoreValue[] = [
     id: "commitment",
     title: "Commitment",
     description:
-      "We carry out every assignment with honesty, discipline, and transparency, ensuring trust remains at the core of all we do.",
+      "We stand by our clients and employees every day, delivering dependable service and consistent support across all operations.",
     iconColor: "#EF4444",
   },
   {
     id: "innovation",
     title: "Innovation",
     description:
-      "We carry out every assignment with honesty, discipline, and transparency, ensuring trust remains at the core of all we do.",
+      "We embrace modern technology and continuous improvement to make security smarter, faster, and more transparent.",
     iconColor: "#EF4444",
   },
   {
     id: "people-first",
     title: "People-First",
     description:
-      "We carry out every assignment with honesty, discipline, and transparency, ensuring trust remains at the core of all we do.",
+      "We value and empower every employee through respect, training, and growth opportunities that build lasting pride and purpose.",
     iconColor: "#EF4444",
   },
   {
     id: "compliance",
     title: "Compliance",
     description:
-      "We carry out every assignment with honesty, discipline, and transparency, ensuring trust remains at the core of all we do.",
+      "We maintain 100% adherence to PSARA, PF/ESIC, and state labour laws, ensuring ethical and lawful operations across India.",
     iconColor: "#EF4444",
   },
 ];

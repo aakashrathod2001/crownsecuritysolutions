@@ -12,8 +12,8 @@ const BrandsSlider = () => {
           {/* Header */}
           <SectionHeader
             label=""
-            title="Meet our Brands"
-            highlightedWords={["Meet"]}
+            title="Clients We have Worked With"
+            highlightedWords={["Clients"]}
           />
         </div>
         <BrandSlider className={styles.brandSlider} speed={1.4} />
