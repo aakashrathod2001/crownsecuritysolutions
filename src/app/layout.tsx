@@ -1,5 +1,6 @@
 import "@/styles/globals.scss";
 import Header from "@/components/layout/Header/Header";
+import Footer from "@/components/layout/Footer/Footer";
 
 // ============================================
 // ROOT LAYOUT - Minimal
@@ -25,6 +26,9 @@ export default function RootLayout({
 
         {/* Page Content */}
         <main>{children}</main>
+
+        {/* Footer */}
+        <Footer />
       </body>
     </html>
   );

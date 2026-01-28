@@ -1,0 +1,58 @@
+.legalPage {
+  background-color: #ffffff;
+  padding: clamp(3rem, 2.231rem + 2.564vw, 5rem) 0
+    clamp(4rem, 2.846rem + 3.846vw, 7rem);
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 0.865rem + 1.282vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 1.077rem + 1.41vw, 2.5rem);
+}
+
+.title {
+  color: #0f172a;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2rem, 1.577rem + 1.41vw, 3rem);
+  font-weight: 500;
+}
+
+.updated {
+  color: #475569;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.875rem, 0.798rem + 0.256vw, 1rem);
+}
+
+.section {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.heading {
+  color: #0f172a;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.125rem, 1.01rem + 0.385vw, 1.5rem);
+  font-weight: 600;
+}
+
+.text {
+  color: #334155;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.95rem, 0.875rem + 0.256vw, 1.1rem);
+  line-height: 1.7;
+}
+
+.list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #334155;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.95rem, 0.875rem + 0.256vw, 1.1rem);
+  line-height: 1.7;
+  display: grid;
+  gap: 0.35rem;
+}
