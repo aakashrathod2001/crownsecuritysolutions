@@ -32,4 +32,8 @@ export const navigationItems: NavItem[] = [
       href: `/services/${service.slug}`,
     })),
   },
+  {
+    label: 'Careers',
+    href: '/careers',
+  },
 ];

@@ -1,0 +1,861 @@
+// Careers Landing Page Styles
+// .careersContainer {
+//   min-height: 100vh;
+//   padding: 4rem 2rem;
+//   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+// }
+
+.careersContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+.careersHeader {
+  width: 100%;
+  text-align: left;
+}
+
+.mainTitle {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a2332;
+  padding-left: 24px;
+  border-left: 3.5px solid #f6292f;
+  margin: 0;
+}
+
+.jobGrid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  --gap: 40px;
+  gap: var(--gap);
+}
+
+.jobCard {
+  flex: 1 1 calc(100% / 3 - var(--gap));
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #00000031;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 12px 24px rgba(0, 0, 0, 0.1),
+      0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: #f6292f;
+
+    .jobCardArrow {
+      background: #f6292f;
+      transform: translateX(4px);
+
+      svg {
+        stroke: white;
+      }
+    }
+  }
+}
+
+.jobCardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.jobTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a2332;
+}
+
+.jobMeta {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    stroke: #c7a034;
+    flex-shrink: 0;
+  }
+}
+
+.jobDescription {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+}
+
+.jobCardArrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke: #64748b;
+    stroke-width: 2.5;
+    transition: stroke 0.3s ease;
+  }
+}
+
+// Application Form Styles
+.applicationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  font-family: "Inter", sans-serif;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 3;
+  }
+
+  &:hover {
+    color: #1a2332;
+  }
+}
+
+.formCard {
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #898989;
+  overflow: hidden;
+}
+
+.formTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formHeader {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  padding: 40px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+}
+
+.formSubtitle {
+  font-size: 18px;
+  color: #c7a034;
+  margin: 0;
+  font-weight: 500;
+}
+
+.stepCounter {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 400;
+  backdrop-filter: blur(10px);
+}
+
+.formBody {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 80px 48px;
+  width: 100%;
+}
+
+// Step Indicator
+.stepIndicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.stepWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.stepCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+
+  &.active {
+    background: linear-gradient(135deg, #c7a034 0%, #a6832b 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(199, 160, 52, 0.3);
+    transform: scale(1.1);
+  }
+}
+
+.stepLine {
+  width: 80px;
+  height: 3px;
+  background: #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+
+  &.active {
+    background: linear-gradient(90deg, #c7a034 0%, #a6832b 100%);
+  }
+}
+
+// Form Content
+.formContent {
+  padding: 3rem;
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #faf8f1 0%, #c7a03445 100%);
+  border-radius: 12px;
+  border-left: 4px solid #c7a034;
+  margin-bottom: 40px;
+}
+
+.sectionIcon {
+  width: 28px;
+  height: 28px;
+  stroke: #c7a034;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 0.875rem 1rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #1e293b;
+    font-family: "Inter", sans-serif;
+    transition: all 0.2s ease;
+    background: white;
+
+    &::placeholder {
+      color: #cbd5e1;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #c7a034;
+    }
+
+    &:disabled {
+      background: #f8fafc;
+      color: #94a3b8;
+      cursor: not-allowed;
+    }
+  }
+
+  select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 20px;
+    padding-right: 3rem;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.6;
+  }
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1.5rem;
+
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    cursor: pointer;
+    appearance: none;
+    transition: all 0.2s ease;
+    position: relative;
+
+    &:checked {
+      background: #c7a034;
+      border-color: #c7a034;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  label {
+    font-size: 18px;
+    color: #475569;
+    cursor: pointer;
+    user-select: none;
+    margin: 0;
+  }
+}
+
+// Language Table
+.languageTable {
+  margin: 2rem 0;
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  thead {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+
+    tr th {
+      padding: 1rem 1.5rem;
+      text-align: left;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+      border-bottom: 2px solid #e2e8f0;
+
+      &:not(:first-child) {
+        text-align: center;
+      }
+    }
+  }
+
+  tbody tr {
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #f8fafc;
+    }
+
+    &:not(:last-child) td {
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    td {
+      padding: 1.25rem 1.5rem;
+      font-size: 18px;
+      color: #1e293b;
+
+      &:first-child {
+        font-weight: 500;
+      }
+
+      &:not(:first-child) {
+        text-align: center;
+      }
+
+      input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        border: 2px solid #cbd5e1;
+        border-radius: 6px;
+        cursor: pointer;
+        appearance: none;
+        transition: all 0.2s ease;
+        position: relative;
+
+        &:checked {
+          background: #10b981;
+          border-color: #10b981;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 3px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Skills Section
+.skillsSection {
+  margin: 2rem 0;
+}
+
+.skillsLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.skillCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: white;
+    border-color: #cbd5e1;
+  }
+
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    cursor: pointer;
+    appearance: none;
+    transition: all 0.2s ease;
+    position: relative;
+    flex-shrink: 0;
+
+    &:checked {
+      background: #8b5cf6;
+      border-color: #8b5cf6;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  label {
+    font-size: 18px;
+    color: #475569;
+    cursor: pointer;
+    user-select: none;
+    margin: 0;
+  }
+}
+
+// Bank Details Section
+.bankDetailsSection {
+  padding: 24px;
+  border-radius: 16px;
+    border: 1px solid #00000033;
+  border-left: 4px solid #c7a034;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.subsectionTitle {
+  font-size: 18px;
+  text-decoration: underline;
+  font-weight: 600;
+  color: #92400e;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+// Document Upload Section
+.documentUploadSection {
+  padding: 1.5rem;
+  border: 1px solid #00000033;
+  border-radius: 12px;
+  border-left: 4px solid #c7a034;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.uploadGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.uploadBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.uploadLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  text-align: center;
+  margin: 0;
+}
+
+.fileInputWrapper {
+  position: relative;
+  width: 100%;
+
+  input[type="file"] {
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+}
+
+.fileInputDisplay {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: white;
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #c7a034;
+    background: #f8fafc;
+  }
+}
+
+.chooseFileButton {
+  padding: 0.625rem 1.25rem;
+  background: #c7a034;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Inter", sans-serif;
+  flex-shrink: 0;
+
+  &:hover {
+    background: #2563eb;
+  }
+}
+
+.fileName {
+  font-size: 0.875rem;
+  color: #64748b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Form Actions
+.formActions {
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.prevButton {
+  padding: 1rem 2rem;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Inter", sans-serif;
+
+  &:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #1a2332;
+  }
+}
+
+.nextButton,
+.submitButton {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  font-family: "Inter", sans-serif;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2.5;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(30, 41, 59, 0.3);
+  }
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #c7a034 0%, #a6832b 100%);
+
+  &:hover {
+    box-shadow: 0 8px 20px rgba(199, 160, 52, 0.4);
+  }
+}
+
+.formDisclaimer {
+  color: #64748b;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+  .careersContainer {
+    padding: 2rem 1rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .jobGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .jobCard {
+    padding: 1.5rem;
+  }
+
+  .applicationContainer {
+    padding: 1rem;
+  }
+
+  .formHeader {
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .stepIndicator {
+    padding: 1.5rem;
+  }
+
+  .stepCircle {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .stepLine {
+    width: 40px;
+  }
+
+  .formContent {
+    padding: 2rem 1.5rem;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .uploadGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .languageTable {
+    table {
+      font-size: 0.875rem;
+    }
+
+    thead th,
+    tbody td {
+      padding: 0.75rem 0.5rem;
+    }
+  }
+
+  .formActions {
+    padding: 1.5rem;
+    flex-direction: column;
+
+    .prevButton,
+    .nextButton,
+    .submitButton {
+      width: 100%;
+      justify-content: center;
+      margin-left: 0;
+    }
+  }
+
+  .formDisclaimer {
+    padding: 0 1.5rem 1.5rem;
+  }
+}
