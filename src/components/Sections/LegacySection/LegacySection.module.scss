@@ -6,6 +6,14 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 80vh;
+  }
+
+  @media (max-width: 480px) {
+    height: 70vh;
+  }
 }
 
 .backgroundContainer {
@@ -21,6 +29,7 @@
 
   img {
     object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -28,26 +37,44 @@
   position: absolute;
   bottom: 0;
   left: 10%;
-  /* width: 100%; */
+  right: 10%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   box-sizing: border-box;
   padding: clamp(1rem, 0.538rem + 2.051vw, 3rem);
   background: rgba(37, 41, 41, 0.6);
   -webkit-backdrop-filter: blur(8.5px);
   backdrop-filter: blur(8.5px);
+  max-width: 600px;
+
+  @media (max-width: 768px) {
+    left: 5%;
+    right: 5%;
+    padding: 1.5rem 1rem;
+  }
+
+  @media (max-width: 480px) {
+    left: 3%;
+    right: 3%;
+    padding: 1rem 0.75rem;
+  }
 }
 
 .contentCard {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
   text-align: left;
   color: white;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    gap: 12px;
+  }
 }
 
 .title {
@@ -57,6 +84,10 @@
   font-style: normal;
   font-weight: 500;
   line-height: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
+
+  @media (max-width: 768px) {
+    font-size: clamp(0.7rem, 0.6rem + 0.5vw, 1rem);
+  }
 }
 
 .subtitle {
@@ -66,6 +97,14 @@
   font-style: normal;
   font-weight: 500;
   line-height: clamp(1.75rem, 1.346rem + 1.795vw, 3.5rem);
+
+  @media (max-width: 768px) {
+    font-size: clamp(1.2rem, 0.9rem + 1.5vw, 2.2rem);
+  }
+
+  @media (max-width: 480px) {
+    font-size: clamp(1rem, 0.8rem + 1.2vw, 1.8rem);
+  }
 }
 
 .content {
@@ -80,6 +119,16 @@
   font-weight: 400;
   line-height: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
   white-space: pre-line;
+
+  @media (max-width: 768px) {
+    font-size: clamp(0.7rem, 0.6rem + 0.3vw, 0.9rem);
+    line-height: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
+  }
+
+  @media (max-width: 480px) {
+    font-size: clamp(0.65rem, 0.55rem + 0.3vw, 0.85rem);
+    line-height: clamp(1.2rem, 1rem + 0.6vw, 1.4rem);
+  }
 }
 
 .author {
@@ -89,6 +138,14 @@
   font-style: normal;
   font-weight: 500;
   line-height: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
+
+  @media (max-width: 768px) {
+    font-size: clamp(0.7rem, 0.6rem + 0.3vw, 0.9rem);
+  }
+
+  @media (max-width: 480px) {
+    font-size: clamp(0.65rem, 0.55rem + 0.3vw, 0.85rem);
+  }
 }
 
 .highlight {
