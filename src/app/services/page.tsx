@@ -6,6 +6,9 @@ import { serviceData } from '@/data/serviceSectionData';
 import styles from './page.module.scss';
 import InfiniteCarousel from '@/components/Sections/InfiniteCarousel/InfiniteCarousel';
 
+// Enable SSG with ISR (revalidate every 1 hour)
+export const revalidate = 3600;
+
 export default function ServicesPage() {
     return (
         <>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './CareersSection.module.scss';
 import { Job, ApplicationData } from '@/data/careersSection';
 
@@ -32,22 +32,48 @@ const CareersSection: React.FC = () => {
   const [showForm, setShowForm] = useState(false);
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   const [currentStep, setCurrentStep] = useState(1);
-  const [formData, setFormData] = useState<ApplicationData>({
-    surname: '', firstName: '', middleName: '', fatherName: '', motherName: '',
-    dateOfBirth: '', age: '', maritalStatus: 'Single',
-    mobileNumber: '', alternateNumber: '', presentAddress: '', permanentAddress: '',
-    permanentAddressSameAsPresent: false, height: '', weight: '', chest: '', qualification: '10th Pass',
-    previousESIC: '', previousUAN: '', residentialExperience: '', commercialExperience: '',
-    industrialExperience: '',
-    languages: {
-      english: { speak: false, read: false, write: false },
-      hindi: { speak: false, read: false, write: false },
-      marathi: { speak: false, read: false, write: false }
-    },
-    skills: { fireFighting: false, safety: false, firstAid: false, driving: false, computer: false },
-    nameOnAadhar: '', aadharNumber: '', panNumber: '', bankName: '', accountHolderName: '',
-    accountNumber: '', ifscCode: '', branchAddress: '', profilePhoto: null, resume: null
+  const [formData, setFormData] = useState(() => {
+    // Try to load saved form data from localStorage
+    if (typeof window !== 'undefined') {
+      const savedData = localStorage.getItem('careersFormData');
+      if (savedData) {
+        try {
+          return JSON.parse(savedData);
+        } catch (error) {
+          console.warn('Failed to parse saved form data:', error);
+        }
+      }
+    }
+    // Default form data
+    return {
+      surname: '', firstName: '', middleName: '', fatherName: '', motherName: '',
+      dateOfBirth: '', age: '', maritalStatus: 'Single',
+      mobileNumber: '', alternateNumber: '', presentAddress: '', permanentAddress: '',
+      permanentAddressSameAsPresent: false, height: '', weight: '', chest: '', qualification: '10th Pass',
+      previousESIC: '', previousUAN: '', residentialExperience: '', commercialExperience: '',
+      industrialExperience: '',
+      languages: {
+        english: { speak: false, read: false, write: false },
+        hindi: { speak: false, read: false, write: false },
+        marathi: { speak: false, read: false, write: false }
+      },
+      skills: { fireFighting: false, safety: false, firstAid: false, driving: false, computer: false },
+      nameOnAadhar: '', aadharNumber: '', panNumber: '', bankName: '', accountHolderName: '',
+      accountNumber: '', ifscCode: '', branchAddress: '', profilePhoto: null, resume: null
+    };
   });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  // Save form data to localStorage whenever it changes
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('careersFormData', JSON.stringify(formData));
+    }
+  }, [formData]);
 
   const handleApply = (job: Job) => {
     setSelectedJob(job);
@@ -62,7 +88,7 @@ const CareersSection: React.FC = () => {
   };
 
   const updateFormData = (data: Partial<ApplicationData>) => {
-    setFormData(prev => ({ ...prev, ...data }));
+    setFormData((prev: ApplicationData) => ({ ...prev, ...data } as ApplicationData));
   };
 
   const nextStep = () => {
@@ -96,7 +122,23 @@ const CareersSection: React.FC = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    if (isSubmitting) {
+      return;
+    }
+    const requiredFields: Array<keyof ApplicationData> = [
+      'surname', 'firstName', 'fatherName', 'motherName', 'dateOfBirth',
+      'age', 'maritalStatus', 'mobileNumber', 'presentAddress',
+      'permanentAddress', 'height', 'weight', 'chest', 'qualification',
+      'nameOnAadhar', 'aadharNumber', 'bankName', 'accountHolderName',
+      'accountNumber', 'ifscCode', 'branchAddress'
+    ];
+    for (const field of requiredFields) {
+      if (!formData[field]) {
+        alert('Please fill in all required fields before submitting.');
+        return;
+      }
+    }
     if (!formData.nameOnAadhar || !formData.aadharNumber || formData.aadharNumber.length !== 12) {
       alert('Please fill in valid Aadhar details');
       return;
@@ -105,9 +147,67 @@ const CareersSection: React.FC = () => {
       alert('Please fill in all bank details correctly');
       return;
     }
-    console.log('Form submitted:', formData);
-    alert('Application submitted successfully! We will contact you soon.');
-    handleBack();
+    if (!formData.profilePhoto || !formData.resume) {
+      alert('Please upload both profile photo and resume');
+      return;
+    }
+
+    // Create FormData for file uploads
+    const formDataToSend = new FormData();
+    
+    // Add all form fields to FormData
+    Object.entries(formData).forEach(([key, value]) => {
+      if (key === 'languages') {
+        // Handle language skills
+        Object.entries(value as any).forEach(([lang, skills]) => {
+          Object.entries(skills as any).forEach(([skill, enabled]) => {
+            formDataToSend.append(`${lang}_${skill}`, enabled ? 'true' : 'false');
+          });
+        });
+      } else if (key === 'skills') {
+        // Handle skills
+        Object.entries(value as any).forEach(([skill, enabled]) => {
+          formDataToSend.append(skill, enabled ? 'true' : 'false');
+        });
+      } else if (key === 'profilePhoto' || key === 'resume') {
+        // Handle files
+        if (value) {
+          formDataToSend.append(key, value as File);
+        }
+      } else {
+        // Handle regular fields
+        if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+          formDataToSend.append(key, value.toString());
+        }
+      }
+    });
+
+    try {
+      setIsSubmitting(true);
+      const response = await fetch('/api/careers', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        setErrorMessage('');
+        setIsModalOpen(true);
+        handleBack();
+      } else {
+        const errorData = await response.json();
+        setIsSuccess(false);
+        setErrorMessage(errorData.error || 'Failed to submit application. Please try again.');
+        setIsModalOpen(true);
+      }
+    } catch (error) {
+      console.error('Error submitting application:', error);
+      setIsSuccess(false);
+      setErrorMessage('Failed to submit application. Please check your internet connection and try again.');
+      setIsModalOpen(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: keyof ApplicationData, value: any) => {
@@ -133,39 +233,66 @@ const CareersSection: React.FC = () => {
     updateFormData({ skills: { ...formData.skills, [skill]: checked } });
   };
 
-  if (showForm && selectedJob) {
-    return (
-      <section className={styles.applicationContainer}>
-        <div className="pageLayout">
-          <div className="full-width-container">
-            <button className={styles.backButton} onClick={handleBack}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              Back to Jobs
-            </button>
+  const statusModal = isModalOpen ? (
+    <div className={styles.modalOverlay} role="dialog" aria-modal="true">
+      <div className={styles.modal}>
+        <div className={styles.modalHeader}>
+          <h3 className={styles.modalTitle}>{isSuccess ? 'Thank You!' : 'Submission Failed'}</h3>
+          <button
+            type="button"
+            className={styles.modalClose}
+            aria-label="Close"
+            onClick={() => setIsModalOpen(false)}
+          >
+            x
+          </button>
+        </div>
+        <p className={styles.modalMessage}>
+          {isSuccess
+            ? 'Your application has been submitted successfully. Our team will get back to you within 24hrs.'
+            : errorMessage}
+        </p>
+        <button type="button" className={styles.modalButton} onClick={() => setIsModalOpen(false)}>
+          OK
+        </button>
+      </div>
+    </div>
+  ) : null;
 
-            <div className={styles.formCard}>
-              <div className={styles.formHeader}>
-                <div className={styles.formTitleContainer}>
-                  <h2 className={styles.formTitle}>Application Form</h2>
-                  <p className={styles.formSubtitle}>Applying for: {selectedJob.title}</p>
+  return (
+    <>
+      {showForm && selectedJob ? (
+        <section className={styles.applicationContainer}>
+          <div className="pageLayout">
+            <div className="full-width-container">
+              <button className={styles.backButton} onClick={handleBack}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Back to Jobs
+              </button>
+
+              <div className={styles.formCard}>
+                <div className={styles.formHeader}>
+                  <div className={styles.formTitleContainer}>
+                    <h2 className={styles.formTitle}>Application Form</h2>
+                    <p className={styles.formSubtitle}>Applying for: {selectedJob.title}</p>
+                  </div>
+                  <div className={styles.stepCounter}>Step {currentStep} of 4</div>
                 </div>
-                <div className={styles.stepCounter}>Step {currentStep} of 4</div>
-              </div>
 
-              <div className={styles.formBody}>
-                <div className={styles.stepIndicator}>
-                  {[1, 2, 3, 4].map((step, index) => (
-                    <div key={step} className={styles.stepWrapper}>
-                      <div className={`${styles.stepCircle} ${step <= currentStep ? styles.active : ''}`}>{step}</div>
-                      {index < 3 && <div className={`${styles.stepLine} ${step < currentStep ? styles.active : ''}`} />}
-                    </div>
-                  ))}
-                </div>
+                <div className={styles.formBody}>
+                  <div className={styles.stepIndicator}>
+                    {[1, 2, 3, 4].map((step, index) => (
+                      <div key={step} className={styles.stepWrapper}>
+                        <div className={`${styles.stepCircle} ${step <= currentStep ? styles.active : ''}`}>{step}</div>
+                        {index < 3 && <div className={`${styles.stepLine} ${step < currentStep ? styles.active : ''}`} />}
+                      </div>
+                    ))}
+                  </div>
 
-                <div className={styles.formContent}>
-                  {currentStep === 1 && (
+                  <div className={styles.formContent}>
+                    {currentStep === 1 && (
                     <div className={styles.stepContent}>
                       <div className={styles.sectionHeader}>
                         <svg className={styles.sectionIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -224,7 +351,7 @@ const CareersSection: React.FC = () => {
                     </div>
                   )}
 
-                  {currentStep === 2 && (
+                    {currentStep === 2 && (
                     <div className={styles.stepContent}>
                       <div className={styles.sectionHeader}>
                         <svg className={styles.sectionIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -294,7 +421,7 @@ const CareersSection: React.FC = () => {
                     </div>
                   )}
 
-                  {currentStep === 3 && (
+                    {currentStep === 3 && (
                     <div className={styles.stepContent}>
                       <div className={styles.sectionHeader}>
                         <svg className={styles.sectionIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -365,7 +492,7 @@ const CareersSection: React.FC = () => {
                     </div>
                   )}
 
-                  {currentStep === 4 && (
+                    {currentStep === 4 && (
                     <div className={styles.stepContent}>
                       <div className={styles.sectionHeader}>
                         <svg className={styles.sectionIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -425,9 +552,21 @@ const CareersSection: React.FC = () => {
                             <div key={upload.id} className={styles.uploadBox}>
                               <label className={styles.uploadLabel}>{upload.label}</label>
                               <div className={styles.fileInputWrapper}>
-                                <input type="file" id={upload.id} accept={upload.accept} onChange={(e) => handleChange(upload.id as 'profilePhoto' | 'resume', e.target.files?.[0] || null)} />
+                                <input 
+                                  type="file" 
+                                  id={upload.id} 
+                                  accept={upload.accept} 
+                                  onChange={(e) => handleChange(upload.id as 'profilePhoto' | 'resume', e.target.files?.[0] || null)}
+                                  style={{ display: 'none' }}
+                                />
                                 <div className={styles.fileInputDisplay}>
-                                  <button type="button" className={styles.chooseFileButton}>Choose File</button>
+                                  <button 
+                                    type="button" 
+                                    className={styles.chooseFileButton}
+                                    onClick={() => document.getElementById(upload.id)?.click()}
+                                  >
+                                    Choose File
+                                  </button>
                                   <span className={styles.fileName}>{formData[upload.id as 'profilePhoto' | 'resume']?.name || 'No file chosen'}</span>
                                 </div>
                               </div>
@@ -439,74 +578,83 @@ const CareersSection: React.FC = () => {
                   )}
                 </div>
 
-                <div className={styles.formActions}>
-                  {currentStep > 1 && <button className={styles.prevButton} onClick={prevStep}>Previous</button>}
-                  {currentStep < 4 ? (
-                    <button className={styles.nextButton} onClick={nextStep}>
-                      Next Step
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
-                  ) : (
-                    <button className={styles.submitButton} onClick={handleSubmit}>Submit Application</button>
+                  <div className={styles.formActions}>
+                    {currentStep > 1 && <button className={styles.prevButton} onClick={prevStep}>Previous</button>}
+                    {currentStep < 4 ? (
+                      <button className={styles.nextButton} onClick={nextStep}>
+                        Next Step
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    ) : (
+                      <button className={styles.submitButton} onClick={handleSubmit} disabled={isSubmitting}>
+                        {isSubmitting ? (
+                          <>
+                            <span className={styles.spinner} aria-hidden="true" />
+                            Submitting...
+                          </>
+                        ) : (
+                          'Submit Application'
+                        )}
+                      </button>
+                    )}
+                  </div>
+
+                  {currentStep === 1 && (
+                    <p className={styles.formDisclaimer}>
+                      By submitting this form, you declare that all information provided is true to the best of your knowledge. False information may lead to rejection of your application.
+                    </p>
                   )}
                 </div>
-
-                {currentStep === 1 && (
-                  <p className={styles.formDisclaimer}>
-                    By submitting this form, you declare that all information provided is true to the best of your knowledge. False information may lead to rejection of your application.
-                  </p>
-                )}
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    );
-  }
+        </section>
+      ) : (
+        <section className={styles.careersContainer}>
+          <div className="pageLayout">
+            <div className="full-width-container">
+              <div className={styles.careersHeader}>
+                <h2 className={styles.mainTitle}>Current Openings</h2>
+              </div>
 
-  return (
-    <section className={styles.careersContainer}>
-      <div className="pageLayout">
-        <div className="full-width-container">
-          <div className={styles.careersHeader}>
-            <h2 className={styles.mainTitle}>Current Openings</h2>
-          </div>
-
-          <div className={styles.jobGrid}>
-            {jobListings.map((job) => (
-              <div key={job.id} className={styles.jobCard} onClick={() => handleApply(job)}>
-                <div className={styles.jobCardContent}>
-                  <h2 className={styles.jobTitle}>{job.title}</h2>
-                  <div className={styles.jobMeta}>
-                    <div className={styles.metaItem}>
-                      <svg className={styles.icon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                      <span>{job.location}</span>
+              <div className={styles.jobGrid}>
+                {jobListings.map((job) => (
+                  <div key={job.id} className={styles.jobCard} onClick={() => handleApply(job)}>
+                    <div className={styles.jobCardContent}>
+                      <h2 className={styles.jobTitle}>{job.title}</h2>
+                      <div className={styles.jobMeta}>
+                        <div className={styles.metaItem}>
+                          <svg className={styles.icon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                          <span>{job.location}</span>
+                        </div>
+                        <div className={styles.metaItem}>
+                          <svg className={styles.icon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          </svg>
+                          <span>{job.experience}</span>
+                        </div>
+                      </div>
+                      <p className={styles.jobDescription}>{job.description}</p>
                     </div>
-                    <div className={styles.metaItem}>
-                      <svg className={styles.icon} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <div className={styles.jobCardArrow}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                      <span>{job.experience}</span>
                     </div>
                   </div>
-                  <p className={styles.jobDescription}>{job.description}</p>
-                </div>
-                <div className={styles.jobCardArrow}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+      )}
+      {statusModal}
+    </>
   );
 };
 

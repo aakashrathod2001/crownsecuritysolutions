@@ -1,10 +1,13 @@
-// app/about/page.tsx
+// app/our-process/page.tsx
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
 import { ourprocesspageHero } from '@/data/heroSections';
 import StackedScroll from '@/components/UI/StackedScroll/StackedScroll';
 import InfiniteCarousel from '@/components/Sections/InfiniteCarousel/InfiniteCarousel';
 
-export default function AboutPage() {
+// Enable SSG with ISR (revalidate every 1 hour)
+export const revalidate = 3600;
+
+export default function OurProcessPage() {
   return (
     <>
       <HeroSection {...ourprocesspageHero} />

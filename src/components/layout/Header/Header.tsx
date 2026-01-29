@@ -69,12 +69,13 @@ const Header: React.FC = () => {
             ))}
           </ul>
           <div className={styles.ctaWrapper}>
-            <Button
-              text="Contact us"
-              variant="primary"
-              icon={<ArrowIcon color="#F6292F" />}
-              onClick={() => console.log('Contact us clicked')}
-            />
+            <Link href="/contact-us" className={styles.contactButton}>
+              <Button
+                text="Contact us"
+                variant="primary"
+                icon={<ArrowIcon color="#F6292F" />}
+              />
+            </Link>
           </div>
         </nav>
 

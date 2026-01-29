@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from '@/styles/legal-page.module.scss';
 
+// Enable SSG with ISR (revalidate every 24 hours)
+export const revalidate = 86400;
+
 export default function TermsAndConditionsPage() {
   return (
     <section className={styles.legalPage}>

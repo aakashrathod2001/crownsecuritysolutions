@@ -16,6 +16,9 @@ interface ServicePageProps {
   }>;
 }
 
+// Enable SSG with ISR (revalidate every 1 hour)
+export const revalidate = 3600;
+
 export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params;
   const service = getServiceBySlug(slug);

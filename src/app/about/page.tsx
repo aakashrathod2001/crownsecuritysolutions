@@ -14,6 +14,9 @@ import StackedScroll from '@/components/UI/StackedScroll/StackedScroll';
 import Testimonials from '@/components/Sections/Testimonials/Testimonials';
 import { ABOUT_DATA } from '@/data/about';
 
+// Enable SSG with ISR (revalidate every 1 hour)
+export const revalidate = 3600;
+
 export default function AboutPage() {
   return (
     <>

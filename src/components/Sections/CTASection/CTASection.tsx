@@ -1,5 +1,12 @@
 import React from 'react';
 import styles from './CTASection.module.scss';
+import Link from 'next/link';
+
+interface CTAButton {
+  text: string;
+  href: string;
+  variant?: 'primary' | 'secondary';
+}
 
 interface CTASectionProps {
   label: string;
@@ -7,6 +14,7 @@ interface CTASectionProps {
   textColor?: string;
   showStripes?: boolean;
   overlayOpacity?: number;
+  button?: CTAButton;
 }
 
 const CTASection: React.FC<CTASectionProps> = ({
@@ -14,7 +22,8 @@ const CTASection: React.FC<CTASectionProps> = ({
   title,
   textColor = '#ffffff',
   showStripes = false,
-  overlayOpacity = 0.7
+  overlayOpacity = 0.7,
+  button
 }) => {
   return (
     <section className={styles.ctaSection}>
@@ -32,6 +41,14 @@ const CTASection: React.FC<CTASectionProps> = ({
             <p className={styles.title} style={{ color: textColor }}>
               {title}
             </p>
+            {button && (
+              <Link 
+                href={button.href}
+                className={`${styles.ctaButton} ${button.variant === 'secondary' ? styles.secondary : styles.primary}`}
+              >
+                {button.text}
+              </Link>
+            )}
           </div>
         </div>
       </div>

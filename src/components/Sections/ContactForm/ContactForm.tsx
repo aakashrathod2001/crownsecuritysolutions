@@ -32,7 +32,9 @@ const ContactForm: React.FC = () => {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [modalMessage, setModalMessage] = useState('');
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -75,45 +77,60 @@ const ContactForm: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e?: React.FormEvent) => {
+    if (e) {
+      e.preventDefault();
+    }
     
     if (!validateForm()) {
+      return;
+    }
+
+    // Prevent duplicate submissions
+    if (isSubmitting) {
       return;
     }
 
     setIsSubmitting(true);
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      console.log('Form submitted:', formData);
-      setIsSubmitted(true);
-      
-      // Reset form after successful submission
-      setFormData({
-        name: '',
-        email: '',
-        contactNumber: '',
-        service: '',
-        message: ''
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        setModalMessage('Your message has been successfully submitted. Our team will get back to you within 24hrs.');
+        setIsModalOpen(true);
+
+        // Reset form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          contactNumber: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to submit form');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
+      setIsSuccess(false);
+      setModalMessage('Failed to submit form. Please try again.');
+      setIsModalOpen(true);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const handleButtonSubmit = () => {
-    // Create a synthetic form event
-    const formEvent = {
-      preventDefault: () => {},
-      target: document.createElement('form')
-    } as unknown as React.FormEvent;
-    
-    handleSubmit(formEvent);
+    handleSubmit();
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -148,128 +165,138 @@ const ContactForm: React.FC = () => {
     }
   };
 
-  if (isSubmitted) {
-    return (
+  return (
+    <>
       <div className={styles.formSection}>
         <div className={styles.formHeader}>
-          <h3 className={styles.formTitle}>Thank You!</h3>
+          <h3 className={styles.formTitle}>Talk to an expert</h3>
         </div>
-        <div className={styles.successMessage}>
-          <p>Your message has been successfully submitted. We will get back to you soon!</p>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className={styles.formSection}>
-      <div className={styles.formHeader}>
-        <h3 className={styles.formTitle}>Talk to an expert</h3>
-      </div>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.field}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name*"
-            aria-label="Name"
-            value={formData.name}
-            onChange={handleInputChange}
-            className={`${styles.input} ${errors.name ? styles.error : ''}`}
-            required
-          />
-          {errors.name && <span className={styles.errorMessage}>{errors.name}</span>}
-        </div>
-
-        <div className={styles.field}>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email ID*"
-            aria-label="Email ID"
-            value={formData.email}
-            onChange={handleInputChange}
-            className={`${styles.input} ${errors.email ? styles.error : ''}`}
-            required
-          />
-          {errors.email && <span className={styles.errorMessage}>{errors.email}</span>}
-        </div>
-
-        <div className={styles.field}>
-          <input
-            type="tel"
-            name="contactNumber"
-            placeholder="Contact Number*"
-            aria-label="Contact Number"
-            value={formData.contactNumber}
-            onChange={handleInputChange}
-            className={`${styles.input} ${errors.contactNumber ? styles.error : ''}`}
-            required
-          />
-          {errors.contactNumber && <span className={styles.errorMessage}>{errors.contactNumber}</span>}
-        </div>
-
-        <div className={styles.field}>
-          <div className={styles.selectWrapper}>
-            <select
-              name="service"
-              aria-label="Services Interested In"
-              value={formData.service}
-              onChange={handleServiceChange}
-              className={`${styles.select} ${errors.service ? styles.error : ''}`}
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <div className={styles.field}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name*"
+              aria-label="Name"
+              value={formData.name}
+              onChange={handleInputChange}
+              className={`${styles.input} ${errors.name ? styles.error : ''}`}
               required
-            >
-              <option value="" disabled>
-                Services Interested In*
-              </option>
-              {services.map((service) => (
-                <option key={service.slug} value={service.slug}>
-                  {service.title}
-                </option>
-              ))}
-            </select>
-            <span className={styles.selectIcon} aria-hidden="true">
-              <svg viewBox="0 0 16 10" focusable="false" aria-hidden="true">
-                <path
-                  d="M1 1l7 7 7-7"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
+            />
+            {errors.name && <span className={styles.errorMessage}>{errors.name}</span>}
           </div>
-          {errors.service && <span className={styles.errorMessage}>{errors.service}</span>}
-        </div>
 
-        <div className={styles.field}>
-          <textarea
-            name="message"
-            placeholder="Message*"
-            aria-label="Message"
-            value={formData.message}
-            onChange={handleInputChange}
-            className={`${styles.textarea} ${errors.message ? styles.error : ''}`}
-            rows={4}
-            required
-          />
-          {errors.message && <span className={styles.errorMessage}>{errors.message}</span>}
-        </div>
+          <div className={styles.field}>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email ID*"
+              aria-label="Email ID"
+              value={formData.email}
+              onChange={handleInputChange}
+              className={`${styles.input} ${errors.email ? styles.error : ''}`}
+              required
+            />
+            {errors.email && <span className={styles.errorMessage}>{errors.email}</span>}
+          </div>
 
-        <div className={styles.submitRow}>
-          <Button
-            text={isSubmitting ? "Submitting..." : "Submit"}
-            icon={<ArrowIcon />}
-            className={styles.submitButton}
-            textColor="#f6292f"
-            iconBgColor="#f6292f"
-            onClick={handleButtonSubmit}
-          />
+          <div className={styles.field}>
+            <input
+              type="tel"
+              name="contactNumber"
+              placeholder="Contact Number*"
+              aria-label="Contact Number"
+              value={formData.contactNumber}
+              onChange={handleInputChange}
+              className={`${styles.input} ${errors.contactNumber ? styles.error : ''}`}
+              required
+            />
+            {errors.contactNumber && <span className={styles.errorMessage}>{errors.contactNumber}</span>}
+          </div>
+
+          <div className={styles.field}>
+            <div className={styles.selectWrapper}>
+              <select
+                name="service"
+                aria-label="Services Interested In"
+                value={formData.service}
+                onChange={handleServiceChange}
+                className={`${styles.select} ${errors.service ? styles.error : ''}`}
+                required
+              >
+                <option value="" disabled>
+                  Services Interested In*
+                </option>
+                {services.map((service) => (
+                  <option key={service.slug} value={service.slug}>
+                    {service.title}
+                  </option>
+                ))}
+              </select>
+              <span className={styles.selectIcon} aria-hidden="true">
+                <svg viewBox="0 0 16 10" focusable="false" aria-hidden="true">
+                  <path
+                    d="M1 1l7 7 7-7"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+            {errors.service && <span className={styles.errorMessage}>{errors.service}</span>}
+          </div>
+
+          <div className={styles.field}>
+            <textarea
+              name="message"
+              placeholder="Message*"
+              aria-label="Message"
+              value={formData.message}
+              onChange={handleInputChange}
+              className={`${styles.textarea} ${errors.message ? styles.error : ''}`}
+              rows={4}
+              required
+            />
+            {errors.message && <span className={styles.errorMessage}>{errors.message}</span>}
+          </div>
+
+          <div className={styles.submitRow}>
+            <Button
+              text={isSubmitting ? "Submitting..." : "Submit"}
+              icon={<ArrowIcon />}
+              className={styles.submitButton}
+              textColor="#f6292f"
+              iconBgColor="#f6292f"
+              onClick={handleButtonSubmit}
+            />
+          </div>
+        </form>
+      </div>
+      {isModalOpen && (
+        <div className={styles.modalOverlay} role="dialog" aria-modal="true">
+          <div className={styles.modal}>
+            <div className={styles.modalHeader}>
+              <h3 className={styles.modalTitle}>{isSuccess ? 'Thank You!' : 'Submission Failed'}</h3>
+              <button
+                type="button"
+                className={styles.modalClose}
+                aria-label="Close"
+                onClick={() => setIsModalOpen(false)}
+              >
+                x
+              </button>
+            </div>
+            <p className={styles.modalMessage}>{modalMessage}</p>
+            <button type="button" className={styles.modalButton} onClick={() => setIsModalOpen(false)}>
+              OK
+            </button>
+          </div>
         </div>
-      </form>
-    </div>
+      )}
+    </>
   );
 };
 
