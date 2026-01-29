@@ -1,8 +1,18 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Script from 'next/script';
 import styles from './CareersSection.module.scss';
 import { Job, ApplicationData } from '@/data/careersSection';
+
+declare global {
+  interface Window {
+    grecaptcha?: {
+      ready: (cb: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
 
 const jobListings: Job[] = [
   {
@@ -29,6 +39,7 @@ const jobListings: Job[] = [
 ];
 
 const CareersSection: React.FC = () => {
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
   const [showForm, setShowForm] = useState(false);
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   const [currentStep, setCurrentStep] = useState(1);
@@ -67,6 +78,32 @@ const CareersSection: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+
+  const getRecaptchaToken = async (action: string): Promise<string> => {
+    if (!siteKey) {
+      throw new Error('reCAPTCHA site key is missing');
+    }
+
+    const waitForRecaptcha = () =>
+      new Promise<void>((resolve, reject) => {
+        const startedAt = Date.now();
+        const check = () => {
+          if (window.grecaptcha?.ready) {
+            resolve();
+            return;
+          }
+          if (Date.now() - startedAt > 6000) {
+            reject(new Error('reCAPTCHA failed to load'));
+            return;
+          }
+          setTimeout(check, 150);
+        };
+        check();
+      });
+
+    await waitForRecaptcha();
+    return window.grecaptcha!.execute(siteKey, { action });
+  };
 
   // Save form data to localStorage whenever it changes
   useEffect(() => {
@@ -184,6 +221,8 @@ const CareersSection: React.FC = () => {
 
     try {
       setIsSubmitting(true);
+      const recaptchaToken = await getRecaptchaToken('careers_submit');
+      formDataToSend.append('recaptchaToken', recaptchaToken);
       const response = await fetch('/api/careers', {
         method: 'POST',
         body: formDataToSend,
@@ -203,7 +242,11 @@ const CareersSection: React.FC = () => {
     } catch (error) {
       console.error('Error submitting application:', error);
       setIsSuccess(false);
-      setErrorMessage('Failed to submit application. Please check your internet connection and try again.');
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : 'Failed to submit application. Please check your internet connection and try again.'
+      );
       setIsModalOpen(true);
     } finally {
       setIsSubmitting(false);
@@ -261,6 +304,12 @@ const CareersSection: React.FC = () => {
 
   return (
     <>
+      {siteKey && (
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
+          strategy="afterInteractive"
+        />
+      )}
       {showForm && selectedJob ? (
         <section className={styles.applicationContainer}>
           <div className="pageLayout">

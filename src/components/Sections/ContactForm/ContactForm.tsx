@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Script from 'next/script';
 import Button, { ArrowIcon } from '@/components/UI/Button/Button';
 import { services } from '@/data/services';
 import styles from './ContactForm.module.scss';
@@ -21,7 +22,17 @@ interface FormErrors {
   message?: string;
 }
 
+declare global {
+  interface Window {
+    grecaptcha?: {
+      ready: (cb: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
 const ContactForm: React.FC = () => {
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -35,6 +46,32 @@ const ContactForm: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
+
+  const getRecaptchaToken = async (action: string): Promise<string> => {
+    if (!siteKey) {
+      throw new Error('reCAPTCHA site key is missing');
+    }
+
+    const waitForRecaptcha = () =>
+      new Promise<void>((resolve, reject) => {
+        const startedAt = Date.now();
+        const check = () => {
+          if (window.grecaptcha?.ready) {
+            resolve();
+            return;
+          }
+          if (Date.now() - startedAt > 6000) {
+            reject(new Error('reCAPTCHA failed to load'));
+            return;
+          }
+          setTimeout(check, 150);
+        };
+        check();
+      });
+
+    await waitForRecaptcha();
+    return window.grecaptcha!.execute(siteKey, { action });
+  };
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -94,12 +131,16 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
 
     try {
+      const recaptchaToken = await getRecaptchaToken('contact_submit');
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken,
+        }),
       });
 
       if (response.ok) {
@@ -122,7 +163,9 @@ const ContactForm: React.FC = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       setIsSuccess(false);
-      setModalMessage('Failed to submit form. Please try again.');
+      setModalMessage(
+        error instanceof Error ? error.message : 'Failed to submit form. Please try again.'
+      );
       setIsModalOpen(true);
     } finally {
       setIsSubmitting(false);
@@ -167,6 +210,12 @@ const ContactForm: React.FC = () => {
 
   return (
     <>
+      {siteKey && (
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
+          strategy="afterInteractive"
+        />
+      )}
       <div className={styles.formSection}>
         <div className={styles.formHeader}>
           <h3 className={styles.formTitle}>Talk to an expert</h3>

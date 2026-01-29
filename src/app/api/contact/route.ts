@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import GoogleSheetsService from '@/lib/google-services/sheets';
+import { verifyRecaptchaToken } from '@/lib/recaptcha';
 
 interface ContactFormData {
   name: string;
@@ -7,6 +8,7 @@ interface ContactFormData {
   contactNumber: string;
   service: string;
   message: string;
+  recaptchaToken?: string;
 }
 
 export async function POST(request: NextRequest) {
@@ -35,6 +37,15 @@ export async function POST(request: NextRequest) {
     if (!numberRegex.test(body.contactNumber)) {
       return NextResponse.json(
         { error: 'Invalid contact number format' },
+        { status: 400 }
+      );
+    }
+
+    // Verify reCAPTCHA
+    const recaptchaCheck = await verifyRecaptchaToken(body.recaptchaToken || '', 'contact_submit');
+    if (!recaptchaCheck.success) {
+      return NextResponse.json(
+        { error: recaptchaCheck.reason || 'reCAPTCHA verification failed' },
         { status: 400 }
       );
     }
