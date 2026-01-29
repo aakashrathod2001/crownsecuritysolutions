@@ -8,9 +8,10 @@ import { ServiceData } from '@/data/serviceSectionData';
 interface ServiceSectionProps {
   variant?: 'left' | 'right';
   service?: ServiceData;
+  showScopeTitle?: boolean;
 }
 
-const ServiceSection: React.FC<ServiceSectionProps> = ({ variant = 'left', service }) => {
+const ServiceSection: React.FC<ServiceSectionProps> = ({ variant = 'left', service, showScopeTitle = true }) => {
   const isLeft = variant === 'left';
 
   // Fallback to first service if no service prop provided
@@ -48,18 +49,26 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ variant = 'left', servi
               <div className={styles.descContainer}>
                 <p className={styles.description}>{currentService.description}</p>
 
-                <div className={styles.targetSegment}>
-                  <strong>Target Segment:</strong> {currentService.targetSegment}
-                </div>
+                {currentService.targetSegment && currentService.targetSegment.trim() !== '' && (
+                  <div className={styles.targetSegment}>
+                    <strong>Target Segment:</strong> {currentService.targetSegment}
+                  </div>
+                )}
 
-                <div className={styles.scopeOfWork}>
-                  <p className={styles.scopeTitle}>Scope of Work:</p>
-                  <ul className={styles.scopeList}>
-                    {currentService.scopeOfWork.map((item: string, index: number) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
+                {currentService.scopeOfWork && currentService.scopeOfWork.length > 0 && (
+                  <div className={styles.scopeOfWork}>
+                    {showScopeTitle && <p className={styles.scopeTitle}>Scope of Work:</p>}
+                    <ul className={styles.scopeList}>
+                      {currentService.scopeOfWork.map((item: string, index: number) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {currentService.conclusion && (
+                  <p className={styles.description}>{currentService.conclusion}</p>
+                )}
 
               </div>
 

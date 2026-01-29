@@ -4,6 +4,37 @@ import styles from '@/styles/legal-page.module.scss';
 // Enable SSG with ISR (revalidate every 24 hours)
 export const revalidate = 86400;
 
+export const metadata = {
+  title: "Privacy Policy | Crown Security Solutions",
+  description: "Review Crown Security Solutions' privacy policy to understand how we collect, use, and protect your personal information.",
+  keywords: ["privacy policy", "data protection", "personal information", "privacy terms", "data security", "information protection"],
+  alternates: {
+    canonical: "/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Crown Security Solutions",
+    description: "Review Crown Security Solutions' privacy policy to understand how we collect, use, and protect your personal information.",
+    url: "/privacy-policy",
+    images: [
+      {
+        url: "/images/home/home-hero-bg.png",
+        width: 1200,
+        height: 630,
+        alt: "Privacy Policy - Crown Security Solutions",
+      },
+    ],
+  },
+  twitter: {
+    title: "Privacy Policy | Crown Security Solutions",
+    description: "Review Crown Security Solutions' privacy policy to understand how we collect, use, and protect your personal information.",
+    images: ["/images/home/home-hero-bg.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function PrivacyPolicyPage() {
   return (
     <section className={styles.legalPage}>

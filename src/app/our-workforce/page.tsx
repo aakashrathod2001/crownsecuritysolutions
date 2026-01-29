@@ -1,4 +1,4 @@
-// app/our-workforce/page.tsx
+// app/our-workforce/page.tsx - Enhanced Workforce Page with Metadata
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
 import InfoSplitSection from '@/components/Sections/InfoSplitSection/InfoSplitSection';
 import QualificationStandardsSection from '@/components/Sections/QualificationStandardsSection/QualificationStandardsSection';
@@ -14,6 +14,37 @@ import styles from './page.module.scss';
 
 // Enable SSG with ISR (revalidate every 1 hour)
 export const revalidate = 3600;
+
+export const metadata = {
+  title: "Our Workforce | Trained & Certified Security Personnel",
+  description: "Meet our trained and certified security workforce dedicated to maintaining safety, professionalism, and operational excellence.",
+  keywords: ["security workforce", "trained security personnel", "certified security guards", "security team", "professional security"],
+  alternates: {
+    canonical: "/our-workforce",
+  },
+  openGraph: {
+    title: "Our Workforce | Trained & Certified Security Personnel",
+    description: "Meet our trained and certified security workforce dedicated to maintaining safety, professionalism, and operational excellence.",
+    url: "/our-workforce",
+    images: [
+      {
+        url: "/images/our-workforce-hero-bg.png",
+        width: 1200,
+        height: 630,
+        alt: "Our Workforce - Trained & Certified Security Personnel",
+      },
+    ],
+  },
+  twitter: {
+    title: "Our Workforce | Trained & Certified Security Personnel",
+    description: "Meet our trained and certified security workforce dedicated to maintaining safety, professionalism, and operational excellence.",
+    images: ["/images/our-workforce-hero-bg.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function WorkforcePage() {
   return (

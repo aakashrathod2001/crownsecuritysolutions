@@ -4,6 +4,37 @@ import styles from '@/styles/legal-page.module.scss';
 // Enable SSG with ISR (revalidate every 24 hours)
 export const revalidate = 86400;
 
+export const metadata = {
+  title: "Terms and Conditions | Crown Security Solutions",
+  description: "Read the terms and conditions governing the use of Crown Security Solutions' website, services, and legal policies.",
+  keywords: ["terms and conditions", "legal policies", "security services terms", "website terms", "service agreements"],
+  alternates: {
+    canonical: "/terms-and-conditions",
+  },
+  openGraph: {
+    title: "Terms and Conditions | Crown Security Solutions",
+    description: "Read the terms and conditions governing the use of Crown Security Solutions' website, services, and legal policies.",
+    url: "/terms-and-conditions",
+    images: [
+      {
+        url: "/images/home/home-hero-bg.png",
+        width: 1200,
+        height: 630,
+        alt: "Terms and Conditions - Crown Security Solutions",
+      },
+    ],
+  },
+  twitter: {
+    title: "Terms and Conditions | Crown Security Solutions",
+    description: "Read the terms and conditions governing the use of Crown Security Solutions' website, services, and legal policies.",
+    images: ["/images/home/home-hero-bg.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function TermsAndConditionsPage() {
   return (
     <section className={styles.legalPage}>

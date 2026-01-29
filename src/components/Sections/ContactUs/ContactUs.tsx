@@ -14,7 +14,7 @@ const ContactUs: React.FC = () => {
                                 <div className={styles.eyebrow}>
                                     <span className={styles.label}>Contact Us</span>
                                     <h2 className={styles.title}>
-                                        Discover how our security services can <span className={styles.highlight}>support and enhance</span> your daily business operations
+                                        Our Contact,<span className={styles.highlight}>Locations</span> & Network
                                     </h2>
                                 </div>
                                 <p className={styles.subtitle}>
@@ -23,7 +23,7 @@ const ContactUs: React.FC = () => {
                             </div>
                             <div className={styles.imageWrapper}>
                                 <Image
-                                    src={"https://placehold.co/400x400.png"}
+                                    src={"/images/contact-us.png"}
                                     alt={"Contact Us Image"}
                                     width={400}
                                     height={400}
@@ -85,28 +85,31 @@ const ContactUs: React.FC = () => {
                                 <div className={styles.serviceBlock}>
                                     <h3 className={styles.serviceTitle}>Service Coverage Areas</h3>
                                     <p className={styles.serviceText}>
-                                        Crown operates across Delhi, Haryana, Gujarat, Maharashtra, Karnataka, Telangana, and Tamil Nadu, with regional offices in Pune, Bangalore, Chennai, Ahmedabad, Hyderabad, and Delhi NCR. This network enables us to offer consistent service standards and quick escalation management across India.
+                                        Crown operates across Delhi, Haryana, Gujarat, Maharashtra, Karnataka, Telangana, and Tamil Nadu, with regional offices in Pune, Bangalore, Chennai, Ahmedabad, Hyderabad, and Delhi NCR.
                                     </p>
+                                    <p className={styles.serviceText}>This network enables us to offer consistent service standards and quick escalation management across India.</p>
                                 </div>
                                 <div className={styles.serviceDivider} />
                                 <div className={styles.serviceBlock}>
                                     <h3 className={styles.serviceTitle}>Escort Services</h3>
                                     <p className={styles.serviceText}>
-                                        Our Escort Services extend PAN-India, supported by licensed officers and advanced route coordination. No matter the destination, we ensure the same professionalism, reliability, and discretion Crown is known for.
+                                        Our Escort Services extend PAN-India, supported by licensed officers and advanced route coordination.
                                     </p>
+                                    <p className={styles.serviceText}>No matter the destination, we ensure the same professionalism, reliability, and discretion Crown is known for.</p>
                                 </div>
                                 <div className={styles.serviceDivider} />
                                 <div className={styles.serviceBlock}>
                                     <h3 className={styles.serviceTitle}>Response Time</h3>
                                     <p className={styles.serviceText}>
-                                        All inquiries are acknowledged within 4 hours and responded to within 24 hours with tailored recommendations. We believe prompt communication is the first step toward building lasting client confidence.
+                                        All inquiries are acknowledged within 4 hours and responded to within 24 hours with tailored recommendations.
                                     </p>
+                                    <p className={styles.serviceText}>We believe prompt communication is the first step toward building lasting client confidence.</p>
                                 </div>
                                 <div className={styles.serviceDivider} />
                                 <div className={styles.serviceBlock}>
                                     <h3 className={styles.serviceTitle}>Regional Representation</h3>
                                     <p className={styles.serviceText}>
-                                        Regional representatives in Pune, Bangalore, Chennai, Ahmedabad, Hyderabad, and Delhi NCR ensure local supervision and swift operational support. This decentralized approach allows Crown to combine national reach with local agility.
+                                       Regional representatives in Pune, Bangalore, Chennai, Ahmedabad, Hyderabad, and Delhi NCR ensure local supervision and swift operational support.
                                     </p>
                                 </div>
                             </div>

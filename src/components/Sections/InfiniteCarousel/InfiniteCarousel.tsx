@@ -14,7 +14,7 @@ interface InfiniteCarouselProps {
 }
 
 export function InfiniteCarousel({
-  speed = 40,
+  speed = 60,
   direction = 'left',
   className = '',
   containerClassName = '',

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Button, { ArrowIcon } from '../../UI/Button/Button';
 import styles from './QualificationStandardsSection.module.scss';
 
@@ -31,7 +32,7 @@ const QualificationStandardsSection: React.FC<QualificationStandardsSectionProps
                         <div className={styles.split}>
                             <div className={styles.imageWrapper}>
                                 <Image
-                                    src={imageSrc}
+                                    src="/images/qualification-standards.png"
                                     alt={imageAlt}
                                     width={560}
                                     height={560}
@@ -52,14 +53,16 @@ const QualificationStandardsSection: React.FC<QualificationStandardsSectionProps
 
                                 <p className={styles.description}>{description}</p>
 
-                                <Button
-                                    text={buttonText}
-                                    onClick={onButtonClick}
-                                    variant="primary"
-                                    iconBgColor="#F6292F"
-                                    textColor="#F6292F"
-                                    icon={<ArrowIcon color="#FFFFFF" />}
-                                />
+                                <Link href="/careers" passHref>
+                                    <Button
+                                        text={buttonText}
+                                        onClick={onButtonClick}
+                                        variant="primary"
+                                        iconBgColor="#F6292F"
+                                        textColor="#F6292F"
+                                        icon={<ArrowIcon color="#FFFFFF" />}
+                                    />
+                                </Link>
                             </div>
                         </div>
                     </div>

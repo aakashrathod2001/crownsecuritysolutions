@@ -1,4 +1,4 @@
-// app/page.tsx - Minimal Home Page
+// app/page.tsx - Enhanced Home Page with Metadata
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
 import InfoSplitSection from '@/components/Sections/InfoSplitSection/InfoSplitSection';
 import StatsValueSection from '@/components/Sections/StatsValueSection/StatsValueSection';
@@ -15,6 +15,37 @@ import { ABOUT_DATA } from '@/data/about';
 
 // Enable SSG with ISR (revalidate every 1 hour)
 export const revalidate = 3600;
+
+export const metadata = {
+  title: "Crown Security Solutions | Professional Security Services in India",
+  description: "Crown Security Solutions provides reliable corporate, industrial, residential, and event security services with trained professionals and 24/7 support.",
+  keywords: ["security services", "corporate security", "industrial security", "residential security", "event security", "security solutions India", "professional security services"],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Crown Security Solutions | Professional Security Services in India",
+    description: "Crown Security Solutions provides reliable corporate, industrial, residential, and event security services with trained professionals and 24/7 support.",
+    url: "/",
+    images: [
+      {
+        url: "/images/home/home-hero-bg.png",
+        width: 1200,
+        height: 630,
+        alt: "Crown Security Solutions - Professional Security Services",
+      },
+    ],
+  },
+  twitter: {
+    title: "Crown Security Solutions | Professional Security Services in India",
+    description: "Crown Security Solutions provides reliable corporate, industrial, residential, and event security services with trained professionals and 24/7 support.",
+    images: ["/images/home/home-hero-bg.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function HomePage() {
   return (

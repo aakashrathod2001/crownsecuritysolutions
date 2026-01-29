@@ -21,7 +21,7 @@ export const homepageHero: HeroSectionProps = {
     buttons: [
       {
         text: 'LEARN HOW',
-        href: '#',
+        href: '/about',
         variant: 'primary',
         iconBgColor: '#F6292F',
       },
@@ -53,14 +53,6 @@ export const aboutpageHero: HeroSectionProps = {
     title: 'About Crown Security Agency',
     description:
       "For almost 30 years now, Crown Security Agency (CSA) has been India's trusted security partner, combining disciplined manpower, ethical governance, and technology-driven systems to safeguard people, property, and peace of mind across 7 states.",
-    buttons: [
-      {
-        text: 'LEARN HOW',
-        href: '#',
-        variant: 'primary',
-        iconBgColor: '#F6292F',
-      },
-    ],
   },
   overlay: {
     enabled: true,
@@ -88,14 +80,6 @@ export const ourprocesspageHero: HeroSectionProps = {
     title: 'Our Process',
     description:
       "At Crown Security Agency, we follow a transparent, step-by-step system that ensures every deployment is planned, compliant, and performance-driven. Each stage is powered by digital tools, trained supervision, and measurable benchmarks to guarantee accountability and peace of mind.",
-    buttons: [
-      {
-        text: 'LEARN HOW',
-        href: '#',
-        variant: 'primary',
-        iconBgColor: '#F6292F',
-      },
-    ],
   },
   overlay: {
     enabled: true,
@@ -122,15 +106,7 @@ export const ourworkforcepageHero: HeroSectionProps = {
   content: {
     title: 'Our Workforce',
     description:
-      "For almost 30 years now, Crown Security Agency (CSA) has been India’s trusted security partner, combining disciplined manpower, ethical governance, and technology-driven systems to safeguard people, property, and peace of mind across 7 states.",
-    buttons: [
-      {
-        text: 'LEARN HOW',
-        href: '#',
-        variant: 'primary',
-        iconBgColor: '#F6292F',
-      },
-    ],
+      "For almost 30 years now, Crown Security Agency (CSA) has been India's trusted security partner, combining disciplined manpower, ethical governance, and technology-driven systems to safeguard people, property, and peace of mind across 7 states.",
   },
   overlay: {
     enabled: true,
@@ -157,15 +133,7 @@ export const servicespageHero: HeroSectionProps = {
   content: {
     title: 'Our Services',
     description:
-      "Security isn’t standard; it’s situational. That’s why Crown Securities offers tailored protection services designed around your environment, risk profile, and operational needs.",
-    buttons: [
-      {
-        text: 'LEARN HOW',
-        href: '#',
-        variant: 'primary',
-        iconBgColor: '#F6292F',
-      },
-    ],
+      "Security isn't standard; it's situational. That's why Crown Securities offers tailored protection services designed around your environment, risk profile, and operational needs.",
   },
   overlay: {
     enabled: true,
@@ -192,15 +160,7 @@ export const careerspageHero: HeroSectionProps = {
   content: {
     title: 'Work With Us',
     description:
-      "For almost 30 years now, Crown Security Agency (CSA) has been India’s trusted security partner, combining disciplined manpower, ethical governance, and technology-driven systems to safeguard people, property, and peace of mind across 7 states.",
-    buttons: [
-      {
-        text: 'LEARN HOW',
-        href: '#',
-        variant: 'primary',
-        iconBgColor: '#F6292F',
-      },
-    ],
+      "For almost 30 years now, Crown Security Agency (CSA) has been India's trusted security partner, combining disciplined manpower, ethical governance, and technology-driven systems to safeguard people, property, and peace of mind across 7 states.",
   },
   overlay: {
     enabled: true,

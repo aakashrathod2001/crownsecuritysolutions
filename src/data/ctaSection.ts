@@ -16,24 +16,14 @@ export const homemissionCTA: CTAContent = {
   label: "Our Mission",
   title: "To serve you with ease and convenience by providing protection and security through elite, trained guards, at any hour of the day or night.",
   textColor: "#ffffff",
-  showStripes: true,
-  button: {
-    text: "Contact Us",
-    href: "/contact-us",
-    variant: "primary"
-  }
+  showStripes: true
 };
 
 export const aboutmissionCTA: CTAContent = {
   label: "Our Mission",
   title: "To serve you with ease and convenience by providing protection and security through elite, trained guards, at any hour of the day or night.",
   textColor: "#ffffff",
-  showStripes: false,
-  button: {
-    text: "Get in Touch",
-    href: "/contact-us",
-    variant: "primary"
-  }
+  showStripes: false
 };
 
 // Example: Vision CTA - Can be used on other pages
@@ -41,12 +31,7 @@ export const homevisionCTA: CTAContent = {
   label: "Our Vision",
   title: "To become India’s most trusted and technology-driven security agency, known for reliability, compliance, and excellence in manpower management.\nOur goal is to establish a strong operational presence in every major metro and Tier-2 city while redefining service quality through innovation and ethical leadership.",
   textColor: "#ffffff",
-  showStripes: true,
-  button: {
-    text: "Learn More",
-    href: "/about",
-    variant: "secondary"
-  }
+  showStripes: true
 };
 
 // // Example: Values CTA - Can be used on other pages

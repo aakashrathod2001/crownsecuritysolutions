@@ -1,7 +1,7 @@
-import { HeroSectionProps } from '@/types/hero';
-import { SectionContent } from '@/types/section';
-import { CoreValue } from '@/data/coreValues';
-import { ServiceData as ServiceSectionData } from '@/data/serviceSectionData';
+import { HeroSectionProps } from "@/types/hero";
+import { SectionContent } from "@/types/section";
+import { CoreValue } from "@/data/coreValues";
+import { ServiceData as ServiceSectionData } from "@/data/serviceSectionData";
 
 export interface ServiceData {
   slug: string;
@@ -17,112 +17,253 @@ export interface ServiceData {
   coreValuesTitle?: string;
   coreValuesSubtitle?: string;
   serviceSectionData: ServiceSectionData[];
+  conclusion?: string;
 }
 
 export const services: ServiceData[] = [
   {
-    slug: 'corporate-park-security',
+    slug: "corporate-park-security",
     label: "SERVICE 01",
     title: "Corporate Park Security Services",
-    description: "Crown's Corporate Park Security solutions are designed to protect large office complexes while maintaining a professional and welcoming environment. Our trained personnel manage access points, visitor verification, vehicle checks, and CCTV surveillance with precision and discretion.",
+    description:
+      "Crown's Corporate Park Security solutions are designed to protect large office complexes while maintaining a professional and welcoming environment. Our trained personnel manage access points, visitor verification, vehicle checks, and CCTV surveillance with precision and discretion.",
     targetSegment: "MNCs, IT Parks, Business Parks, and Corporate Offices.",
     scopeOfWork: [
       "Visitor verification and employee ID checks.",
       "Access control and vehicle management.",
       "CCTV monitoring and alarm response coordination.",
       "Fire and emergency drill assistance.",
-      "Incident reporting, documentation, and escalation to supervisors."
+      "Incident reporting, documentation, and escalation to supervisors.",
     ],
     image: "/images/services/service-1.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-1.png",
         alt: "Corporate Park Security Services",
       },
       content: {
         title: "Corporate Park Security Services",
-        description: "Crown's Corporate Park Security solutions are designed to protect large office complexes while maintaining a professional and welcoming environment.",
+        description:
+          "Security in a corporate environment is never routine. It requires a strategic balance of vigilance, hospitality, process discipline, and technology. Crown Security Agency provides tailored Corporate Park Security Services designed to protect people, property, and day-to-day operations with complete professionalism and reliability.\nWith nearly three decades of experience, CSA delivers a structured, compliance driven security framework that supports business continuity and creates a safe and welcoming atmosphere for employees, clients, and visitors.",
+      },
+      overlay: {
+        enabled: true,
+        color: "#252929",
+        opacity: 0.6,
+      },
+      contentPosition: "left",
+      minHeight: "600px",
+    },
+    infoSplitData: {
+      label: "SERVICE 01",
+      title: "Why Corporate Park Security Matters?",
+      subtitle: "",
+      imageSrc: "",
+      imageAlt: "",
+      paragraphs: [
+        "Corporate parks have continuous foot traffic, multiple access points, sensitive assets, and large operational areas. These factors demand more than basic guarding. They require trained professionals who understand protocol management, emergency readiness, visitor handling, and real-time monitoring.\n\nCSA ensures that every corporate park receives a proactive, technology supported protection system that keeps risks low and confidence high.",
+      ],
+    },
+    coreValuesTitle: "Our Expertise in Corporate Park Security",
+    coreValuesSubtitle:
+      "We offer an end to end security solution designed specifically for the dynamic nature of business and corporate park environments.",
+    coreValuesData: [
+      {
+        id: "round_the_clock_protection",
+        title: "24×7 On-Site Protection",
+        description:
+          "Continuous guard deployment with shift-based rotations, on-ground supervisors, and rapid response teams ensuring uninterrupted vigilance at all times.",
+        iconColor: "#EF4444",
+      },
+      {
+        id: "visitor_management",
+        title: "Visitor Management & Assistance",
+        description:
+          "Trained security personnel manage reception areas, verify identities, enforce entry protocols, and assist visitors with professionalism and courtesy.",
+        iconColor: "#EF4444",
+      },
+      {
+        id: "access_control",
+        title: "Access Control & Vehicle Management",
+        description:
+          "Strict control at all entry and exit points including ID validation, vehicle inspections, RFID access systems, and detailed visitor logging.",
+        iconColor: "#EF4444",
+      },
+      {
+        id: "crisis_handling",
+        title: "Crisis & Labor Unrest Handling",
+        description:
+          "Experienced professionals trained to manage emergencies, disruptions, and sensitive situations with calm judgment, discipline, and tactical awareness.",
+        iconColor: "#EF4444",
+      },
+      {
+        id: "surveillance_monitoring",
+        title: "Surveillance & Digital Monitoring",
+        description:
+          "Integrated CCTV surveillance, patrol verification systems, and GPS-based attendance tracking to enhance visibility, control, and accountability.",
+        iconColor: "#EF4444",
+      },
+      {
+        id: "order_discipline",
+        title: "Order & Discipline Maintenance",
+        description:
+          "Ensuring all office and facility zones remain secure, organized, and compliant with established client policies and procedures.",
+        iconColor: "#EF4444",
+      },
+      {
+        id: "reporting_audit",
+        title: "Daily Reporting & Audit Support",
+        description:
+          "Every shift is documented through incident logs, attendance records, and daily activity reports supported by robust digital audit tools.",
+        iconColor: "#EF4444",
+      },
+    ],
+    serviceSectionData: [
+      {
+        label: "",
+        targetSegment: "",
+        title: "Why Clients Trust Crown Security Agency?",
+        description: "Organizations prefer CSA because of our commitment to transparency, discipline, and operational excellence.",
+        scopeOfWork: [
+          "PSARA certified corporate park security personnel",
+          "Customized deployment plans based on every site's layout and risk level",
+          "Cloud based reporting and real time supervision",
+          "Dedicated operations managers and field officers",
+          "Central control room support for continuous monitoring",
+          "Strong compliance and competitive pricing models",
+        ],
+        image: "/images/services/service-1.png",
         buttons: [
           {
-            text: "Find Out More",
+            text: "Learn More",
             variant: "primary",
-            iconBgColor: "#F6292F",
+            iconBgColor: "#000",
+            textColor: "#000",
+            href: "/contact-us",
+          },
+        ],
+      },
+      {
+        label: "",
+        targetSegment: "",
+        title: "Understanding Corporate Park Security Needs",
+        description:
+          "Corporate parks experience a mix of high footfall, vendor movement, vehicle circulation, and operational activity. These touchpoints create vulnerabilities if not managed with clear SOPs and trained personnel.\n\nCSA identifies these risks early through site surveys and creates protection plans that streamline access, improve visibility, and maintain order throughout the premises.",
+        scopeOfWork: [
+        ],
+        image: "/images/services/service-2.png",
+        buttons: [
+          {
+            text: "Learn More",
+            variant: "primary",
+            iconBgColor: "#000",
+            textColor: "#000",
+            href: "/contact-us",
+          },
+        ],
+      },
+      {
+        label: "",
+        targetSegment: "",
+        title: "Tailored Security Solutions for Corporate Parks",
+        description:
+          "Every corporate park is unique in design and operational flow. CSA builds a custom solution for each site which may include:",
+        scopeOfWork: [
+          "Perimeter and internal access control planning",
+          "Multi tier CCTV integration with centralized monitoring",
+          "Emergency and evacuation preparedness planning",
+          "Coordination with housekeeping, facility teams, and local authorities",
+          "Parking lot management and movement control",
+          "Vendor verification and material gate pass checks",
+        ],
+        image: "/images/services/service-1.png",
+        buttons: [
+          {
+            text: "Learn More",
+            variant: "primary",
+            iconBgColor: "#000",
+            textColor: "#000",
+            href: "/contact-us",
+          },
+        ],
+      },
+      {
+        label: "",
+        targetSegment: "",
+        title: "Certified, Trained, and Reliable Personnel",
+        description:
+          "CSA guards form the backbone of our service quality. Each team member goes through:",
+        scopeOfWork: [
+          "Police and background verification",
+          "Medical fitness certification",
+          "Training in etiquette, professional behavior, and corporate conduct",
+          "Fire fighting, first aid, and emergency readiness sessions",
+          "Visitor management and customer interaction training",
+        ],
+        conclusion: "These measures ensure that every guard represents your brand with confidence and discipline.",
+        image: "/images/services/service-2.png",
+        buttons: [
+          {
+            text: "Learn More",
+            variant: "primary",
+            iconBgColor: "#000",
+            textColor: "#000",
             href: "#",
           },
         ],
       },
-      overlay: {
-        enabled: true,
-        color: '#252929',
-        opacity: 0.6,
-      },
-      contentPosition: 'left',
-      minHeight: '600px',
-    },
-    infoSplitData: {
-      label: "SERVICE 01",
-      title: "Corporate Park Security Services",
-      subtitle: "",
-      imageSrc: "/images/services/service-1.png",
-      imageAlt: "Corporate Park Security Services",
-      paragraphs: [
-        "Corporate parks are high-value environments bustling with activity, housing multiple offices, assets, and employees. With constant foot traffic and valuable equipment, these spaces require proactive, technology-driven security, not just passive surveillance."
-      ]
-    },
-    coreValuesData: [
       {
-        id: "professionalism",
-        title: "Professionalism",
-        description: "Maintaining the highest standards of professional conduct in corporate environments.",
-        iconColor: "#EF4444",
-      },
-      {
-        id: "discretion",
-        title: "Discretion",
-        description: "Handling sensitive corporate information with complete confidentiality.",
-        iconColor: "#EF4444",
-      },
-      {
-        id: "reliability",
-        title: "Reliability",
-        description: "Ensuring 24/7 protection for corporate assets and personnel.",
-        iconColor: "#EF4444",
-      },
-      {
-        id: "compliance",
-        title: "Compliance",
-        description: "Adhering to corporate security protocols and regulatory requirements.",
-        iconColor: "#EF4444",
+        label: "",
+        targetSegment: "",
+        title: "Trusted by Leading Corporates in India",
+        description:
+          "CSA has provided security services to some of the country's most respected brands in corporate and commercial real estate. Our operational consistency, strict compliance, and technology backed supervision make us a preferred partner for long term deployments.",
+        scopeOfWork: [
+          "Long-term security partnerships with Fortune 500 companies and leading Indian conglomerates",
+          "Multi-city deployments across major metropolitan areas including Mumbai, Delhi, Bangalore, and Hyderabad",
+          "Zero-incident track record in high-security corporate environments",
+          "Dedicated account management teams for personalized service delivery",
+        ],
+        image: "/images/services/service-1.png",
+        buttons: [
+          {
+            text: "Learn More",
+            variant: "primary",
+            iconBgColor: "#000",
+            textColor: "#000",
+            href: "/contact-us",
+          },
+        ],
       },
     ],
-    coreValuesTitle: "Our Core Values in Corporate Security",
-    coreValuesSubtitle: "Excellence in professional security services",
-    serviceSectionData: [],
   },
+  
   {
-    slug: 'escort-services',
+    slug: "escort-services",
     label: "SERVICE 02",
     title: "Escort Services",
-    description: "Crown provides professional escort services for secure transportation of valuables, personnel, and high-risk cargo. Our trained escorts ensure safe transit with real-time monitoring and emergency response capabilities.",
+    description:
+      "Crown provides professional escort services for secure transportation of valuables, personnel, and high-risk cargo. Our trained escorts ensure safe transit with real-time monitoring and emergency response capabilities.",
     targetSegment: "Banks, Financial Institutions, and High-Value Transport.",
     scopeOfWork: [
       "Personal security escort for VIPs.",
       "Cash and valuables transportation.",
       "High-risk cargo protection.",
       "Real-time GPS monitoring.",
-      "Emergency response coordination."
+      "Emergency response coordination.",
     ],
     image: "/images/services/service-2.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-2.png",
         alt: "Escort Services",
       },
       content: {
         title: "Escort Services",
-        description: "Crown provides professional escort services for secure transportation of valuables, personnel, and high-risk cargo.",
+        description:
+          "Crown provides professional escort services for secure transportation of valuables, personnel, and high-risk cargo.",
         buttons: [
           {
             text: "Find Out More",
@@ -134,21 +275,22 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 02",
       title: "Escort Services",
-      subtitle: "Target Segment: Banks, Financial Institutions, and High-Value Transport.",
+      subtitle:
+        "Target Segment: Banks, Financial Institutions, and High-Value Transport.",
       imageSrc: "/images/services/service-2.png",
       imageAlt: "Escort Services",
       paragraphs: [
-        "Crown provides professional escort services for secure transportation of valuables, personnel, and high-risk cargo. Our trained escorts ensure safe transit with real-time monitoring and emergency response capabilities."
-      ]
+        "Crown provides professional escort services for secure transportation of valuables, personnel, and high-risk cargo. Our trained escorts ensure safe transit with real-time monitoring and emergency response capabilities.",
+      ],
     },
     coreValuesData: [
       {
@@ -166,7 +308,8 @@ export const services: ServiceData[] = [
       {
         id: "emergency-response",
         title: "Emergency Response",
-        description: "Rapid response to any security incidents during transport.",
+        description:
+          "Rapid response to any security incidents during transport.",
         iconColor: "#EF4444",
       },
       {
@@ -181,28 +324,30 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'hospitality-services',
+    slug: "hospitality-services",
     label: "SERVICE 03",
     title: "Hospitality Services",
-    description: "Crown delivers comprehensive security solutions for hotels, resorts, and hospitality establishments. Our services ensure guest safety, protect property assets, and maintain a welcoming environment for all visitors.",
+    description:
+      "Crown delivers comprehensive security solutions for hotels, resorts, and hospitality establishments. Our services ensure guest safety, protect property assets, and maintain a welcoming environment for all visitors.",
     targetSegment: "Hotels, Resorts, and Hospitality Establishments.",
     scopeOfWork: [
       "Guest safety and security.",
       "Property and asset protection.",
       "Access control and key management.",
       "Emergency response and evacuation procedures.",
-      "24/7 front desk and concierge support."
+      "24/7 front desk and concierge support.",
     ],
     image: "/images/services/service-1.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-1.png",
         alt: "Hospitality Services",
       },
       content: {
         title: "Hospitality Services",
-        description: "Crown delivers comprehensive security solutions for hotels, resorts, and hospitality establishments.",
+        description:
+          "Crown delivers comprehensive security solutions for hotels, resorts, and hospitality establishments.",
         buttons: [
           {
             text: "Find Out More",
@@ -214,33 +359,36 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 03",
       title: "Hospitality Services",
-      subtitle: "Target Segment: Hotels, Resorts, and Hospitality Establishments.",
+      subtitle:
+        "Target Segment: Hotels, Resorts, and Hospitality Establishments.",
       imageSrc: "/images/services/service-1.png",
       imageAlt: "Hospitality Services",
       paragraphs: [
-        "Crown delivers comprehensive security solutions for hotels, resorts, and hospitality establishments. Our services ensure guest safety, protect property assets, and maintain a welcoming environment for all visitors."
-      ]
+        "Crown delivers comprehensive security solutions for hotels, resorts, and hospitality establishments. Our services ensure guest safety, protect property assets, and maintain a welcoming environment for all visitors.",
+      ],
     },
     coreValuesData: [
       {
         id: "guest-safety",
         title: "Guest Safety",
-        description: "Ensuring the safety and security of all guests and visitors.",
+        description:
+          "Ensuring the safety and security of all guests and visitors.",
         iconColor: "#EF4444",
       },
       {
         id: "property-protection",
         title: "Property Protection",
-        description: "Comprehensive protection of hospitality property and assets.",
+        description:
+          "Comprehensive protection of hospitality property and assets.",
         iconColor: "#EF4444",
       },
       {
@@ -261,28 +409,31 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'industrial-security',
+    slug: "industrial-security",
     label: "SERVICE 04",
     title: "Industrial Security",
-    description: "Crown specializes in industrial security for manufacturing facilities, warehouses, and industrial complexes. Our solutions protect valuable assets, equipment, and personnel with advanced security systems and trained professionals.",
-    targetSegment: "Manufacturing Facilities, Warehouses, and Industrial Complexes.",
+    description:
+      "Crown specializes in industrial security for manufacturing facilities, warehouses, and industrial complexes. Our solutions protect valuable assets, equipment, and personnel with advanced security systems and trained professionals.",
+    targetSegment:
+      "Manufacturing Facilities, Warehouses, and Industrial Complexes.",
     scopeOfWork: [
       "Asset protection and inventory control.",
       "Equipment and machinery security.",
       "Fire prevention and safety monitoring.",
       "24/7 facility monitoring and access control.",
-      "Emergency response and incident management."
+      "Emergency response and incident management.",
     ],
     image: "/images/services/service-2.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-2.png",
         alt: "Industrial Security",
       },
       content: {
         title: "Industrial Security",
-        description: "Crown specializes in industrial security for manufacturing facilities, warehouses, and industrial complexes.",
+        description:
+          "Crown specializes in industrial security for manufacturing facilities, warehouses, and industrial complexes.",
         buttons: [
           {
             text: "Find Out More",
@@ -294,33 +445,36 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 04",
       title: "Industrial Security",
-      subtitle: "Target Segment: Manufacturing Facilities, Warehouses, and Industrial Complexes.",
+      subtitle:
+        "Target Segment: Manufacturing Facilities, Warehouses, and Industrial Complexes.",
       imageSrc: "/images/services/service-2.png",
       imageAlt: "Industrial Security",
       paragraphs: [
-        "Crown specializes in industrial security for manufacturing facilities, warehouses, and industrial complexes. Our solutions protect valuable assets, equipment, and personnel with advanced security systems and trained professionals."
-      ]
+        "Crown specializes in industrial security for manufacturing facilities, warehouses, and industrial complexes. Our solutions protect valuable assets, equipment, and personnel with advanced security systems and trained professionals.",
+      ],
     },
     coreValuesData: [
       {
         id: "asset-protection",
         title: "Asset Protection",
-        description: "Comprehensive protection of industrial assets and equipment.",
+        description:
+          "Comprehensive protection of industrial assets and equipment.",
         iconColor: "#EF4444",
       },
       {
         id: "safety-monitoring",
         title: "Safety Monitoring",
-        description: "Continuous monitoring of safety protocols and procedures.",
+        description:
+          "Continuous monitoring of safety protocols and procedures.",
         iconColor: "#EF4444",
       },
       {
@@ -341,28 +495,30 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'logistics-security',
+    slug: "logistics-security",
     label: "SERVICE 05",
     title: "Logistics Security",
-    description: "Crown provides specialized security solutions for logistics and supply chain operations. Our services protect cargo, warehouses, and transportation hubs with advanced monitoring and risk mitigation strategies.",
+    description:
+      "Crown provides specialized security solutions for logistics and supply chain operations. Our services protect cargo, warehouses, and transportation hubs with advanced monitoring and risk mitigation strategies.",
     targetSegment: "Logistics Companies, Warehouses, and Distribution Centers.",
     scopeOfWork: [
       "Cargo protection and monitoring.",
       "Warehouse security and access control.",
       "Supply chain risk assessment.",
       "Theft prevention and loss mitigation.",
-      "Real-time cargo tracking and surveillance."
+      "Real-time cargo tracking and surveillance.",
     ],
     image: "/images/services/service-1.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-1.png",
         alt: "Logistics Security",
       },
       content: {
         title: "Logistics Security",
-        description: "Crown provides specialized security solutions for logistics and supply chain operations.",
+        description:
+          "Crown provides specialized security solutions for logistics and supply chain operations.",
         buttons: [
           {
             text: "Find Out More",
@@ -374,21 +530,22 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 05",
       title: "Logistics Security",
-      subtitle: "Target Segment: Logistics Companies, Warehouses, and Distribution Centers.",
+      subtitle:
+        "Target Segment: Logistics Companies, Warehouses, and Distribution Centers.",
       imageSrc: "/images/services/service-1.png",
       imageAlt: "Logistics Security",
       paragraphs: [
-        "Crown provides specialized security solutions for logistics and supply chain operations. Our services protect cargo, warehouses, and transportation hubs with advanced monitoring and risk mitigation strategies."
-      ]
+        "Crown provides specialized security solutions for logistics and supply chain operations. Our services protect cargo, warehouses, and transportation hubs with advanced monitoring and risk mitigation strategies.",
+      ],
     },
     coreValuesData: [
       {
@@ -421,28 +578,30 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'mall-security',
+    slug: "mall-security",
     label: "SERVICE 06",
     title: "Mall Security",
-    description: "Crown offers comprehensive security solutions for shopping malls and retail complexes. Our services ensure customer safety, protect retail assets, and maintain a secure shopping environment for all visitors.",
+    description:
+      "Crown offers comprehensive security solutions for shopping malls and retail complexes. Our services ensure customer safety, protect retail assets, and maintain a secure shopping environment for all visitors.",
     targetSegment: "Shopping Malls, Retail Complexes, and Commercial Centers.",
     scopeOfWork: [
       "Customer safety and crowd management.",
       "Asset protection and loss prevention.",
       "Access control and parking security.",
       "Emergency response and evacuation procedures.",
-      "24/7 surveillance and monitoring."
+      "24/7 surveillance and monitoring.",
     ],
     image: "/images/services/service-2.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-2.png",
         alt: "Mall Security",
       },
       content: {
         title: "Mall Security",
-        description: "Crown offers comprehensive security solutions for shopping malls and retail complexes.",
+        description:
+          "Crown offers comprehensive security solutions for shopping malls and retail complexes.",
         buttons: [
           {
             text: "Find Out More",
@@ -454,21 +613,22 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 06",
       title: "Mall Security",
-      subtitle: "Target Segment: Shopping Malls, Retail Complexes, and Commercial Centers.",
+      subtitle:
+        "Target Segment: Shopping Malls, Retail Complexes, and Commercial Centers.",
       imageSrc: "/images/services/service-2.png",
       imageAlt: "Mall Security",
       paragraphs: [
-        "Crown offers comprehensive security solutions for shopping malls and retail complexes. Our services ensure customer safety, protect retail assets, and maintain a secure shopping environment for all visitors."
-      ]
+        "Crown offers comprehensive security solutions for shopping malls and retail complexes. Our services ensure customer safety, protect retail assets, and maintain a secure shopping environment for all visitors.",
+      ],
     },
     coreValuesData: [
       {
@@ -501,28 +661,31 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'high-end-residential-security',
+    slug: "high-end-residential-security",
     label: "SERVICE 07",
     title: "High-End Residential Security",
-    description: "Crown provides premium security solutions for luxury residences, gated communities, and high-end properties. Our discreet and professional services ensure privacy, protection, and peace of mind for discerning clients.",
-    targetSegment: "Luxury Residences, Gated Communities, and High-End Properties.",
+    description:
+      "Crown provides premium security solutions for luxury residences, gated communities, and high-end properties. Our discreet and professional services ensure privacy, protection, and peace of mind for discerning clients.",
+    targetSegment:
+      "Luxury Residences, Gated Communities, and High-End Properties.",
     scopeOfWork: [
       "24/7 residence monitoring and patrols.",
       "Discreet security presence.",
       "Advanced access control systems.",
       "Emergency response and coordination.",
-      "Privacy protection and confidentiality."
+      "Privacy protection and confidentiality.",
     ],
     image: "/images/services/service-1.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-1.png",
         alt: "High-End Residential Security",
       },
       content: {
         title: "High-End Residential Security",
-        description: "Crown provides premium security solutions for luxury residences, gated communities, and high-end properties.",
+        description:
+          "Crown provides premium security solutions for luxury residences, gated communities, and high-end properties.",
         buttons: [
           {
             text: "Find Out More",
@@ -534,21 +697,22 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 07",
       title: "High-End Residential Security",
-      subtitle: "Target Segment: Luxury Residences, Gated Communities, and High-End Properties.",
+      subtitle:
+        "Target Segment: Luxury Residences, Gated Communities, and High-End Properties.",
       imageSrc: "/images/services/service-1.png",
       imageAlt: "High-End Residential Security",
       paragraphs: [
-        "Crown provides premium security solutions for luxury residences, gated communities, and high-end properties. Our discreet and professional services ensure privacy, protection, and peace of mind for discerning clients."
-      ]
+        "Crown provides premium security solutions for luxury residences, gated communities, and high-end properties. Our discreet and professional services ensure privacy, protection, and peace of mind for discerning clients.",
+      ],
     },
     coreValuesData: [
       {
@@ -581,28 +745,30 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'school-security',
+    slug: "school-security",
     label: "SERVICE 08",
     title: "School Security",
-    description: "Crown offers comprehensive security solutions for schools, colleges, and educational institutions. Our services protect students, faculty, and campus facilities while promoting a safe learning environment.",
+    description:
+      "Crown offers comprehensive security solutions for schools, colleges, and educational institutions. Our services protect students, faculty, and campus facilities while promoting a safe learning environment.",
     targetSegment: "Schools, Colleges, and Educational Institutions.",
     scopeOfWork: [
       "Student and faculty safety management.",
       "Campus access control and monitoring.",
       "Emergency response and evacuation procedures.",
       "Anti-bullying and conflict resolution.",
-      "Security education and awareness programs."
+      "Security education and awareness programs.",
     ],
     image: "/images/services/service-2.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-2.png",
         alt: "School Security",
       },
       content: {
         title: "School Security",
-        description: "Crown offers comprehensive security solutions for schools, colleges, and educational institutions.",
+        description:
+          "Crown offers comprehensive security solutions for schools, colleges, and educational institutions.",
         buttons: [
           {
             text: "Find Out More",
@@ -614,39 +780,43 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 08",
       title: "School Security",
-      subtitle: "Target Segment: Schools, Colleges, and Educational Institutions.",
+      subtitle:
+        "Target Segment: Schools, Colleges, and Educational Institutions.",
       imageSrc: "/images/services/service-2.png",
       imageAlt: "School Security",
       paragraphs: [
-        "Crown offers comprehensive security solutions for schools, colleges, and educational institutions. Our services protect students, faculty, and campus facilities while promoting a safe learning environment."
-      ]
+        "Crown offers comprehensive security solutions for schools, colleges, and educational institutions. Our services protect students, faculty, and campus facilities while promoting a safe learning environment.",
+      ],
     },
     coreValuesData: [
       {
         id: "student-safety",
         title: "Student Safety",
-        description: "Creating safe environments for student learning and development.",
+        description:
+          "Creating safe environments for student learning and development.",
         iconColor: "#EF4444",
       },
       {
         id: "campus-security",
         title: "Campus Security",
-        description: "Comprehensive security coverage for educational facilities.",
+        description:
+          "Comprehensive security coverage for educational facilities.",
         iconColor: "#EF4444",
       },
       {
         id: "emergency-preparedness",
         title: "Emergency Preparedness",
-        description: "Preparedness for various emergency situations and responses.",
+        description:
+          "Preparedness for various emergency situations and responses.",
         iconColor: "#EF4444",
       },
       {
@@ -661,28 +831,31 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'event-security',
+    slug: "event-security",
     label: "SERVICE 09",
     title: "Event Security",
-    description: "Crown provides comprehensive event security solutions for conferences, concerts, sports events, and corporate gatherings. Our experienced team ensures crowd management, access control, and emergency response while maintaining a positive atmosphere for attendees.",
-    targetSegment: "Event Organizers, Venues, Corporate Events, and Public Gatherings.",
+    description:
+      "Crown provides comprehensive event security solutions for conferences, concerts, sports events, and corporate gatherings. Our experienced team ensures crowd management, access control, and emergency response while maintaining a positive atmosphere for attendees.",
+    targetSegment:
+      "Event Organizers, Venues, Corporate Events, and Public Gatherings.",
     scopeOfWork: [
       "Crowd control and flow management.",
       "Access control and ticket verification.",
       "Emergency response and medical coordination.",
       "VIP protection and secure transportation.",
-      "Post-event security debriefing and reporting."
+      "Post-event security debriefing and reporting.",
     ],
     image: "/images/services/service-1.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-1.png",
         alt: "Event Security",
       },
       content: {
         title: "Event Security",
-        description: "Crown provides comprehensive event security solutions for conferences, concerts, sports events, and corporate gatherings.",
+        description:
+          "Crown provides comprehensive event security solutions for conferences, concerts, sports events, and corporate gatherings.",
         buttons: [
           {
             text: "Find Out More",
@@ -694,45 +867,50 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 09",
       title: "Event Security",
-      subtitle: "Target Segment: Event Organizers, Venues, Corporate Events, and Public Gatherings.",
+      subtitle:
+        "Target Segment: Event Organizers, Venues, Corporate Events, and Public Gatherings.",
       imageSrc: "/images/services/service-1.png",
       imageAlt: "Event Security",
       paragraphs: [
-        "Crown provides comprehensive event security solutions for conferences, concerts, sports events, and corporate gatherings. Our experienced team ensures crowd management, access control, and emergency response while maintaining a positive atmosphere for attendees."
-      ]
+        "Crown provides comprehensive event security solutions for conferences, concerts, sports events, and corporate gatherings. Our experienced team ensures crowd management, access control, and emergency response while maintaining a positive atmosphere for attendees.",
+      ],
     },
     coreValuesData: [
       {
         id: "crowd-management",
         title: "Crowd Management",
-        description: "Expert handling of large crowds while maintaining safety and order.",
+        description:
+          "Expert handling of large crowds while maintaining safety and order.",
         iconColor: "#EF4444",
       },
       {
         id: "emergency-response",
         title: "Emergency Response",
-        description: "Rapid and effective response to any security incidents during events.",
+        description:
+          "Rapid and effective response to any security incidents during events.",
         iconColor: "#EF4444",
       },
       {
         id: "coordination",
         title: "Coordination",
-        description: "Seamless coordination with event organizers and local authorities.",
+        description:
+          "Seamless coordination with event organizers and local authorities.",
         iconColor: "#EF4444",
       },
       {
         id: "discretion",
         title: "Discretion",
-        description: "Maintaining privacy and professionalism in high-profile event settings.",
+        description:
+          "Maintaining privacy and professionalism in high-profile event settings.",
         iconColor: "#EF4444",
       },
     ],
@@ -741,28 +919,31 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'security-convoy-services',
+    slug: "security-convoy-services",
     label: "SERVICE 10",
     title: "Security Convoy Services",
-    description: "Crown provides armored convoy services for secure transportation of high-value cargo, personnel, and sensitive materials. Our professional teams ensure safe transit with advanced security protocols and real-time coordination.",
-    targetSegment: "High-Value Transport, Government Agencies, and Corporate Clients.",
+    description:
+      "Crown provides armored convoy services for secure transportation of high-value cargo, personnel, and sensitive materials. Our professional teams ensure safe transit with advanced security protocols and real-time coordination.",
+    targetSegment:
+      "High-Value Transport, Government Agencies, and Corporate Clients.",
     scopeOfWork: [
       "Armored vehicle transportation.",
       "Multi-vehicle convoy protection.",
       "Route planning and risk assessment.",
       "Real-time communication and monitoring.",
-      "Emergency response and backup coordination."
+      "Emergency response and backup coordination.",
     ],
     image: "/images/services/service-2.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-2.png",
         alt: "Security Convoy Services",
       },
       content: {
         title: "Security Convoy Services",
-        description: "Crown provides armored convoy services for secure transportation of high-value cargo, personnel, and sensitive materials.",
+        description:
+          "Crown provides armored convoy services for secure transportation of high-value cargo, personnel, and sensitive materials.",
         buttons: [
           {
             text: "Find Out More",
@@ -774,21 +955,22 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 10",
       title: "Security Convoy Services",
-      subtitle: "Target Segment: High-Value Transport, Government Agencies, and Corporate Clients.",
+      subtitle:
+        "Target Segment: High-Value Transport, Government Agencies, and Corporate Clients.",
       imageSrc: "/images/services/service-2.png",
       imageAlt: "Security Convoy Services",
       paragraphs: [
-        "Crown provides armored convoy services for secure transportation of high-value cargo, personnel, and sensitive materials. Our professional teams ensure safe transit with advanced security protocols and real-time coordination."
-      ]
+        "Crown provides armored convoy services for secure transportation of high-value cargo, personnel, and sensitive materials. Our professional teams ensure safe transit with advanced security protocols and real-time coordination.",
+      ],
     },
     coreValuesData: [
       {
@@ -821,28 +1003,31 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'vip-protection-personal-escort-security',
+    slug: "vip-protection-personal-escort-security",
     label: "SERVICE 11",
     title: "VIP Protection / Personal Escort Security",
-    description: "Crown delivers elite personal security and VIP protection services for high-profile individuals, celebrities, and executives. Our discreet and professional teams ensure complete safety and privacy for our clients.",
-    targetSegment: "High-Profile Individuals, Celebrities, and Corporate Executives.",
+    description:
+      "Crown delivers elite personal security and VIP protection services for high-profile individuals, celebrities, and executives. Our discreet and professional teams ensure complete safety and privacy for our clients.",
+    targetSegment:
+      "High-Profile Individuals, Celebrities, and Corporate Executives.",
     scopeOfWork: [
       "Personal bodyguard services.",
       "Residential and event security.",
       "Travel security and coordination.",
       "Threat assessment and planning.",
-      "Emergency medical coordination."
+      "Emergency medical coordination.",
     ],
     image: "/images/services/service-1.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-1.png",
         alt: "VIP Protection / Personal Escort Security",
       },
       content: {
         title: "VIP Protection / Personal Escort Security",
-        description: "Crown delivers elite personal security and VIP protection services for high-profile individuals, celebrities, and executives.",
+        description:
+          "Crown delivers elite personal security and VIP protection services for high-profile individuals, celebrities, and executives.",
         buttons: [
           {
             text: "Find Out More",
@@ -854,21 +1039,22 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 11",
       title: "VIP Protection / Personal Escort Security",
-      subtitle: "Target Segment: High-Profile Individuals, Celebrities, and Corporate Executives.",
+      subtitle:
+        "Target Segment: High-Profile Individuals, Celebrities, and Corporate Executives.",
       imageSrc: "/images/services/service-1.png",
       imageAlt: "VIP Protection / Personal Escort Security",
       paragraphs: [
-        "Crown delivers elite personal security and VIP protection services for high-profile individuals, celebrities, and executives. Our discreet and professional teams ensure complete safety and privacy for our clients."
-      ]
+        "Crown delivers elite personal security and VIP protection services for high-profile individuals, celebrities, and executives. Our discreet and professional teams ensure complete safety and privacy for our clients.",
+      ],
     },
     coreValuesData: [
       {
@@ -901,28 +1087,31 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'cctv-monitoring-alarm-response-services',
+    slug: "cctv-monitoring-alarm-response-services",
     label: "SERVICE 12",
     title: "CCTV Monitoring & Alarm Response Services",
-    description: "Crown provides 24/7 CCTV monitoring and alarm response services with advanced surveillance technology and rapid response teams. Our centralized monitoring centers ensure immediate action on security threats.",
-    targetSegment: "Commercial Buildings, Residential Complexes, and Security Systems.",
+    description:
+      "Crown provides 24/7 CCTV monitoring and alarm response services with advanced surveillance technology and rapid response teams. Our centralized monitoring centers ensure immediate action on security threats.",
+    targetSegment:
+      "Commercial Buildings, Residential Complexes, and Security Systems.",
     scopeOfWork: [
       "24/7 CCTV monitoring and surveillance.",
       "Alarm system monitoring and response.",
       "Centralized control room operations.",
       "Rapid response team deployment.",
-      "Incident documentation and reporting."
+      "Incident documentation and reporting.",
     ],
     image: "/images/services/service-2.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-2.png",
         alt: "CCTV Monitoring & Alarm Response Services",
       },
       content: {
         title: "CCTV Monitoring & Alarm Response Services",
-        description: "Crown provides 24/7 CCTV monitoring and alarm response services with advanced surveillance technology and rapid response teams.",
+        description:
+          "Crown provides 24/7 CCTV monitoring and alarm response services with advanced surveillance technology and rapid response teams.",
         buttons: [
           {
             text: "Find Out More",
@@ -934,21 +1123,22 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 12",
       title: "CCTV Monitoring & Alarm Response Services",
-      subtitle: "Target Segment: Commercial Buildings, Residential Complexes, and Security Systems.",
+      subtitle:
+        "Target Segment: Commercial Buildings, Residential Complexes, and Security Systems.",
       imageSrc: "/images/services/service-2.png",
       imageAlt: "CCTV Monitoring & Alarm Response Services",
       paragraphs: [
-        "Crown provides 24/7 CCTV monitoring and alarm response services with advanced surveillance technology and rapid response teams. Our centralized monitoring centers ensure immediate action on security threats."
-      ]
+        "Crown provides 24/7 CCTV monitoring and alarm response services with advanced surveillance technology and rapid response teams. Our centralized monitoring centers ensure immediate action on security threats.",
+      ],
     },
     coreValuesData: [
       {
@@ -966,7 +1156,8 @@ export const services: ServiceData[] = [
       {
         id: "advanced-technology",
         title: "Advanced Technology",
-        description: "Utilizing the latest surveillance and monitoring technology.",
+        description:
+          "Utilizing the latest surveillance and monitoring technology.",
         iconColor: "#EF4444",
       },
       {
@@ -981,28 +1172,31 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'access-control-management',
+    slug: "access-control-management",
     label: "SERVICE 13",
     title: "Access Control Management",
-    description: "Crown implements comprehensive access control systems for buildings, facilities, and restricted areas. Our solutions include biometric authentication, card-based systems, and digital monitoring for secure access management.",
-    targetSegment: "Commercial Buildings, Government Facilities, and Secure Premises.",
+    description:
+      "Crown implements comprehensive access control systems for buildings, facilities, and restricted areas. Our solutions include biometric authentication, card-based systems, and digital monitoring for secure access management.",
+    targetSegment:
+      "Commercial Buildings, Government Facilities, and Secure Premises.",
     scopeOfWork: [
       "Biometric access control systems.",
       "Digital key card and RFID systems.",
       "Access log monitoring and reporting.",
       "System maintenance and upgrades.",
-      "Emergency access protocols."
+      "Emergency access protocols.",
     ],
     image: "/images/services/service-1.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-1.png",
         alt: "Access Control Management",
       },
       content: {
         title: "Access Control Management",
-        description: "Crown implements comprehensive access control systems for buildings, facilities, and restricted areas.",
+        description:
+          "Crown implements comprehensive access control systems for buildings, facilities, and restricted areas.",
         buttons: [
           {
             text: "Find Out More",
@@ -1014,21 +1208,22 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 13",
       title: "Access Control Management",
-      subtitle: "Target Segment: Commercial Buildings, Government Facilities, and Secure Premises.",
+      subtitle:
+        "Target Segment: Commercial Buildings, Government Facilities, and Secure Premises.",
       imageSrc: "/images/services/service-1.png",
       imageAlt: "Access Control Management",
       paragraphs: [
-        "Crown implements comprehensive access control systems for buildings, facilities, and restricted areas. Our solutions include biometric authentication, card-based systems, and digital monitoring for secure access management."
-      ]
+        "Crown implements comprehensive access control systems for buildings, facilities, and restricted areas. Our solutions include biometric authentication, card-based systems, and digital monitoring for secure access management.",
+      ],
     },
     coreValuesData: [
       {
@@ -1061,28 +1256,31 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'fire-safety-emergency-drill-support',
+    slug: "fire-safety-emergency-drill-support",
     label: "SERVICE 14",
     title: "Fire Safety & Emergency Drill Support",
-    description: "Crown provides fire safety services and emergency drill support for buildings and facilities. Our trained professionals conduct fire safety assessments, evacuation drills, and emergency preparedness training.",
-    targetSegment: "Commercial Buildings, Residential Complexes, and Public Facilities.",
+    description:
+      "Crown provides fire safety services and emergency drill support for buildings and facilities. Our trained professionals conduct fire safety assessments, evacuation drills, and emergency preparedness training.",
+    targetSegment:
+      "Commercial Buildings, Residential Complexes, and Public Facilities.",
     scopeOfWork: [
       "Fire safety assessments and audits.",
       "Emergency evacuation drill coordination.",
       "Fire prevention training programs.",
       "Emergency response planning.",
-      "Equipment maintenance and inspection."
+      "Equipment maintenance and inspection.",
     ],
     image: "/images/services/service-2.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-2.png",
         alt: "Fire Safety & Emergency Drill Support",
       },
       content: {
         title: "Fire Safety & Emergency Drill Support",
-        description: "Crown provides fire safety services and emergency drill support for buildings and facilities.",
+        description:
+          "Crown provides fire safety services and emergency drill support for buildings and facilities.",
         buttons: [
           {
             text: "Find Out More",
@@ -1094,21 +1292,22 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 14",
       title: "Fire Safety & Emergency Drill Support",
-      subtitle: "Target Segment: Commercial Buildings, Residential Complexes, and Public Facilities.",
+      subtitle:
+        "Target Segment: Commercial Buildings, Residential Complexes, and Public Facilities.",
       imageSrc: "/images/services/service-2.png",
       imageAlt: "Fire Safety & Emergency Drill Support",
       paragraphs: [
-        "Crown provides fire safety services and emergency drill support for buildings and facilities. Our trained professionals conduct fire safety assessments, evacuation drills, and emergency preparedness training."
-      ]
+        "Crown provides fire safety services and emergency drill support for buildings and facilities. Our trained professionals conduct fire safety assessments, evacuation drills, and emergency preparedness training.",
+      ],
     },
     coreValuesData: [
       {
@@ -1126,7 +1325,8 @@ export const services: ServiceData[] = [
       {
         id: "training-education",
         title: "Training & Education",
-        description: "Educating personnel on fire safety and emergency procedures.",
+        description:
+          "Educating personnel on fire safety and emergency procedures.",
         iconColor: "#EF4444",
       },
       {
@@ -1141,28 +1341,32 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'gate-pass-and-vehicle-movement-verification-logistics-industrial',
+    slug: "gate-pass-and-vehicle-movement-verification-logistics-industrial",
     label: "SERVICE 15",
     title: "Gate-Pass and Vehicle Movement Verification (Logistics/Industrial)",
-    description: "Crown provides gate-pass and vehicle movement verification services for logistics and industrial facilities. Our systems ensure secure access control, vehicle verification, and movement tracking for enhanced security.",
-    targetSegment: "Logistics Facilities, Industrial Complexes, and Secure Premises.",
+    description:
+      "Crown provides gate-pass and vehicle movement verification services for logistics and industrial facilities. Our systems ensure secure access control, vehicle verification, and movement tracking for enhanced security.",
+    targetSegment:
+      "Logistics Facilities, Industrial Complexes, and Secure Premises.",
     scopeOfWork: [
       "Gate-pass system implementation.",
       "Vehicle registration and verification.",
       "Movement tracking and logging.",
       "Access control for delivery vehicles.",
-      "Security clearance procedures."
+      "Security clearance procedures.",
     ],
     image: "/images/services/service-1.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-1.png",
         alt: "Gate-Pass and Vehicle Movement Verification (Logistics/Industrial)",
       },
       content: {
-        title: "Gate-Pass and Vehicle Movement Verification (Logistics/Industrial)",
-        description: "Crown provides gate-pass and vehicle movement verification services for logistics and industrial facilities.",
+        title:
+          "Gate-Pass and Vehicle Movement Verification (Logistics/Industrial)",
+        description:
+          "Crown provides gate-pass and vehicle movement verification services for logistics and industrial facilities.",
         buttons: [
           {
             text: "Find Out More",
@@ -1174,21 +1378,24 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 15",
-      title: "Gate-Pass and Vehicle Movement Verification (Logistics/Industrial)",
-      subtitle: "Target Segment: Logistics Facilities, Industrial Complexes, and Secure Premises.",
+      title:
+        "Gate-Pass and Vehicle Movement Verification (Logistics/Industrial)",
+      subtitle:
+        "Target Segment: Logistics Facilities, Industrial Complexes, and Secure Premises.",
       imageSrc: "/images/services/service-1.png",
-      imageAlt: "Gate-Pass and Vehicle Movement Verification (Logistics/Industrial)",
+      imageAlt:
+        "Gate-Pass and Vehicle Movement Verification (Logistics/Industrial)",
       paragraphs: [
-        "Crown provides gate-pass and vehicle movement verification services for logistics and industrial facilities. Our systems ensure secure access control, vehicle verification, and movement tracking for enhanced security."
-      ]
+        "Crown provides gate-pass and vehicle movement verification services for logistics and industrial facilities. Our systems ensure secure access control, vehicle verification, and movement tracking for enhanced security.",
+      ],
     },
     coreValuesData: [
       {
@@ -1221,28 +1428,31 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'cargo-integrity-audits-logistics-security',
+    slug: "cargo-integrity-audits-logistics-security",
     label: "SERVICE 16",
     title: "Cargo Integrity Audits (Logistics Security)",
-    description: "Crown conducts comprehensive cargo integrity audits for logistics and transportation companies. Our services ensure cargo security, prevent tampering, and maintain supply chain integrity throughout the transportation process.",
-    targetSegment: "Logistics Companies, Transportation Firms, and Supply Chain Operators.",
+    description:
+      "Crown conducts comprehensive cargo integrity audits for logistics and transportation companies. Our services ensure cargo security, prevent tampering, and maintain supply chain integrity throughout the transportation process.",
+    targetSegment:
+      "Logistics Companies, Transportation Firms, and Supply Chain Operators.",
     scopeOfWork: [
       "Cargo inspection and verification.",
       "Seal integrity checks.",
       "Documentation and record keeping.",
       "Tamper detection and prevention.",
-      "Quality assurance audits."
+      "Quality assurance audits.",
     ],
     image: "/images/services/service-2.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-2.png",
         alt: "Cargo Integrity Audits (Logistics Security)",
       },
       content: {
         title: "Cargo Integrity Audits (Logistics Security)",
-        description: "Crown conducts comprehensive cargo integrity audits for logistics and transportation companies.",
+        description:
+          "Crown conducts comprehensive cargo integrity audits for logistics and transportation companies.",
         buttons: [
           {
             text: "Find Out More",
@@ -1254,21 +1464,22 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 16",
       title: "Cargo Integrity Audits (Logistics Security)",
-      subtitle: "Target Segment: Logistics Companies, Transportation Firms, and Supply Chain Operators.",
+      subtitle:
+        "Target Segment: Logistics Companies, Transportation Firms, and Supply Chain Operators.",
       imageSrc: "/images/services/service-2.png",
       imageAlt: "Cargo Integrity Audits (Logistics Security)",
       paragraphs: [
-        "Crown conducts comprehensive cargo integrity audits for logistics and transportation companies. Our services ensure cargo security, prevent tampering, and maintain supply chain integrity throughout the transportation process."
-      ]
+        "Crown conducts comprehensive cargo integrity audits for logistics and transportation companies. Our services ensure cargo security, prevent tampering, and maintain supply chain integrity throughout the transportation process.",
+      ],
     },
     coreValuesData: [
       {
@@ -1301,28 +1512,31 @@ export const services: ServiceData[] = [
     serviceSectionData: [],
   },
   {
-    slug: 'perimeter-patrolling-ppe-compliance-industrial-security',
+    slug: "perimeter-patrolling-ppe-compliance-industrial-security",
     label: "SERVICE 17",
     title: "Perimeter Patrolling & PPE Compliance (Industrial Security)",
-    description: "Crown provides perimeter patrolling services and PPE compliance monitoring for industrial facilities. Our trained security personnel ensure facility security and enforce safety protocols for worker protection.",
-    targetSegment: "Industrial Facilities, Manufacturing Plants, and Construction Sites.",
+    description:
+      "Crown provides perimeter patrolling services and PPE compliance monitoring for industrial facilities. Our trained security personnel ensure facility security and enforce safety protocols for worker protection.",
+    targetSegment:
+      "Industrial Facilities, Manufacturing Plants, and Construction Sites.",
     scopeOfWork: [
       "Perimeter security patrols.",
       "PPE compliance monitoring.",
       "Safety protocol enforcement.",
       "Security breach prevention.",
-      "Incident reporting and documentation."
+      "Incident reporting and documentation.",
     ],
     image: "/images/services/service-1.png",
     heroData: {
       media: {
-        type: 'image',
+        type: "image",
         src: "/images/services/service-1.png",
         alt: "Perimeter Patrolling & PPE Compliance (Industrial Security)",
       },
       content: {
         title: "Perimeter Patrolling & PPE Compliance (Industrial Security)",
-        description: "Crown provides perimeter patrolling services and PPE compliance monitoring for industrial facilities.",
+        description:
+          "Crown provides perimeter patrolling services and PPE compliance monitoring for industrial facilities.",
         buttons: [
           {
             text: "Find Out More",
@@ -1334,21 +1548,22 @@ export const services: ServiceData[] = [
       },
       overlay: {
         enabled: true,
-        color: '#252929',
+        color: "#252929",
         opacity: 0.6,
       },
-      contentPosition: 'left',
-      minHeight: '600px',
+      contentPosition: "left",
+      minHeight: "600px",
     },
     infoSplitData: {
       label: "SERVICE 17",
       title: "Perimeter Patrolling & PPE Compliance (Industrial Security)",
-      subtitle: "Target Segment: Industrial Facilities, Manufacturing Plants, and Construction Sites.",
+      subtitle:
+        "Target Segment: Industrial Facilities, Manufacturing Plants, and Construction Sites.",
       imageSrc: "/images/services/service-1.png",
       imageAlt: "Perimeter Patrolling & PPE Compliance (Industrial Security)",
       paragraphs: [
-        "Crown provides perimeter patrolling services and PPE compliance monitoring for industrial facilities. Our trained security personnel ensure facility security and enforce safety protocols for worker protection."
-      ]
+        "Crown provides perimeter patrolling services and PPE compliance monitoring for industrial facilities. Our trained security personnel ensure facility security and enforce safety protocols for worker protection.",
+      ],
     },
     coreValuesData: [
       {
@@ -1360,7 +1575,8 @@ export const services: ServiceData[] = [
       {
         id: "safety-compliance",
         title: "Safety Compliance",
-        description: "Ensuring compliance with safety regulations and PPE requirements.",
+        description:
+          "Ensuring compliance with safety regulations and PPE requirements.",
         iconColor: "#EF4444",
       },
       {
@@ -1377,17 +1593,18 @@ export const services: ServiceData[] = [
       },
     ],
     coreValuesTitle: "Our Core Values in Perimeter Security",
-    coreValuesSubtitle: "Protecting industrial facilities and ensuring safety compliance",
+    coreValuesSubtitle:
+      "Protecting industrial facilities and ensuring safety compliance",
     serviceSectionData: [],
   },
 ];
 
 // Helper function to get service by slug
 export const getServiceBySlug = (slug: string): ServiceData | undefined => {
-  return services.find(service => service.slug === slug);
+  return services.find((service) => service.slug === slug);
 };
 
 // Get all service slugs for static generation
 export const getAllServiceSlugs = (): string[] => {
-  return services.map(service => service.slug);
+  return services.map((service) => service.slug);
 };

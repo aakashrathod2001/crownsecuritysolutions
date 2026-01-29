@@ -15,6 +15,7 @@ export interface ServiceData {
   scopeOfWork: string[];
   image: string;
   buttons?: ButtonConfig[];
+  conclusion?: string;
 }
 
 export const serviceData: ServiceData[] = [

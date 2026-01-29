@@ -1,4 +1,4 @@
-// app/about/page.tsx
+// app/about/page.tsx - Enhanced About Page with Metadata
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
 import InfoSplitSection from '@/components/Sections/InfoSplitSection/InfoSplitSection';
 import { aboutpageHero } from '@/data/heroSections';
@@ -17,6 +17,37 @@ import { ABOUT_DATA } from '@/data/about';
 // Enable SSG with ISR (revalidate every 1 hour)
 export const revalidate = 3600;
 
+export const metadata = {
+  title: "About Crown Security Solutions | Trusted Security Experts",
+  description: "Learn about Crown Security Solutions, our experience, values, and commitment to delivering professional and dependable security services.",
+  keywords: ["about us", "security company", "security experts", "security services", "professional security", "security solutions"],
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Crown Security Solutions | Trusted Security Experts",
+    description: "Learn about Crown Security Solutions, our experience, values, and commitment to delivering professional and dependable security services.",
+    url: "/about",
+    images: [
+      {
+        url: "/images/about/about-hero-bg.png",
+        width: 1200,
+        height: 630,
+        alt: "About Crown Security Solutions - Trusted Security Experts",
+      },
+    ],
+  },
+  twitter: {
+    title: "About Crown Security Solutions | Trusted Security Experts",
+    description: "Learn about Crown Security Solutions, our experience, values, and commitment to delivering professional and dependable security services.",
+    images: ["/images/about/about-hero-bg.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function AboutPage() {
   return (
     <>
@@ -25,12 +56,13 @@ export default function AboutPage() {
         <InfoSplitSection showImage={true} content={ABOUT_DATA.aboutContent} />
         <StatsValueSection />;
       </div>
-      <TrackRecordSection />
-      <CTASection {...aboutmissionCTA} />
-      <LegacySection />
-      <CTASection {...homevisionCTA} />
+      <CTASection {...aboutmissionCTA} />;
       <div className="bodySectionLayout">
-        <CoreTeamSection />
+        <CoreTeamSection />;
+      </div>
+      <CTASection {...homevisionCTA} />;
+      <TrackRecordSection />
+      <div className="bodySectionLayout">
         <BrandsSlider />
         <CoreValues />;
       </div>
@@ -39,7 +71,6 @@ export default function AboutPage() {
       <div className="bodySectionLayout">
         <Testimonials />;
       </div>
-
     </>
   );
 }
