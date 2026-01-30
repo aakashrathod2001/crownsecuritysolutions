@@ -17,7 +17,7 @@ export const metadata = {
     url: "/terms-and-conditions",
     images: [
       {
-        url: "/images/home/home-hero-bg.png",
+        url: "/images/home/home-hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "Terms and Conditions - Crown Security Solutions",
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     title: "Terms and Conditions | Crown Security Solutions",
     description: "Read the terms and conditions governing the use of Crown Security Solutions' website, services, and legal policies.",
-    images: ["/images/home/home-hero-bg.png"],
+    images: ["/images/home/home-hero-bg.webp"],
   },
   robots: {
     index: true,

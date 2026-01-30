@@ -16,7 +16,7 @@ export const metadata = {
     url: "/contact-us",
     images: [
       {
-        url: "/images/home/home-hero-bg.png",
+        url: "/images/home/home-hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "Contact Crown Security Solutions - Get in Touch Today",
@@ -26,7 +26,7 @@ export const metadata = {
   twitter: {
     title: "Contact Crown Security Solutions | Get in Touch Today",
     description: "Contact Crown Security Solutions for professional security services, consultations, and customized security solutions.",
-    images: ["/images/home/home-hero-bg.png"],
+    images: ["/images/home/home-hero-bg.webp"],
   },
   robots: {
     index: true,

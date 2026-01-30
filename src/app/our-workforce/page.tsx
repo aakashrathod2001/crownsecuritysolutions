@@ -28,7 +28,7 @@ export const metadata = {
     url: "/our-workforce",
     images: [
       {
-        url: "/images/our-workforce-hero-bg.png",
+        url: "/images/our-workforce-hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "Our Workforce - Trained & Certified Security Personnel",
@@ -38,7 +38,7 @@ export const metadata = {
   twitter: {
     title: "Our Workforce | Trained & Certified Security Personnel",
     description: "Meet our trained and certified security workforce dedicated to maintaining safety, professionalism, and operational excellence.",
-    images: ["/images/our-workforce-hero-bg.png"],
+    images: ["/images/our-workforce-hero-bg.webp"],
   },
   robots: {
     index: true,

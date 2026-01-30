@@ -20,7 +20,7 @@ export const metadata = {
     url: "/our-process",
     images: [
       {
-        url: "/images/our-process-hero-bg.png",
+        url: "/images/our-process-hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "Our Security Process - How Crown Security Solutions Works",
@@ -30,7 +30,7 @@ export const metadata = {
   twitter: {
     title: "Our Security Process | How Crown Security Solutions Works",
     description: "Discover Crown Security Solutions' structured security process, from risk assessment to deployment, ensuring safety and compliance.",
-    images: ["/images/our-process-hero-bg.png"],
+    images: ["/images/our-process-hero-bg.webp"],
   },
   robots: {
     index: true,

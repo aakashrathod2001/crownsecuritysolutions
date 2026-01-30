@@ -34,7 +34,7 @@ export const metadata = {
     siteName: "Crown Security Solutions",
     images: [
       {
-        url: "/images/home/home-hero-bg.png",
+        url: "/images/home/home-hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "Crown Security Solutions - Professional Security Services",
@@ -45,7 +45,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Crown Security Solutions | Professional Security Services in India",
     description: "Crown Security Solutions provides reliable corporate, industrial, residential, and event security services with trained professionals and 24/7 support.",
-    images: ["/images/home/home-hero-bg.png"],
+    images: ["/images/home/home-hero-bg.webp"],
     creator: "@crownsecurity",
   },
   robots: {

@@ -17,17 +17,17 @@ export interface VideoTestimonial {
 export const videoTestimonials: VideoTestimonial[] = [
   {
     id: 1,
-    thumbnail: "https://placehold.co/300x600.png",
+    thumbnail: "https://placehold.co/300x600.webp",
     videoUrl: "/videos/sample.mp4",
   },
   {
     id: 2,
-    thumbnail: "https://placehold.co/300x600.png",
+    thumbnail: "https://placehold.co/300x600.webp",
     videoUrl: "/videos/sample.mp4",
   },
   {
     id: 3,
-    thumbnail: "https://placehold.co/300x600.png",
+    thumbnail: "https://placehold.co/300x600.webp",
     videoUrl: "/videos/sample.mp4",
   },
 ];
@@ -36,7 +36,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 1,
     quote: "From the conceptual big picture thinking, to the fine details, Afundi offer a wealth of knowledge and experience that would be invaluable to any business owner.",
-    companyLogo: "https://placehold.co/400x400.png",
+    companyLogo: "https://placehold.co/400x400.webp",
     companyName: "Aditya Birla Group",
     personName: "Phill Butler",
     title: "Director, Aditya Birla Group",
@@ -45,7 +45,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 2,
     quote: "From the conceptual big picture thinking, to the fine details, Afundi offer a wealth of knowledge and experience that would be invaluable to any business owner.",
-    companyLogo: "https://placehold.co/400x400.png",
+    companyLogo: "https://placehold.co/400x400.webp",
     companyName: "Airtel Payments Bank",
     personName: "Sarah Johnson",
     title: "Director, Airtel Payments Bank",
@@ -54,7 +54,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 3,
     quote: "From the conceptual big picture thinking, to the fine details, Afundi offer a wealth of knowledge and experience that would be invaluable to any business owner.",
-    companyLogo: "https://placehold.co/400x400.png",
+    companyLogo: "https://placehold.co/400x400.webp",
     companyName: "ICICI Bank",
     personName: "Michael Chen",
     title: "Director, ICICI Bank",
@@ -63,7 +63,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 4,
     quote: "From the conceptual big picture thinking, to the fine details, Afundi offer a wealth of knowledge and experience that would be invaluable to any business owner.",
-    companyLogo: "https://placehold.co/400x400.png",
+    companyLogo: "https://placehold.co/400x400.webp",
     companyName: "HSBC",
     personName: "Emma Davis",
     title: "Director, HSBC",
@@ -72,7 +72,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 5,
     quote: "From the conceptual big picture thinking, to the fine details, Afundi offer a wealth of knowledge and experience that would be invaluable to any business owner.",
-    companyLogo: "https://placehold.co/400x400.png",
+    companyLogo: "https://placehold.co/400x400.webp",
     companyName: "Paytm",
     personName: "Rajesh Kumar",
     title: "Director, Paytm",
@@ -81,7 +81,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 6,
     quote: "From the conceptual big picture thinking, to the fine details, Afundi offer a wealth of knowledge and experience that would be invaluable to any business owner.",
-    companyLogo: "https://placehold.co/400x400.png",
+    companyLogo: "https://placehold.co/400x400.webp",
     companyName: "TVS",
     personName: "Priya Sharma",
     title: "Director, TVS",

@@ -9,9 +9,10 @@ interface ServiceSectionProps {
   variant?: 'left' | 'right';
   service?: ServiceData;
   showScopeTitle?: boolean;
+  frameIndex?: number; // New prop for frame overlay (0-3 for frame-1 to frame-4)
 }
 
-const ServiceSection: React.FC<ServiceSectionProps> = ({ variant = 'left', service, showScopeTitle = true }) => {
+const ServiceSection: React.FC<ServiceSectionProps> = ({ variant = 'left', service, showScopeTitle = true, frameIndex }) => {
   const isLeft = variant === 'left';
 
   // Fallback to first service if no service prop provided
@@ -21,9 +22,18 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ variant = 'left', servi
     description: "Crown's Corporate Park Security solutions are designed to protect large office complexes while maintaining a professional and welcoming environment.",
     targetSegment: "MNCs, IT Parks, Business Parks, and Corporate Offices.",
     scopeOfWork: ["Visitor verification and employee ID checks."],
-    image: "https://placehold.co/600x600.png",
+    image: "https://placehold.co/600x600.webp",
     buttons: []
   };
+
+  // Determine which frame to show based on frameIndex (0-3 for frame-1 to frame-4)
+  const getFrameImage = (index: number | undefined) => {
+    if (index === undefined) return null;
+    const frameNumber = (index % 4) + 1; // 1, 2, 3, 4, then repeat
+    return `/images/frames/frame-${frameNumber}.webp`;
+  };
+
+  const frameImage = getFrameImage(frameIndex);
 
   return (
     <section className={`${styles.serviceSection} ${isLeft ? styles.leftLayout : styles.rightLayout}`}>
@@ -39,6 +49,18 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ variant = 'left', servi
                 className={styles.image}
                 priority
               />
+              {frameImage && (
+                <div className={styles.frameOverlay}>
+                  <Image
+                    src={frameImage}
+                    alt={`Frame ${((frameIndex || 0) % 4) + 1}`}
+                    width={600}
+                    height={600}
+                    className={styles.frameImage}
+                    priority
+                  />
+                </div>
+              )}
             </div>
 
             <div className={styles.content}>

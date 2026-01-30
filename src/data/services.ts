@@ -36,11 +36,11 @@ export const services: ServiceData[] = [
       "Fire and emergency drill assistance.",
       "Incident reporting, documentation, and escalation to supervisors.",
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/services/service-1.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-1.png",
+        src: "/images/home/services/Corporate Park Security Services.webp",
         alt: "Corporate Park Security Services",
       },
       content: {
@@ -135,7 +135,7 @@ export const services: ServiceData[] = [
           "Central control room support for continuous monitoring",
           "Strong compliance and competitive pricing models",
         ],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -153,7 +153,7 @@ export const services: ServiceData[] = [
         description:
           "Corporate parks experience a mix of high footfall, vendor movement, vehicle circulation, and operational activity. These touchpoints create vulnerabilities if not managed with clear SOPs and trained personnel.\n\nCSA identifies these risks early through site surveys and creates protection plans that streamline access, improve visibility, and maintain order throughout the premises.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -178,7 +178,7 @@ export const services: ServiceData[] = [
           "Parking lot management and movement control",
           "Vendor verification and material gate pass checks",
         ],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -204,7 +204,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These measures ensure that every guard represents your brand with confidence and discipline.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -227,7 +227,7 @@ export const services: ServiceData[] = [
           "Zero-incident track record in high-security corporate environments",
           "Dedicated account management teams for personalized service delivery",
         ],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -255,11 +255,11 @@ export const services: ServiceData[] = [
       "Real-time GPS monitoring.",
       "Emergency response coordination.",
     ],
-    image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-2.png",
+        src: "/images/home/services/Security Convoy Services.webp",
         alt: "Escort Services",
       },
       content: {
@@ -347,7 +347,7 @@ export const services: ServiceData[] = [
           "Strong compliance, ethical standards, and accurate reporting",
           "Leadership involvement in planning and supervision",
         ],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -365,7 +365,7 @@ export const services: ServiceData[] = [
         description:
           "Escort assignments often involve sensitive items or people who cannot be exposed to operational delays or security threats. CSA begins with a clear understanding of transit objectives, route conditions, handover points, and expected risks. The result is a customized escort plan that ensures both speed and safety.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -392,7 +392,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Each plan is created based on the level of risk, the value of the consignment, and the distance of travel.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -418,7 +418,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "This combination of skill, discipline, and awareness ensures safe and controlled movement at all times.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -436,7 +436,7 @@ export const services: ServiceData[] = [
         description:
           "CSA has supported several banks, logistics firms, corporate groups, and high profile individuals with safe and reliable escort services. Our operational discipline and technology integration allow us to deliver consistent quality across multiple states.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -464,11 +464,11 @@ export const services: ServiceData[] = [
       "Emergency response and evacuation procedures.",
       "24/7 front desk and concierge support.",
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/services/service-1.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-1.png",
+        src: "/images/home/services/Hospitality Services.webp",
         alt: "Hospitality Services",
       },
       content: {
@@ -488,7 +488,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Hospitality Security Matters?",
       subtitle: "",
-      imageSrc: "/images/services/service-1.png",
+      imageSrc: "/images/services/service-1.webp",
       imageAlt: "Hospitality Services",
       paragraphs: [
         "Hospitality spaces host guests, staff, vendors, event organizers, and large crowds throughout the day. These environments demand security teams who are alert, well groomed, and capable of handling unexpected situations with professionalism and discretion.\n\nCSA delivers a security framework that protects your property while reinforcing the premium service standards your brand represents.",
@@ -558,7 +558,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA ensures safety without compromising the guest experience.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -576,7 +576,7 @@ export const services: ServiceData[] = [
         description:
           "Hospitality properties require a balance between vigilance and warmth. Guests should feel welcomed, not watched. At the same time, access control, patrols, and emergency readiness must operate flawlessly in the background.\n\nCSA begins with a site assessment to understand guest flow, staff movement, event schedules, and sensitive zones before designing a tailored deployment plan.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -605,7 +605,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help maintain a secure, organised, and guest friendly environment.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -632,7 +632,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our teams represent your brand with discipline, poise, and complete professionalism.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -650,7 +650,7 @@ export const services: ServiceData[] = [
         description:
           "CSA has provided security services to hospitality brands and event properties where guest experience and safety are equally important. Our consistent quality and trained manpower make us a preferred partner in the hospitality sector.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -679,11 +679,11 @@ export const services: ServiceData[] = [
       "24/7 facility monitoring and access control.",
       "Emergency response and incident management.",
     ],
-    image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-2.png",
+        src: "/images/home/services/Industrial Security.webp",
         alt: "Industrial Security",
       },
       content: {
@@ -703,7 +703,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Industrial Security Is Essential?",
       subtitle: "",
-      imageSrc: "/images/services/service-2.png",
+      imageSrc: "/images/services/service-2.webp",
       imageAlt: "Industrial Security",
       paragraphs: [
         "Manufacturing units and industrial sites involve continuous movement of goods, heavy machinery, hazardous zones, critical equipment, and large workforces. Without dedicated security protocols, these environments face risks such as unauthorized access, material theft, safety lapses, and operational disruptions.\n\nCSA addresses these challenges through structured SOPs, trained industrial guards, and real time visibility systems that strengthen both security and safety compliance.",
@@ -773,7 +773,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These factors make CSA a dependable security partner for long term industrial deployments.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -791,7 +791,7 @@ export const services: ServiceData[] = [
         description:
           "Factories and industrial facilities operate day and night, often with multiple contractors, heavy vehicle traffic, valuable equipment, and safety sensitive areas. CSA conducts detailed site surveys to map these touchpoints and identify risks that require proactive management.\n\nThis allows us to create a security plan that reduces losses, improves compliance, and supports uninterrupted production.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -819,7 +819,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Every solution is designed to protect people, processes, and assets with maximum efficiency.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -846,7 +846,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "This preparation allows our teams to support both security and safety in complex industrial environments.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -864,7 +864,7 @@ export const services: ServiceData[] = [
         description:
           "CSA protects manufacturing units, plants, warehouses, and industrial estates for some of India’s most respected brands. Our long term presence in this sector demonstrates our ability to manage high risk zones with consistency and professionalism.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -892,11 +892,11 @@ export const services: ServiceData[] = [
       "Theft prevention and loss mitigation.",
       "Real-time cargo tracking and surveillance.",
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/services/service-1.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-1.png",
+        src: "/images/home/services/Logistics Security.webp",
         alt: "Logistics Security",
       },
       content: {
@@ -917,7 +917,7 @@ export const services: ServiceData[] = [
       title: "Why Logistics Security Is Critical?",
       subtitle:
         "Target Segment: Logistics Companies, Warehouses, and Distribution Centers.",
-      imageSrc: "/images/services/service-1.png",
+      imageSrc: "/images/services/service-1.webp",
       imageAlt: "Logistics Security",
       paragraphs: [
         "Warehouses and logistics hubs face continuous movement of goods, high traffic of vehicles, multiple vendors, and time sensitive operations. These environments are vulnerable to theft, pilferage, diversion, unauthorized access, and shipment discrepancies.\n\nCSA strengthens logistics operations through structured SOPs, trained security personnel, and real time reporting systems that ensure every movement is verified and accountable.",
@@ -987,7 +987,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA’s combination of manpower and technology provides a balanced security system that supports efficiency and reduces risk.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1005,7 +1005,7 @@ export const services: ServiceData[] = [
         description:
           "Logistics operations involve rapid movement, large inventories, varied stakeholders, and time bound dispatch schedules. A lapse in any stage can result in financial loss or operational delays.\n\nCSA conducts detailed assessments to identify weak points such as blind spots, high traffic zones, storage patterns, and documentation gaps. This allows us to build a security plan that supports accuracy and smooth operations.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1033,7 +1033,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help maintain transparency and accountability across the supply chain.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1059,7 +1059,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our teams work with discipline and precision to support your logistics cycle.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1077,7 +1077,7 @@ export const services: ServiceData[] = [
         description:
           "Crown Security Agency secures logistics hubs, distribution centers, and transport networks for some of India’s most recognized corporations. Our long standing presence in the sector demonstrates our capability to handle high volume operations with accuracy and integrity.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1105,11 +1105,11 @@ export const services: ServiceData[] = [
       "Emergency response and evacuation procedures.",
       "24/7 surveillance and monitoring.",
     ],
-    image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-2.png",
+        src: "/images/home/services/Mall Security.webp",
         alt: "Mall Security",
       },
       content: {
@@ -1129,7 +1129,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Mall Security Is Important",
       subtitle: "",
-      imageSrc: "/images/services/service-2.png",
+      imageSrc: "/images/services/service-2.webp",
       imageAlt: "Mall Security",
       paragraphs: [
         "Malls handle thousands of visitors each day along with vendors, staff, events, and parking movements. This creates multiple risk points such as crowd surges, theft attempts, emergency situations, misplaced items, and unauthorized access.\n\nCSA understands the dynamic nature of mall environments and provides a protection framework that balances safety with hospitality, ensuring every visitor feels secure without experiencing intrusive oversight.",
@@ -1199,7 +1199,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA offers a reassuring presence that supports both security and retail operations.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1217,7 +1217,7 @@ export const services: ServiceData[] = [
         description:
           "Malls function as complex public environments with multiple entry points, service zones, emergency exits, and high activity areas. CSA conducts detailed site surveys to understand foot traffic patterns, high risk pockets, CCTV coverage, and event requirements.\n\nThis allows us to develop a security strategy that reinforces visitor comfort and operational efficiency.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1245,7 +1245,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help maintain a safe, organized, and visitor friendly environment throughout the day.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1272,7 +1272,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our personnel uphold the brand values of discipline, courtesy, and alertness in every interaction.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1290,7 +1290,7 @@ export const services: ServiceData[] = [
         description:
           "CSA secures malls, retail complexes, and entertainment centers for well known brands that prioritize visitor experience and safety. Our long standing presence in the sector reflects our reliability and commitment to operational excellence.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1319,11 +1319,11 @@ export const services: ServiceData[] = [
       "Emergency response and coordination.",
       "Privacy protection and confidentiality.",
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/services/service-1.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-1.png",
+        src: "/images/home/services/High-End Residential Security.webp",
         alt: "High-End Residential Security",
       },
       content: {
@@ -1343,7 +1343,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Residential Security Matters?",
       subtitle: "",
-      imageSrc: "/images/services/service-1.png",
+      imageSrc: "/images/services/service-1.webp",
       imageAlt: "High-End Residential Security",
       paragraphs: [
         "High end residential communities experience a wide range of movements including residents, visitors, housekeeping staff, delivery agents, service technicians, and vehicles. Without structured access control and trained security personnel, these points can become vulnerable to intrusion, theft, or safety lapses.\n\nCSA provides a security framework that maintains complete control over entry, movement, and emergency readiness while preserving the comfort and privacy of residents.",
@@ -1413,7 +1413,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA brings reliability, trust, and structure to every residential deployment.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1431,7 +1431,7 @@ export const services: ServiceData[] = [
         description:
           "High end residential environments operate like small communities with unique lifestyle patterns, visitor flow, staff schedules, and vendor movements. CSA conducts a detailed assessment to identify risk points, blind spots, and operational requirements.\n\nThis enables us to create a security plan that ensures safety without disrupting the comfort or routine of residents.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1460,7 +1460,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions maintain a secure and harmonious residential environment.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1487,7 +1487,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our personnel represent the values of respect, discipline, and dependability in every interaction.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1505,7 +1505,7 @@ export const services: ServiceData[] = [
         description:
           "CSA protects several upscale communities and luxury developments. Our reputation for consistency, courtesy, and operational vigilance has made us a preferred security partner for high end properties.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1533,11 +1533,11 @@ export const services: ServiceData[] = [
       "Anti-bullying and conflict resolution.",
       "Security education and awareness programs.",
     ],
-    image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-2.png",
+        src: "/images/home/services/School Security.webp",
         alt: "School Security",
       },
       content: {
@@ -1557,7 +1557,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why School Security Is Essential",
       subtitle: "",
-      imageSrc: "/images/services/service-2.png",
+      imageSrc: "/images/services/service-2.webp",
       imageAlt: "School Security",
       paragraphs: [
         "Schools are high responsibility environments with constant movement of students, parents, faculty members, vendors, and transport vehicles. Without trained guards and controlled entry systems, risks such as unauthorized access, student safety lapses, and emergency handling issues can arise.\n\nCSA ensures that every campus has a security framework that supports safety without creating fear or discomfort for children.",
@@ -1627,7 +1627,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA maintains a protective environment that reassures parents and faculty while keeping operations smooth.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1645,7 +1645,7 @@ export const services: ServiceData[] = [
         description:
           "Schools function differently from corporate or industrial sites. Children require monitoring that is gentle yet attentive. Visitors must be screened without delay. Emergency protocols must be clear and well practiced.\n\nCSA conducts on site assessments to identify critical points such as entry gates, playground zones, transport areas, CCTV coverage, and evacuation paths. This helps us design a security plan tailored to the rhythm of the school.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1673,7 +1673,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These measures ensure safety while supporting a positive learning environment.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1700,7 +1700,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our personnel represent safety, responsibility, and professionalism in every interaction.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1718,7 +1718,7 @@ export const services: ServiceData[] = [
         description:
           "CSA secures schools, colleges, and academic campuses for leading education groups. Our commitment to safety, consistency, and respectful conduct has made us a preferred partner in the education sector.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1747,11 +1747,11 @@ export const services: ServiceData[] = [
       "VIP protection and secure transportation.",
       "Post-event security debriefing and reporting.",
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/services/service-1.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-1.png",
+        src: "/images/home/services/Event Security.webp",
         alt: "Event Security",
       },
       content: {
@@ -1771,7 +1771,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Event Security Is Essential?",
       subtitle: "",
-      imageSrc: "/images/services/service-1.png",
+      imageSrc: "/images/services/service-1.webp",
       imageAlt: "Event Security",
       paragraphs: [
         "Events attract diverse crowds, multiple vendors, performers, VIPs, and media. These activities create unique risks such as crowd surges, unauthorized access, backstage breaches, emergency situations, and coordination challenges.\n\nCSA eliminates these vulnerabilities through disciplined on ground management, clear SOPs, and a team trained to handle high energy environments with precision and courtesy.",
@@ -1841,7 +1841,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA ensures that events remain safe, organized, and enjoyable for every attendee.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1859,7 +1859,7 @@ export const services: ServiceData[] = [
         description:
           "Each event has its own flow, audience type, risk level, and venue layout. CSA begins by conducting a detailed review of entry points, crowd zones, stage placement, emergency exits, and operational schedules.\n\nThis allows us to build a security plan that integrates smoothly with event management and visitor experience.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1886,7 +1886,7 @@ export const services: ServiceData[] = [
           "Coordination with local authorities when required",
           "Standby emergency and evacuation support",
         ],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1913,7 +1913,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our personnel maintain discipline and professionalism from start to completion of the event.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1931,7 +1931,7 @@ export const services: ServiceData[] = [
         description:
           "CSA has supported corporate events, exhibitions, concerts, weddings, and large public gatherings. Our dependable service quality and operational structure make us a preferred partner across the events industry.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1960,11 +1960,11 @@ export const services: ServiceData[] = [
       "Real-time communication and monitoring.",
       "Emergency response and backup coordination.",
     ],
-    image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-2.png",
+        src: "/images/home/services/Security Convoy Services.webp",
         alt: "Security Convoy Services",
       },
       content: {
@@ -1984,7 +1984,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Security Convoy Services Are Important?",
       subtitle: "",
-      imageSrc: "/images/services/service-2.png",
+      imageSrc: "/images/services/service-2.webp",
       imageAlt: "Security Convoy Services",
       paragraphs: [
         "Sensitive or high value movements face risks related to route conditions, theft attempts, road incidents, and unpredictable external factors. Without trained convoy teams and structured protocols, the chances of exposure increase significantly.\n\nCSA ensures that every movement is planned, monitored, and executed with complete control and accountability.",
@@ -2054,7 +2054,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA provides a secure transit environment that protects both people and assets.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2072,7 +2072,7 @@ export const services: ServiceData[] = [
         description:
           "Convoy assignments vary based on consignment value, distance, location sensitivity, and movement schedules. CSA conducts an initial requirement assessment to understand these factors, followed by a route evaluation and risk analysis.\n\nThis results in a convoy plan that is structured, efficient, and tailored specifically to the operational need.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2099,7 +2099,7 @@ export const services: ServiceData[] = [
           "Post movement reporting and verification",
         ],
         conclusion: "Each plan ensures safety from dispatch to destination.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2126,7 +2126,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "This ensures that every convoy is supervised by personnel who understand the seriousness of their role.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2144,7 +2144,7 @@ export const services: ServiceData[] = [
         description:
           "CSA has successfully managed convoy operations for logistics firms, high value projects, sensitive consignments, and corporate transfers. Our experience across various regions and route conditions demonstrates our capability in high risk transit management.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2173,11 +2173,11 @@ export const services: ServiceData[] = [
       "Threat assessment and planning.",
       "Emergency medical coordination.",
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/services/service-1.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-1.png",
+        src: "/images/home/services/VIP Protection _ Personal Escort Security.webp",
         alt: "VIP Protection / Personal Escort Security",
       },
       content: {
@@ -2267,7 +2267,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA provides a protective environment where clients feel both secure and respected.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2285,7 +2285,7 @@ export const services: ServiceData[] = [
         description:
           "Every individual has unique routines, schedules, and exposure levels. CSA begins by understanding lifestyle patterns, travel frequency, event commitments, and potential risk scenarios.\n\nThis allows us to create a protection plan that aligns with both security requirements and personal comfort.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2313,7 +2313,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions ensure complete safety across all personal and professional engagements.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2340,7 +2340,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our officers represent professionalism, discretion, and discipline in every assignment.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2358,7 +2358,7 @@ export const services: ServiceData[] = [
         description:
           "CSA has provided personal protection to executives, visiting dignitaries, corporate leaders, and well known personalities. Our consistent service quality and confidential handling have made us a trusted partner for sensitive security requirements.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2387,11 +2387,11 @@ export const services: ServiceData[] = [
       "Rapid response team deployment.",
       "Incident documentation and reporting.",
     ],
-    image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-2.png",
+        src: "/images/home/services/CCTV Monitoring & Alarm Response Services.webp",
         alt: "CCTV Monitoring & Alarm Response Services",
       },
       content: {
@@ -2480,7 +2480,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA adds value by combining human vigilance with advanced monitoring support.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2498,7 +2498,7 @@ export const services: ServiceData[] = [
         description:
           "Every facility has different layouts, blind spots, foot traffic patterns, and operational risks. CSA conducts a monitoring requirement assessment that includes camera positioning, lighting conditions, access points, and activity zones.\n\nThis evaluation helps design a monitoring plan that ensures complete visibility and accurate incident detection.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2526,7 +2526,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help minimize blind spots and improve response time for potential threats.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2553,7 +2553,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our personnel maintain discipline and attentiveness during every shift.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2571,7 +2571,7 @@ export const services: ServiceData[] = [
         description:
           "CSA supports surveillance operations for commercial buildings, industrial plants, logistics facilities, and residential communities. Our dependable monitoring and strong response structure make us a preferred partner for technology assisted security.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2600,11 +2600,11 @@ export const services: ServiceData[] = [
       "System maintenance and upgrades.",
       "Emergency access protocols.",
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/services/service-1.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-1.png",
+        src: "/images/home/services/Access Control Management.webp",
         alt: "Access Control Management",
       },
       content: {
@@ -2624,7 +2624,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Access Control Management Is Essential?",
       subtitle: "",
-      imageSrc: "/images/services/service-1.png",
+      imageSrc: "/images/services/service-1.webp",
       imageAlt: "Access Control Management",
       paragraphs: [
         "Unauthorized entry can lead to theft, safety risks, data exposure, and operational disruptions. A reliable access control system ensures that every entry and exit is verified, documented, and approved.\n\nCSA provides a disciplined framework that reduces risks by combining trained guards with technology based verification tools and clear SOPs for visitor, staff, and material movement.",
@@ -2694,7 +2694,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA enhances the security of your premises by maintaining complete control at every entry point.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2712,7 +2712,7 @@ export const services: ServiceData[] = [
         description:
           "Different facilities have different access patterns, from busy corporate entrances to restricted industrial zones. CSA begins by assessing entry points, visitor load, shift timings, material flow, and existing security gaps.\n\nThis analysis helps create an access control plan that is both secure and convenient for daily operations.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2740,7 +2740,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions strengthen security while maintaining smooth operational flow.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2767,7 +2767,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our guards maintain accuracy and courtesy at every checkpoint.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2785,7 +2785,7 @@ export const services: ServiceData[] = [
         description:
           "CSA supports large corporate parks, industrial facilities, logistics centres, and premium residential spaces with dependable access control solutions. Our experience across multiple sectors ensures consistent and compliant site operations.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2814,11 +2814,11 @@ export const services: ServiceData[] = [
       "Emergency response planning.",
       "Equipment maintenance and inspection.",
     ],
-    image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-2.png",
+        src: "/images/home/services/Fire Safety & Emergency Drill Support.webp",
         alt: "Fire Safety & Emergency Drill Support",
       },
       content: {
@@ -2839,7 +2839,7 @@ export const services: ServiceData[] = [
       title: "Why Fire Safety and Emergency Preparedness Matter?",
       subtitle:
         "Target Segment: Commercial Buildings, Residential Complexes, and Public Facilities.",
-      imageSrc: "/images/services/service-2.png",
+      imageSrc: "/images/services/service-2.webp",
       imageAlt: "Fire Safety & Emergency Drill Support",
       paragraphs: [
         "Fires and emergency situations escalate quickly if not managed with trained personnel and clear procedures. Many incidents can be prevented or contained when guards are equipped with the right knowledge and when regular drills familiarise staff and visitors with evacuation steps.\n\nCSA ensures that every site has the training, readiness, and support needed to manage emergencies with confidence and discipline.",
@@ -2909,7 +2909,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA enhances workplace safety by combining trained manpower with structured readiness systems.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2927,7 +2927,7 @@ export const services: ServiceData[] = [
         description:
           "Every facility has different fire risk levels based on layout, occupancy, equipment, and operational hazards. CSA begins by studying the site's emergency exits, assembly points, fire equipment placement, and typical foot traffic patterns.\n\nThis evaluation helps design a fire response plan that is practical and effective for the specific environment.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2955,7 +2955,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions strengthen safety culture and ensure preparedness across the organisation.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2982,7 +2982,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our guards treat emergency readiness as a core responsibility, not an additional task.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3000,7 +3000,7 @@ export const services: ServiceData[] = [
         description:
           "CSA supports fire safety programs for corporate parks, manufacturing plants, residential complexes, and commercial buildings. Our structured training and calm response make us a trusted partner in emergency preparedness.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3029,11 +3029,11 @@ export const services: ServiceData[] = [
       "Access control for delivery vehicles.",
       "Security clearance procedures.",
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/services/service-1.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-1.png",
+        src: "/images/home/services/Gate-Pass and Vehicle Movement Verification (Logistics_Industrial).webp",
         alt: "Gate-Pass and Vehicle Movement Verification (Logistics/Industrial)",
       },
       content: {
@@ -3123,7 +3123,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA brings transparency and accountability to high activity entry and exit points.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3141,7 +3141,7 @@ export const services: ServiceData[] = [
         description:
           "Every facility has unique material flows, vendor schedules, and vehicle traffic patterns. CSA begins with a site survey to understand peak hours, entry layouts, dispatch patterns, and potential risk points.\n\nThis allows us to create a verification plan that supports efficiency without compromising control.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3169,7 +3169,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help reduce loss, maintain accuracy, and support seamless operational movement.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3196,7 +3196,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our teams maintain strict attention to detail at every checkpoint.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3214,7 +3214,7 @@ export const services: ServiceData[] = [
         description:
           "CSA supports large manufacturing plants, distribution centres, and industrial hubs where material accuracy and verification standards are critical. Our disciplined approach makes us a preferred partner in gate control operations.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3243,11 +3243,11 @@ export const services: ServiceData[] = [
       "Tamper detection and prevention.",
       "Quality assurance audits.",
     ],
-    image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-2.png",
+        src: "/images/home/services/Cargo Integrity Audits (Logistics Security).webp",
         alt: "Cargo Integrity Audits (Logistics Security)",
       },
       content: {
@@ -3267,7 +3267,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Cargo Integrity Audits Are Important?",
       subtitle: "",
-      imageSrc: "/images/services/service-2.png",
+      imageSrc: "/images/services/service-2.webp",
       imageAlt: "Cargo Integrity Audits (Logistics Security)",
       paragraphs: [
         "Cargo can be exposed to risks such as tampering, pilferage, seal breakage, incorrect documentation, or mishandling during transit. Even small discrepancies can create delays, insurance issues, and financial impact.\n\nCSA ensures that every shipment is inspected with accuracy, documented thoroughly, and monitored at key transfer points to maintain complete accountability.",
@@ -3337,7 +3337,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA ensures cargo is monitored with discipline at every critical checkpoint.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3355,7 +3355,7 @@ export const services: ServiceData[] = [
         description:
           "Every facility and supply chain has unique cargo handling patterns. CSA begins with an assessment of loading zones, storage areas, seal types, documentation workflows, and dispatch points.\n\nThis allows us to design a structured audit plan that aligns with operational flow and risk levels.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3383,7 +3383,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help maintain accuracy and strengthen trust throughout the supply chain.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3410,7 +3410,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA personnel bring discipline and accuracy to every audit assignment.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3429,7 +3429,7 @@ export const services: ServiceData[] = [
         description:
           "CSA supports cargo integrity programs for supply chain operators, manufacturing units, and large warehouses. Our commitment to accuracy and compliance has made us a valued partner in cargo monitoring.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3458,11 +3458,11 @@ export const services: ServiceData[] = [
       "Security breach prevention.",
       "Incident reporting and documentation.",
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/services/service-1.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/service-1.png",
+        src: "/images/home/services/Perimeter Patrolling & PPE Compliance (Industrial Security).webp",
         alt: "Perimeter Patrolling & PPE Compliance (Industrial Security)",
       },
       content: {
@@ -3482,7 +3482,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Perimeter Patrolling and PPE Compliance Are Important?",
       subtitle: "",
-      imageSrc: "/images/services/service-1.png",
+      imageSrc: "/images/services/service-1.webp",
       imageAlt: "Perimeter Patrolling & PPE Compliance (Industrial Security)",
       paragraphs: [
         "Factories, warehouses, and industrial plants face risks related to trespassing, equipment interference, safety lapses, and unauthorized movement. At the same time, failure to follow PPE requirements can lead to injuries, operational shutdowns, and regulatory violations.\n\nCSA strengthens site security with regular patrols, strict monitoring, and professional enforcement of safety guidelines to protect people, assets, and processes.",
@@ -3552,7 +3552,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA integrates security and safety to help industries maintain smooth and incident free operations.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3570,7 +3570,7 @@ export const services: ServiceData[] = [
         description:
           "Each industrial facility has different layouts, risk zones, shift patterns, and safety regulations. CSA begins by studying site maps, patrol routes, PPE requirements, and operational hazards.\n\nThis allows us to create a tailored security plan that supports both safety and production efficiency.",
         scopeOfWork: [],
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3599,7 +3599,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help reduce risks and maintain discipline across industrial sites.",
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3626,7 +3626,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our guards maintain strong attention to detail and uphold the highest safety standards.",
-        image: "/images/services/service-2.png",
+        image: "/images/services/service-2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3644,7 +3644,7 @@ export const services: ServiceData[] = [
         description:
           "CSA secures plants, factories, energy sites, and large industrial campuses where perimeter protection and safety compliance are critical. Our structured supervision and disciplined patrol practices make us a trusted partner for long term industrial operations.",
         scopeOfWork: [],
-        image: "/images/services/service-1.png",
+        image: "/images/services/service-1.webp",
         buttons: [
           {
             text: "Learn More",

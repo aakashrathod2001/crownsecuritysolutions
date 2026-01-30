@@ -30,7 +30,7 @@ export const metadata = {
     url: "/about",
     images: [
       {
-        url: "/images/about/about-hero-bg.png",
+        url: "/images/about/about-hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "About Crown Security Solutions - Trusted Security Experts",
@@ -40,7 +40,7 @@ export const metadata = {
   twitter: {
     title: "About Crown Security Solutions | Trusted Security Experts",
     description: "Learn about Crown Security Solutions, our experience, values, and commitment to delivering professional and dependable security services.",
-    images: ["/images/about/about-hero-bg.png"],
+    images: ["/images/about/about-hero-bg.webp"],
   },
   robots: {
     index: true,

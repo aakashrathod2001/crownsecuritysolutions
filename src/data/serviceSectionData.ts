@@ -31,7 +31,7 @@ export const serviceData: ServiceData[] = [
       "Fire and emergency drill assistance.",
       "Incident reporting, documentation, and escalation to supervisors."
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/home/services/Corporate Park Security Services.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -54,7 +54,7 @@ export const serviceData: ServiceData[] = [
       "Chain-of-custody documentation and secure delivery confirmation.",
       "Coordination with local authorities for safe transit."
     ],
-    image: "/images/services/service-2.png",
+    image: "/images/home/services/Security Convoy Services.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -77,7 +77,7 @@ export const serviceData: ServiceData[] = [
       "Coordination with hotel staff and emergency response teams.",
       "VIP handling and discreet guest assistance."
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/home/services/Hospitality Services.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -100,7 +100,7 @@ export const serviceData: ServiceData[] = [
       "Fire safety coordination and alarm response.",
       "Perimeter patrols and equipment security monitoring."
     ],
-    image: "/images/services/service-2.png",
+    image: "/images/home/services/Industrial Security.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -123,7 +123,7 @@ export const serviceData: ServiceData[] = [
       "Shipment sealing and integrity verification.",
       "Inventory loss prevention and real-time reporting."
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/home/services/Logistics Security.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -146,7 +146,7 @@ export const serviceData: ServiceData[] = [
       "Lost-and-found and first-aid assistance.",
       "Event support and coordination with management."
     ],
-    image: "/images/services/service-2.png",
+    image: "/images/home/services/Mall Security.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -169,7 +169,7 @@ export const serviceData: ServiceData[] = [
       "Emergency response and resident assistance.",
       "Regular audits and community updates."
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/home/services/High-End Residential Security.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -192,7 +192,7 @@ export const serviceData: ServiceData[] = [
       "Emergency drills and evacuation support.",
       "Background-verified security personnel."
     ],
-    image: "/images/services/service-2.png",
+    image: "/images/home/services/School Security.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -215,7 +215,7 @@ export const serviceData: ServiceData[] = [
       "Coordination with event organisers and local authorities.",
       "Emergency response and evacuation planning."
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/home/services/Event Security.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -238,7 +238,7 @@ export const serviceData: ServiceData[] = [
       "Liaison with local authorities during transit.",
       "Reporting and verification of delivery completion."
     ],
-    image: "/images/services/service-2.png",
+    image: "/images/home/services/Security Convoy Services.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -260,7 +260,7 @@ export const serviceData: ServiceData[] = [
       "Discreet escorting in public and private spaces.",
       "24/7 supervision and real-time updates to client coordinators."
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/home/services/VIP Protection _ Personal Escort Security.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -282,7 +282,7 @@ export const serviceData: ServiceData[] = [
       "Surveillance reporting and evidence documentation.",
       "Integration with client or partnered systems."
     ],
-    image: "/images/services/service-2.png",
+    image: "/images/home/services/CCTV Monitoring & Alarm Response Services.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -304,7 +304,7 @@ export const serviceData: ServiceData[] = [
       "Gate-pass validation for materials and vehicles.",
       "Coordination with CCTV and the control room."
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/home/services/Access Control Management.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -326,7 +326,7 @@ export const serviceData: ServiceData[] = [
       "Coordinating with fire safety officers during emergencies.",
       "Conducting evacuation drills and equipment checks."
     ],
-    image: "/images/services/service-2.png",
+    image: "/images/home/services/Fire Safety & Emergency Drill Support.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -348,7 +348,7 @@ export const serviceData: ServiceData[] = [
       "Driver ID and document verification.",
       "Coordination with logistics and control room."
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/home/services/Gate-Pass and Vehicle Movement Verification (Logistics_Industrial).webp",
     buttons: [
       {
         text: "Find Out More",
@@ -370,7 +370,7 @@ export const serviceData: ServiceData[] = [
       "Handling oversight at loading/unloading points.",
       "Incident reporting and compliance documentation."
     ],
-    image: "/images/services/service-2.png",
+    image: "/images/home/services/Cargo Integrity Audits (Logistics Security).webp",
     buttons: [
       {
         text: "Find Out More",
@@ -392,7 +392,7 @@ export const serviceData: ServiceData[] = [
       "Coordination with safety officers and site supervisors.",
       "Reporting safety or operational irregularities."
     ],
-    image: "/images/services/service-1.png",
+    image: "/images/home/services/Perimeter Patrolling & PPE Compliance (Industrial Security).webp",
     buttons: [
       {
         text: "Find Out More",

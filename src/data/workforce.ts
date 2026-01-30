@@ -47,7 +47,7 @@ export const QUALIFICATION_STANDARDS_DATA: QualificationStandardsData = {
   ],
   description: "Our recruitment philosophy focuses not just on qualification, but also on discipline, reliability, and a service-oriented mindset.",
   buttonText: "Apply Now",
-  imageSrc: "https://placehold.co/400x400.png",
+  imageSrc: "https://placehold.co/400x400.webp",
   imageAlt: "Security team monitoring control screens"
 };
 

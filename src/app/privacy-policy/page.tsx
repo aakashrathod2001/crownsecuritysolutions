@@ -17,7 +17,7 @@ export const metadata = {
     url: "/privacy-policy",
     images: [
       {
-        url: "/images/home/home-hero-bg.png",
+        url: "/images/home/home-hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "Privacy Policy - Crown Security Solutions",
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     title: "Privacy Policy | Crown Security Solutions",
     description: "Review Crown Security Solutions' privacy policy to understand how we collect, use, and protect your personal information.",
-    images: ["/images/home/home-hero-bg.png"],
+    images: ["/images/home/home-hero-bg.webp"],
   },
   robots: {
     index: true,

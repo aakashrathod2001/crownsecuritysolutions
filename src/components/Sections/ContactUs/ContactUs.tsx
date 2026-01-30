@@ -23,7 +23,7 @@ const ContactUs: React.FC = () => {
                             </div>
                             <div className={styles.imageWrapper}>
                                 <Image
-                                    src={"/images/contact-us.png"}
+                                    src={"/images/contact-us.webp"}
                                     alt={"Contact Us Image"}
                                     width={400}
                                     height={400}

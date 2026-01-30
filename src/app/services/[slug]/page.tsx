@@ -154,11 +154,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
         />
         <BrandsSlider />
         <div className={styles.pageLayout}>
-          <ServiceSection service={service.serviceSectionData[0]} showScopeTitle={false} />
-          <ServiceSection service={service.serviceSectionData[1]} variant="right" showScopeTitle={false} />
-          <ServiceSection service={service.serviceSectionData[2]} showScopeTitle={false} />
-          <ServiceSection service={service.serviceSectionData[3]} variant="right" showScopeTitle={false} />
-          <ServiceSection service={service.serviceSectionData[4]} showScopeTitle={false} />
+          <ServiceSection service={service.serviceSectionData[0]} showScopeTitle={false} frameIndex={0} />
+          <ServiceSection service={service.serviceSectionData[1]} variant="right" showScopeTitle={false} frameIndex={1} />
+          <ServiceSection service={service.serviceSectionData[2]} showScopeTitle={false} frameIndex={2} />
+          <ServiceSection service={service.serviceSectionData[3]} variant="right" showScopeTitle={false} frameIndex={3} />
+          <ServiceSection service={service.serviceSectionData[4]} showScopeTitle={false} frameIndex={4} />
         </div>
         <Testimonials />;
       </div>

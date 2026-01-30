@@ -19,7 +19,7 @@ export const metadata = {
     url: "/careers",
     images: [
       {
-        url: "/images/home/home-hero-bg.png",
+        url: "/images/home/home-hero-bg.webp",
         width: 1200,
         height: 630,
         alt: "Careers at Crown Security Solutions - Join Our Team",
@@ -29,7 +29,7 @@ export const metadata = {
   twitter: {
     title: "Careers at Crown Security Solutions | Join Our Team",
     description: "Build your career with Crown Security Solutions. Explore opportunities for security professionals and grow with a trusted security company.",
-    images: ["/images/home/home-hero-bg.png"],
+    images: ["/images/home/home-hero-bg.webp"],
   },
   robots: {
     index: true,

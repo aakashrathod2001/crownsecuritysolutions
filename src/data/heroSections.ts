@@ -5,7 +5,7 @@ export const homepageHero: HeroSectionProps = {
   media: {
     type: 'video',
     src: '/videos/garda-security-usa-ambient.mp4',
-    poster: '/images/home/home-hero-bg.png',
+    poster: '/images/home/home-hero-bg.webp',
     alt: 'Security guard at concert',
     videoProps: {
       autoPlay: true,
@@ -40,7 +40,7 @@ export const aboutpageHero: HeroSectionProps = {
   media: {
     type: 'video',
     src: '/videos/garda-security-usa-ambient.mp4',
-    poster: '/images/about/about-hero-bg.png',
+    poster: '/images/about/about-hero-bg.webp',
     alt: 'Security guard at concert',
     videoProps: {
       autoPlay: true,
@@ -67,7 +67,7 @@ export const ourprocesspageHero: HeroSectionProps = {
   media: {
     type: 'video',
     src: '/videos/garda-security-usa-ambient.mp4',
-    poster: '/images/our-process-hero-bg.png',
+    poster: '/images/our-process-hero-bg.webp',
     alt: 'Security guard at concert',
     videoProps: {
       autoPlay: true,
@@ -94,7 +94,7 @@ export const ourworkforcepageHero: HeroSectionProps = {
   media: {
     type: 'video',
     src: '/videos/garda-security-usa-ambient.mp4',
-    poster: '/images/our-workforce-hero-bg.png',
+    poster: '/images/our-workforce-hero-bg.webp',
     alt: 'Security guard at concert',
     videoProps: {
       autoPlay: true,
@@ -121,7 +121,7 @@ export const servicespageHero: HeroSectionProps = {
   media: {
     type: 'video',
     src: '/videos/garda-security-usa-ambient.mp4',
-    poster: '/images/our-workforce-hero-bg.png',
+    poster: '/images/our-services-hero-bg.webp',
     alt: 'Security guard at concert',
     videoProps: {
       autoPlay: true,
@@ -148,7 +148,7 @@ export const careerspageHero: HeroSectionProps = {
   media: {
     type: 'video',
     src: '/videos/garda-security-usa-ambient.mp4',
-    poster: '/images/our-workforce-hero-bg.png',
+    poster: '/images/careers-hero-bg.webp',
     alt: 'Security guard at concert',
     videoProps: {
       autoPlay: true,

@@ -32,7 +32,7 @@ const QualificationStandardsSection: React.FC<QualificationStandardsSectionProps
                         <div className={styles.split}>
                             <div className={styles.imageWrapper}>
                                 <Image
-                                    src="/images/qualification-standards.png"
+                                    src="/images/qualification-standards.webp"
                                     alt={imageAlt}
                                     width={560}
                                     height={560}

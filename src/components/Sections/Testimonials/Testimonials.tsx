@@ -75,7 +75,7 @@ const VideoThumbnail = ({
       />
       <div className={styles.videoOverlay} />
         <img
-          src="/images/testimonials/play-icon.png"
+          src="/images/testimonials/play-icon.webp"
           alt="Play video"
           className={styles.playIcon}
           onClick={onPlay}
