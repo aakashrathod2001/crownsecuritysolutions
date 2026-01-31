@@ -131,7 +131,20 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const recaptchaToken = await getRecaptchaToken('contact_submit');
+      // Permanent fix: Only use reCAPTCHA if site key is available
+      let recaptchaToken: string | undefined;
+      
+      if (siteKey) {
+        try {
+          recaptchaToken = await getRecaptchaToken('contact_submit');
+        } catch (recaptchaError) {
+          console.warn('reCAPTCHA failed to load, proceeding without it:', recaptchaError);
+          // Continue without reCAPTCHA token
+        }
+      } else {
+        console.warn('reCAPTCHA site key not found, proceeding without reCAPTCHA');
+      }
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -139,7 +152,7 @@ const ContactForm: React.FC = () => {
         },
         body: JSON.stringify({
           ...formData,
-          recaptchaToken,
+          ...(recaptchaToken && { recaptchaToken }), // Only include if we have a token
         }),
       });
 
