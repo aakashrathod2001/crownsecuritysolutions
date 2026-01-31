@@ -25,10 +25,7 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
-    { label: 'Instagram', href: 'https://www.instagram.com/' },
-    { label: 'Facebook', href: 'https://www.facebook.com/' },
-    { label: 'X (Twitter)', href: 'https://x.com/' },
+    { label: 'LinkedIn', href: 'https://in.linkedin.com/company/crown-security-solutions' },
   ];
 
   return (
@@ -136,6 +133,9 @@ const Footer: React.FC = () => {
                 <p className={styles.text}>
                   Office 11, P3 Level, Azziano, Rustomjee Urbania, Majiwada, Thane
                   (W), Maharashtra 400601
+                </p>
+                <p className={styles.text}>
+                  Elite's Hajra Mansion, 02, off Doctor Ansari Road, 2nd, Rabodi, Thane West, Thane, Maharashtra 400601
                 </p>
                 <p className={styles.text}>info@crownsecuritysolutions.com</p>
                 <p className={styles.text}>+91 8108107824</p>

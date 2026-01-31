@@ -118,6 +118,7 @@
   border: 1px solid #000;
   background: #fff;
   overflow: hidden;
+  justify-content: space-between;
 
   @media (max-width: 767px) {
     flex: 1 1 100%;

@@ -37,3 +37,11 @@ export const navigationItems: NavItem[] = [
     href: '/careers',
   },
 ];
+
+export const contact = {
+  title: "Contact Us",
+  address: "Elite's Hajra Mansion, 02, off Doctor Ansari Road, 2nd, Rabodi, Thane West, Thane, Maharashtra 400601",
+  email: "info@crownsecuritysolutions.com",
+  phone: "+91 98200 00000",
+  mapUrl: "https://maps.google.com/?cid=123456789",
+};

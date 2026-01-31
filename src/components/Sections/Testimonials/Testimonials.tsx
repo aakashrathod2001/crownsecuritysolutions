@@ -106,20 +106,20 @@ const TestimonialCard = ({
     >
       <p className={styles.quote}>"{quote}"</p>
       <div className={styles.cardFooter}>
-        <div className={styles.authorInfo}>
-          <div className={styles.companyLogo}>
-            <img
-              src={companyLogo}
-              alt={`${companyName} logo`}
-              className={styles.logoImage}
-            />
+          <div className={styles.authorInfo}>
+            {/* <div className={styles.companyLogo}>
+              <img
+                src={companyLogo}
+                alt={`${companyName} logo`}
+                className={styles.logoImage}
+              />
+            </div> */}
+            <div className={styles.divider} />
+            <div className={styles.personInfo}>
+              <p className={styles.personName}>{personName}</p>
+              <p className={styles.personTitle}>{title}</p>
+            </div>
           </div>
-          <div className={styles.divider} />
-          <div className={styles.personInfo}>
-            <p className={styles.personName}>{personName}</p>
-            <p className={styles.personTitle}>{title}</p>
-          </div>
-        </div>
         <StarRating rating={rating} />
       </div>
     </div>

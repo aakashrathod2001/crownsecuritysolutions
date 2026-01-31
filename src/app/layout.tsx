@@ -74,52 +74,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Abel:wght@400&family=Inter:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        {/* Structured Data for Local Business */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Crown Security Solutions",
-              "image": "/images/logo.png",
-              "@id": "https://crownsecuritysolutions.com",
-              "url": "https://crownsecuritysolutions.com",
-              "telephone": "+91-XXXXXXXXXX",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Your Address Here",
-                "addressLocality": "Your City",
-                "addressRegion": "Your State",
-                "postalCode": "XXXXXX",
-                "addressCountry": "IN"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 0.0,
-                "longitude": 0.0
-              },
-              "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                  "Monday",
-                  "Tuesday", 
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
-                  "Saturday"
-                ],
-                "opens": "09:00",
-                "closes": "18:00"
-              },
-              "sameAs": [
-                "https://www.facebook.com/crownsecuritysolutions",
-                "https://www.instagram.com/crownsecuritysolutions",
-                "https://www.linkedin.com/company/crownsecuritysolutions"
-              ]
-            })
-          }}
-        />
       </head>
       <body suppressHydrationWarning={true}>
         {/* Header */}

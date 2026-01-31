@@ -12,6 +12,7 @@ import BrandsSlider from '@/components/Sections/BrandsSlider/BrandsSlider';
 import Testimonials from '@/components/Sections/Testimonials/Testimonials';
 import StackedScroll from '@/components/UI/StackedScroll/StackedScroll';
 import { ABOUT_DATA } from '@/data/about';
+import { JsonLd } from '@/components/JsonLd/JsonLd';
 
 // Enable SSG with ISR (revalidate every 1 hour)
 export const revalidate = 3600;
@@ -67,6 +68,7 @@ export default function HomePage() {
       <div className="bodySectionLayout">
         <Testimonials />;
       </div>
+      <JsonLd />
     </>
   );
 }

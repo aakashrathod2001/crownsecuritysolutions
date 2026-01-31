@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './MapSection.module.scss';
+import Button, { ArrowIcon } from '@/components/UI/Button/Button';
 
 const MapSection: React.FC = () => {
   return (
@@ -8,10 +9,9 @@ const MapSection: React.FC = () => {
       
       <div className={styles.officeGrid}>
         <div className={styles.officeCard}>
-          <h5 className={styles.officeTitle}>Thane Office</h5>
           <div className={styles.mapWrapper}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.666970005158!2d72.9706893749745!3d19.24141498118155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6380907500f%3A0x3066e58817c29529!2sRustomjee%20Urbania%2C%20Majiwada%2C%20Thane%2C%20Maharashtra%20400601!5e0!3m2!1sen!2sin!4v1738245678901!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.701118970854!2d72.9854820768195!3d19.208252347804365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9361999ddef%3A0xec5f83df01940d4!2sRustomjee%20Urbania!5e0!3m2!1sen!2sin!4v1769839126988!5m2!1sen!2sin"
               width="100%"
               height="150"
               style={{ border: 0 }}
@@ -21,29 +21,22 @@ const MapSection: React.FC = () => {
               title="Crown Security Solutions Thane Office"
             />
           </div>
-          <p className={styles.officeAddress}>
-            Office 11, P3 Level, Azziano, Rustomjee Urbania, Majiwada, Thane (W), Maharashtra 400601
-          </p>
         </div>
-
         <div className={styles.officeCard}>
-          <h5 className={styles.officeTitle}>Mumbai Office</h5>
           <div className={styles.mapWrapper}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.388993933357!2d72.8713689749745!3d19.07598398118155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c97f346053b7%3A0x619300705ca208%20!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1738245678901!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d483192.5343475806!2d73.09631596406362!3d18.88966850287397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9312d0aeaab%3A0xf68e7487ea7ec1cc!2sCrown%20Security%20Agency!5e0!3m2!1sen!2sin!4v1769838590540!5m2!1sen!2sin"
               width="100%"
-              height="150"
+              height="200"
               style={{ border: 0 }}
               allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Crown Security Solutions Mumbai Office"
+              title="Crown Security Solutions Thane West Office"
             />
           </div>
-          <p className={styles.officeAddress}>
-            Mumbai, Maharashtra
-          </p>
         </div>
+
       </div>
 
       <p className={styles.mapText}>
