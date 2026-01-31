@@ -19,7 +19,7 @@ export const metadata = {
     url: "/services",
     images: [
       {
-        url: "/images/services/service-1.webp",
+        url: "/images/services/Corporate Park Security Services/1.webp",
         width: 1200,
         height: 630,
         alt: "Security Services - Corporate, Industrial & Residential",
@@ -29,7 +29,7 @@ export const metadata = {
   twitter: {
     title: "Security Services | Corporate, Industrial & Residential",
     description: "Explore Crown Security Solutions' full range of security services, including corporate, industrial, residential, logistics, and event security.",
-    images: ["/images/services/service-1.webp"],
+    images: ["/images/services/Corporate Park Security Services/1.webp"],
   },
   robots: {
     index: true,
