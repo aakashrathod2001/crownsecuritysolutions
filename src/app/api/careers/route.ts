@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { verifyRecaptchaToken } from '@/lib/recaptcha';
 
 interface LanguageSkills {
   speak: boolean;
@@ -65,9 +64,6 @@ export async function POST(request: NextRequest) {
   try {
     // Parse form data
     const formData = await request.formData();
-    
-    // Extract text fields
-    const recaptchaToken = (formData.get('recaptchaToken') as string) || '';
 
     const applicationData: ApplicationData = {
       surname: formData.get('surname') as string || '',
@@ -134,14 +130,6 @@ export async function POST(request: NextRequest) {
       resume: formData.get('resume') || null,
     };
 
-    // Verify reCAPTCHA
-    const recaptchaCheck = await verifyRecaptchaToken(recaptchaToken, 'careers_submit');
-    if (!recaptchaCheck.success) {
-      return NextResponse.json(
-        { error: recaptchaCheck.reason || 'reCAPTCHA verification failed' },
-        { status: 400 }
-      );
-    }
 
     // Validate required fields
     const requiredFields = [

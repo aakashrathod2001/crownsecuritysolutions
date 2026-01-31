@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Script from 'next/script';
 import Button, { ArrowIcon } from '@/components/UI/Button/Button';
 import { services } from '@/data/services';
 import styles from './ContactForm.module.scss';
@@ -22,17 +21,7 @@ interface FormErrors {
   message?: string;
 }
 
-declare global {
-  interface Window {
-    grecaptcha?: {
-      ready: (cb: () => void) => void;
-      execute: (siteKey: string, options: { action: string }) => Promise<string>;
-    };
-  }
-}
-
 const ContactForm: React.FC = () => {
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -46,32 +35,6 @@ const ContactForm: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
-
-  const getRecaptchaToken = async (action: string): Promise<string> => {
-    if (!siteKey) {
-      throw new Error('reCAPTCHA site key is missing');
-    }
-
-    const waitForRecaptcha = () =>
-      new Promise<void>((resolve, reject) => {
-        const startedAt = Date.now();
-        const check = () => {
-          if (window.grecaptcha?.ready) {
-            resolve();
-            return;
-          }
-          if (Date.now() - startedAt > 6000) {
-            reject(new Error('reCAPTCHA failed to load'));
-            return;
-          }
-          setTimeout(check, 150);
-        };
-        check();
-      });
-
-    await waitForRecaptcha();
-    return window.grecaptcha!.execute(siteKey, { action });
-  };
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -131,29 +94,12 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // Permanent fix: Only use reCAPTCHA if site key is available
-      let recaptchaToken: string | undefined;
-      
-      if (siteKey) {
-        try {
-          recaptchaToken = await getRecaptchaToken('contact_submit');
-        } catch (recaptchaError) {
-          console.warn('reCAPTCHA failed to load, proceeding without it:', recaptchaError);
-          // Continue without reCAPTCHA token
-        }
-      } else {
-        console.warn('reCAPTCHA site key not found, proceeding without reCAPTCHA');
-      }
-
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          ...(recaptchaToken && { recaptchaToken }), // Only include if we have a token
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -222,121 +168,113 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <>
-      {siteKey && (
-        <Script
-          src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
-          strategy="afterInteractive"
-        />
-      )}
-      <div className={styles.formSection}>
-        <div className={styles.formHeader}>
-          <h3 className={styles.formTitle}>Talk to an expert</h3>
-        </div>
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles.field}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name*"
-              aria-label="Name"
-              value={formData.name}
-              onChange={handleInputChange}
-              className={`${styles.input} ${errors.name ? styles.error : ''}`}
-              required
-            />
-            {errors.name && <span className={styles.errorMessage}>{errors.name}</span>}
-          </div>
-
-          <div className={styles.field}>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email ID*"
-              aria-label="Email ID"
-              value={formData.email}
-              onChange={handleInputChange}
-              className={`${styles.input} ${errors.email ? styles.error : ''}`}
-              required
-            />
-            {errors.email && <span className={styles.errorMessage}>{errors.email}</span>}
-          </div>
-
-          <div className={styles.field}>
-            <input
-              type="tel"
-              name="contactNumber"
-              placeholder="Contact Number*"
-              aria-label="Contact Number"
-              value={formData.contactNumber}
-              onChange={handleInputChange}
-              className={`${styles.input} ${errors.contactNumber ? styles.error : ''}`}
-              required
-            />
-            {errors.contactNumber && <span className={styles.errorMessage}>{errors.contactNumber}</span>}
-          </div>
-
-          <div className={styles.field}>
-            <div className={styles.selectWrapper}>
-              <select
-                name="service"
-                aria-label="Services Interested In"
-                value={formData.service}
-                onChange={handleServiceChange}
-                className={`${styles.select} ${errors.service ? styles.error : ''}`}
-                required
-              >
-                <option value="" disabled>
-                  Services Interested In*
-                </option>
-                {services.map((service) => (
-                  <option key={service.slug} value={service.slug}>
-                    {service.title}
-                  </option>
-                ))}
-              </select>
-              <span className={styles.selectIcon} aria-hidden="true">
-                <svg viewBox="0 0 16 10" focusable="false" aria-hidden="true">
-                  <path
-                    d="M1 1l7 7 7-7"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-            </div>
-            {errors.service && <span className={styles.errorMessage}>{errors.service}</span>}
-          </div>
-
-          <div className={styles.field}>
-            <textarea
-              name="message"
-              placeholder="Message*"
-              aria-label="Message"
-              value={formData.message}
-              onChange={handleInputChange}
-              className={`${styles.textarea} ${errors.message ? styles.error : ''}`}
-              rows={4}
-              required
-            />
-            {errors.message && <span className={styles.errorMessage}>{errors.message}</span>}
-          </div>
-
-          <div className={styles.submitRow}>
-            <Button
-              text={isSubmitting ? "Submitting..." : "Submit"}
-              icon={<ArrowIcon />}
-              className={styles.submitButton}
-              textColor="#f6292f"
-              iconBgColor="#f6292f"
-              onClick={handleButtonSubmit}
-            />
-          </div>
-        </form>
+    <div className={styles.formSection}>
+      <div className={styles.formHeader}>
+        <h3 className={styles.formTitle}>Talk to an expert</h3>
       </div>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.field}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name*"
+            aria-label="Name"
+            value={formData.name}
+            onChange={handleInputChange}
+            className={`${styles.input} ${errors.name ? styles.error : ''}`}
+            required
+          />
+          {errors.name && <span className={styles.errorMessage}>{errors.name}</span>}
+        </div>
+
+        <div className={styles.field}>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email ID*"
+            aria-label="Email ID"
+            value={formData.email}
+            onChange={handleInputChange}
+            className={`${styles.input} ${errors.email ? styles.error : ''}`}
+            required
+          />
+          {errors.email && <span className={styles.errorMessage}>{errors.email}</span>}
+        </div>
+
+        <div className={styles.field}>
+          <input
+            type="tel"
+            name="contactNumber"
+            placeholder="Contact Number*"
+            aria-label="Contact Number"
+            value={formData.contactNumber}
+            onChange={handleInputChange}
+            className={`${styles.input} ${errors.contactNumber ? styles.error : ''}`}
+            required
+          />
+          {errors.contactNumber && <span className={styles.errorMessage}>{errors.contactNumber}</span>}
+        </div>
+
+        <div className={styles.field}>
+          <div className={styles.selectWrapper}>
+            <select
+              name="service"
+              aria-label="Services Interested In"
+              value={formData.service}
+              onChange={handleServiceChange}
+              className={`${styles.select} ${errors.service ? styles.error : ''}`}
+              required
+            >
+              <option value="" disabled>
+                Services Interested In*
+              </option>
+              {services.map((service) => (
+                <option key={service.slug} value={service.slug}>
+                  {service.title}
+                </option>
+              ))}
+            </select>
+            <span className={styles.selectIcon} aria-hidden="true">
+              <svg viewBox="0 0 16 10" focusable="false" aria-hidden="true">
+                <path
+                  d="M1 1l7 7 7-7"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </div>
+          {errors.service && <span className={styles.errorMessage}>{errors.service}</span>}
+        </div>
+
+        <div className={styles.field}>
+          <textarea
+            name="message"
+            placeholder="Message*"
+            aria-label="Message"
+            value={formData.message}
+            onChange={handleInputChange}
+            className={`${styles.textarea} ${errors.message ? styles.error : ''}`}
+            rows={4}
+            required
+          />
+          {errors.message && <span className={styles.errorMessage}>{errors.message}</span>}
+        </div>
+
+        <div className={styles.submitRow}>
+          <Button
+            text={isSubmitting ? "Submitting..." : "Submit"}
+            icon={<ArrowIcon />}
+            className={styles.submitButton}
+            textColor="#f6292f"
+            iconBgColor="#f6292f"
+            onClick={handleButtonSubmit}
+          />
+        </div>
+      </form>
       {isModalOpen && (
         <div className={styles.modalOverlay} role="dialog" aria-modal="true">
           <div className={styles.modal}>
@@ -358,7 +296,7 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
