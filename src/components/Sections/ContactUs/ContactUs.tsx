@@ -14,7 +14,7 @@ const ContactUs: React.FC = () => {
                                 <div className={styles.eyebrow}>
                                     <span className={styles.label}>Contact Us</span>
                                     <h2 className={styles.title}>
-                                        Our Contact,<span className={styles.highlight}>Locations</span> & Network
+                                        Contact a <span className={styles.highlight}> Trusted</span> Security Services Provider in India for Customized Protection Solutions.
                                     </h2>
                                 </div>
                                 <p className={styles.subtitle}>
