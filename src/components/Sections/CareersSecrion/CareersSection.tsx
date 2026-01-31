@@ -39,7 +39,7 @@ const jobListings: Job[] = [
 ];
 
 const CareersSection: React.FC = () => {
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
   const [showForm, setShowForm] = useState(false);
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
   const [currentStep, setCurrentStep] = useState(1);

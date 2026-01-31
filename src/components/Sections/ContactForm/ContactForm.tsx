@@ -32,7 +32,7 @@ declare global {
 }
 
 const ContactForm: React.FC = () => {
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
