@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { navigationItems } from '@/data/navigation';
 import { services } from '@/data/services';
 import styles from './Footer.module.scss';
-import Button, { ArrowIcon } from '@/components/UI/Button/Button';
 import MapSection from '@/components/Sections/MapSection/MapSection';
 
 const Footer: React.FC = () => {
@@ -30,26 +29,6 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <section className={styles.ctaSection}>
-        <div className="pageLayout">
-          <div className="full-width-container">
-            <div className={styles.ctaContainer}>
-              <div className={styles.ctaTitle}>
-                <h2>Get in Touch</h2>
-                <p>Contact us for a consultation and customized proposal.</p>
-              </div>
-
-              <Link href="/contact-us" passHref>
-                <Button
-                  text='Contact Us'
-                  variant="primary"
-                  icon={<ArrowIcon color="#F6292F" />}
-                />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
       <footer className={styles.footer}>
         <div className={styles.top}>
           <div className="full-width-container">

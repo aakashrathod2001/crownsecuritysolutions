@@ -13,6 +13,7 @@ import Testimonials from '@/components/Sections/Testimonials/Testimonials';
 import StackedScroll from '@/components/UI/StackedScroll/StackedScroll';
 import { ABOUT_DATA } from '@/data/about';
 import { JsonLd } from '@/components/JsonLd/JsonLd';
+import EndCta from '@/components/Sections/EndCta/EndCta';
 
 // Enable SSG with ISR (revalidate every 1 hour)
 export const revalidate = 3600;
@@ -62,11 +63,10 @@ export default function HomePage() {
       <LegacySection />
       <div className="bodySectionLayout">
         <CoreValues />
-        <BrandsSlider />;
-      </div>
-      <StackedScroll />
-      <div className="bodySectionLayout">
-        <Testimonials />;
+        <BrandsSlider />
+        <StackedScroll />
+        <Testimonials />
+        <EndCta />
       </div>
       <JsonLd />
     </>

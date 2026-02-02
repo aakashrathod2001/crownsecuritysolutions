@@ -9,6 +9,7 @@ import BrandsSlider from '@/components/Sections/BrandsSlider/BrandsSlider';
 import Testimonials from '@/components/Sections/Testimonials/Testimonials';
 import InfiniteCarousel from '@/components/Sections/InfiniteCarousel/InfiniteCarousel';
 import styles from './page.module.scss';
+import EndCta from '@/components/Sections/EndCta/EndCta';
 
 interface ServicePageProps {
   params: Promise<{
@@ -146,7 +147,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <HeroSection {...service.heroData} />
       <div className="bodySectionLayout">
         <InfoSplitSection content={service.infoSplitData} showImage={false} />
-        <StatsValueSection />
         <CoreValuesSection
           values={service.coreValuesData}
           title={service.coreValuesTitle || "Our Expertise"}
@@ -160,13 +160,16 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <ServiceSection service={service.serviceSectionData[3]} variant="right" showScopeTitle={false} frameIndex={3} />
           <ServiceSection service={service.serviceSectionData[4]} showScopeTitle={false} frameIndex={4} />
         </div>
-        <Testimonials />;
+        <StatsValueSection />
+        <Testimonials />
+        <InfiniteCarousel
+          speed={35}
+          direction="left"
+          gap={32}
+        />
+        <EndCta />
       </div>
-      <InfiniteCarousel
-        speed={35}
-        direction="left"
-        gap={32}
-      />;
+
     </>
   );
 }

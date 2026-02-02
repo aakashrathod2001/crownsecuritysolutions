@@ -13,6 +13,9 @@ import CoreTeamSection from '@/components/Sections/CoreTeamSection/CoreTeamSecti
 import StackedScroll from '@/components/UI/StackedScroll/StackedScroll';
 import Testimonials from '@/components/Sections/Testimonials/Testimonials';
 import { ABOUT_DATA } from '@/data/about';
+import EndCta from '@/components/Sections/EndCta/EndCta';
+import styles from './page.module.scss';
+
 
 // Enable SSG with ISR (revalidate every 1 hour)
 export const revalidate = 3600;
@@ -52,24 +55,21 @@ export default function AboutPage() {
   return (
     <>
       <HeroSection {...aboutpageHero} />
-      <div className="bodySectionLayout">
+      <div className={styles.pageLayout}>
         <InfoSplitSection showImage={true} content={ABOUT_DATA.aboutContent} />
-        <StatsValueSection />;
-      </div>
-      <CTASection {...aboutmissionCTA} />;
-      <div className="bodySectionLayout">
-        <CoreTeamSection />;
-      </div>
-      <CTASection {...homevisionCTA} />;
+        <StatsValueSection />
+
+      <CTASection {...aboutmissionCTA} />
+        <CoreTeamSection />
+  
+      <CTASection {...homevisionCTA} />
       <TrackRecordSection />
-      <div className="bodySectionLayout">
         <BrandsSlider />
-        <CoreValues />;
-      </div>
+        <CoreValues />
       
       <StackedScroll />
-      <div className="bodySectionLayout">
-        <Testimonials />;
+        <Testimonials />
+        <EndCta/>
       </div>
     </>
   );

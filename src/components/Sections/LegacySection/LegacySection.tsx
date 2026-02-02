@@ -54,17 +54,16 @@ const LegacySection: React.FC = () => {
             <h2 className={styles.title}>{LEGACY_SECTION_DATA.title}</h2>
             {/* Subtitle */}
             <h3 className={styles.subtitle}>{LEGACY_SECTION_DATA.subtitle}</h3>
+            {/* Quote */}
+            <div className={styles.quoteContainer}>
+              <cite className={styles.author}>{LEGACY_SECTION_DATA.author}</cite>
+            </div>
 
             {/* Content with line breaks and highlighted words */}
             <div className={styles.content}>
               <p className={styles.paragraph}>
                 {highlightWords(LEGACY_SECTION_DATA.content, LEGACY_SECTION_DATA.highlightedWords || [])}
               </p>
-            </div>
-
-            {/* Quote */}
-            <div className={styles.quoteContainer}>
-              <cite className={styles.author}>{LEGACY_SECTION_DATA.author}</cite>
             </div>
           </div>
         </div>

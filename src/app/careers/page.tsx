@@ -1,5 +1,6 @@
 // app/careers/page.tsx - Enhanced Careers Page with Metadata
 import CareersSection from '@/components/Sections/CareersSecrion/CareersSection';
+import EndCta from '@/components/Sections/EndCta/EndCta';
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
 import { careerspageHero } from '@/data/heroSections';
 
@@ -42,7 +43,8 @@ export default function CareersPage() {
     <>
       <HeroSection {...careerspageHero} />
       <div className="bodySectionLayout">
-        <CareersSection/>;
+        <CareersSection />
+        <EndCta />
       </div>
 
     </>

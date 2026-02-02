@@ -11,6 +11,7 @@ import {
   WORKFORCE_STRUCTURE_DATA
 } from '@/data/workforce';
 import styles from './page.module.scss';
+import EndCta from '@/components/Sections/EndCta/EndCta';
 
 // Enable SSG with ISR (revalidate every 1 hour)
 export const revalidate = 3600;
@@ -61,7 +62,8 @@ export default function WorkforcePage() {
           imageAlt={QUALIFICATION_STANDARDS_DATA.imageAlt}
         />
         <WorkforceStructureSection columns={WORKFORCE_STRUCTURE_DATA.columns} />
-        <StatsValueSection />;
+        <StatsValueSection />
+        <EndCta/>
       </div>
     </>
   );

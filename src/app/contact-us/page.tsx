@@ -1,4 +1,5 @@
 import ContactUs from '@/components/Sections/ContactUs/ContactUs';
+import styles from './page.module.scss';
 
 // Enable SSG with ISR (revalidate every 1 hour)
 export const revalidate = 3600;
@@ -37,8 +38,8 @@ export const metadata = {
 export default function ContactUsPage() {
   return (
     <>
-      <div className="bodySectionLayout">
-        <ContactUs />;
+      <div className={styles.pageLayout}>
+        <ContactUs />
       </div>
     </>
   );

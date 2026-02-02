@@ -1,0 +1,6 @@
+.pageLayout {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 1.019rem + 4.359vw, 6.25rem);
+  padding-block: clamp(4.5rem, 3.462rem + 4.615vw, 9rem);
+}

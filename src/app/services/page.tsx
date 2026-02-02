@@ -5,6 +5,7 @@ import { servicespageHero } from '@/data/heroSections';
 import { serviceData } from '@/data/serviceSectionData';
 import styles from './page.module.scss';
 import InfiniteCarousel from '@/components/Sections/InfiniteCarousel/InfiniteCarousel';
+import EndCta from '@/components/Sections/EndCta/EndCta';
 
 // Enable SSG with ISR (revalidate every 1 hour)
 export const revalidate = 3600;
@@ -55,8 +56,10 @@ export default function ServicesPage() {
                     speed={35}
                     direction="left"
                     gap={32}
-                />;
+                />
+                <EndCta/>
             </div>
+            
         </>
     );
 }

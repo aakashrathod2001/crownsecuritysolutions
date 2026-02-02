@@ -39,7 +39,7 @@ export const testimonials: Testimonial[] = [
     companyLogo: "https://placehold.co/400x400.webp",
     companyName: "TVS",
     personName: "Mr. S. G. Chakalabi",
-    title: "Sr. General Manager",
+    title: "Sr. General Manager, TVS",
     rating: 5,
   },
   {
@@ -48,7 +48,7 @@ export const testimonials: Testimonial[] = [
     companyLogo: "https://placehold.co/400x400.webp",
     companyName: "DHL",
     personName: "Mr. Harshul Ashar",
-    title: "Head – Security & Ops",
+    title: "Head – Security & Ops, DHL",
     rating: 5,
   },
   {
@@ -57,7 +57,7 @@ export const testimonials: Testimonial[] = [
     companyLogo: "https://placehold.co/400x400.webp",
     companyName: "MAHINDRA",
     personName: "Mr. Vijay Pawar",
-    title: "Sr. Manager",
+    title: "Sr. Manager, Mahindra",
     rating: 5,
   },
 ];
