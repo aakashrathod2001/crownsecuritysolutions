@@ -20,15 +20,16 @@
   justify-content: center;
   border-radius: clamp(0.75rem, 0.692rem + 0.256vw, 1rem);
   border: 1px solid #c7a034;
-  padding: clamp(1rem, 0.654rem + 1.538vw, 2.5rem) clamp(1.5rem, 0.923rem + 2.564vw, 4rem);
+  padding: 1rem 2rem;
 }
 
 .logoImage {
-  height: var(--logo-h, 40px); /* control only height */
+  height: var(--logo-h, 120px); /* control only height */
   width: auto; /* auto-adjust width */
   object-fit: contain;
   filter: var(--logo-filter, grayscale(100%));
   transition: all 0.3s ease;
+  border-radius: clamp(0.75rem, 0.692rem + 0.256vw, 1rem);
 
   // &:hover {
   //   filter: grayscale(0%);
