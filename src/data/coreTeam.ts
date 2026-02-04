@@ -36,7 +36,7 @@ export interface TeamMember {
 export const coreTeamData: TeamMember[] = [
   {
     id: "tanveer-shaikh",
-    name: "Late Mr. Tanveer Shamnameer Shaikh",
+    name: "(Late) Mr. Tanveer Shamnameer Shaikh",
     position: "Founder",
     image: "/images/team/tanveer_shaikh.webp",
     isCore: true,
