@@ -163,7 +163,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         <StatsValueSection />
         <Testimonials />
         <InfiniteCarousel
-          speed={35}
+          speed={200}
           direction="left"
           gap={32}
         />

@@ -53,7 +53,7 @@ export default function ServicesPage() {
                     />
                 ))}
                 <InfiniteCarousel
-                    speed={35}
+                    speed={200}
                     direction="left"
                     gap={32}
                 />
