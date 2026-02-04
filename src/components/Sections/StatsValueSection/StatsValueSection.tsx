@@ -11,10 +11,10 @@ const StatsValueSection: React.FC = () => {
 
   const statistics = [
     { number: '25+', label: 'Years of Experience', target: 25 },
-    { number: '5000CR+', label: 'Secured', target: 5000 },
+    { number: '20000CR+', label: 'Secured', target: 20000 },
     { number: '100+', label: 'Happy Clients', target: 100 },
-    { number: '1500+', label: 'Employees', target: 1500 },
-    { number: '10+', label: 'Fortune 500 Clients', target: 10 },
+    { number: '2000+', label: 'Skilled Workers', target: 2000 },
+    { number: '200+', label: 'Operational Sites', target: 200 },
   ];
 
   useEffect(() => {

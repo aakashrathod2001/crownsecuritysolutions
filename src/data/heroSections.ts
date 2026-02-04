@@ -3,16 +3,9 @@ import { HeroSectionProps } from '@/types/hero';
 
 export const homepageHero: HeroSectionProps = {
   media: {
-    type: 'video',
-    src: '/videos/garda-security-usa-ambient.mp4',
-    poster: '/images/home/home-hero-bg.webp',
+    type: 'image',
+    src: '/images/home/home-hero-bg.webp',
     alt: 'Security guard at concert',
-    videoProps: {
-      autoPlay: true,
-      loop: true,
-      muted: true,
-      playsInline: true,
-    },
   },
   content: {
     title: 'Your Security. Our Priority.',
@@ -38,16 +31,9 @@ export const homepageHero: HeroSectionProps = {
 
 export const aboutpageHero: HeroSectionProps = {
   media: {
-    type: 'video',
-    src: '/videos/garda-security-usa-ambient.mp4',
-    poster: '/images/about/about-hero-bg.webp',
+    type: 'image',
+    src: '/images/about/about-hero-bg.webp',
     alt: 'Security guard at concert',
-    videoProps: {
-      autoPlay: true,
-      loop: true,
-      muted: true,
-      playsInline: true,
-    },
   },
   content: {
     title: 'Trusted Security Services Company in India for Commercial, Residential & Industrial Protection',
@@ -65,16 +51,9 @@ export const aboutpageHero: HeroSectionProps = {
 
 export const ourprocesspageHero: HeroSectionProps = {
   media: {
-    type: 'video',
-    src: '/videos/garda-security-usa-ambient.mp4',
-    poster: '/images/our-process-hero-bg.webp',
+    type: 'image',
+    src: '/images/our-process-hero-bg.webp',
     alt: 'Security guard at concert',
-    videoProps: {
-      autoPlay: true,
-      loop: true,
-      muted: true,
-      playsInline: true,
-    },
   },
   content: {
     title: 'Our Proven Security Process Built on Compliance, Risk Assessment & Industry Best Practices in India',
@@ -92,16 +71,9 @@ export const ourprocesspageHero: HeroSectionProps = {
 
 export const ourworkforcepageHero: HeroSectionProps = {
   media: {
-    type: 'video',
-    src: '/videos/garda-security-usa-ambient.mp4',
-    poster: '/images/our-workforce-hero-bg.webp',
+    type: 'image',
+    src: '/images/our-workforce-hero-bg.webp',
     alt: 'Security guard at concert',
-    videoProps: {
-      autoPlay: true,
-      loop: true,
-      muted: true,
-      playsInline: true,
-    },
   },
   content: {
     title: 'Professionally Trained, PSARA-Compliant Security Guards Across India',
@@ -119,16 +91,9 @@ export const ourworkforcepageHero: HeroSectionProps = {
 
 export const servicespageHero: HeroSectionProps = {
   media: {
-    type: 'video',
-    src: '/videos/garda-security-usa-ambient.mp4',
-    poster: '/images/our-services-hero-bg.webp',
+    type: 'image',
+    src: '/images/our-services-hero-bg.webp',
     alt: 'Security guard at concert',
-    videoProps: {
-      autoPlay: true,
-      loop: true,
-      muted: true,
-      playsInline: true,
-    },
   },
   content: {
     title: 'Comprehensive Security Services in India for Corporates, Residences & Industrial Facilities',
@@ -146,16 +111,9 @@ export const servicespageHero: HeroSectionProps = {
 
 export const careerspageHero: HeroSectionProps = {
   media: {
-    type: 'video',
-    src: '/videos/garda-security-usa-ambient.mp4',
-    poster: '/images/careers-hero-bg.webp',
+    type: 'image',
+    src: '/images/careers-hero-bg.webp',
     alt: 'Security guard at concert',
-    videoProps: {
-      autoPlay: true,
-      loop: true,
-      muted: true,
-      playsInline: true,
-    },
   },
   content: {
     title: 'Security Guard & Management Careers with a Growing Security Services Company in India',

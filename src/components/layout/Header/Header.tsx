@@ -18,6 +18,16 @@ const Header: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setDropdownOpen(null);
+  };
+
+  const handleNavClick = (hasChildren: boolean) => {
+    // Always close the menu when clicking any navigation item
+    closeMenu();
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -39,11 +49,20 @@ const Header: React.FC = () => {
                   className={`${styles.navItemWrapper} ${item.children ? styles.hasDropdown : ''}`}
                   onMouseEnter={() => item.children && setDropdownOpen(item.label)}
                   onMouseLeave={() => setDropdownOpen(null)}
-                  onClick={() => item.children && setDropdownOpen(dropdownOpen === item.label ? null : item.label)}
                 >
                   <Link
                     href={item.href}
                     className={`${styles.navLink} ${pathname === item.href || pathname.startsWith(item.href + '/') || (item.href !== '/' && pathname === item.href + '/') ? styles.active : ''} ${item.children ? styles.hasDropdown : ''}`}
+                    onClick={(e) => {
+                      if (item.children) {
+                        e.preventDefault(); // Prevent navigation for dropdown items
+                        // Always open the dropdown when clicking a dropdown item
+                        setDropdownOpen(item.label);
+                      } else {
+                        // Close menu for non-dropdown items
+                        closeMenu();
+                      }
+                    }}
                   >
                     {item.label}
                     {item.children && (
@@ -52,11 +71,22 @@ const Header: React.FC = () => {
                   </Link>
                   {item.children && (
                     <ul className={`${styles.dropdownMenu} ${dropdownOpen === item.label ? styles.dropdownOpen : ''}`}>
+                      {/* Add a "View All Services" link at the top */}
+                      <li className={styles.dropdownItem}>
+                        <Link
+                          href={item.href}
+                          className={`${styles.dropdownLink} ${pathname === item.href || pathname.startsWith(item.href + '/') || (item.href !== '/' && pathname === item.href + '/') ? styles.active : ''}`}
+                          onClick={closeMenu}
+                        >
+                          View All {item.label}
+                        </Link>
+                      </li>
                       {item.children.map((child) => (
                         <li key={child.label} className={styles.dropdownItem}>
                           <Link
                             href={child.href}
                             className={`${styles.dropdownLink} ${pathname === child.href ? styles.active : ''}`}
+                            onClick={closeMenu}
                           >
                             {child.label}
                           </Link>

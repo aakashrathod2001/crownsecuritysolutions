@@ -12,14 +12,14 @@ export const TIMELINE_DATA: TimelineItem[] = [
     id: '1',
     year: 'Before 1996',
     title: 'Security Industry Foundation',
-    description: 'Mr. Tanvir served as Security Branch Manager at SSB Security Agency, during the early days when security agencies were a new and niche sector in India.',
+    description: 'Mr. Tanveer Shamnameer Shaikh served as Security Branch Manager at SSB Security Agency, during the early days when security agencies were a new and niche sector in India.',
     highlightColor: '#d4af37'
   },
   {
     id: '2',
     year: '1996',
     title: 'Vision for Independence',
-    description: 'Inspired by Mr. (Founder of SSB), Mr. Tanvir decided to establish his own security agency to contribute towards the security field for India and its citizens.',
+    description: 'Inspired by Mr. (Founder of SSB), Mr. Tanveer Shamnameer Shaikh decided to establish his own security agency to contribute towards the security field for India and its citizens.',
     highlightColor: '#d4af37'
   },
   {
