@@ -41,7 +41,7 @@ export const ABOUT_DATA: AboutData = {
     imageSrc: "/images/about/about-us.webp",
     imageAlt: "Crown Security Agency professional guard",
     paragraphs: [
-      "Established in 1997 by the Late Mr. Mohammad Tanveer Shamnameer Shaikh, Crown Security Agencies (CSA) has expanded from a Mumbai-based business to a PAN-India company that protects assets valued at more than ₹20000 crores.\n\nWe currently employ 2000+ skilled workers operating in 7 states, combining modern technology with human vigilance.\n\nWith corporate office in Thane and regional presence in Pune, Bangalore, Ahmedabad, Delhi, Chennai, Haryana, and Hyderabad, Crown Security Agency continues to redefine what dependable, compliant, and people-first security truly means.",
+      "Established in 1997 by the Late Mr. Mohammad Tanveer Shamnameer Shaikh, Crown Security Agencies (CSA) has expanded from a Mumbai-based business to a PAN-India company that protects assets valued at more than ₹25000 crores.\n\nWe currently employ 2000+ Security Personnels operating in 7 states, combining modern technology with human vigilance.\n\nWith corporate office in Thane and regional presence in Pune, Bangalore, Ahmedabad, Delhi, Chennai, Haryana, and Hyderabad, Crown Security Agency continues to redefine what dependable, compliant, and people-first security truly means.",
     ],
   },
 };

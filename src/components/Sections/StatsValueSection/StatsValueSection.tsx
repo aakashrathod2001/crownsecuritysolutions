@@ -13,7 +13,7 @@ const StatsValueSection: React.FC = () => {
     { number: '25+', label: 'Years of Experience', target: 25 },
     { number: '25000CR+', label: 'Secured', target: 25000 },
     { number: '100+', label: 'Happy Clients', target: 100 },
-    { number: '2000+', label: 'Skilled Workers', target: 2000 },
+    { number: '2000+', label: 'Security Personnels', target: 2000 },
     { number: '200+', label: 'Operational Sites', target: 200 },
   ];
 
