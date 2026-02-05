@@ -47,7 +47,7 @@ export default function OurProcessPage() {
       <div className={styles.pageLayout}>
         <StackedScroll showHeader={false} />
         <InfiniteCarousel
-          speed={200}
+          speed={400}
           direction="left"
           gap={32}
         />

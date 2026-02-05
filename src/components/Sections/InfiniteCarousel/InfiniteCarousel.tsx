@@ -14,7 +14,7 @@ interface InfiniteCarouselProps {
 }
 
 export function InfiniteCarousel({
-  speed = 38400,
+  speed = 400,
   direction = 'left',
   className = '',
   containerClassName = '',
@@ -36,6 +36,8 @@ export function InfiniteCarousel({
           duration: speed,
           ease: "linear",
           repeat: Infinity,
+          repeatType: "loop",
+          repeatDelay: 0,
         }}
       >
         {duplicatedItems.map((url, index) => (
