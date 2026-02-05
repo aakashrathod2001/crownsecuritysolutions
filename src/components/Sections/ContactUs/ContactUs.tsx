@@ -42,10 +42,10 @@ const ContactUs: React.FC = () => {
                                 <div className={styles.infoCardRow}>
                                     <h3 className={styles.infoTitle}>Head & Corporate Office</h3>
                                     <p className={styles.infoText}>
-                                        Address: Office 11, P3 Level, Azziano, Rustomjee Urbania, Majiwada, Thane (W), Maharashtra 400601
+                                         Head Office: Office 11, P3 Level, Azziano, Rustomjee Urbania, Majiwada, Thane (W), Maharashtra 400601
                                     </p>
                                     <p className={styles.infoText}>
-                                        Address: Elite's Hajra Mansion, 02, off Doctor Ansari Road, 2nd, Rabodi, Thane West, Thane, Maharashtra 400601
+                                        Corporate Office: Elite's Hajra Mansion, 02, off Doctor Ansari Road, 2nd, Rabodi, Thane West, Thane, Maharashtra 400601
                                     </p>
                                     <div className={styles.infoLinkGroup}>
                                         <p className={styles.infoLink}>
