@@ -94,7 +94,7 @@ export const coreTeamData: TeamMember[] = [
     id: "satyakumar-dhavse",
     name: "Mr. Satyakumar Dhavse",
     position: "Sr. Operations Manager",
-    image: "/images/team/abdul_manteen.webp",
+    image: "/images/team/satyakumar_dhavse.webp",
     isCore: false,
   },
   {
