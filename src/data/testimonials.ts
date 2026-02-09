@@ -66,7 +66,7 @@ export const testimonials: Testimonial[] = [
     companyLogo: "https://placehold.co/400x400.webp",
     companyName: "ALF Engg Pvt Ltd.",
     personName: "Vinod Tipre",
-    title: "Vinod Tipre, ALF Engg Pvt Ltd.",
+    title: "Plant Head, ALF Engg Pvt Ltd.",
     rating: 5,
   },
 ];
