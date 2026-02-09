@@ -60,4 +60,13 @@ export const testimonials: Testimonial[] = [
     title: "Sr. Manager, Mahindra",
     rating: 5,
   },
+    {
+    id: 4,
+    quote: "We are in SAFE hands since 13 years. Thank you being a PARTNER.",
+    companyLogo: "https://placehold.co/400x400.webp",
+    companyName: "ALF Engg Pvt Ltd.",
+    personName: "Vinod Tipre",
+    title: "Vinod Tipre, ALF Engg Pvt Ltd.",
+    rating: 5,
+  },
 ];
