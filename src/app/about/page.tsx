@@ -56,7 +56,7 @@ export default function AboutPage() {
     <>
       <HeroSection {...aboutpageHero} />
       <div className={styles.pageLayout}>
-        <InfoSplitSection showImage={true} content={ABOUT_DATA.aboutContent} layout="column" />
+        <InfoSplitSection showImage={false} content={ABOUT_DATA.aboutContent} layout="column" videoSrc="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" />
         <StatsValueSection />
 
       <CTASection {...aboutmissionCTA} />
