@@ -56,7 +56,7 @@ export default function AboutPage() {
     <>
       <HeroSection {...aboutpageHero} />
       <div className={styles.pageLayout}>
-        <InfoSplitSection showImage={true} content={ABOUT_DATA.aboutContent} />
+        <InfoSplitSection showImage={true} content={ABOUT_DATA.aboutContent} layout="column" />
         <StatsValueSection />
 
       <CTASection {...aboutmissionCTA} />

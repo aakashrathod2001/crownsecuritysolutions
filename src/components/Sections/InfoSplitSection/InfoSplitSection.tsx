@@ -4,12 +4,17 @@ import SectionHeader from '@/components/UI/SectionHeader/SectionHeader';
 import styles from './InfoSplitSection.module.scss';
 import { SectionWithImageProps } from '@/types/section';
 
-const InfoSplitSection: React.FC<SectionWithImageProps> = ({
+interface InfoSplitSectionProps extends SectionWithImageProps {
+  layout?: 'row' | 'column';
+}
+
+const InfoSplitSection: React.FC<InfoSplitSectionProps> = ({
   showImage = true,
-  content
+  content,
+  layout = 'row'
 }) => {
   return (
-    <section className={styles.aboutSection}>
+    <section className={`${styles.aboutSection} ${layout === 'column' ? styles.columnLayout : ''}`}>
       <div className="pageLayout">
         <div className="full-width-container">
           <div className={styles.container}>
