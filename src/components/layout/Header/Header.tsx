@@ -23,11 +23,6 @@ const Header: React.FC = () => {
     setDropdownOpen(null);
   };
 
-  const handleNavClick = (hasChildren: boolean) => {
-    // Always close the menu when clicking any navigation item
-    closeMenu();
-  };
-
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -50,28 +45,46 @@ const Header: React.FC = () => {
                   onMouseEnter={() => item.children && setDropdownOpen(item.label)}
                   onMouseLeave={() => setDropdownOpen(null)}
                 >
-                  <Link
-                    href={item.href}
-                    className={`${styles.navLink} ${pathname === item.href || pathname.startsWith(item.href + '/') || (item.href !== '/' && pathname === item.href + '/') ? styles.active : ''} ${item.children ? styles.hasDropdown : ''}`}
-                    onClick={(e) => {
-                      if (item.children) {
-                        e.preventDefault(); // Prevent navigation for dropdown items
-                        // Always open the dropdown when clicking a dropdown item
-                        setDropdownOpen(item.label);
-                      } else {
-                        // Close menu for non-dropdown items
-                        closeMenu();
-                      }
-                    }}
-                  >
-                    {item.label}
+                  <div className={styles.navLinkWrapper}>
+                    <Link
+                      href={item.href}
+                      className={`${styles.navLink} ${pathname === item.href || pathname.startsWith(item.href + '/') || (item.href !== '/' && pathname === item.href + '/') ? styles.active : ''} ${item.children ? styles.hasDropdown : ''}`}
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setDropdownOpen(null);
+                      }}
+                    >
+                      {item.label}
+                    </Link>
                     {item.children && (
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.dropdownIcon} aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                      <button
+                        className={styles.dropdownToggle}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setDropdownOpen(dropdownOpen === item.label ? null : item.label);
+                        }}
+                        aria-label={`Toggle ${item.label} dropdown`}
+                      >
+                        <svg 
+                          xmlns="http://www.w3.org/2000/svg" 
+                          width="16" 
+                          height="16" 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          className={`${styles.dropdownIcon} ${dropdownOpen === item.label ? styles.dropdownIconOpen : ''}`}
+                        >
+                          <path d="m6 9 6 6 6-6"></path>
+                        </svg>
+                      </button>
                     )}
-                  </Link>
+                  </div>
                   {item.children && (
                     <ul className={`${styles.dropdownMenu} ${dropdownOpen === item.label ? styles.dropdownOpen : ''}`}>
-                      {/* Add a "View All Services" link at the top */}
                       <li className={styles.dropdownItem}>
                         <Link
                           href={item.href}
@@ -108,8 +121,6 @@ const Header: React.FC = () => {
             </Link>
           </div>
         </nav>
-
-
 
         <button
           className={`${styles.hamburger} ${isMenuOpen ? styles.hamburgerOpen : ''}`}

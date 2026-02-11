@@ -87,6 +87,33 @@
   display: inline-block;
 }
 
+.navLinkWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dropdownToggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0.5rem;
+    margin-left: auto;
+  }
+}
+
 .navLink {
   color: #ffffff;
   text-decoration: none;
@@ -129,15 +156,6 @@
     width: 100%;
   }
 
-  &.hasDropdown:hover::after {
-    width: calc(100% - 35px);
-  }
-
-  &.hasDropdown.active::after,
-  &.hasDropdown.active:hover::after {
-    width: calc(100% - 35px);
-  }
-
   &.hasDropdown {
     position: relative;
   }
@@ -178,14 +196,18 @@
   display: inline-block;
   flex-shrink: 0;
   vertical-align: middle;
+  cursor: pointer;
+  transform: rotate(0deg);
 }
 
-.navItemWrapper:hover .dropdownIcon {
-  transform: rotate(180deg);
+.dropdownIconOpen {
+  transform: rotate(180deg) !important;
 }
 
-.navItemWrapper:has(> .dropdownMenu.dropdownOpen) .dropdownIcon {
-  transform: rotate(180deg);
+@media (min-width: 1025px) {
+  .navItemWrapper:hover .dropdownIcon:not(.dropdownIconOpen) {
+    transform: rotate(180deg);
+  }
 }
 
 .dropdownMenu {
