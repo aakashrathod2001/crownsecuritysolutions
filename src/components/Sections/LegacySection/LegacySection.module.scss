@@ -158,16 +158,6 @@
   font-weight: 400;
   line-height: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
   white-space: pre-line;
-
-  @media (max-width: 768px) {
-    font-size: clamp(0.7rem, 0.6rem + 0.3vw, 0.9rem);
-    line-height: clamp(1.1rem, 0.9rem + 0.6vw, 1.4rem);
-  }
-
-  @media (max-width: 480px) {
-    font-size: clamp(0.65rem, 0.55rem + 0.3vw, 0.85rem);
-    line-height: clamp(1.2rem, 1rem + 0.6vw, 1.4rem);
-  }
 }
 
 .author {
