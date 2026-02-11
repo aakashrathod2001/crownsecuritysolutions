@@ -8,7 +8,7 @@
 
 .container {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   --gap: clamp(2rem, 1.019rem + 4.359vw, 6.25rem);
   gap: var(--gap);
   align-self: stretch;
@@ -16,7 +16,6 @@
 
   @media (max-width: 799px) {
     flex-direction: column;
-
   }
 }
 
@@ -25,13 +24,18 @@
   flex-direction: column;
   flex: 1;
   gap: clamp(2rem, 1.538rem + 2.051vw, 4rem);
+  min-height: 100%;
+
+  > * {
+    flex: 1 1 50%;
+  }
 }
 
 .imageWrapper {
   width: 100%;
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1/1;
+  min-height: 0;
 }
 
 .image {
