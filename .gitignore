@@ -42,7 +42,7 @@ next-env.d.ts
 
 # public folder assets
 # /public/images
-/public/videos
+# /public/videos
 
 # Google service account key
 service-account-key.json.json
