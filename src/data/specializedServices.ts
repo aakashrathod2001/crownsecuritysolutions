@@ -82,7 +82,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       imageSrc: "/images/home/services/Hospitality Services.webp",
       imageAlt: "Hospitality Security services",
       linkText: "Learn More",
-      linkUrl: "/services/hospitality-security",
+      linkUrl: "/services/hospitality-services",
     },
     {
       title: "High-End Residential Security",
@@ -100,7 +100,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       imageSrc: "/images/home/services/VIP Protection _ Personal Escort Security.webp",
       imageAlt: "VIP Protection services",
       linkText: "Learn More",
-      linkUrl: "/services/vip-protection",
+      linkUrl: "/services/vip-protection-personal-escort-security",
     },
     {
       title: "Mall Security",
@@ -127,7 +127,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       imageSrc: "/images/home/services/CCTV Monitoring & Alarm Response Services.webp",
       imageAlt: "CCTV Monitoring services",
       linkText: "Learn More",
-      linkUrl: "/services/cctv-monitoring",
+      linkUrl: "/services/cctv-monitoring-alarm-response-services",
     },
     {
       title: "Access Control Management",
@@ -145,7 +145,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       imageSrc: "/images/home/services/Fire Safety & Emergency Drill Support.webp",
       imageAlt: "Fire Safety services",
       linkText: "Learn More",
-      linkUrl: "/services/fire-safety",
+      linkUrl: "/services/fire-safety-emergency-drill-support",
     },
     {
       title: "Gate-Pass & Vehicle Verification",
@@ -154,7 +154,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       imageSrc: "/images/home/services/Gate-Pass and Vehicle Movement Verification (Logistics_Industrial).webp",
       imageAlt: "Gate-Pass & Vehicle Verification",
       linkText: "Learn More",
-      linkUrl: "/services/gate-pass-vehicle-verification",
+      linkUrl: "/services/gate-pass-and-vehicle-movement-verification-logistics-industrial",
     },
     {
       title: "Cargo Integrity Audits",
@@ -163,7 +163,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       imageSrc: "/images/home/services/Cargo Integrity Audits (Logistics Security).webp",
       imageAlt: "Cargo Integrity Audits",
       linkText: "Learn More",
-      linkUrl: "/services/cargo-integrity-audits",
+      linkUrl: "/services/cargo-integrity-audits-logistics-security",
     },
     {
       title: "Perimeter Patrolling & PPE Compliance",
@@ -172,7 +172,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       imageSrc: "/images/home/services/Perimeter Patrolling & PPE Compliance (Industrial Security).webp",
       imageAlt: "Perimeter Patrolling services",
       linkText: "Learn More",
-      linkUrl: "/services/perimeter-patrolling",
+      linkUrl: "/services/perimeter-patrolling-ppe-compliance-industrial-security",
     },
   ],
 };

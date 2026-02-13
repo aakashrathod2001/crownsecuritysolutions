@@ -267,7 +267,7 @@ export const serviceData: ServiceData[] = [
         variant: "primary",
         iconBgColor: "#1a1a1a",
         textColor: "#1a1a1a",
-        href: "/services/vip-protection"
+        href: "/services/vip-protection-personal-escort-security"
       }
     ]
   },
@@ -289,7 +289,7 @@ export const serviceData: ServiceData[] = [
         variant: "primary",
         iconBgColor: "#1a1a1a",
         textColor: "#1a1a1a",
-        href: "/services/cctv-monitoring"
+        href: "/services/cctv-monitoring-alarm-response-services"
       }
     ]
   },
@@ -333,7 +333,7 @@ export const serviceData: ServiceData[] = [
         variant: "primary",
         iconBgColor: "#1a1a1a",
         textColor: "#1a1a1a",
-        href: "/services/fire-safety"
+        href: "/services/fire-safety-emergency-drill-support"
       }
     ]
   },
@@ -355,7 +355,7 @@ export const serviceData: ServiceData[] = [
         variant: "primary",
         iconBgColor: "#1a1a1a",
         textColor: "#1a1a1a",
-        href: "/services/gate-pass-vehicle-verification"
+        href: "/services/gate-pass-and-vehicle-movement-verification-logistics-industrial"
       }
     ]
   },
@@ -377,7 +377,7 @@ export const serviceData: ServiceData[] = [
         variant: "primary",
         iconBgColor: "#1a1a1a",
         textColor: "#1a1a1a",
-        href: "/services/cargo-integrity-audits"
+        href: "/services/cargo-integrity-audits-logistics-security"
       }
     ]
   },
@@ -399,7 +399,7 @@ export const serviceData: ServiceData[] = [
         variant: "primary",
         iconBgColor: "#1a1a1a",
         textColor: "#1a1a1a",
-        href: "/services/perimeter-patrolling"
+        href: "/services/perimeter-patrolling-ppe-compliance-industrial-security"
       }
     ]
   }
