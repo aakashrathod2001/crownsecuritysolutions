@@ -124,7 +124,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "CCTV Monitoring & Alarm Response",
       description:
         "Real-time surveillance monitoring and quick on-ground response to incidents using integrated technology systems.",
-      imageSrc: "/images/home/services/CCTV Monitoring & Alarm Response Services.webp",
+      imageSrc: "/images/home/services/CCTV_Monitoring.webp",
       imageAlt: "CCTV Monitoring services",
       linkText: "Learn More",
       linkUrl: "/services/cctv-monitoring-alarm-response-services",
@@ -142,7 +142,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Fire Safety & Emergency Drill Support",
       description:
         "Fire prevention, evacuation training, and emergency coordination to ensure readiness and safety compliance.",
-      imageSrc: "/images/home/services/Fire Safety & Emergency Drill Support.webp",
+      imageSrc: "/images/home/services/Fire_Safety.webp",
       imageAlt: "Fire Safety services",
       linkText: "Learn More",
       linkUrl: "/services/fire-safety-emergency-drill-support",
@@ -169,7 +169,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Perimeter Patrolling & PPE Compliance",
       description:
         "Regular patrols and safety checks to maintain industrial security and enforce PPE standards.",
-      imageSrc: "/images/home/services/Perimeter Patrolling & PPE Compliance (Industrial Security).webp",
+      imageSrc: "/images/home/services/Perimeter_Patrolling.webp",
       imageAlt: "Perimeter Patrolling services",
       linkText: "Learn More",
       linkUrl: "/services/perimeter-patrolling-ppe-compliance-industrial-security",

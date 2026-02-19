@@ -282,7 +282,7 @@ export const serviceData: ServiceData[] = [
       "Surveillance reporting and evidence documentation.",
       "Integration with client or partnered systems."
     ],
-    image: "/images/home/services/CCTV Monitoring & Alarm Response Services.webp",
+    image: "/images/home/services/CCTV_Monitoring.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -326,7 +326,7 @@ export const serviceData: ServiceData[] = [
       "Coordinating with fire safety officers during emergencies.",
       "Conducting evacuation drills and equipment checks."
     ],
-    image: "/images/home/services/Fire Safety & Emergency Drill Support.webp",
+    image: "/images/home/services/Fire_Safety.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -392,7 +392,7 @@ export const serviceData: ServiceData[] = [
       "Coordination with safety officers and site supervisors.",
       "Reporting safety or operational irregularities."
     ],
-    image: "/images/home/services/Perimeter Patrolling & PPE Compliance (Industrial Security).webp",
+    image: "/images/home/services/Perimeter_Patrolling.webp",
     buttons: [
       {
         text: "Find Out More",

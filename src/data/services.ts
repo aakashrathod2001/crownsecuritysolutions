@@ -2391,7 +2391,7 @@ export const services: ServiceData[] = [
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/CCTV Monitoring & Alarm Response Services.webp",
+        src: "/images/home/services/CCTV_Monitoring.webp",
         alt: "CCTV Monitoring & Alarm Response Services",
       },
       content: {
@@ -2818,7 +2818,7 @@ export const services: ServiceData[] = [
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/Fire Safety & Emergency Drill Support.webp",
+        src: "/images/home/services/Fire_Safety.webp",
         alt: "Fire Safety & Emergency Drill Support",
       },
       content: {
@@ -3462,7 +3462,7 @@ export const services: ServiceData[] = [
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/Perimeter Patrolling & PPE Compliance (Industrial Security).webp",
+        src: "/images/home/services/Perimeter_Patrolling.webp",
         alt: "Perimeter Patrolling & PPE Compliance (Industrial Security)",
       },
       content: {
