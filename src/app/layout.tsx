@@ -11,6 +11,15 @@ export const metadata = {
     default: "Crown Security Solutions | Professional Security Services in India",
     template: "%s | Crown Security Solutions"
   },
+  icons: {
+    icon: [
+      { url: '/images/css_logo.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/images/css_logo.svg', type: 'image/svg+xml' },
+    ],
+  },
   description: "Crown Security Solutions provides reliable corporate, industrial, residential, and event security services with trained professionals and 24/7 support.",
   keywords: ["security services", "corporate security", "industrial security", "residential security", "event security", "security solutions India"],
   authors: [{ name: "Crown Security Solutions" }],
