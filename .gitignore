@@ -46,3 +46,7 @@ next-env.d.ts
 
 # Google service account key
 service-account-key.json.json
+
+# Auto-generated sitemap and robots.txt (generated during build)
+/public/sitemap*.xml
+/public/robots.txt
