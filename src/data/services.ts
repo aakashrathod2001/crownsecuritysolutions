@@ -2387,7 +2387,7 @@ export const services: ServiceData[] = [
       "Rapid response team deployment.",
       "Incident documentation and reporting.",
     ],
-        image: "/images/services/CCTV Monitoring & Alarm Response Services/1.webp",
+        image: "/images/services/CCTV_Monitoring/1.webp",
     heroData: {
       media: {
         type: "image",
@@ -2480,7 +2480,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA adds value by combining human vigilance with advanced monitoring support.",
-        image: "/images/services/CCTV Monitoring & Alarm Response Services/2.webp",
+        image: "/images/services/CCTV_Monitoring/2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2498,7 +2498,7 @@ export const services: ServiceData[] = [
         description:
           "Every facility has different layouts, blind spots, foot traffic patterns, and operational risks. CSA conducts a monitoring requirement assessment that includes camera positioning, lighting conditions, access points, and activity zones.\n\nThis evaluation helps design a monitoring plan that ensures complete visibility and accurate incident detection.",
         scopeOfWork: [],
-        image: "/images/services/CCTV Monitoring & Alarm Response Services/3.webp",
+        image: "/images/services/CCTV_Monitoring/3.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2526,7 +2526,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help minimize blind spots and improve response time for potential threats.",
-        image: "/images/services/CCTV Monitoring & Alarm Response Services/4.webp",
+        image: "/images/services/CCTV_Monitoring/4.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2553,7 +2553,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our personnel maintain discipline and attentiveness during every shift.",
-        image: "/images/services/CCTV Monitoring & Alarm Response Services/5.webp",
+        image: "/images/services/CCTV_Monitoring/5.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2571,7 +2571,7 @@ export const services: ServiceData[] = [
         description:
           "CSA supports surveillance operations for commercial buildings, industrial plants, logistics facilities, and residential communities. Our dependable monitoring and strong response structure make us a preferred partner for technology assisted security.",
         scopeOfWork: [],
-        image: "/images/services/CCTV Monitoring & Alarm Response Services/1.webp",
+        image: "/images/services/CCTV_Monitoring/1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2814,7 +2814,7 @@ export const services: ServiceData[] = [
       "Emergency response planning.",
       "Equipment maintenance and inspection.",
     ],
-        image: "/images/services/Fire Safety & Emergency Drill Support/1.webp",
+        image: "/images/services/Fire_Safety/1.webp",
     heroData: {
       media: {
         type: "image",
@@ -2839,7 +2839,7 @@ export const services: ServiceData[] = [
       title: "Why Fire Safety and Emergency Preparedness Matter?",
       subtitle:
         "Target Segment: Commercial Buildings, Residential Complexes, and Public Facilities.",
-      imageSrc: "/images/services/Fire Safety & Emergency Drill Support/1.webp",
+      imageSrc: "/images/services/Fire_Safety/1.webp",
       imageAlt: "Fire Safety & Emergency Drill Support",
       paragraphs: [
         "Fires and emergency situations escalate quickly if not managed with trained personnel and clear procedures. Many incidents can be prevented or contained when guards are equipped with the right knowledge and when regular drills familiarise staff and visitors with evacuation steps.\n\nCSA ensures that every site has the training, readiness, and support needed to manage emergencies with confidence and discipline.",
@@ -2909,7 +2909,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA enhances workplace safety by combining trained manpower with structured readiness systems.",
-        image: "/images/services/Fire Safety & Emergency Drill Support/1.webp",
+        image: "/images/services/Fire_Safety/1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2927,7 +2927,7 @@ export const services: ServiceData[] = [
         description:
           "Every facility has different fire risk levels based on layout, occupancy, equipment, and operational hazards. CSA begins by studying the site's emergency exits, assembly points, fire equipment placement, and typical foot traffic patterns.\n\nThis evaluation helps design a fire response plan that is practical and effective for the specific environment.",
         scopeOfWork: [],
-        image: "/images/services/Fire Safety & Emergency Drill Support/2.webp",
+        image: "/images/services/Fire_Safety/2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2955,7 +2955,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions strengthen safety culture and ensure preparedness across the organisation.",
-        image: "/images/services/Fire Safety & Emergency Drill Support/3.webp",
+        image: "/images/services/Fire_Safety/3.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2982,7 +2982,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our guards treat emergency readiness as a core responsibility, not an additional task.",
-        image: "/images/services/Fire Safety & Emergency Drill Support/4.webp",
+        image: "/images/services/Fire_Safety/4.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3000,7 +3000,7 @@ export const services: ServiceData[] = [
         description:
           "CSA supports fire safety programs for corporate parks, manufacturing plants, residential complexes, and commercial buildings. Our structured training and calm response make us a trusted partner in emergency preparedness.",
         scopeOfWork: [],
-        image: "/images/services/Fire Safety & Emergency Drill Support/5.webp",
+        image: "/images/services/Fire_Safety/5.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3458,7 +3458,7 @@ export const services: ServiceData[] = [
       "Security breach prevention.",
       "Incident reporting and documentation.",
     ],
-    image: "/images/services/Perimeter Patrolling & PPE Compliance (Industrial Security)/1.webp",
+    image: "/images/services/Perimeter_Patrolling/1.webp",
     heroData: {
       media: {
         type: "image",
@@ -3482,7 +3482,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Perimeter Patrolling and PPE Compliance Are Important?",
       subtitle: "",
-      imageSrc: "/images/services/Perimeter Patrolling & PPE Compliance (Industrial Security)/1.webp",
+      imageSrc: "/images/services/Perimeter_Patrolling/1.webp",
       imageAlt: "Perimeter Patrolling & PPE Compliance (Industrial Security)",
       paragraphs: [
         "Factories, warehouses, and industrial plants face risks related to trespassing, equipment interference, safety lapses, and unauthorized movement. At the same time, failure to follow PPE requirements can lead to injuries, operational shutdowns, and regulatory violations.\n\nCSA strengthens site security with regular patrols, strict monitoring, and professional enforcement of safety guidelines to protect people, assets, and processes.",
@@ -3552,7 +3552,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA integrates security and safety to help industries maintain smooth and incident free operations.",
-        image: "/images/services/Perimeter Patrolling & PPE Compliance (Industrial Security)/1.webp",
+        image: "/images/services/Perimeter_Patrolling/1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3570,7 +3570,7 @@ export const services: ServiceData[] = [
         description:
           "Each industrial facility has different layouts, risk zones, shift patterns, and safety regulations. CSA begins by studying site maps, patrol routes, PPE requirements, and operational hazards.\n\nThis allows us to create a tailored security plan that supports both safety and production efficiency.",
         scopeOfWork: [],
-        image: "/images/services/Perimeter Patrolling & PPE Compliance (Industrial Security)/2.webp",
+        image: "/images/services/Perimeter_Patrolling/2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3599,7 +3599,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help reduce risks and maintain discipline across industrial sites.",
-        image: "/images/services/Perimeter Patrolling & PPE Compliance (Industrial Security)/3.webp",
+        image: "/images/services/Perimeter_Patrolling/3.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3626,7 +3626,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our guards maintain strong attention to detail and uphold the highest safety standards.",
-        image: "/images/services/Perimeter Patrolling & PPE Compliance (Industrial Security)/4.webp",
+        image: "/images/services/Perimeter_Patrolling/4.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3644,7 +3644,7 @@ export const services: ServiceData[] = [
         description:
           "CSA secures plants, factories, energy sites, and large industrial campuses where perimeter protection and safety compliance are critical. Our structured supervision and disciplined patrol practices make us a trusted partner for long term industrial operations.",
         scopeOfWork: [],
-        image: "/images/services/Perimeter Patrolling & PPE Compliance (Industrial Security)/5.webp",
+        image: "/images/services/Perimeter_Patrolling/5.webp",
         buttons: [
           {
             text: "Learn More",
