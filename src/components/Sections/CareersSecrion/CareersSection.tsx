@@ -311,15 +311,15 @@ const CareersSection: React.FC = () => {
                       <div className={styles.formGrid}>
                         <div className={styles.formGroup}>
                           <label>SURNAME</label>
-                          <input type="text" placeholder="SHAIKH" value={formData.surname} onChange={(e) => handleChange('surname', e.target.value.toUpperCase())} required />
+                          <input type="text" placeholder="TIWARI" value={formData.surname} onChange={(e) => handleChange('surname', e.target.value.toUpperCase())} required />
                         </div>
                         <div className={styles.formGroup}>
                           <label>FIRST NAME</label>
-                          <input type="text" placeholder="MOHAMMAD" value={formData.firstName} onChange={(e) => handleChange('firstName', e.target.value.toUpperCase())} required />
+                          <input type="text" placeholder="RAJU" value={formData.firstName} onChange={(e) => handleChange('firstName', e.target.value.toUpperCase())} required />
                         </div>
                         <div className={styles.formGroup}>
                           <label>MIDDLE NAME</label>
-                          <input type="text" placeholder="NADIR" value={formData.middleName} onChange={(e) => handleChange('middleName', e.target.value.toUpperCase())} />
+                          <input type="text" placeholder="RAHUL" value={formData.middleName} onChange={(e) => handleChange('middleName', e.target.value.toUpperCase())} />
                         </div>
                       </div>
 
