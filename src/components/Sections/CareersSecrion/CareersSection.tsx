@@ -7,25 +7,25 @@ import { Job, ApplicationData } from '@/data/careersSection';
 
 const jobListings: Job[] = [
   {
-    id: 'security-guard',
-    title: 'Security Guard',
-    location: 'Mumbai, Maharashtra',
+    id: 'guard-i',
+    title: 'Guard I',
+    location: 'Mumbai, Pune, Hyderabad, Bangalore, Chennai',
     experience: 'Fresher / 1-2 Years',
     description: 'Frontline protection role ensuring safety of assets and personnel at corporate parks and residential complexes.'
   },
   {
-    id: 'security-supervisor',
-    title: 'Security Supervisor',
-    location: 'Pune, Maharashtra',
-    experience: '3-5 Years',
-    description: 'Leadership role managing a team of guards, ensuring deployment schedules and client compliance.'
+    id: 'lady-guard',
+    title: 'Lady Guard',
+    location: 'Mumbai, Pune, Hyderabad, Bangalore, Chennai',
+    experience: 'Fresher / 1-2 Years',
+    description: 'Female security personnel for specialized roles including frisking, access control at corporate offices, malls, and residential complexes.'
   },
   {
-    id: 'field-officer',
-    title: 'Field Officer',
-    location: 'Delhi NCR',
-    experience: '5+ Years',
-    description: 'Operational command role overseeing multiple sites and ensuring standard operating procedures (SOPs).'
+    id: 'supervisor',
+    title: 'Supervisor',
+    location: 'Mumbai, Pune, Hyderabad, Bangalore, Chennai',
+    experience: '3-5 Years',
+    description: 'Leadership role managing a team of guards, ensuring deployment schedules and client compliance.'
   }
 ];
 
