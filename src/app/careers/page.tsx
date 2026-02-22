@@ -1,5 +1,5 @@
 // app/careers/page.tsx - Enhanced Careers Page with Metadata
-import CareersSection from '@/components/Sections/CareersSecrion/CareersSection';
+import CareersSection from '@/components/Sections/CareersSection/CareersSection';
 import EndCta from '@/components/Sections/EndCta/EndCta';
 import HeroSection from '@/components/Sections/HeroSection/HeroSection';
 import { careerspageHero } from '@/data/heroSections';
