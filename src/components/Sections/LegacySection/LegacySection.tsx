@@ -34,37 +34,37 @@ const LegacySection: React.FC = () => {
   };
   return (
     <section className={styles.legacySection}>
-      <div className={styles.backgroundContainer}>
-        {/* Background Image */}
-        <div className={styles.backgroundImage}>
-          <Image
-            src={LEGACY_SECTION_DATA.backgroundImage}
-            alt="Legacy and Leadership Background"
-            fill
-            sizes="100vw"
-            style={{ objectFit: 'cover' }}
-            priority
-          />
+      <div className={styles.container}>
+        {/* Left Column - Text Content */}
+        <div className={styles.leftColumn}>
+          {/* Title */}
+          <h2 className={styles.title}>{LEGACY_SECTION_DATA.title}</h2>
+          {/* Subtitle */}
+          <h3 className={styles.subtitle}>{LEGACY_SECTION_DATA.subtitle}</h3>
+          {/* Author */}
+          <div className={styles.authorContainer}>
+            <cite className={styles.author}>{LEGACY_SECTION_DATA.author}</cite>
+          </div>
+
+          {/* Content with line breaks and highlighted words */}
+          <div className={styles.content}>
+            <p className={styles.paragraph}>
+              {highlightWords(LEGACY_SECTION_DATA.content, LEGACY_SECTION_DATA.highlightedWords || [])}
+            </p>
+          </div>
         </div>
 
-        {/* Overlay with Content */}
-        <div className={styles.overlay}>
-          <div className={styles.contentCard}>
-            {/* Title */}
-            <h2 className={styles.title}>{LEGACY_SECTION_DATA.title}</h2>
-            {/* Subtitle */}
-            <h3 className={styles.subtitle}>{LEGACY_SECTION_DATA.subtitle}</h3>
-            {/* Quote */}
-            <div className={styles.quoteContainer}>
-              <cite className={styles.author}>{LEGACY_SECTION_DATA.author}</cite>
-            </div>
-
-            {/* Content with line breaks and highlighted words */}
-            <div className={styles.content}>
-              <p className={styles.paragraph}>
-                {highlightWords(LEGACY_SECTION_DATA.content, LEGACY_SECTION_DATA.highlightedWords || [])}
-              </p>
-            </div>
+        {/* Right Column - Image */}
+        <div className={styles.rightColumn}>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={LEGACY_SECTION_DATA.backgroundImage}
+              alt="Legacy and Leadership"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              style={{ objectFit: 'cover' }}
+              priority
+            />
           </div>
         </div>
       </div>
