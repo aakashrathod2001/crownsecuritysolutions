@@ -133,23 +133,3 @@ export const careerspageHero: HeroSectionProps = {
   contentPosition: "left",
   minHeight: "840px",
 };
-
-export const certificationHero: HeroSectionProps = {
-  media: {
-    type: "image",
-    src: "/images/certifications/certifications.webp",
-    alt: "Security guard at concert",
-  },
-  content: {
-    title: "Certifications & Accreditations",
-    description:
-      "Crown Security is proud to hold several certifications and accreditations that validate our commitment to excellence in security services. These credentials ensure that we meet the highest industry standards and regulatory requirements across India.",
-  },
-  overlay: {
-    enabled: true,
-    color: "#252929",
-    opacity: 0.6,
-  },
-  contentPosition: "left",
-  minHeight: "840px",
-};

@@ -1,11 +1,10 @@
-import HeroSection from "@/components/Sections/HeroSection/HeroSection";
-import { certificationHero } from "@/data/heroSections";
+import CertificatesSection from "@/components/Sections/CertificatesSection/CertificatesSection";
 import "./page.module.scss";
 
 export default function Certification() {
   return (
     <>
-      <HeroSection {...certificationHero} />
+      <CertificatesSection />
     </>
   );
 }

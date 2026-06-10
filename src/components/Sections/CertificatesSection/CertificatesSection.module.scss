@@ -1,0 +1,289 @@
+.certificatesSection {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #fff;
+  padding: clamp(2.5rem, 1.923rem + 2.564vw, 5rem) 0;
+}
+
+.sectionHeader {
+  width: 100%;
+  text-align: left;
+  margin-bottom: clamp(1.5rem, 1.154rem + 1.538vw, 3rem);
+}
+
+.certificatesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 0.769rem + 1.026vw, 2rem);
+  width: 100%;
+}
+
+.certificateCard {
+  flex: 1 1 calc(100% / 3 - clamp(1rem, 0.769rem + 1.026vw, 2rem));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: clamp(0.875rem, 0.673rem + 0.897vw, 1.75rem);
+  width: 100%;
+  padding: clamp(1.25rem, 0.962rem + 1.282vw, 2.5rem);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: #c7a034;
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+  }
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.documentIcon {
+  width: clamp(3rem, 2.538rem + 2.051vw, 5rem);
+  height: clamp(3rem, 2.538rem + 2.051vw, 5rem);
+  border-radius: 16px;
+  background: rgba(199, 160, 52, 0.12);
+  color: #c7a034;
+  display: grid;
+  place-items: center;
+
+  svg {
+    width: 60%;
+    height: 60%;
+  }
+}
+
+.fileBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem 0.75rem;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.cardMeta {
+  color: #c7a034;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.cardTitle {
+  margin: 0;
+  color: #1a2332;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 0.885rem + 0.513vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.cardDescription {
+  margin: 0;
+  color: #64748b;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.75rem, 0.692rem + 0.256vw, 1rem);
+  line-height: clamp(1.125rem, 1.01rem + 0.513vw, 1.625rem);
+}
+
+.cardAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1a2332;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.75rem, 0.692rem + 0.256vw, 1rem);
+  font-weight: 600;
+
+  svg {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: min(100%, 1100px);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1rem, 0.769rem + 1.026vw, 2rem);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.35);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.modalEyebrow {
+  margin: 0 0 0.25rem;
+  color: #c7a034;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.modalTitle {
+  margin: 0;
+  color: #1a2332;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.125rem, 0.923rem + 0.897vw, 2rem);
+  font-weight: 600;
+}
+
+.modalFileName {
+  margin: 0.4rem 0 0;
+  color: #64748b;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  word-break: break-word;
+}
+
+.modalClose {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #1a2332;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.modalViewer {
+  flex: 1;
+  min-height: 60vh;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.pdfFrame {
+  width: 100%;
+  height: 100%;
+  min-height: 60vh;
+  border: 0;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.openInNewTab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.25rem;
+  border-radius: 999px;
+  background: #1a2332;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #c7a034;
+  }
+}
+
+@media (max-width: 1023px) {
+  .certificateCard {
+    flex: 1 1 calc(100% / 2 - clamp(1rem, 0.769rem + 1.026vw, 2rem));
+  }
+
+  .modal {
+    max-height: 88vh;
+  }
+
+  .modalViewer,
+  .pdfFrame {
+    min-height: 52vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .certificateCard {
+    flex-basis: 100%;
+  }
+
+  .modalOverlay {
+    padding: 0.5rem;
+  }
+
+  .modalHeader {
+    flex-direction: column;
+  }
+
+  .modalClose {
+    align-self: flex-end;
+  }
+
+  .modalViewer,
+  .pdfFrame {
+    min-height: 48vh;
+  }
+
+  .modalFooter {
+    justify-content: stretch;
+  }
+
+  .openInNewTab {
+    width: 100%;
+  }
+}
