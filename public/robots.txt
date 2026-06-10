@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://crownsecuritysolutions.com/
+Host: https://crownsecuritysolutions.com
 
 # Sitemaps
 Sitemap: https://crownsecuritysolutions.com/sitemap.xml
