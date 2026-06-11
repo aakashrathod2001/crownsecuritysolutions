@@ -19,7 +19,6 @@ const Footer: React.FC = () => {
   }));
 
   const legalLinks = [
-    { label: "Certifications", href: "/certification" },
     { label: "Terms & Conditions", href: "/terms-and-conditions" },
     { label: "Privacy Policy", href: "/privacy-policy" },
   ];
