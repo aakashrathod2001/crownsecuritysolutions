@@ -117,8 +117,8 @@ const Footer: React.FC = () => {
                   Majiwada, Thane (W), Maharashtra 400601
                 </p>
                 <p className={styles.text}>
-                  Corporate Office: Elite's Hajra Mansion, 02, off Doctor Ansari
-                  Road, 2nd, Rabodi, Thane West, Thane, Maharashtra 400601
+                  Corporate Office: Office 11, P3 Level, Azziano, Rustomjee
+                  Urbania, Majiwada, Thane (W), Maharashtra 400601
                 </p>
                 <p className={styles.text}>info@crownsecuritysolutions.com</p>
                 <p className={styles.text}>+91 8108107824</p>
