@@ -4,7 +4,7 @@ import { HeroSectionProps } from "@/types/hero";
 export const homepageHero: HeroSectionProps = {
   media: {
     type: "image",
-    src: "/images/home/home-hero-bg.webp",
+    src: "/images/home/home_new.webp",
     alt: "Security guard at concert",
   },
   content: {
