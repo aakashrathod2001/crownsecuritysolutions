@@ -255,7 +255,7 @@ export const services: ServiceData[] = [
       "Real-time GPS monitoring.",
       "Emergency response coordination.",
     ],
-        image: "/images/services/Security Convoy Services/1.webp",
+    image: "/images/services/Security Convoy Services/Convoy_2.webp",
     heroData: {
       media: {
         type: "image",
@@ -347,7 +347,7 @@ export const services: ServiceData[] = [
           "Strong compliance, ethical standards, and accurate reporting",
           "Leadership involvement in planning and supervision",
         ],
-        image: "/images/services/Security Convoy Services/2.webp",
+        image: "/images/services/Security Convoy Services/Convoy_2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -365,7 +365,7 @@ export const services: ServiceData[] = [
         description:
           "Escort assignments often involve sensitive items or people who cannot be exposed to operational delays or security threats. CSA begins with a clear understanding of transit objectives, route conditions, handover points, and expected risks. The result is a customized escort plan that ensures both speed and safety.",
         scopeOfWork: [],
-        image: "/images/services/Security Convoy Services/3.webp",
+        image: "/images/services/Security Convoy Services/Convoy_5.webp",
         buttons: [
           {
             text: "Learn More",
@@ -392,7 +392,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Each plan is created based on the level of risk, the value of the consignment, and the distance of travel.",
-        image: "/images/services/Security Convoy Services/4.webp",
+        image: "/images/services/Security Convoy Services/Convoy_6.webp",
         buttons: [
           {
             text: "Learn More",
@@ -418,7 +418,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "This combination of skill, discipline, and awareness ensures safe and controlled movement at all times.",
-        image: "/images/services/Security Convoy Services/5.webp",
+        image: "/images/services/Security Convoy Services/Convoy_7.webp",
         buttons: [
           {
             text: "Learn More",
@@ -436,7 +436,7 @@ export const services: ServiceData[] = [
         description:
           "CSA has supported several banks, logistics firms, corporate groups, and high profile individuals with safe and reliable escort services. Our operational discipline and technology integration allow us to deliver consistent quality across multiple states.",
         scopeOfWork: [],
-        image: "/images/services/Security Convoy Services/1.webp",
+        image: "/images/services/Security Convoy Services/Convoy_2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1105,7 +1105,7 @@ export const services: ServiceData[] = [
       "Emergency response and evacuation procedures.",
       "24/7 surveillance and monitoring.",
     ],
-        image: "/images/services/Mall Security/1.webp",
+    image: "/images/services/Mall Security/1.webp",
     heroData: {
       media: {
         type: "image",
@@ -1319,7 +1319,7 @@ export const services: ServiceData[] = [
       "Emergency response and coordination.",
       "Privacy protection and confidentiality.",
     ],
-        image: "/images/services/High-End Residential Security/1.webp",
+    image: "/images/services/High-End Residential Security/1.webp",
     heroData: {
       media: {
         type: "image",
@@ -1533,7 +1533,7 @@ export const services: ServiceData[] = [
       "Anti-bullying and conflict resolution.",
       "Security education and awareness programs.",
     ],
-        image: "/images/services/School Security/1.webp",
+    image: "/images/services/School Security/1.webp",
     heroData: {
       media: {
         type: "image",
@@ -1747,7 +1747,7 @@ export const services: ServiceData[] = [
       "VIP protection and secure transportation.",
       "Post-event security debriefing and reporting.",
     ],
-        image: "/images/services/Event Security/1.webp",
+    image: "/images/services/Event Security/1.webp",
     heroData: {
       media: {
         type: "image",
@@ -1960,7 +1960,7 @@ export const services: ServiceData[] = [
       "Real-time communication and monitoring.",
       "Emergency response and backup coordination.",
     ],
-        image: "/images/services/Security Convoy Services/1.webp",
+    image: "/images/services/Security Convoy Services/Convoy_2.webp",
     heroData: {
       media: {
         type: "image",
@@ -1984,7 +1984,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Security Convoy Services Are Important?",
       subtitle: "",
-      imageSrc: "/images/services/Security Convoy Services/1.webp",
+      imageSrc: "/images/services/Security Convoy Services/Convoy_2.webp",
       imageAlt: "Security Convoy Services",
       paragraphs: [
         "Sensitive or high value movements face risks related to route conditions, theft attempts, road incidents, and unpredictable external factors. Without trained convoy teams and structured protocols, the chances of exposure increase significantly.\n\nCSA ensures that every movement is planned, monitored, and executed with complete control and accountability.",
@@ -2054,7 +2054,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA provides a secure transit environment that protects both people and assets.",
-        image: "/images/services/Security Convoy Services/1.webp",
+        image: "/images/services/Security Convoy Services/Convoy_2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2072,7 +2072,7 @@ export const services: ServiceData[] = [
         description:
           "Convoy assignments vary based on consignment value, distance, location sensitivity, and movement schedules. CSA conducts an initial requirement assessment to understand these factors, followed by a route evaluation and risk analysis.\n\nThis results in a convoy plan that is structured, efficient, and tailored specifically to the operational need.",
         scopeOfWork: [],
-        image: "/images/services/Security Convoy Services/2.webp",
+        image: "/images/services/Security Convoy Services/Convoy_1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2099,7 +2099,7 @@ export const services: ServiceData[] = [
           "Post movement reporting and verification",
         ],
         conclusion: "Each plan ensures safety from dispatch to destination.",
-        image: "/images/services/Security Convoy Services/3.webp",
+        image: "/images/services/Security Convoy Services/Convoy_5.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2126,7 +2126,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "This ensures that every convoy is supervised by personnel who understand the seriousness of their role.",
-        image: "/images/services/Security Convoy Services/4.webp",
+        image: "/images/services/Security Convoy Services/Convoy_6.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2144,7 +2144,7 @@ export const services: ServiceData[] = [
         description:
           "CSA has successfully managed convoy operations for logistics firms, high value projects, sensitive consignments, and corporate transfers. Our experience across various regions and route conditions demonstrates our capability in high risk transit management.",
         scopeOfWork: [],
-        image: "/images/services/Security Convoy Services/5.webp",
+        image: "/images/services/Security Convoy Services/Convoy_7.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2267,7 +2267,8 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA provides a protective environment where clients feel both secure and respected.",
-        image: "/images/services/VIP Protection - Personal Escort Security/1.webp",
+        image:
+          "/images/services/VIP Protection - Personal Escort Security/1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2285,7 +2286,8 @@ export const services: ServiceData[] = [
         description:
           "Every individual has unique routines, schedules, and exposure levels. CSA begins by understanding lifestyle patterns, travel frequency, event commitments, and potential risk scenarios.\n\nThis allows us to create a protection plan that aligns with both security requirements and personal comfort.",
         scopeOfWork: [],
-        image: "/images/services/VIP Protection - Personal Escort Security/2.webp",
+        image:
+          "/images/services/VIP Protection - Personal Escort Security/2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2313,7 +2315,8 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions ensure complete safety across all personal and professional engagements.",
-        image: "/images/services/VIP Protection - Personal Escort Security/3.webp",
+        image:
+          "/images/services/VIP Protection - Personal Escort Security/3.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2340,7 +2343,8 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our officers represent professionalism, discretion, and discipline in every assignment.",
-        image: "/images/services/VIP Protection - Personal Escort Security/4.webp",
+        image:
+          "/images/services/VIP Protection - Personal Escort Security/4.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2358,7 +2362,8 @@ export const services: ServiceData[] = [
         description:
           "CSA has provided personal protection to executives, visiting dignitaries, corporate leaders, and well known personalities. Our consistent service quality and confidential handling have made us a trusted partner for sensitive security requirements.",
         scopeOfWork: [],
-        image: "/images/services/VIP Protection - Personal Escort Security/5.webp",
+        image:
+          "/images/services/VIP Protection - Personal Escort Security/5.webp",
         buttons: [
           {
             text: "Learn More",
@@ -2387,7 +2392,7 @@ export const services: ServiceData[] = [
       "Rapid response team deployment.",
       "Incident documentation and reporting.",
     ],
-        image: "/images/services/CCTV_Monitoring/1.webp",
+    image: "/images/services/CCTV_Monitoring/1.webp",
     heroData: {
       media: {
         type: "image",
@@ -2814,7 +2819,7 @@ export const services: ServiceData[] = [
       "Emergency response planning.",
       "Equipment maintenance and inspection.",
     ],
-        image: "/images/services/Fire_Safety/1.webp",
+    image: "/images/services/Fire_Safety/1.webp",
     heroData: {
       media: {
         type: "image",
@@ -3029,7 +3034,8 @@ export const services: ServiceData[] = [
       "Access control for delivery vehicles.",
       "Security clearance procedures.",
     ],
-    image: "/images/services/Gate-Pass and Vehicle Movement Verification (Logistics-Industrial)/1.webp",
+    image:
+      "/images/services/Gate-Pass and Vehicle Movement Verification (Logistics-Industrial)/1.webp",
     heroData: {
       media: {
         type: "image",
@@ -3123,7 +3129,8 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA brings transparency and accountability to high activity entry and exit points.",
-        image: "/images/services/Gate-Pass and Vehicle Movement Verification (Logistics-Industrial)/1.webp",
+        image:
+          "/images/services/Gate-Pass and Vehicle Movement Verification (Logistics-Industrial)/1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3141,7 +3148,8 @@ export const services: ServiceData[] = [
         description:
           "Every facility has unique material flows, vendor schedules, and vehicle traffic patterns. CSA begins with a site survey to understand peak hours, entry layouts, dispatch patterns, and potential risk points.\n\nThis allows us to create a verification plan that supports efficiency without compromising control.",
         scopeOfWork: [],
-        image: "/images/services/Gate-Pass and Vehicle Movement Verification (Logistics-Industrial)/2.webp",
+        image:
+          "/images/services/Gate-Pass and Vehicle Movement Verification (Logistics-Industrial)/2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3169,7 +3177,8 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help reduce loss, maintain accuracy, and support seamless operational movement.",
-        image: "/images/services/Gate-Pass and Vehicle Movement Verification (Logistics-Industrial)/3.webp",
+        image:
+          "/images/services/Gate-Pass and Vehicle Movement Verification (Logistics-Industrial)/3.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3196,7 +3205,8 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our teams maintain strict attention to detail at every checkpoint.",
-        image: "/images/services/Gate-Pass and Vehicle Movement Verification (Logistics-Industrial)/4.webp",
+        image:
+          "/images/services/Gate-Pass and Vehicle Movement Verification (Logistics-Industrial)/4.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3214,7 +3224,8 @@ export const services: ServiceData[] = [
         description:
           "CSA supports large manufacturing plants, distribution centres, and industrial hubs where material accuracy and verification standards are critical. Our disciplined approach makes us a preferred partner in gate control operations.",
         scopeOfWork: [],
-        image: "/images/services/Gate-Pass and Vehicle Movement Verification (Logistics-Industrial)/5.webp",
+        image:
+          "/images/services/Gate-Pass and Vehicle Movement Verification (Logistics-Industrial)/5.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3243,7 +3254,8 @@ export const services: ServiceData[] = [
       "Tamper detection and prevention.",
       "Quality assurance audits.",
     ],
-        image: "/images/services/Cargo Integrity Audits (Logistics Security)/1.webp",
+    image:
+      "/images/services/Cargo Integrity Audits (Logistics Security)/1.webp",
     heroData: {
       media: {
         type: "image",
@@ -3267,7 +3279,8 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Cargo Integrity Audits Are Important?",
       subtitle: "",
-      imageSrc: "/images/services/Cargo Integrity Audits (Logistics Security)/1.webp",
+      imageSrc:
+        "/images/services/Cargo Integrity Audits (Logistics Security)/1.webp",
       imageAlt: "Cargo Integrity Audits (Logistics Security)",
       paragraphs: [
         "Cargo can be exposed to risks such as tampering, pilferage, seal breakage, incorrect documentation, or mishandling during transit. Even small discrepancies can create delays, insurance issues, and financial impact.\n\nCSA ensures that every shipment is inspected with accuracy, documented thoroughly, and monitored at key transfer points to maintain complete accountability.",
@@ -3337,7 +3350,8 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA ensures cargo is monitored with discipline at every critical checkpoint.",
-        image: "/images/services/Cargo Integrity Audits (Logistics Security)/1.webp",
+        image:
+          "/images/services/Cargo Integrity Audits (Logistics Security)/1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3355,7 +3369,8 @@ export const services: ServiceData[] = [
         description:
           "Every facility and supply chain has unique cargo handling patterns. CSA begins with an assessment of loading zones, storage areas, seal types, documentation workflows, and dispatch points.\n\nThis allows us to design a structured audit plan that aligns with operational flow and risk levels.",
         scopeOfWork: [],
-        image: "/images/services/Cargo Integrity Audits (Logistics Security)/2.webp",
+        image:
+          "/images/services/Cargo Integrity Audits (Logistics Security)/2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3383,7 +3398,8 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help maintain accuracy and strengthen trust throughout the supply chain.",
-        image: "/images/services/Cargo Integrity Audits (Logistics Security)/3.webp",
+        image:
+          "/images/services/Cargo Integrity Audits (Logistics Security)/3.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3410,7 +3426,8 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA personnel bring discipline and accuracy to every audit assignment.",
-        image: "/images/services/Cargo Integrity Audits (Logistics Security)/4.webp",
+        image:
+          "/images/services/Cargo Integrity Audits (Logistics Security)/4.webp",
         buttons: [
           {
             text: "Learn More",
@@ -3429,7 +3446,8 @@ export const services: ServiceData[] = [
         description:
           "CSA supports cargo integrity programs for supply chain operators, manufacturing units, and large warehouses. Our commitment to accuracy and compliance has made us a valued partner in cargo monitoring.",
         scopeOfWork: [],
-        image: "/images/services/Cargo Integrity Audits (Logistics Security)/5.webp",
+        image:
+          "/images/services/Cargo Integrity Audits (Logistics Security)/5.webp",
         buttons: [
           {
             text: "Learn More",
