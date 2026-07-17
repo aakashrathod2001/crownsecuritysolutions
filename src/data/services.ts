@@ -464,11 +464,11 @@ export const services: ServiceData[] = [
       "Emergency response and evacuation procedures.",
       "24/7 front desk and concierge support.",
     ],
-    image: "/images/services/Hospitality Services/1.webp",
+    image: "/images/services/Hospitality Services/h1.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/Hospitality Services.webp",
+        src: "/images/services/Hospitality Services/h1.webp",
         alt: "Hospitality Services",
       },
       content: {
@@ -576,7 +576,7 @@ export const services: ServiceData[] = [
         description:
           "Hospitality properties require a balance between vigilance and warmth. Guests should feel welcomed, not watched. At the same time, access control, patrols, and emergency readiness must operate flawlessly in the background.\n\nCSA begins with a site assessment to understand guest flow, staff movement, event schedules, and sensitive zones before designing a tailored deployment plan.",
         scopeOfWork: [],
-        image: "/images/services/Hospitality Services/2.webp",
+        image: "/images/services/Hospitality Services/h2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1105,7 +1105,7 @@ export const services: ServiceData[] = [
       "Emergency response and evacuation procedures.",
       "24/7 surveillance and monitoring.",
     ],
-    image: "/images/services/Mall Security/1.webp",
+    image: "/images/services/Mall Security/m4.webp",
     heroData: {
       media: {
         type: "image",
@@ -1129,7 +1129,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Mall Security Is Important",
       subtitle: "",
-      imageSrc: "/images/services/Mall Security/1.webp",
+      imageSrc: "/images/services/Mall Security/m1.webp",
       imageAlt: "Mall Security",
       paragraphs: [
         "Malls handle thousands of visitors each day along with vendors, staff, events, and parking movements. This creates multiple risk points such as crowd surges, theft attempts, emergency situations, misplaced items, and unauthorized access.\n\nCSA understands the dynamic nature of mall environments and provides a protection framework that balances safety with hospitality, ensuring every visitor feels secure without experiencing intrusive oversight.",
@@ -1199,7 +1199,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA offers a reassuring presence that supports both security and retail operations.",
-        image: "/images/services/Mall Security/1.webp",
+        image: "/images/services/Mall Security/m4.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1217,7 +1217,7 @@ export const services: ServiceData[] = [
         description:
           "Malls function as complex public environments with multiple entry points, service zones, emergency exits, and high activity areas. CSA conducts detailed site surveys to understand foot traffic patterns, high risk pockets, CCTV coverage, and event requirements.\n\nThis allows us to develop a security strategy that reinforces visitor comfort and operational efficiency.",
         scopeOfWork: [],
-        image: "/images/services/Mall Security/2.webp",
+        image: "/images/services/Mall Security/m2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1245,7 +1245,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help maintain a safe, organized, and visitor friendly environment throughout the day.",
-        image: "/images/services/Mall Security/3.webp",
+        image: "/images/services/Mall Security/m3.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1290,7 +1290,7 @@ export const services: ServiceData[] = [
         description:
           "CSA secures malls, retail complexes, and entertainment centers for well known brands that prioritize visitor experience and safety. Our long standing presence in the sector reflects our reliability and commitment to operational excellence.",
         scopeOfWork: [],
-        image: "/images/services/Mall Security/5.webp",
+        image: "/images/services/Mall Security/m1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1319,11 +1319,11 @@ export const services: ServiceData[] = [
       "Emergency response and coordination.",
       "Privacy protection and confidentiality.",
     ],
-    image: "/images/services/High-End Residential Security/1.webp",
+    image: "/images/services/High-End Residential Security/r1.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/High-End Residential Security.webp",
+        src: "/images/services/High-End Residential Security/rh.webp",
         alt: "High-End Residential Security",
       },
       content: {
@@ -1343,7 +1343,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Residential Security Matters?",
       subtitle: "",
-      imageSrc: "/images/services/High-End Residential Security/1.webp",
+      imageSrc: "/images/services/High-End Residential Security/r1.webp",
       imageAlt: "High-End Residential Security",
       paragraphs: [
         "High end residential communities experience a wide range of movements including residents, visitors, housekeeping staff, delivery agents, service technicians, and vehicles. Without structured access control and trained security personnel, these points can become vulnerable to intrusion, theft, or safety lapses.\n\nCSA provides a security framework that maintains complete control over entry, movement, and emergency readiness while preserving the comfort and privacy of residents.",
@@ -1413,7 +1413,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA brings reliability, trust, and structure to every residential deployment.",
-        image: "/images/services/High-End Residential Security/1.webp",
+        image: "/images/services/High-End Residential Security/r1.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1431,7 +1431,7 @@ export const services: ServiceData[] = [
         description:
           "High end residential environments operate like small communities with unique lifestyle patterns, visitor flow, staff schedules, and vendor movements. CSA conducts a detailed assessment to identify risk points, blind spots, and operational requirements.\n\nThis enables us to create a security plan that ensures safety without disrupting the comfort or routine of residents.",
         scopeOfWork: [],
-        image: "/images/services/High-End Residential Security/2.webp",
+        image: "/images/services/High-End Residential Security/r2.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1460,7 +1460,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions maintain a secure and harmonious residential environment.",
-        image: "/images/services/High-End Residential Security/3.webp",
+        image: "/images/services/High-End Residential Security/r3.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1487,7 +1487,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our personnel represent the values of respect, discipline, and dependability in every interaction.",
-        image: "/images/services/High-End Residential Security/4.webp",
+        image: "/images/services/High-End Residential Security/r4.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1505,7 +1505,7 @@ export const services: ServiceData[] = [
         description:
           "CSA protects several upscale communities and luxury developments. Our reputation for consistency, courtesy, and operational vigilance has made us a preferred security partner for high end properties.",
         scopeOfWork: [],
-        image: "/images/services/High-End Residential Security/5.webp",
+        image: "/images/services/High-End Residential Security/r5.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1533,11 +1533,11 @@ export const services: ServiceData[] = [
       "Anti-bullying and conflict resolution.",
       "Security education and awareness programs.",
     ],
-    image: "/images/services/School Security/1.webp",
+    image: "/images/services/School Security/sh.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/School Security.webp",
+        src: "/images/services/School Security/sh.webp",
         alt: "School Security",
       },
       content: {
@@ -1557,7 +1557,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why School Security Is Essential",
       subtitle: "",
-      imageSrc: "/images/services/School Security/1.webp",
+      imageSrc: "/images/services/School Security/s4.webp",
       imageAlt: "School Security",
       paragraphs: [
         "Schools are high responsibility environments with constant movement of students, parents, faculty members, vendors, and transport vehicles. Without trained guards and controlled entry systems, risks such as unauthorized access, student safety lapses, and emergency handling issues can arise.\n\nCSA ensures that every campus has a security framework that supports safety without creating fear or discomfort for children.",
@@ -1627,7 +1627,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA maintains a protective environment that reassures parents and faculty while keeping operations smooth.",
-        image: "/images/services/School Security/1.webp",
+        image: "/images/services/School Security/s4.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1645,7 +1645,7 @@ export const services: ServiceData[] = [
         description:
           "Schools function differently from corporate or industrial sites. Children require monitoring that is gentle yet attentive. Visitors must be screened without delay. Emergency protocols must be clear and well practiced.\n\nCSA conducts on site assessments to identify critical points such as entry gates, playground zones, transport areas, CCTV coverage, and evacuation paths. This helps us design a security plan tailored to the rhythm of the school.",
         scopeOfWork: [],
-        image: "/images/services/School Security/2.webp",
+        image: "/images/services/School Security/s6.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1673,7 +1673,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These measures ensure safety while supporting a positive learning environment.",
-        image: "/images/services/School Security/3.webp",
+        image: "/images/services/School Security/s7.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1700,7 +1700,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "Our personnel represent safety, responsibility, and professionalism in every interaction.",
-        image: "/images/services/School Security/4.webp",
+        image: "/images/services/School Security/s3.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1718,7 +1718,7 @@ export const services: ServiceData[] = [
         description:
           "CSA secures schools, colleges, and academic campuses for leading education groups. Our commitment to safety, consistency, and respectful conduct has made us a preferred partner in the education sector.",
         scopeOfWork: [],
-        image: "/images/services/School Security/5.webp",
+        image: "/images/services/School Security/s2.webp",
         buttons: [
           {
             text: "Learn More",
