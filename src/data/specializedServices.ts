@@ -79,7 +79,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Hospitality Security",
       description:
         "Discreet and guest-friendly protection for hotels, resorts, and event venues, maintaining a balance between safety and hospitality.",
-      imageSrc: "/images/home/services/Hospitality Services.webp",
+      imageSrc: "/images/services/Hospitality Services/hs1.webp",
       imageAlt: "Hospitality Security services",
       linkText: "Learn More",
       linkUrl: "/services/hospitality-services",
@@ -88,7 +88,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "High-End Residential Security",
       description:
         "Discreet and reliable security for gated communities and luxury residences with visitor verification and night patrols.",
-      imageSrc: "/images/home/services/High-End Residential Security.webp",
+      imageSrc: "/images/services/High-End Residential Security/rs1.webp",
       imageAlt: "High-End Residential Security",
       linkText: "Learn More",
       linkUrl: "/services/high-end-residential-security",
