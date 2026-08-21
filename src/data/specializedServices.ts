@@ -79,7 +79,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Hospitality Security",
       description:
         "Discreet and guest-friendly protection for hotels, resorts, and event venues, maintaining a balance between safety and hospitality.",
-      imageSrc: "/images/services/Hospitality Services/hs1.webp",
+      imageSrc: "/images/services/Hospitality Services/hospital_hero_image.webp",
       imageAlt: "Hospitality Security services",
       linkText: "Learn More",
       linkUrl: "/services/hospitality-services",
