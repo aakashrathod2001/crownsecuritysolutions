@@ -123,7 +123,7 @@ export const serviceData: ServiceData[] = [
       "Shipment sealing and integrity verification.",
       "Inventory loss prevention and real-time reporting."
     ],
-    image: "/images/home/services/Logistics Security.webp",
+    image: "/images/home/services/logistic_security.webp",
     buttons: [
       {
         text: "Find Out More",

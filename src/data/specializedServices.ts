@@ -43,7 +43,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Logistics Security",
       description:
         "End-to-end cargo and warehouse protection using access checks, GPS tracking, and real-time inventory monitoring.",
-      imageSrc: "/images/home/services/Logistics Security.webp",
+      imageSrc: "/images/home/services/logistic_security.webp",
       imageAlt: "Logistics Security services",
       linkText: "Learn More",
       linkUrl: "/services/logistics-security",
