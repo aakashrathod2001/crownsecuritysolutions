@@ -3259,7 +3259,7 @@ export const services: ServiceData[] = [
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/Cargo Integrity Audits (Logistics Security).webp",
+        src: "/images/home/services/cargo.webp",
         alt: "Cargo Integrity Audits (Logistics Security)",
       },
       content: {

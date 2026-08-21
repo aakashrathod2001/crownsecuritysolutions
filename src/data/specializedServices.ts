@@ -160,7 +160,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Cargo Integrity Audits",
       description:
         "Inspection and documentation of cargo seals and manifests to ensure shipment safety and accountability.",
-      imageSrc: "/images/home/services/Cargo Integrity Audits (Logistics Security).webp",
+      imageSrc: "/images/home/services/cargo.webp",
       imageAlt: "Cargo Integrity Audits",
       linkText: "Learn More",
       linkUrl: "/services/cargo-integrity-audits-logistics-security",

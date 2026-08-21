@@ -370,7 +370,7 @@ export const serviceData: ServiceData[] = [
       "Handling oversight at loading/unloading points.",
       "Incident reporting and compliance documentation."
     ],
-    image: "/images/home/services/Cargo Integrity Audits (Logistics Security).webp",
+    image: "/images/home/services/cargo.webp",
     buttons: [
       {
         text: "Find Out More",
