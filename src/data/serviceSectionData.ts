@@ -304,7 +304,7 @@ export const serviceData: ServiceData[] = [
       "Gate-pass validation for materials and vehicles.",
       "Coordination with CCTV and the control room."
     ],
-    image: "/images/home/services/Access Control Management.webp",
+    image: "/images/home/services/access_control.webp",
     buttons: [
       {
         text: "Find Out More",

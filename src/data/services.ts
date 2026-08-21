@@ -2609,7 +2609,7 @@ export const services: ServiceData[] = [
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/Access Control Management.webp",
+        src: "/images/home/services/access_control.webp",
         alt: "Access Control Management",
       },
       content: {

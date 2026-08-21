@@ -133,7 +133,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Access Control Management",
       description:
         "Controlled entry and identity verification to prevent unauthorized access and strengthen site security.",
-      imageSrc: "/images/home/services/Access Control Management.webp",
+      imageSrc: "/images/home/services/access_control.webp",
       imageAlt: "Access Control Management",
       linkText: "Learn More",
       linkUrl: "/services/access-control-management",
