@@ -864,7 +864,7 @@ export const services: ServiceData[] = [
         description:
           "CSA protects manufacturing units, plants, warehouses, and industrial estates for some of India’s most respected brands. Our long term presence in this sector demonstrates our ability to manage high risk zones with consistency and professionalism.",
         scopeOfWork: [],
-        image: "/images/services/Industrial Security/5.webp",
+        image: "/images/home/services/industrial_security.webp",
         buttons: [
           {
             text: "Learn More",
@@ -1033,7 +1033,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "These solutions help maintain transparency and accountability across the supply chain.",
-        image: "/images/services/Logistics Security/3.webp",
+        image: "/images/home/services/logistic_security.webp",
         buttons: [
           {
             text: "Learn More",
