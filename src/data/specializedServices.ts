@@ -106,7 +106,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Mall Security",
       description:
         "Trained professionals ensure visitor safety, manage crowd flow, and support retail operations with 24/7 vigilance.",
-      imageSrc: "/images/home/services/Mall Security.webp",
+      imageSrc: "/images/home/services/mall_security.webp",
       imageAlt: "Mall Security services",
       linkText: "Learn More",
       linkUrl: "/services/mall-security",

@@ -146,7 +146,7 @@ export const serviceData: ServiceData[] = [
       "Lost-and-found and first-aid assistance.",
       "Event support and coordination with management."
     ],
-    image: "/images/home/services/Mall Security.webp",
+    image: "/images/home/services/mall_security.webp",
     buttons: [
       {
         text: "Find Out More",
