@@ -61,7 +61,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Escort Services",
       description:
         "Secure movement of high-value assets, personnel, and consignments with route planning, GPS tracking, and armed/unarmed escorts.",
-      imageSrc: "/images/home/services/Escort-Services.webp",
+      imageSrc: "/images/home/services/escort_service.webp",
       imageAlt: "Escort Services",
       linkText: "Learn More",
       linkUrl: "/services/escort-services",

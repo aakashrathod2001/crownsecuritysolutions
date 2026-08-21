@@ -259,7 +259,7 @@ export const services: ServiceData[] = [
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/Escort-Services.webp",
+        src: "/images/home/services/escort_service.webp",
         alt: "Security Convoy Services",
       },
       content: {

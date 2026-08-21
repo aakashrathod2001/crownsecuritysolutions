@@ -54,7 +54,7 @@ export const serviceData: ServiceData[] = [
       "Chain-of-custody documentation and secure delivery confirmation.",
       "Coordination with local authorities for safe transit."
     ],
-    image: "/images/home/services/Escort-Services.webp",
+    image: "/images/home/services/escort_service.webp",
     buttons: [
       {
         text: "Find Out More",
