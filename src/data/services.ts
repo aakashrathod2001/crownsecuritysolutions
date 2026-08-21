@@ -464,11 +464,11 @@ export const services: ServiceData[] = [
       "Emergency response and evacuation procedures.",
       "24/7 front desk and concierge support.",
     ],
-    image: "/images/services/Hospitality Services/h1.webp",
+    image: "/images/services/Hospitality Services/hospital_hero_image.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/Hospitality Services/h1.webp",
+        src: "/images/services/Hospitality Services/hospital_hero_image.webp",
         alt: "Hospitality Services",
       },
       content: {
