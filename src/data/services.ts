@@ -488,7 +488,7 @@ export const services: ServiceData[] = [
       label: "",
       title: "Why Hospitality Security Matters?",
       subtitle: "",
-      imageSrc: "/images/services/Hospitality Services/1.webp",
+      imageSrc: "/images/services/Hospitality Services/hospital_service.webp",
       imageAlt: "Hospitality Services",
       paragraphs: [
         "Hospitality spaces host guests, staff, vendors, event organizers, and large crowds throughout the day. These environments demand security teams who are alert, well groomed, and capable of handling unexpected situations with professionalism and discretion.\n\nCSA delivers a security framework that protects your property while reinforcing the premium service standards your brand represents.",
@@ -558,7 +558,7 @@ export const services: ServiceData[] = [
         ],
         conclusion:
           "CSA ensures safety without compromising the guest experience.",
-        image: "/images/services/Hospitality Services/1.webp",
+        image: "/images/services/Hospitality Services/hospital_service.webp",
         buttons: [
           {
             text: "Learn More",

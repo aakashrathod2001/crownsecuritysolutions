@@ -52,7 +52,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "School Security",
       description:
         "Child-sensitive, trained guards ensure a safe learning environment through access control, patrols, and emergency readiness.",
-      imageSrc: "/images/home/services/school_security.webp",
+      imageSrc: "/images/home/services/school_security_1.webp",
       imageAlt: "School Security services",
       linkText: "Learn More",
       linkUrl: "/services/school-security",
