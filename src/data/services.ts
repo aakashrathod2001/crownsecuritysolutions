@@ -3480,7 +3480,7 @@ export const services: ServiceData[] = [
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/Perimeter_Patrolling.webp",
+        src: "/images/home/services/perimeter.webp",
         alt: "Perimeter Patrolling & PPE Compliance (Industrial Security)",
       },
       content: {

@@ -169,7 +169,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Perimeter Patrolling & PPE Compliance",
       description:
         "Regular patrols and safety checks to maintain industrial security and enforce PPE standards.",
-      imageSrc: "/images/home/services/Perimeter_Patrolling.webp",
+      imageSrc: "/images/home/services/perimeter.webp",
       imageAlt: "Perimeter Patrolling services",
       linkText: "Learn More",
       linkUrl: "/services/perimeter-patrolling-ppe-compliance-industrial-security",

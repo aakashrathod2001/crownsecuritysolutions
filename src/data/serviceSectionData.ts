@@ -392,7 +392,7 @@ export const serviceData: ServiceData[] = [
       "Coordination with safety officers and site supervisors.",
       "Reporting safety or operational irregularities."
     ],
-    image: "/images/home/services/Perimeter_Patrolling.webp",
+    image: "/images/home/services/perimeter.webp",
     buttons: [
       {
         text: "Find Out More",
