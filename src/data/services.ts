@@ -464,11 +464,11 @@ export const services: ServiceData[] = [
       "Emergency response and evacuation procedures.",
       "24/7 front desk and concierge support.",
     ],
-    image: "/images/home/services/Hospitality Services.webp",
+    image: "/images/services/Hospitality Services/hospital_hero_image.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/Hospitality Services.webp",
+        src: "/images/services/Hospitality Services/hospital_hero_image.webp",
         alt: "Hospitality Services",
       },
       content: {
@@ -1323,7 +1323,7 @@ export const services: ServiceData[] = [
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/High-End Residential Security/rh.webp",
+        src: "/images/services/High-End Residential Security/rs1.webp",
         alt: "High-End Residential Security",
       },
       content: {
@@ -1533,11 +1533,11 @@ export const services: ServiceData[] = [
       "Anti-bullying and conflict resolution.",
       "Security education and awareness programs.",
     ],
-    image: "/images/services/School Security/sh.webp",
+    image: "/images/home/services/school_security_1.webp",
     heroData: {
       media: {
         type: "image",
-        src: "/images/services/School Security/sh.webp",
+        src: "/images/home/services/school_security_1.webp",
         alt: "School Security",
       },
       content: {
