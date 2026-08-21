@@ -100,7 +100,7 @@ export const serviceData: ServiceData[] = [
       "Fire safety coordination and alarm response.",
       "Perimeter patrols and equipment security monitoring."
     ],
-    image: "/images/home/services/Industrial Security.webp",
+    image: "/images/home/services/industrial_security.webp",
     buttons: [
       {
         text: "Find Out More",

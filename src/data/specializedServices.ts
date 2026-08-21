@@ -34,7 +34,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Industrial Security",
       description:
         "Comprehensive protection for factories and manufacturing units, focusing on safety compliance, fire prevention, and asset integrity.",
-      imageSrc: "/images/home/services/Industrial Security.webp",
+      imageSrc: "/images/home/services/industrial_security.webp",
       imageAlt: "Industrial Security services",
       linkText: "Learn More",
       linkUrl: "/services/industrial-security",
