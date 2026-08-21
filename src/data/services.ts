@@ -3039,7 +3039,7 @@ export const services: ServiceData[] = [
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/Gate-Pass and Vehicle Movement Verification (Logistics_Industrial).webp",
+        src: "/images/home/services/gate_pass.webp",
         alt: "Gate-Pass and Vehicle Movement Verification (Logistics/Industrial)",
       },
       content: {

@@ -151,7 +151,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Gate-Pass & Vehicle Verification",
       description:
         "Strict monitoring of vehicle entry/exit and shipment validation at logistics and industrial sites.",
-      imageSrc: "/images/home/services/Gate-Pass and Vehicle Movement Verification (Logistics_Industrial).webp",
+      imageSrc: "/images/home/services/gate_pass.webp",
       imageAlt: "Gate-Pass & Vehicle Verification",
       linkText: "Learn More",
       linkUrl: "/services/gate-pass-and-vehicle-movement-verification-logistics-industrial",

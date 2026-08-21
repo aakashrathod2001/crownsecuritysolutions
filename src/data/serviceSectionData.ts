@@ -348,7 +348,7 @@ export const serviceData: ServiceData[] = [
       "Driver ID and document verification.",
       "Coordination with logistics and control room."
     ],
-    image: "/images/home/services/Gate-Pass and Vehicle Movement Verification (Logistics_Industrial).webp",
+    image: "/images/home/services/gate_pass.webp",
     buttons: [
       {
         text: "Find Out More",
