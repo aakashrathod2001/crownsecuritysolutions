@@ -142,7 +142,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Fire Safety & Emergency Drill Support",
       description:
         "Fire prevention, evacuation training, and emergency coordination to ensure readiness and safety compliance.",
-      imageSrc: "/images/home/services/Fire_Safety.webp",
+      imageSrc: "/images/home/services/fire_safety.webp",
       imageAlt: "Fire Safety services",
       linkText: "Learn More",
       linkUrl: "/services/fire-safety-emergency-drill-support",

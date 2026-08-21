@@ -326,7 +326,7 @@ export const serviceData: ServiceData[] = [
       "Coordinating with fire safety officers during emergencies.",
       "Conducting evacuation drills and equipment checks."
     ],
-    image: "/images/home/services/Fire_Safety.webp",
+    image: "/images/home/services/fire_safety.webp",
     buttons: [
       {
         text: "Find Out More",

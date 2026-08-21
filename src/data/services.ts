@@ -2823,7 +2823,7 @@ export const services: ServiceData[] = [
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/Fire_Safety.webp",
+        src: "/images/home/services/fire_safety.webp",
         alt: "Fire Safety & Emergency Drill Support",
       },
       content: {
