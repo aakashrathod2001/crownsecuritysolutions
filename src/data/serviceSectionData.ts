@@ -215,7 +215,7 @@ export const serviceData: ServiceData[] = [
       "Coordination with event organisers and local authorities.",
       "Emergency response and evacuation planning."
     ],
-    image: "/images/home/services/Event Security.webp",
+    image: "/images/home/services/event_security.webp",
     buttons: [
       {
         text: "Find Out More",

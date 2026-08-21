@@ -115,7 +115,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Event Security",
       description:
         "Tailored deployment for events, concerts, and exhibitions — managing entry control, crowd movement, and VIP protection.",
-      imageSrc: "/images/home/services/Event Security.webp",
+      imageSrc: "/images/home/services/event_security.webp",
       imageAlt: "Event Security services",
       linkText: "Learn More",
       linkUrl: "/services/event-security",
