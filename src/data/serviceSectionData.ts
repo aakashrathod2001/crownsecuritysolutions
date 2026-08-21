@@ -238,7 +238,7 @@ export const serviceData: ServiceData[] = [
       "Liaison with local authorities during transit.",
       "Reporting and verification of delivery completion."
     ],
-    image: "/images/home/services/Security Convoy Services.webp",
+    image: "/images/home/services/security_convoy_service.webp",
     buttons: [
       {
         text: "Find Out More",

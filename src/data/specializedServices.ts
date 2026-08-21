@@ -70,7 +70,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "Security Convoy Services",
       description:
         "Armed and GPS-tracked convoys for safe transportation of personnel or valuables through secure routes.",
-      imageSrc: "/images/home/services/Security Convoy Services.webp",
+      imageSrc: "/images/home/services/security_convoy_service.webp",
       imageAlt: "Security Convoy Services",
       linkText: "Learn More",
       linkUrl: "/services/security-convoy-services",
