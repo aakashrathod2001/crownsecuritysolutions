@@ -192,7 +192,7 @@ export const serviceData: ServiceData[] = [
       "Emergency drills and evacuation support.",
       "Background-verified security personnel."
     ],
-    image: "/images/home/services/School Security.webp",
+    image: "/images/home/services/school_security.webp",
     buttons: [
       {
         text: "Find Out More",
