@@ -77,7 +77,7 @@ export const serviceData: ServiceData[] = [
       "Coordination with hotel staff and emergency response teams.",
       "VIP handling and discreet guest assistance."
     ],
-    image: "/images/home/services/Hospitality Services.webp",
+    image: "/images/services/Hospitality Services/hospital_hero_image.webp",
     buttons: [
       {
         text: "Find Out More",
@@ -169,7 +169,7 @@ export const serviceData: ServiceData[] = [
       "Emergency response and resident assistance.",
       "Regular audits and community updates."
     ],
-    image: "/images/home/services/High-End Residential Security.webp",
+    image: "/images/services/High-End Residential Security/rs1.webp",
     buttons: [
       {
         text: "Find Out More",
