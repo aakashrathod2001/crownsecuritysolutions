@@ -97,7 +97,7 @@ export const SPECIALIZED_SERVICES_DATA: SpecializedServicesData = {
       title: "VIP Protection / Personal Escort Security",
       description:
         "Discreet close protection for executives and high-profile individuals with trained, professional officers.",
-      imageSrc: "/images/home/services/VIP Protection _ Personal Escort Security.webp",
+      imageSrc: "/images/home/services/vip_protection.webp",
       imageAlt: "VIP Protection services",
       linkText: "Learn More",
       linkUrl: "/services/vip-protection-personal-escort-security",

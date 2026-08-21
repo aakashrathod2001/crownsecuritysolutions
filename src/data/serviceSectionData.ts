@@ -260,7 +260,7 @@ export const serviceData: ServiceData[] = [
       "Discreet escorting in public and private spaces.",
       "24/7 supervision and real-time updates to client coordinators."
     ],
-    image: "/images/home/services/VIP Protection _ Personal Escort Security.webp",
+    image: "/images/home/services/vip_protection.webp",
     buttons: [
       {
         text: "Find Out More",

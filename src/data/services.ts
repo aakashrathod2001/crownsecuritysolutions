@@ -2177,7 +2177,7 @@ export const services: ServiceData[] = [
     heroData: {
       media: {
         type: "image",
-        src: "/images/home/services/VIP Protection _ Personal Escort Security.webp",
+        src: "/images/home/services/vip_protection.webp",
         alt: "VIP Protection / Personal Escort Security",
       },
       content: {
